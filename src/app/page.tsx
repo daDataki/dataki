@@ -1,101 +1,99 @@
-import Image from "next/image";
+'use client';
+
+import React, { useEffect, useState } from 'react';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [images, setImages] = useState<string[]>([]);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  // Función para dividir las imágenes en grupos de 8
+  const chunkArray = (arr: string[], size: number) => {
+    const result = [];
+    for (let i = 0; i < arr.length; i += size) {
+      result.push(arr.slice(i, i + size));
+    }
+    return result;
+  };
+
+  useEffect(() => {
+    // Llamada a la API para obtener las imágenes
+    fetch('/api/get-images')
+      .then((response) => response.json())
+      .then((data) => setImages(data))
+      .catch((error) => console.error('Error fetching images:', error));
+  }, []);
+
+  // Dividir las imágenes en grupos de 8
+  const imageGroups = chunkArray(images, 8);
+
+  return (
+    <>
+      <Header />
+      <main>
+        {/* Sección del video */}
+        <div className="relative">
+          <video
+            className="w-full h-auto object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <source src="/video/Video1_06-01.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        {/* Otras secciones de contenido */}
+        <div className="flex flex-col">
+          {/* Contenido del encabezado */}
+          <div className="flex flex-col">
+            <div className="my-8 md:my-12 lg:my-20">
+              <h4 className="flex flex-col justify-center items-center font-Poppins font-semibold text-xl sm:text-3xl uppercase ">
+                <span>Growth &</span> <span>business partner</span>
+              </h4>
+            </div>
+            <div className="flex flex-col justify-center items-center font-antonio font-bold text-4xl md:text-5xl lg:text-8xl mb-8 md:mb-12 lg:mb-20 uppercase ">
+              <span>we help companies</span>
+              <div>
+                <span className="text-easternBlue">bring to life</span>
+                <span> their</span>
+              </div>
+              <span>business vision</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Galería de imágenes */}
+        <div className="bg-black text-white py-12">
+          <h2 className="text-center text-3xl font-Poppins font-semibold my-20 uppercase">
+            true partners
+          </h2>
+          <h1 className="text-center text-[220px] font-antonio font-bold mb-20 uppercase">
+            they <span className='text-easternBlue'>trust us</span>
+          </h1>
+
+          {/* Sección que agrupa las imágenes en 8 */}
+          <div className="">
+            {imageGroups.map((group, groupIndex) => (
+              <div
+                key={groupIndex}
+                className="grid grid-cols-8 gap-8 border-t  border-solid border-white py-12 px-12"
+              >
+                {group.map((src, index) => (
+                  <img
+                    key={index}
+                    src={src}
+                    alt={`Partner logo ${groupIndex * 8 + index}`}
+                    className="w-36 h-auto object-contain"
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <Footer />
+    </>
   );
 }
