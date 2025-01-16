@@ -1,0 +1,58 @@
+:root{ 
+    --cant-images: 9;
+    --images-width: 230px;
+}
+
+.carousel-container {
+    width: 100%;    
+    height: auto;
+    overflow: hidden; /* Asegura que solo se vea la parte visible del carrusel */
+  }
+  
+  .slider {
+    width: 100vw;
+    max-width: calc(var(--cant-images) * var(--images-width));
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    -webkit-animation: scroll 20s linear infinite;
+    width: calc(var(--images-width) * 2 * var(--cant-images));
+}
+
+.slider:nth-child(1) .slide-track {
+    animation-duration: 25s;
+}
+.slider:nth-child(2) .slide-track{
+    animation-duration: 20s;
+}
+.slider:nth-child(3) .slide-track {
+    animation-duration: 18s;
+}
+.slide {
+ width: var(--images-width);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.slider .slide img {
+    width: 80%;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-1 * var(--images-width) * var(--cant-images)));
+        transform: translateX(calc(-1 * var(--images-width) * var(--cant-images)));
+    }
+}

@@ -13,7 +13,7 @@ export default function Footer() {
                 </div>
 
                 <div className="max-sm:justify-center max-sm:text-center flex mt-12 mb-8">
-                    <p className="font-antonio font-bold   max-sm:text-[50px]  max-sm:leading-[80px] sm:text-[100px] sm:leading-[180px] md:text-[150px] md:leading-[250px]  lg:text-[200px] lg:leading-[300px] xl:text-[250px] xl:leading-[350px] uppercase">Tell us about <br /> your idea.</p>
+                    <p className="font-antonio font-bold   max-sm:text-[50px]  max-sm:leading-[80px] sm:text-[100px] sm:leading-[180px] md:text-[150px] md:leading-[250px]  lg:text-[150px] lg:leading-[300px] xl:text-[180px] xl:leading-[200px] uppercase">Tell us about <br /> your idea.</p>
                 </div>
                 <div className="block sm:flex justify-between w-full max-sm:text-center xl:w-1/2 ">
                     <div> <p className="text-2xl font-Poppins max-sm:mb-12 sm:pl-8">
