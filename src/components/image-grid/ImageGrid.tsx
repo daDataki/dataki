@@ -21,7 +21,7 @@ export default function ImageGrid() {
         />
         <div> <Image src="/images-grid/Mask group (2).png" alt="Mask group 2 " className=" sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px] sm:-translate-y-1/2"  width={250} 
           height={150}/></div>
-        <div><Image src="/images-grid/Mask group (3).png" alt="Mask group 3 " className=" sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px]"  width={250} 
+        <div><Image src="/images-grid/Mask group (3).png" alt="Mask group 3 " className="max-sm:h-[173px] sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px]"  width={250} 
           height={150} /></div>
       </div>
 
