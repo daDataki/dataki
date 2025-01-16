@@ -1,4 +1,5 @@
 // components/Footer.jsx
+
 export default function Footer() {
     return (
         <footer className="bg-easternBlue bg-gradient-to-b from-black/70 to-transparent py-20 sm:py-48">

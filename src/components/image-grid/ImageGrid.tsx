@@ -1,5 +1,4 @@
-
-import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function ImageGrid() {
 
@@ -13,9 +12,17 @@ export default function ImageGrid() {
         <h3 className=" text-7xl font-light font-signature text-easternBlue ">Showcase</h3>
       </div>
       <div className="max-sm:flex-col max-sm:justify-center max-sm:items-center flex justify-between items-end max-sm:gap-4 max-sm:mb-3">
-        <div><img src="/images-grid/Mask group (1).png" alt="Mask group 1 " className=" sm:w-[250px] lg:w-auto  sm:h-[150px] lg:h-[278px]" /></div>
-        <div> <img src="/images-grid/Mask group (2).png" alt="Mask group 2 " className=" sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px] sm:-translate-y-1/2" /></div>
-        <div><img src="/images-grid/Mask group (3).png" alt="Mask group 3 " className=" sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px]" /></div>
+        <Image
+          src="/images-grid/Mask group (1).png"
+          alt="Mask group 1"
+          className="sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px]"
+          width={250} 
+          height={150} 
+        />
+        <div> <Image src="/images-grid/Mask group (2).png" alt="Mask group 2 " className=" sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px] sm:-translate-y-1/2"  width={250} 
+          height={150}/></div>
+        <div><Image src="/images-grid/Mask group (3).png" alt="Mask group 3 " className=" sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px]"  width={250} 
+          height={150} /></div>
       </div>
 
       <div className="relative max-sm:hidden flex items-center justify-center">
@@ -25,17 +32,19 @@ export default function ImageGrid() {
 
       <div className="max-sm:flex-col max-sm:justify-center max-sm:items-center flex sm:mt-40 max-sm:gap-4 max-sm:mb-3">
         <div className="flex justify-center sm:w-1/2">
-          <img
+          <Image
             src="/images-grid/Mask group (4).png"
             alt="Mask group 3"
-            className="sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px] "
+            className="sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px]"  width={250} 
+            height={150}
           />
         </div>
         <div className="flex justify-center sm:w-1/2 ">
-          <img
+          <Image
             src="/images-grid/beacon-hotel-south-beach 5.png"
             alt="beacon-hotel-south-beach"
-            className="sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px] sm:-translate-y-1/2"
+            className="sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px] sm:-translate-y-1/2"  width={250} 
+            height={150}
           />
         </div>
       </div>
