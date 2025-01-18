@@ -84,7 +84,7 @@ export default function About() {
       </header>
       <div className="bg-black pt-12  sm:pt-32">
         <div className="left-8 px-16 sm:left-24"><h1 className=" text-8xl sm:text-[150px] lg:text-[200px] font-antonio font-bold text-white uppercase">about
-        </h1><h2 className="absolute top-44 sm:top-[300px] lg:top-80 left-[120px]  sm:left-[156px] lg:left-48 text-easternBlue font-signature font-light text-[65px] sm:text-8xl lg:text-[140px]">Our story</h2>
+        </h1><h2 className="absolute top-44 sm:top-[300px] lg:top-80 left-[120px]  sm:left-[156px] lg:left-44 text-easternBlue font-signature font-light text-[65px] sm:text-8xl lg:text-[140px]">Our story</h2>
         </div>
         <div className="flex justify-center my-28 sm:my-32 md:my-36 lg:my-60"><h2 className="uppercase font-antonio font-bold text-white leading-[50px] text-[40px] sm:text-7xl lg:text-[110px]">We are ready to <br />
           become your <span className="text-easternBlue">growth <br />
