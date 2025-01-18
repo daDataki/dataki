@@ -11,14 +11,15 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        easternBlue: '#2b8d9d'
+        easternBlue: '#2b8d9d',
       },
       fontFamily: {
         signature: ['BrittanySignature', 'sans-serif'],
         antonio: ['Antonio', 'sans-serif'],
-        Poppins: ['Poppins', 'sans-serif' ] 
+        Poppins: ['Poppins', 'sans-serif'],
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 } satisfies Config;
+
