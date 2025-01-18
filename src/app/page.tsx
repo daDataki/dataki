@@ -1,6 +1,3 @@
-
-'use client';
-
 import Footer from '../components/footer/Footer';
 import Header from '../components/header/Header';
 import ImageGrid from '../components/image-grid/ImageGrid'
@@ -8,6 +5,8 @@ import VerticalSlider from '../components/vertical-slider/VerticalSlider'
 import HorizontalSlider from '../components/horizontal-slider/HorizontalSlider'
 
 export default function Home() {
+
+
   return (
     <>
       <Header />

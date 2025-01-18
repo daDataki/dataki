@@ -1,10 +1,8 @@
-'use client';
-
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './HorizontalSlider.css';
 import Image from 'next/image';
+import getImages from '@/utils/images';
 
-// Función para dividir las imágenes en grupos
 const chunkArray = (arr: string[], size: number) => {
   const result = [];
   for (let i = 0; i < arr.length; i += size) {
@@ -13,17 +11,10 @@ const chunkArray = (arr: string[], size: number) => {
   return result;
 };
 
-export default function HorizontalSlider() {
-  const [images, setImages] = useState<string[]>([]);
+export default async function HorizontalSlider() {
+  const images = await getImages();
 
-  useEffect(() => {
-    // Llamada a la API para obtener las imágenes
-    fetch('/api/get-images')
-      .then((response) => response.json())
-      .then((data) => setImages(data || []))
-      .catch((error) => console.error('Error fetching images:', error));
-  }, []);
-
+  console.log(images)
   // Dividir las imágenes en grupos de 9
   const imageGroups = chunkArray(images, 9);
 
