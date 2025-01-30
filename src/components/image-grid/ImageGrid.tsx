@@ -16,12 +16,12 @@ export default function ImageGrid() {
           src="/images-grid/Mask group (1).png"
           alt="Mask group 1"
           className="sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px]"
-          width={250} 
-          height={150} 
+          width={250}
+          height={150}
         />
-        <div> <Image src="/images-grid/Mask group (2).png" alt="Mask group 2 " className=" sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px] sm:-translate-y-1/2"  width={250} 
-          height={150}/></div>
-        <div><Image src="/images-grid/Mask group (3).png" alt="Mask group 3 " className="max-sm:h-[173px] sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px]"  width={250} 
+        <div> <Image src="/images-grid/Mask group (2).png" alt="Mask group 2 " className=" sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px] sm:-translate-y-1/2" width={250}
+          height={150} /></div>
+        <div><Image src="/images-grid/Mask group (3).png" alt="Mask group 3 " className="max-sm:h-[173px] sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px]" width={250}
           height={150} /></div>
       </div>
 
@@ -35,7 +35,7 @@ export default function ImageGrid() {
           <Image
             src="/images-grid/Mask group (4).png"
             alt="Mask group 3"
-            className="sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px]"  width={250} 
+            className="sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px]" width={250}
             height={150}
           />
         </div>
@@ -43,7 +43,7 @@ export default function ImageGrid() {
           <Image
             src="/images-grid/beacon-hotel-south-beach 5.png"
             alt="beacon-hotel-south-beach"
-            className="sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px] sm:-translate-y-1/2"  width={250} 
+            className="sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px] sm:-translate-y-1/2" width={250}
             height={150}
           />
         </div>

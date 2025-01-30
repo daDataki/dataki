@@ -1,0 +1,76 @@
+.text-bordered {
+    color: black;
+    /* Color de la letra */
+    text-shadow:
+        -1px -1px 0 white,
+        /* Sombra arriba-izquierda */
+        1px -1px 0 white,
+        /* Sombra arriba-derecha */
+        -1px 1px 0 white,
+        /* Sombra abajo-izquierda */
+        1px 1px 0 white;
+    /* Sombra abajo-derecha */
+}
+
+.fontSize-fluid {
+    font-size: clamp(20vw, 27vw, 50vw);
+    line-height: clamp(20vw, 27vw, 50vw);
+
+}
+.fontSize-fluid-branding {
+    font-size: clamp(15vw, 21vw, 27vw);
+    line-height: clamp(15vw, 21vw, 27vw);
+
+}
+
+.fontSize-fluid-social {
+    font-size: clamp(7vw, 15vw, 21vw);
+    line-height: clamp(7vw, 15vw, 21vw);
+
+}
+
+.bg-branding {
+    background: linear-gradient(180deg, #D1CEAE 0%, #131313 100%);
+    height: auto;
+    
+   
+  }
+  .text-bordered-branding {
+    color: #989680;
+    /* Color de la letra */
+    text-shadow:
+        -1px -1px 0 white,
+        /* Sombra arriba-izquierda */
+        1px -1px 0 white,
+        /* Sombra arriba-derecha */
+        -1px 1px 0 white,
+        /* Sombra abajo-izquierda */
+        1px 1px 0 white;
+    /* Sombra abajo-derecha */
+}
+
+.text-bordered-strategy {
+    color: #68725E;
+    ;
+    /* Color de la letra */
+    text-shadow:
+        -1px -1px 0 white,
+        /* Sombra arriba-izquierda */
+        1px -1px 0 white,
+        /* Sombra arriba-derecha */
+        -1px 1px 0 white,
+        /* Sombra abajo-izquierda */
+        1px 1px 0 white;
+    /* Sombra abajo-derecha */
+}
+.fontSize-fluid-strategy {
+    font-size: clamp(7vw, 16vw, 21vw);
+    line-height: clamp(7vw, 15vw, 21vw);
+
+}
+.bg-strategy {
+    background-color: #68725E; ;
+    
+   
+  }
+

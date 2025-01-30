@@ -44,8 +44,15 @@ export default function Home() {
           </div>
         </div>
         <div className='flex flex-col w-full'>
-          <div className='relative flex flex-col justify-center items-center w-full bg-black'><div className='bg-black flex justify-around items-end mt-8 text-white w-full font-antonio text-xl sm:text-3xl uppercase'><p>dataki</p><p>dataki</p><p>dataki</p></div><div className='relative font-antonio font-bold text-[90px] sm:text-[120px] lg:text-[220px] uppercase text-white h-[120px] sm:h-[220px] lg:h-[330px]'><h2 className='absolute left-1/2 transform -translate-x-1/2 -bottom-[27px] sm:-bottom-[37px]  lg:-bottom-[67px]'>customer</h2></div></div>
-          <div className='flex flex-col justify-center items-center w-full'><div className='relative font-antonio font-bold text-[90px] sm:text-[120px] lg:text-[220px] uppercase text-black h-[120px] sm:h-[220px] lg:h-[330px]'><h2 className='absolute left-1/2 transform -translate-x-1/2 -top-4 sm:-top-4 lg:-top-12'>oriented</h2></div><div className='bg-white flex justify-around items-end mb-8 w-full text-black font-antonio text-xl sm:text-3xl'><p>dataki</p><p>dataki</p><p>dataki</p></div></div>
+          <video
+            className="w-full h-screen object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="/video/Video3_B_16-ENE.mp4" type="video/mp4" />
+          </video>
         </div>
         <div><VerticalSlider /></div>
 
