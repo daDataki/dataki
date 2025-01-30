@@ -70,7 +70,25 @@
 }
 .bg-strategy {
     background-color: #68725E; ;
-    
-   
-  }
+}
+
+.text-bordered-data {
+    color: #68725E;
+    ;
+    /* Color de la letra */
+    text-shadow:
+        -1px -1px 0 white,
+        /* Sombra arriba-izquierda */
+        1px -1px 0 white,
+        /* Sombra arriba-derecha */
+        -1px 1px 0 white,
+        /* Sombra abajo-izquierda */
+        1px 1px 0 white;
+    /* Sombra abajo-derecha */
+}
+.fontSize-fluid-data {
+    font-size: clamp(7vw, 16vw, 21vw);
+    line-height: clamp(7vw, 15vw, 21vw);
+
+}
 

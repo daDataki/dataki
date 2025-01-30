@@ -1,17 +1,14 @@
-"use client";
 
-import { useState } from "react";
 import Image from "next/image";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer"
 
 
 export default function About() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  return (
+  return (  
     <div>
-      <header className="bg-black">
+      <Header/>
+      <div className="bg-black">
         <div className="flex justify-between items-center px-4 py-6">
           {/* Logo */}
           <div className="flex-shrink-0 mt-4 ml-6">
@@ -22,66 +19,8 @@ export default function About() {
               height={25}
             />
           </div>
-
-          {/* Navegación */}
-          <div className="hidden md:flex space-x-8 mt-4 mr-6">
-            <a href="#about" className="uppercase text-white">
-              About
-            </a>
-            <a href="#work" className="uppercase text-white">
-              Work
-            </a>
-            <a href="#services" className="uppercase text-white">
-              Services
-            </a>
-            <a href="#contact" className="uppercase text-white">
-              Contact
-            </a>
-          </div>
-
-          {/* Menú Hamburguesa */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white focus:outline-none"
-            >
-              {isMenuOpen ? (
-                <XMarkIcon className="w-6 h-6" />
-              ) : (
-                <Bars3Icon className="w-6 h-6" />
-              )}
-            </button>
-          </div>
         </div>
-
-        {/* Menú Desplegable */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-gray-800">
-            <ul className="space-y-4 p-4">
-              <li>
-                <a href="#about" className="block text-white">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#work" className="block text-white">
-                  Work
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="block text-white">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="block text-white">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-        )}
-      </header>
+      </div>
       <div className="bg-black pt-12  sm:pt-32">
         <div className="left-8 px-16 sm:left-24"><h1 className=" text-8xl sm:text-[150px] lg:text-[200px] font-antonio font-bold text-white uppercase">about
         </h1><h2 className="absolute top-44 sm:top-[300px] lg:top-80 left-[120px]  sm:left-[156px] lg:left-44 text-easternBlue font-signature font-light text-[65px] sm:text-8xl lg:text-[140px]">Our story</h2>

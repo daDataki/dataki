@@ -17,6 +17,7 @@ export default {
         signature: ['BrittanySignature', 'sans-serif'],
         antonio: ['Antonio', 'sans-serif'],
         Poppins: ['Poppins', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
     },
   },

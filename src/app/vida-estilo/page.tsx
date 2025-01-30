@@ -4,6 +4,7 @@ import Image from 'next/image';
 import './vida-estilo.css'
 import Footer from '../../components/footer/Footer'
 
+
 export default function VidaEstilo() {
   return (
     <>
@@ -145,6 +146,59 @@ export default function VidaEstilo() {
           width={800}
           height={1111}
         /></div></div>
+        <div className='relative bg-[#68725E] py-8'>
+          <div><h2 className='uppercase text-bordered-data fontSize-fluid-data font-antonio'>Data <br />Analytics </h2></div>
+          <div className='max-sm:hidden absolute w-[37%] left-[52%] top-[10%] h-auto z-10'><Image
+            className=" w-full z-10 "
+            src="/images-proyecto/Profit (1).png"
+            alt="vida-estilo"
+            layout="intrinsic"
+            width={611}
+            height={672}
+          /></div>
+          <div className='relative max-sm:m-auto p-8 sm:left-14 w-3/4 bg-black rounded-2xl top-[-5rem] text-white z-10'>
+            <h2 className='text-3xl md:text-6xl xl:text-8xl font-inter font-bold'>Metric evolution</h2>
+            <p className='text-xl md:text-2xl xl:text-3xl font-inter font-light'>December</p>
+            <div className='relative text-xl md:text-2xl xl:text-4xl font-inter font-bold my-6 '>
+              <div className='absolute w-[62%] sm:w-[76%] md:w-[70%] top-24 sm:top-24 md:top-36 xl:top-28 left-8 sm:left-12 md:left-28 h-auto z-10'><Image
+                className=" w-full z-10 "
+                src="/images-proyecto/Vector-346.png"
+                alt="vida-estilo"
+                layout="intrinsic"
+                width={800}
+                height={1111}
+              /></div>
+              <div className='absolute w-[58%] sm:w-[66%] md:w-[60%] top-20 sm:top-16 md:top-24 xl:top-11 left-8 sm:left-12 md:left-36 h-auto z-10'><Image
+                className=" w-full z-10 "
+                src="/images-proyecto/Vector-347.png"
+                alt="vida-estilo"
+                layout="intrinsic"
+                width={800}
+                height={1111}
+              /></div>
+              <div className='w-full flex justify-between border-b border-gray-500 py-4 md:py-8'>
+                <h4>Clics</h4><h4>Impression</h4>
+              </div>
+              <div className='max-sm:hidden w-full flex justify-between border-b border-gray-500 font-light py-4 md:py-8'>
+                <h4>180</h4><h4>20 mil</h4>
+              </div>
+              <div className='w-full flex justify-between border-b border-gray-500 font-light py-4 md:py-8'>
+                <h4>90</h4><h4>10 mil</h4>
+              </div>
+              <div className='w-full flex justify-between border-b border-gray-500 font-light py-4 md:py-8'>
+                <h4>0</h4><h4>0</h4>
+              </div>
+            </div>
+          </div>
+          <div className='sm:hidden w-[50%] m-auto'><Image
+            className=" w-full z-10 "
+            src="/images-proyecto/Profit (1).png"
+            alt="vida-estilo"
+            layout="intrinsic"
+            width={611}
+            height={672}
+          /></div>
+        </div>
         <div>
           <Footer background="bg-black " />
         </div>
