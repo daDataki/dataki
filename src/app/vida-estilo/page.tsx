@@ -96,11 +96,11 @@ export default function VidaEstilo() {
           <div className='flex'>
             <div className='w-2/5'>
             </div>
-            <div className='w-3/5'>
+            <div className='w-3/5 flex justify-center'>
               <h2 className='uppercase text-white font-semibold font-antonio fontSize-fluid-social max-sm:mb-12'>Media</h2>
             </div>
           </div>
-          <div className='relative sm:absolute w-[36%] sm:h-[36%] sm:top-[17%] left-[27%] z-10'><Image
+          <div className='relative sm:absolute w-[40%] sm:h-[36%] sm:top-[17%] left-1/2 transform -translate-x-1/2 z-10'><Image
             className=" w-full 2xl:w-[100%] !max-w-[800px] z-10 "
             src="/images-proyecto/MIAMI-SPACE.png"
             alt="vida-estilo"
