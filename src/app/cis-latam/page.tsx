@@ -1,4 +1,4 @@
-import Footer from '../../components/footer/Footer'
+
 import Hero from '@/components/hero/Hero';
 import cis from  '../../../public/images-proyecto/cis-latam.png';
 
