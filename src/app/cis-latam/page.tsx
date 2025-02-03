@@ -84,7 +84,7 @@ export default function CisLatam() {
             muted
             playsInline
           >
-            <source src="/video/Video3_B_16-ENE.mp4" type="video/mp4" />
+            <source src="/video/institucional-cisup2.mp4" type="video/mp4" />
           </video>
         </div>
         <div className='bg-black py-28 mt-[-1px]'>
