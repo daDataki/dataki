@@ -42,7 +42,7 @@ export default function VidaEstilo() {
             </h2>
           </div>
           <div className='font-antonio font-semibold fontSize-fluid'>
-            <h2 className='uppercase text-bordered ç'>
+            <h2 className='uppercase text-bordered'>
               design
             </h2>
           </div>
