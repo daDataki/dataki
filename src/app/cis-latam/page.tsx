@@ -58,7 +58,7 @@ export default function CisLatam() {
             ],
           }}
         /></div>
-        <div className="relative w-full h-[60vh] md:h-[120vh] flex justify-end items-center  bg-black mt-[-1px]">
+        <div className=" hidden relative w-full h-[60vh] md:h-[120vh]  justify-end items-center  bg-black mt-[-1px]">
           <div className="w-full absolute flex justify-center top-1/2 left-1/2 -translate-x-[47%] -translate-y-[70%]">
             <Image
               className="w-[70%] lg:w-[40%] slide-fwd-center"
@@ -71,7 +71,7 @@ export default function CisLatam() {
               digital <br /> strategy
             </h2>
           </div>
-          <div className='hidden  justify-center w-full absolute top-1/2 left-1/2 -translate-x-[70%]  lg:-translate-x-[60%] -translate-y-1/2 '><Image
+          <div className='justify-center w-full absolute top-1/2 left-1/2 -translate-x-[70%]  lg:-translate-x-[60%] -translate-y-1/2 '><Image
             className="w-[70%] lg:w-[45%]"
             src="/images-proyecto/CisUp-Mockup-Phone.png"
             alt="vida-estilo"
