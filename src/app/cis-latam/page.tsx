@@ -6,6 +6,8 @@ import './cis-latam.css'
 import Image from 'next/image';
 import { useState } from "react";
 import PreviousNext from '../../components/previous-next/PreviousNext'
+import Footer from '../../components/footer/Footer'
+
 
 const images = [
   "/images-proyecto/Cis-PautaDigital-S01.png",
@@ -17,6 +19,7 @@ const images = [
 
 export default function CisLatam() {
   const [activeIndex, setActiveIndex] = useState(1);
+
 
   const prevSlide = () => {
     setActiveIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
@@ -58,7 +61,7 @@ export default function CisLatam() {
         <div className="relative w-full h-[60vh] md:h-[120vh] flex justify-end items-center  bg-black mt-[-1px]">
           <div className="w-full absolute flex justify-center top-1/2 left-1/2 -translate-x-[47%] -translate-y-[70%]">
             <Image
-              className="w-[70%] lg:w-[40%]"
+              className="w-[70%] lg:w-[40%] slide-fwd-center"
               src="/images-proyecto/Ellipse31.png"
               alt="vida-estilo"
               width={879}
@@ -68,13 +71,13 @@ export default function CisLatam() {
               digital <br /> strategy
             </h2>
           </div>
-          <div className='flex justify-center w-full absolute top-1/2 left-1/2 -translate-x-[70%]  lg:-translate-x-[60%] -translate-y-1/2 '><Image
-              className="w-[70%] lg:w-[45%]"
-              src="/images-proyecto/CisUp-Mockup-Phone.png"
-              alt="vida-estilo"
-              width={879}
-              height={879}
-            /></div>    
+          <div className='hidden  justify-center w-full absolute top-1/2 left-1/2 -translate-x-[70%]  lg:-translate-x-[60%] -translate-y-1/2 '><Image
+            className="w-[70%] lg:w-[45%]"
+            src="/images-proyecto/CisUp-Mockup-Phone.png"
+            alt="vida-estilo"
+            width={879}
+            height={879}
+          /></div>
         </div>
         <div className='flex flex-col w-full mt-[-1px]'>
           <video
@@ -171,7 +174,7 @@ export default function CisLatam() {
           />
         </div>
         <div className='bg-black h-70'></div>
-        <div className='relative flex flex-col rectangulo62 h-[100vh] sm:h-[150vh] md:h-[200vh] lg:h-[240vh] xl:h-[270vh] 2xl:h-[300vh] mt-[-1px]' >
+        <div className='relative flex flex-col rectangulo62 h-[120vh] sm:h-[150vh]  lg:h-[180vh] xl:h-[230vh] 2xl:h-[270vh] mt-[-1px]' >
           <div className='relative flex flex-col top-[16%]  font-antonio font-semibold fontSize-fluid-marketing ]'>
             <h2 className='uppercase text-bordered-marketing '>marketing</h2>
             <h2 className='uppercase text-bordered-marketing self-end mr-14 '>campaign</h2>
@@ -207,6 +210,9 @@ export default function CisLatam() {
           <div className='relative top-[25%] lg:top-[18%] 2xl:top-[15%] w-[80%] mx-auto'>
             <PreviousNext />
           </div>
+        </div>
+        <div>
+          <Footer background="bg-black " />
         </div>
       </div>
     </>
