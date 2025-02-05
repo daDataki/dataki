@@ -1,7 +1,7 @@
 "use client"
 
 import Hero from '@/components/hero/Hero';
-import cis from '../../../public/images-proyecto/cis-latam.png';
+import cis from '../../../public/images-proyecto/cis-slider-1.png';
 import './cis-latam.css'
 import Image from 'next/image';
 import { useState } from "react";
@@ -34,6 +34,7 @@ export default function CisLatam() {
       <div>
         <div><Hero
           title="CIS latam"
+          isAroundPage={true}
           backgroundImage={cis.src}
           clientInfo={{
             group: "",

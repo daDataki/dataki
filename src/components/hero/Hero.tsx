@@ -21,6 +21,7 @@ interface HeroProps {
     clientInfo: ClientInfo;
     aboutInfo: string;
     services: Services;
+    isAroundPage?: boolean;
 }
 
 const Hero: React.FC<HeroProps> = ({
@@ -29,6 +30,7 @@ const Hero: React.FC<HeroProps> = ({
     clientInfo,
     aboutInfo,
     services,
+    isAroundPage = false,
 }) => {
     const bgImage = typeof backgroundImage === 'string' ? backgroundImage : backgroundImage.src;
     return (
@@ -66,7 +68,7 @@ const Hero: React.FC<HeroProps> = ({
                                 </h4>
                             </div>
                         </div>
-                        <div className="max-sm:hidden w-[71%] flex justify-between text-white mt-24">
+                        <div className={`max-sm:hidden w-[71%] flex ${isAroundPage ? "justify-around" : "justify-between"} text-white mt-24`}>
                             <div className="z-10">
                                 <h4 className="font-Poppins font-bold text-fluid-span uppercase z-10 mb-2">Date</h4>
                                 <span className="text-fluid-span font-Poppins z-10">
