@@ -1,0 +1,5 @@
+
+.xtext-lg {
+    font-size: clamp(25px, 7.1vw, 150px);
+    line-height: clamp(25px, 7.1vw, 150px);
+}

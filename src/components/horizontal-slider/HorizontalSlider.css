@@ -25,13 +25,19 @@
 }
 
 .slider:nth-child(1) .slide-track {
-    animation-duration: 25s;
+    animation-duration: 20s;
+    animation-name: scroll-right;
 }
 .slider:nth-child(2) .slide-track{
     animation-duration: 20s;
+    animation-name: scroll-left;
 }
 .slider:nth-child(3) .slide-track {
-    animation-duration: 18s;
+    animation-duration: 20s;
+    animation-name: scroll-right;
+}
+.slider:nth-child(3) {
+    border-bottom: none;
 }
 .slide {
  width: var(--images-width);
@@ -41,18 +47,39 @@
 }
 
 .slider .slide img {
-    width: 80%;
+    width: 60%;
     max-height: 150px;
     object-fit: contain;
 }
 
-@keyframes scroll {
+@keyframes scroll-right {
     0% {
-        -webkit-transform: translateX(0);
         transform: translateX(0);
     }
     100% {
-        -webkit-transform: translateX(calc(-1 * var(--images-width) * var(--cant-images)));
         transform: translateX(calc(-1 * var(--images-width) * var(--cant-images)));
     }
+}
+
+/* Animación para moverse hacia la izquierda */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(calc(-1 * var(--images-width) * var(--cant-images)));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.xtext-sm {
+    font-size: clamp(12px, 2.14vw, 45px);
+    line-height: clamp(12px, 2.14vw, 45px);
+}
+.xtext-lg {
+    font-size: clamp(30px, 7.1vw, 150px);
+    line-height: clamp(30px, 7.1vw, 150px);
+}
+
+.xtext-2xl {
+    font-size: clamp(40px, 12vw, 250px);
+    line-height: clamp(40px, 12vw, 250px);
 }

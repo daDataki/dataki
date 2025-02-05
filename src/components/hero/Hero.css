@@ -1,13 +1,16 @@
 .text-fluid {
-    font-size: clamp(1.5rem, 13vw, 15vw); 
+    font-size: clamp(73px, 15vw , 330px); 
+    
   }
 
 .text-fluid-h4{
-    font-size: clamp(1rem, 4.5vw, 5vw);
+    font-size: clamp(23px, 4.7vw, 105px);
+    line-height:32px
 }
 
 .text-fluid-span{
-    font-size: clamp(0.5rem, 1.5vw, 1.5vw);
+    font-size: clamp(0.3rem, 1.5vw, 1.5vw);
+    line-height:  clamp(0.3rem, 1.5vw, 1.5vw);;
 }
 
 .h-fluid {

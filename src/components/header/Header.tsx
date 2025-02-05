@@ -83,6 +83,14 @@ export default function Header() {
                 Cis-Latam
               </Link>
             </li>
+            <li>
+              <Link
+                href="/daytona"
+                className="block px-4 py-2 sm:p-0 hover:text-gray-400"
+              >
+                daytona
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

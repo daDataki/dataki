@@ -32,22 +32,9 @@
 .bg-branding {
     background: linear-gradient(180deg, #D1CEAE 0%, #131313 100%);
     height: auto;
-    
-   
-  }
-  .text-bordered-branding {
-    color: #989680;
-    /* Color de la letra */
-    text-shadow:
-        -1px -1px 0 white,
-        /* Sombra arriba-izquierda */
-        1px -1px 0 white,
-        /* Sombra arriba-derecha */
-        -1px 1px 0 white,
-        /* Sombra abajo-izquierda */
-        1px 1px 0 white;
-    /* Sombra abajo-derecha */
 }
+
+
 
 .text-bordered-strategy {
     color: #68725E;
@@ -91,4 +78,9 @@
     line-height: clamp(7vw, 15vw, 21vw);
 
 }
-
+.text-bordered-branding {
+    color: transparent;
+    /* Color de la letra */
+    -webkit-text-stroke: 1px white;
+   
+}

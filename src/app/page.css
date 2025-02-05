@@ -1,0 +1,14 @@
+.xtext-xs {
+    font-size: clamp(10px, 1.5vw, 30px);
+    line-height: clamp(10px, 1.5vw, 30px);
+}
+
+.xtext-sm {
+    font-size: clamp(15px, 2.14vw, 45px);
+    line-height: clamp(15px, 2.14vw, 45px);
+}
+
+.xtext-lg {
+    font-size: clamp(25px, 7.1vw, 150px);
+    line-height: clamp(25px, 7.1vw, 150px);
+}
