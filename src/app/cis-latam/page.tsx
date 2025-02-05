@@ -34,7 +34,6 @@ export default function CisLatam() {
       <div>
         <div><Hero
           title="CIS latam"
-          isAroundPage={true}
           backgroundImage={cis.src}
           clientInfo={{
             group: "",
