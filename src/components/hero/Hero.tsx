@@ -53,7 +53,7 @@ const Hero: React.FC<HeroProps> = ({
                             </h1>
                         </div>
                         <div className="hidden sm:flex justify-between items-center w-[85%]">
-                            <div className="w-8 h-auto">
+                            <div className="w-14 h-auto">
                                 <Image
                                     className="relative object-contain"
                                     src="/images-proyecto/arrow.png"

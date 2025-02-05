@@ -12,7 +12,6 @@ export default function Daytona() {
       <div>
         <div><Hero
           title="Daytona"
-          isAroundPage={true}
           backgroundImage={daytona.src}
           clientInfo={{
             group: "",
