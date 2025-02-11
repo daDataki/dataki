@@ -90,19 +90,25 @@ export default function VidaEstilo() {
             /></div>
           </div>
         </div>
-      
+
         <div className='relative py-32 px-12  bg-black mt-[-1px]'>
-          <div className='absolute w-1/2 left-[21vw] sm:left-[22vw] top-[43vw] sm:top-[28vw] uppercase text-white font-semibold font-antonio fontSize-fluid-social '><h2>Social</h2></div>
-          <div data-aos="fade-down" className='flex flex-col justify-center items-center z-20'><Image
-            className="w-[30%]  z-10"
-            src="/images-proyecto/MIAMI-SPACE-0.png"
-            alt="vida-estilo"
-            layout="intrinsic"
-            width={800}
-            height={800}
-          />
+          <div data-aos="fade-down" className='flex flex-col justify-center items-center z-20'>
+            <div className='relative w-full flex justify-center'>
+              <div className='absolute w-fit top-0 left-0 md:top-[14vw] md:left-[16vw] xl:left-[18vw] uppercase text-white font-semibold font-antonio fontSize-fluid-social '>
+                <h2>Social</h2>
+              </div>
+              <Image
+                className="w-[30%]  z-10"
+                src="/images-proyecto/MIAMI-SPACE-0.png"
+                alt="vida-estilo"
+                layout="intrinsic"
+                width={800}
+                height={800}
+              />
+            </div>
+
             <div data-aos="fade-down" className='relative flex flex-col justify-center w-full top-1/2 z-10 '>
-              <div className='w-full flex justify-center gap-[3vw] z-10 right-[-5vw]'><Image
+              <div className='w-full flex justify-center gap-[3vw] z-10 mt-[-5vw]'><Image
                 className="w-[30%]  z-10"
                 src="/images-proyecto/MIAMI-SPACE1-1.png"
                 alt="vida-estilo"
@@ -120,7 +126,7 @@ export default function VidaEstilo() {
                 /><div className='absolute w-full flex justify-end top-[90%] mr-[20vw] uppercase text-white font-semibold font-antonio fontSize-fluid-social '><h2>Media</h2></div></div>
             </div>
           </div>
-          
+
         </div>
         <div className='relative flex flex-col bg-strategy mt-[-1px]'>
           <div className=' w-full z-10'><Image
