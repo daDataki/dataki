@@ -13,8 +13,8 @@
 }
 
 .fontSize-fluid {
-    font-size: clamp(20vw, 27vw, 50vw);
-    line-height: clamp(20vw, 27vw, 50vw);
+    font-size: clamp(13vw, 20vw, 35vw);
+    line-height: clamp(13vw, 20vw, 35vw);
 
 }
 .fontSize-fluid-branding {
@@ -24,8 +24,8 @@
 }
 
 .fontSize-fluid-social {
-    font-size: clamp(7vw, 15vw, 21vw);
-    line-height: clamp(7vw, 15vw, 21vw);
+    font-size: clamp(33px, 7.14vw, 150px);
+    line-height: clamp(33px, 7.14vw, 150px);
 
 }
 

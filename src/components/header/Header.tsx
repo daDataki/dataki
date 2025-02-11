@@ -14,15 +14,11 @@ export default function Header() {
 
   return (
     <header className="bg-gray-800 text-white p-4">
-      <div className="container mx-auto flex justify-between items-center relative">
-        {/* Logotipo */}
-        <div className="text-2xl font-bold">
-          <Link href="/">MyWebsite</Link>
-        </div>
+      <div className="container mx-auto flex justify-end items-center relative">
 
         {/* Botón hamburguesa */}
         <button
-          className="sm:hidden text-2xl"
+          className="md:hidden text-2xl"
           onClick={() => setIsOpen(!isOpen)}
         >
           ☰
@@ -32,9 +28,9 @@ export default function Header() {
         <nav
           className={`${
             isOpen ? 'block' : 'hidden'
-          } sm:flex sm:space-x-6 absolute sm:static top-14 left-0 w-full bg-gray-800 sm:bg-transparent sm:w-auto z-50`}
+          } sm:flex absolute sm:static top-14 left-0 w-full bg-gray-800 sm:bg-transparent sm:w-auto z-50`}
         >
-          <ul className="sm:flex sm:space-x-6">
+          <ul className="sm:flex sm:space-x-3">
             <li>
               <Link
                 href="/"
@@ -89,6 +85,14 @@ export default function Header() {
                 className="block px-4 py-2 sm:p-0 hover:text-gray-400"
               >
                 daytona
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/tango"
+                className="block px-4 py-2 sm:p-0 hover:text-gray-400"
+              >
+                tango
               </Link>
             </li>
           </ul>

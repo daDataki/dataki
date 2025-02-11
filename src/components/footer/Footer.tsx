@@ -11,7 +11,7 @@ export default function Footer({ background = DEFAULT_BG }:FooterProps) {
         <footer className={`py-12 mt-[-1] sm:py-20 ${background}`}>
             <nav className="mx-12 text-white">
                 <div className="max-sm:block max-sm:text-center flex justify-between items-center h-auto">
-                    <p className="font-normal max-sm:mb-12 max-sm:text-[40px] max-sm:leading-[50px] text-[100px] leading-[180px] font-signature">
+                    <p className="font-normal max-sm:mb-12 max-sm:text-[40px] max-sm:leading-[50px] text-[75px] font-signature">
                         Let’s Talk
                     </p>
                     <p className="font-normal max-sm:text-[20px] text-2xl">

@@ -1,0 +1,4 @@
+.text-pre-next{
+    font-size: clamp(12px,1.71vw,36px);
+    line-height:clamp(12px,1.71vw,36px) ;
+}

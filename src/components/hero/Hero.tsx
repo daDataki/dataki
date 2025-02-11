@@ -16,12 +16,12 @@ interface Services {
 }
 
 interface HeroProps {
-    title: string;
+    title: string | React.ReactNode;
     backgroundImage: string | StaticImageData;
     clientInfo: ClientInfo;
-    aboutInfo: string;
+    aboutInfo: string | React.ReactNode;
     services: Services;
-   
+
 }
 
 const Hero: React.FC<HeroProps> = ({
@@ -30,15 +30,15 @@ const Hero: React.FC<HeroProps> = ({
     clientInfo,
     aboutInfo,
     services,
-   
+
 }) => {
     const bgImage = typeof backgroundImage === 'string' ? backgroundImage : backgroundImage.src;
     return (
         <div>
             <Header />
-            <div className="relative w-full">
+            <div className="relative w-full z-10">
                 <div
-                    className="relative w-full h-[300px] sm:h-[600px] md:h-[800px] 2xl:h-screen pb-32"
+                    className="relative flex flex-col justify-between w-full h-[50vh] sm:h-[65vh] md:h-[80vh] lg:h-screen "
                     style={{
                         backgroundImage: `url(${bgImage})`,
                         backgroundSize: 'cover',
@@ -46,29 +46,31 @@ const Hero: React.FC<HeroProps> = ({
                     }}
                 >
                     <div className="absolute inset-0 bg-black opacity-40"></div>
-                    <div className="px-12 py-12">
-                        <div className="flex justify-center sm:justify-start">
-                            <h1 className="font-antonio text-fluid font-bold text-white uppercase z-10">
-                                {title}
-                            </h1>
-                        </div>
-                        <div className="hidden sm:flex justify-between items-center w-[85%]">
-                            <div className="w-14 h-auto">
-                                <Image
-                                    className="relative object-contain"
-                                    src="/images-proyecto/arrow.png"
-                                    alt="arrow"
-                                    width={126}
-                                    height={101}
-                                />
+                    <div className="flex flex-col justify-between p-12 z-10 h-[100%]">
+                        <div className="w-fit">
+                            <div className="w-fit">
+                                <h1 className="font-antonio font-bold text-fluid text-white uppercase">
+                                    {title}
+                                </h1>
                             </div>
-                            <div className="w-1/2 z-10">
-                                <h4 className="text-left max-md:ml-4 uppercase font-antonio font-bold text-fluid-h4 text-white">
-                                    {clientInfo.group}
-                                </h4>
+                            <div className="hidden sm:flex justify-between items-center w-full">
+                                <div className="sm:w-10 lg:w-12 h-auto">
+                                    <Image
+                                        className="relative object-contain"
+                                        src="/images-proyecto/arrow.png"
+                                        alt="arrow"
+                                        width={115}
+                                        height={101}
+                                    />
+                                </div>
+                                <div className="flex justify-around z-10">
+                                    <h4 className="uppercase font-antonio font-bold text-fluid-h4 text-white">
+                                        {clientInfo.group}
+                                    </h4>
+                                </div>
                             </div>
                         </div>
-                        <div className="max-sm:hidden w-[71%] flex justify-between text-white mt-24">
+                        <div className="max-sm:hidden w-[71%] flex justify-between text-white">
                             <div className="z-10">
                                 <h4 className="font-Poppins font-bold text-fluid-span uppercase z-10 mb-2">Date</h4>
                                 <span className="text-fluid-span font-Poppins z-10">
@@ -93,34 +95,34 @@ const Hero: React.FC<HeroProps> = ({
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <div className="flex justify-center sm:justify-end text-white font-semibold font-Poppins">
-                        <div className="z-10 pr-12">
-                            <span className="mr-6 uppercase">previous</span>
-                            <span className="uppercase">next</span>
+                        <div className="flex max-sm:justify-between justify-end text-white font-semibold font-Poppins">
+                            <div className="z-10  text-sm sm:text-base max-sm:w-full max-sm:flex max-sm:justify-between">
+                                <span className="mr-6 uppercase">previous</span>
+                                <span className="uppercase">next</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="bg-black py-12 sm:py-16 px-12 mt-[-1px]">
-                <div className="font-Poppins text-white text-base sm:text-xl">
+            <div className="relative bg-black py-12 sm:py-16 px-12 mt-[-1px] z-20">
+                <div className="font-Poppins text-white text-sm sm:text-base">
                     <div className="uppercase font-bold">About</div>
                     <p>{aboutInfo}</p>
                 </div>
                 <div className="flex max-sm:flex-col py-8 sm:pt-16">
                     <div className="w-1/2">
                         <div className="w-80">
-                            <p className="font-Poppins font-medium text-base sm:text-2xl text-white">
+                            <p className="font-Poppins font-medium text-sm sm:text-base text-white">
                                 {services.description}
                             </p>
                         </div>
                     </div>
                     <div className="w-1/2">
-                        <div>
-                            <ul className="uppercase text-white text-lg  md:text-3xl font-antonio font-bold">
+                        <div className='max-sm:mt-8'>
+                            <ul className="uppercase text-white text-sm sm:text-base font-antonio font-bold">
                                 {services.list.map((service, index) => (
                                     <li key={index}>
-                                        <p className="leading-[50px] md:leading-[100px]">{service}</p>
+                                        <p className="leading-[30px] md:leading-[50px]">{service}</p>
                                     </li>
                                 ))}
                             </ul>

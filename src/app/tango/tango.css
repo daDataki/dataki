@@ -1,0 +1,33 @@
+
+.text-bordered-branding {
+    color: transparent;
+    /* Color de la letra */
+    -webkit-text-stroke: 1px white;
+}
+.text-tango-title{
+    font-size: clamp(40px, 11vw, 240px);
+    line-height: clamp(40px, 11vw, 240px);
+}
+.h-video{
+    height: clamp(268px, 57vw, 1200px);
+}
+.xtext-xxl {
+    font-size: clamp(80px, 21vw, 450px);
+    line-height: clamp(80px, 21vw, 450px);
+}
+.top {
+    margin-top: -16vw;
+  }
+
+.top-1 {
+    margin-top: -12vw;
+    
+  }
+
+.top-2 {
+    margin-top: 0;
+  }
+  
+.w-image-iphone{
+    width: clamp(125px, 24vw, 562px);
+}

@@ -1,21 +1,21 @@
 .text-fluid {
-    font-size: clamp(73px, 15vw , 330px); 
+    font-size: clamp(33px, 7.14vw, 150px); 
     
-  }
+}
+
 
 .text-fluid-h4{
-    font-size: clamp(23px, 4.7vw, 105px);
+    font-size: clamp(16px, 3vw, 72px);
     line-height:32px
 }
 
 .text-fluid-span{
-    font-size: clamp(0.3rem, 1.5vw, 1.5vw);
-    line-height:  clamp(0.3rem, 1.5vw, 1.5vw);;
+    font-size: clamp(4px, 1.3vw, 36px);
+    line-height:  clamp(4px, 1.3vw, 36px);
+}
+.text-pre-next{
+    font-size: clamp(10px,16px,16px);
 }
 
-.h-fluid {
-    height: clamp(400px, 800px, 1200px);
-    overflow: hidden;
-}
 
 
