@@ -90,7 +90,7 @@ export default function VidaEstilo() {
             /></div>
           </div>
         </div>
-        <div className='relative bg-black h-[70%] sm:h-screen lg:h[120vh] xl:h-[125vh] 2xl:h-[150vh] py-32  mt-[-1px]'>
+        <div className='relative bg-black h-[70%] sm:h-screen md:h-[120vh] lg:h-[130vh] xl:h-[140vh] 2xl:h-[150vh] py-32  mt-[-1px]'>
           <div className='absolute flex left-1/4'>
             <div className='w-3/5 flex justify-center '>
               <h2 className='uppercase text-white font-semibold font-antonio fontSize-fluid-social'>Social
