@@ -90,46 +90,36 @@ export default function VidaEstilo() {
             /></div>
           </div>
         </div>
-        <div className='relative bg-black h-[70%] sm:h-screen md:h-[120vh] lg:h-[130vh] xl:h-[140vh] 2xl:h-[150vh] py-32  mt-[-1px]'>
-          <div className='absolute flex left-1/4'>
-            <div className='w-3/5 flex justify-center '>
-              <h2 className='uppercase text-white font-semibold font-antonio fontSize-fluid-social'>Social
-              </h2>
-            </div>
-            <div className='w-2/5'></div>
-          </div>
-          <div className='absolute flex top-[70%]  sm:top-[80%] left-[65%]'>
-            <div className='w-2/5'>
-            </div>
-            <div className='w-3/5 flex justify-start'>
-              <h2 className='uppercase text-white font-semibold font-antonio fontSize-fluid-social max-sm:mb-12'>Media</h2>
-            </div>
-          </div>
-          <div data-aos="fade-down" className='flex justify-center z-10'><Image
+      
+        <div className='relative py-32 px-12  bg-black mt-[-1px]'>
+          <div className='absolute w-1/2 left-[21vw] sm:left-[22vw] top-[43vw] sm:top-[28vw] uppercase text-white font-semibold font-antonio fontSize-fluid-social '><h2>Social</h2></div>
+          <div data-aos="fade-down" className='flex flex-col justify-center items-center z-20'><Image
             className="w-[30%]  z-10"
-            src="/images-proyecto/MIAMI-SPACE.png"
+            src="/images-proyecto/MIAMI-SPACE-0.png"
             alt="vida-estilo"
             layout="intrinsic"
             width={800}
             height={800}
-          /></div>
-          <div className='relative flex justify-center top-[-11%]'><Image
-            data-aos="fade-left" 
-            className=" w-[30%] z-10 "
-            src="/images-proyecto/MIAMI-SPACE1.png"
-            alt="vida-estilo"
-            layout="intrinsic"
-            width={800}
-            height={800}
-
-          /><Image data-aos="fade-right"
-              className="w-[30%]  z-10 "
-              src="/images-proyecto/MIAMI-SPACE2.png"
-              alt="vida-estilo"
-              layout="intrinsic"
-              width={800}
-              height={800}
-            /></div>
+          />
+            <div data-aos="fade-down" className='relative flex flex-col justify-center w-full top-1/2 z-10 '>
+              <div className='w-full flex justify-center gap-[3vw] z-10 right-[-5vw]'><Image
+                className="w-[30%]  z-10"
+                src="/images-proyecto/MIAMI-SPACE1-1.png"
+                alt="vida-estilo"
+                layout="intrinsic"
+                width={800}
+                height={800}
+              />
+                <Image
+                  className="w-[30%]  z-10"
+                  src="/images-proyecto/MIAMI-SPACE2-1.png"
+                  alt="vida-estilo"
+                  layout="intrinsic"
+                  width={800}
+                  height={800}
+                /><div className='absolute w-full flex justify-end top-[90%] mr-[20vw] uppercase text-white font-semibold font-antonio fontSize-fluid-social '><h2>Media</h2></div></div>
+            </div>
+          </div>
           
         </div>
         <div className='relative flex flex-col bg-strategy mt-[-1px]'>
