@@ -13,9 +13,8 @@
 }
 
 .fontSize-fluid {
-    font-size: clamp(13vw, 20vw, 35vw);
-    line-height: clamp(13vw, 20vw, 35vw);
-
+    font-size: clamp(80px, 16.6vw, 360px);
+    line-height: clamp(80px, 16.6vw, 360px);
 }
 .fontSize-fluid-branding {
     font-size: clamp(15vw, 21vw, 27vw);
@@ -24,8 +23,8 @@
 }
 
 .fontSize-fluid-social {
-    font-size: clamp(33px, 7.14vw, 150px);
-    line-height: clamp(33px, 7.14vw, 150px);
+    font-size: clamp(80px, 16.6vw, 330px);
+    line-height: clamp(80px, 16.6vw, 330px);
 
 }
 
@@ -52,9 +51,13 @@
 }
 .fontSize-fluid-strategy {
     font-size: clamp(7vw, 16vw, 21vw);
-    line-height: clamp(7vw, 15vw, 21vw);
-
+    line-height: clamp(7vw, 16vw, 21vw);
 }
+.text-elevating{
+    font-size: clamp(16px, 3.33vw, 72px);
+    line-height: clamp(22px, 4.72vw, 102px);
+}
+
 .bg-strategy {
     background-color: #68725E; ;
 }
@@ -84,3 +87,62 @@
     -webkit-text-stroke: 1px white;
    
 }
+
+/* Contenedor principal */
+.slider-wrapper {
+    width: 100%;
+   
+  }
+  
+  /* Contenedor del slider */
+  .slider-container {
+    display: flex;
+    width: 500%; /* Ajusta el ancho para las tres imágenes */
+    animation: slide-animation 9s linear infinite; /* Movimiento contínuo */
+  }
+  
+  /* Cada imagen (slide) */
+  .slide {
+    width: 100%; /* Cada slide ocupa el 100% del contenedor */
+    height: 100%;
+  }
+  
+  /* Asegúrate que las imágenes no se deformen */
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Para evitar que las imágenes se estiren */
+  }
+  
+  /* Animación para el movimiento del slider */
+  @keyframes slide-animation {
+    0% {
+      transform: translate(0, 0) rotate(45deg); /* Al inicio */
+    }
+    33% {
+      transform: translate(-33.33%, -33.33%) rotate(45deg); /* Mover a la segunda imagen */
+    }
+    66% {
+      transform: translate(-66.66%, -66.66%) rotate(45deg); /* Mover a la tercera imagen */
+    }
+    100% {
+      transform: translate(0, 0) rotate(45deg); /* Regresar al inicio */
+    }
+  }
+  
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   /* Rota el contenedor 45 grados */
+  }
+  
+  .item {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-45deg); /* Rota los elementos dentro del contenedor en sentido opuesto */
+  }

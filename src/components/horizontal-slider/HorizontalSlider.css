@@ -3,19 +3,7 @@
     --images-width: 230px;
 }
 
-.carousel-container {
-    width: 100%;    
-    height: auto;
-    overflow: hidden; /* Asegura que solo se vea la parte visible del carrusel */
-  }
-  
-  .slider {
-    width: 100vw;
-    max-width: calc(var(--cant-images) * var(--images-width));
-    height: auto;
-    margin: auto;
-    overflow: hidden;
-}
+
 
 .slider .slide-track {
     display: flex;

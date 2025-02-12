@@ -46,7 +46,7 @@ const Hero: React.FC<HeroProps> = ({
                     }}
                 >
                     <div className="absolute inset-0 bg-black opacity-40"></div>
-                    <div className="flex flex-col justify-between p-12 z-10 h-[100%]">
+                    <div className="flex flex-col justify-between pl-[100px] pr-20 pt-20 pb-14 z-10 h-[100%]">
                         <div className="w-fit">
                             <div className="w-fit">
                                 <h1 className="font-antonio font-bold text-fluid text-white uppercase">
@@ -59,8 +59,8 @@ const Hero: React.FC<HeroProps> = ({
                                         className="relative object-contain"
                                         src="/images-proyecto/arrow.png"
                                         alt="arrow"
-                                        width={115}
-                                        height={101}
+                                        width={83}
+                                        height={67}
                                     />
                                 </div>
                                 <div className="flex justify-around z-10">
@@ -96,30 +96,30 @@ const Hero: React.FC<HeroProps> = ({
                             </div>
                         </div>
                         <div className="flex max-sm:justify-between justify-end text-white font-semibold font-Poppins">
-                            <div className="z-10  text-sm sm:text-base max-sm:w-full max-sm:flex max-sm:justify-between">
-                                <span className="mr-6 uppercase">previous</span>
-                                <span className="uppercase">next</span>
+                            <div className="z-10  font-pre-next max-sm:w-full max-sm:flex max-sm:justify-between">
+                                <span className="mr-6 uppercase font-Poppins">previous</span>
+                                <span className="uppercase font-Poppins">next</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="relative bg-black py-12 sm:py-16 px-12 mt-[-1px] z-20">
-                <div className="font-Poppins text-white text-sm sm:text-base">
+            <div className="relative bg-black py-12 sm:py-20 px-12 mt-[-1px] z-20">
+                <div className="font-Poppins text-white text-sm sm:text-2xl">
                     <div className="uppercase font-bold">About</div>
-                    <p>{aboutInfo}</p>
+                    <p className='font-light'>{aboutInfo}</p>
                 </div>
                 <div className="flex max-sm:flex-col py-8 sm:pt-16">
-                    <div className="w-1/2">
-                        <div className="w-80">
-                            <p className="font-Poppins font-medium text-sm sm:text-base text-white">
+                    <div className="w-full sm:w-1/2">
+                        <div className="w-[70%] sm:w-80">
+                            <p className="font-Poppins font-medium text-servicie text-white">
                                 {services.description}
                             </p>
                         </div>
                     </div>
                     <div className="w-1/2">
                         <div className='max-sm:mt-8'>
-                            <ul className="uppercase text-white text-sm sm:text-base font-antonio font-bold">
+                            <ul className="uppercase text-white text-ul-servicie font-antonio font-bold">
                                 {services.list.map((service, index) => (
                                     <li key={index}>
                                         <p className="leading-[30px] md:leading-[50px]">{service}</p>

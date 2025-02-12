@@ -1,21 +1,28 @@
+
 .text-fluid {
-    font-size: clamp(33px, 7.14vw, 150px); 
-    
+    font-size: clamp(60px, 12.5vw, 270px); 
+    line-height: clamp(60px, 12.5vw, 270px); 
 }
 
-
 .text-fluid-h4{
-    font-size: clamp(16px, 3vw, 72px);
-    line-height:32px
+    font-size: clamp(20px, 4.28vw, 90px);
+    line-height:clamp(21.3px, 4.44vw, 96px);
 }
 
 .text-fluid-span{
-    font-size: clamp(4px, 1.3vw, 36px);
-    line-height:  clamp(4px, 1.3vw, 36px);
+    font-size: clamp(7px, 1.52vw, 33px);
+    line-height:  clamp(10px, 1.94vw, 36px);
 }
 .text-pre-next{
-    font-size: clamp(10px,16px,16px);
+    font-size: clamp(5.5px,1.1vw,24px);
+    line-height: clamp(5px,1.1vw,24px);
+}
+.text-servicie {
+    font-size: clamp(7px, 1.52vw, 33px);
+    line-height:  clamp(11.3px, 2.36vw, 51px);
 }
 
-
-
+.text-ul-servicie{
+    font-size: clamp(10px, 2vw, 45px);
+    line-height:  clamp(13px, 2.7vw, 60px);
+}
