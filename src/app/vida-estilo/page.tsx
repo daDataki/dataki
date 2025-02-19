@@ -313,7 +313,7 @@ export default function VidaEstilo() {
               {/* IMAGEN 1 */}
               <Image
                 data-aos="fade-left"
-                data-aos-delay="500"
+                data-aos-delay="1200"
                 data-aos-duration="3200"
                 className={`w-[30%] z-30 ${fadeOutIndex >= 2 ? "fade-out-right" : ""}`}
                 src="/images-proyecto/MIAMI-SPACE-0.png"
@@ -404,9 +404,9 @@ export default function VidaEstilo() {
           <div className='absolute fontSize-fluid   top-1/3 left-32'><div className=''><h2 className='uppercase font-antonio font-bold text-bordered-strategy '>Digital</h2></div>
             <div className=''><h2 className='uppercase font-antonio font-bold text-bordered-strategy '>Strategy</h2></div></div>
         </div>
-        <div><div className=' w-full flex justify-center z-10 mt-[-1px]'><Image
+        <div><div className='bg-[#E2DED6] w-full flex justify-center z-10 mt-[-1px]'><Image
           className=" w-full z-10 "
-          src="/images-proyecto/Vida-Estilo-Menu.png"
+          src="/images-proyecto/Mockup V&E.png"
           alt="vida-estilo"
           layout="intrinsic"
           width={800}
