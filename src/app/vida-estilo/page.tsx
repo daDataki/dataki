@@ -148,7 +148,7 @@ export default function VidaEstilo() {
   useEffect(() => {
     AOS.init({
       duration: 3000,
-      once: false,
+      once: true,
       easing: "ease-out-cubic",
     });
 
@@ -302,7 +302,7 @@ export default function VidaEstilo() {
               {/* SOCIAL */}
               <div
                 className={`absolute w-fit top-0 lg:left-[-58px] xl:left-0 uppercase text-white font-semibold font-antonio fontSize-fluid-social z-50
-        ${fadeOutIndex >= 1 ? "" : ""}`}
+         ${fadeOutIndex >= 1 ? "" : ""}`}
                 data-aos="fade-left"
                 data-aos-delay="500"
                 data-aos-duration="3000"
