@@ -140,28 +140,66 @@ export default function VidaEstilo() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  useEffect(() => {
-    AOS.init({ duration: 3000, once: false });
-  }, []);
+
+
   const [fadeOutIndex, setFadeOutIndex] = useState<number>(-1);
+  const elementRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 3000,
+      once: false,
+      easing: "ease-out-cubic",
+    });
 
-    // Tiempo total de aparición (última animación + 2s de espera)
-    const totalTime = 1500 + 1100 + 2000;
+    let timeoutId: NodeJS.Timeout | null = null;
+    let intervalId: NodeJS.Timeout | null = null;
 
-    const timeoutId = setTimeout(() => {
-      let index = 0;
-      const interval = setInterval(() => {
-        setFadeOutIndex(index);
-        index++;
-        if (index > 4) clearInterval(interval); // Se ejecuta para 4 elementos
-      }, 1000); // Cada elemento desaparece con 1s de diferencia
-    }, totalTime);
+    const startFadeOutAnimation = () => {
+      setFadeOutIndex(-1); // Resetear animación cuando aparece el elemento
 
-    return () => clearTimeout(timeoutId);// Limpia intervalos si el componente se desmonta
+      const totalTime = 1500 + 1100 + 2000; // Tiempo total antes de comenzar la desaparición
+
+      timeoutId = setTimeout(() => {
+        let index = 0;
+        intervalId = setInterval(() => {
+          setFadeOutIndex((prev) => index); // Actualiza correctamente el estado
+          index++;
+          if (index > 4 && intervalId) {
+            clearInterval(intervalId);
+          }
+        }, 1000);
+      }, totalTime);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            startFadeOutAnimation();
+          } else {
+            // Si el usuario scrollea fuera, reiniciamos la animación
+            setFadeOutIndex(-1);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => {
+      if (elementRef.current) {
+        observer.unobserve(elementRef.current);
+      }
+      if (timeoutId) clearTimeout(timeoutId);
+      if (intervalId) clearInterval(intervalId);
+      AOS.refresh();
+    };
   }, []);
+
   return (
     <>
       <div>
@@ -254,7 +292,7 @@ export default function VidaEstilo() {
           </div>
         </div>
 
-        <div className='relative py-12 px-12 md:py-32 md:px-48 bg-black mt-[-1px]'>
+        <div className="relative py-12 px-12 md:py-32 md:px-48 bg-black mt-[-1px]" ref={elementRef}>
           <div className="md:hidden text-white font-semibold font-antonio fontSize-fluid-social">
             <h2>Social Media</h2>
           </div>
@@ -264,7 +302,7 @@ export default function VidaEstilo() {
               {/* SOCIAL */}
               <div
                 className={`absolute w-fit top-0 lg:left-[-58px] xl:left-0 uppercase text-white font-semibold font-antonio fontSize-fluid-social z-50
-          ${fadeOutIndex >= 1 ? "" : ""}`}
+        ${fadeOutIndex >= 1 ? "" : ""}`}
                 data-aos="fade-left"
                 data-aos-delay="500"
                 data-aos-duration="3000"
@@ -293,8 +331,8 @@ export default function VidaEstilo() {
                   data-aos="fade-right"
                   data-aos-delay="0"
                   data-aos-duration="3000"
-                  className={`relative lg:left-[-88px] xl:left-[-141px] w-[30%] z-30 ${fadeOutIndex >= 0 ? "fade-out-up" : ""
-                    }`}
+                  className={`relative lg:left-[-88px] xl:left-[-141px] w-[30%] z-30 
+          ${fadeOutIndex >= 0 ? "fade-out-up" : ""}`}
                   src="/images-proyecto/MIAMI-SPACE1-1.png"
                   alt="vida-estilo"
                   layout="intrinsic"
@@ -307,8 +345,8 @@ export default function VidaEstilo() {
                   data-aos="fade-left"
                   data-aos-delay="1200"
                   data-aos-duration="3500"
-                  className={`w-[30%] relative lg:top-[-67px] xl:top-[-130px] z-30 ${fadeOutIndex >= 3 ? "fade-out-left" : ""
-                    }`}
+                  className={`w-[30%] relative lg:top-[-67px] xl:top-[-130px] z-30 
+          ${fadeOutIndex >= 3 ? "fade-out-left" : ""}`}
                   src="/images-proyecto/MIAMI-SPACE2-1.png"
                   alt="vida-estilo"
                   layout="intrinsic"
@@ -319,7 +357,7 @@ export default function VidaEstilo() {
                 {/* MEDIA */}
                 <div
                   className={`absolute w-full flex justify-end lg:top-[-14px] xl:top-0 uppercase text-white font-semibold font-antonio fontSize-fluid-social z-10
-            ${fadeOutIndex >= 4 ? "" : ""}`}
+          ${fadeOutIndex >= 4 ? "" : ""}`}
                   data-aos="fade-down"
                   data-aos-delay="1500"
                   data-aos-duration="3500"
@@ -330,17 +368,18 @@ export default function VidaEstilo() {
             </div>
           </div>
         </div>
+
         <div className='relative flex bg-strategy mt-[-1px] h-screen overflow-hidden'  >
           <ImageColumn
             left="left-[-22rem]"
             top="top-0"
-            images={["/images-proyecto/image1.png", "/images-proyecto/image2.png", "/images-proyecto/image1.png","/images-proyecto/image2.png", "/images-proyecto/image1.png"]}
+            images={["/images-proyecto/image1.png", "/images-proyecto/image2.png", "/images-proyecto/image1.png", "/images-proyecto/image2.png", "/images-proyecto/image1.png"]}
             transitionSpeeds={[2000, 500, 8000, 1000]} // Velocidades para subida y bajada
           />
           <ImageColumn
             left="left-0"
             top="top-0"
-            images={["/images-proyecto/image3.png", "/images-proyecto/image4.png", "/images-proyecto/image5.png","/images-proyecto/image4.png", "/images-proyecto/image5.png"]}
+            images={["/images-proyecto/image3.png", "/images-proyecto/image4.png", "/images-proyecto/image5.png", "/images-proyecto/image4.png", "/images-proyecto/image5.png"]}
             transitionSpeeds={[1500, 8000, 6000, 2000]} // Velocidades para subida y bajada
           />
           <ImageColumn
@@ -352,13 +391,13 @@ export default function VidaEstilo() {
           <ImageColumn
             left="left-[44rem]"
             top="top-0"
-            images={["/images-proyecto/image8.png", "/images-proyecto/image9.png", "/images-proyecto/image8.png","/images-proyecto/image9.png", "/images-proyecto/image8.png"]}
+            images={["/images-proyecto/image8.png", "/images-proyecto/image9.png", "/images-proyecto/image8.png", "/images-proyecto/image9.png", "/images-proyecto/image8.png"]}
             transitionSpeeds={[8000, 2000, 4000, 1000]} // Velocidades para subida y bajada
           />
           <ImageColumn
             left="left-[66rem]"
             top="top-0"
-            images={["/images-proyecto/image9.png", "/images-proyecto/image10.png", "/images-proyecto/image9.png","/images-proyecto/image10.png", "/images-proyecto/image9.png"]}
+            images={["/images-proyecto/image9.png", "/images-proyecto/image10.png", "/images-proyecto/image9.png", "/images-proyecto/image10.png", "/images-proyecto/image9.png"]}
             transitionSpeeds={[7000, 5000, 7000, 5000]} // Velocidades para subida y bajada
           />
 
