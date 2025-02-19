@@ -1,4 +1,9 @@
+.text-back-case{
+    font-size: clamp(20px,4.16vw,90px);
+    line-height:clamp(22px,4.72vw,102px) ;
+}
+
 .text-pre-next{
-    font-size: clamp(12px,1.71vw,36px);
-    line-height:clamp(12px,1.71vw,36px) ;
+    font-size: clamp(8px,1.66vw,36px);
+    line-height:clamp(9px,1.99vw,42px) ;
 }

@@ -13,8 +13,8 @@
 }
 
 .fontSize-fluid {
-    font-size: clamp(80px, 16.6vw, 360px);
-    line-height: clamp(80px, 16.6vw, 360px);
+    font-size: clamp(40px, 16.6vw, 360px);
+    line-height: clamp(40px, 16.6vw, 360px);
 }
 .fontSize-fluid-branding {
     font-size: clamp(15vw, 21vw, 27vw);
@@ -57,6 +57,18 @@
     font-size: clamp(16px, 3.33vw, 72px);
     line-height: clamp(22px, 4.72vw, 102px);
 }
+.text-metric{
+    font-size: clamp(20px, 4.16vw, 90px);
+    line-height: clamp(23px, 4.86vw, 105px);
+}
+.text-caption{
+    font-size: clamp(7px, 1.52vw, 33px);
+    line-height: clamp(8px, 1.80vw, 39px);
+}
+.text-clip{
+    font-size: clamp(10px, 2.08vw, 45px);
+    line-height: clamp(13px, 2.7vw, 60px);
+}
 
 .bg-strategy {
     background-color: #68725E; ;
@@ -77,7 +89,7 @@
     /* Sombra abajo-derecha */
 }
 .fontSize-fluid-data {
-    font-size: clamp(7vw, 16vw, 21vw);
+    font-size: clamp(80px, 16vw, 360px);
     line-height: clamp(7vw, 15vw, 21vw);
 
 }
@@ -145,4 +157,19 @@
     justify-content: center;
     align-items: center;
     transform: rotate(-45deg); /* Rota los elementos dentro del contenedor en sentido opuesto */
+  }
+
+  .carousel {
+    width: 100%;
+  }
+  
+  .carousel-inner {
+    width: 100%;
+    display: flex;
+    transition: transform 5s ease-in-out;
+  }
+  
+  .carousel-inner > * {
+    flex: 0 0 100%;
+    width: 100%;
   }

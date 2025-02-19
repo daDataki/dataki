@@ -70,7 +70,7 @@ const Hero: React.FC<HeroProps> = ({
                                 </div>
                             </div>
                         </div>
-                        <div className="max-sm:hidden w-[71%] flex justify-between text-white">
+                        <div className="max-sm:hidden w-[69%] flex justify-between text-white">
                             <div className="z-10">
                                 <h4 className="font-Poppins font-bold text-fluid-span uppercase z-10 mb-2">Date</h4>
                                 <span className="text-fluid-span font-Poppins z-10">
@@ -111,7 +111,7 @@ const Hero: React.FC<HeroProps> = ({
                 </div>
                 <div className="flex max-sm:flex-col py-8 sm:pt-16">
                     <div className="w-full sm:w-1/2">
-                        <div className="w-[70%] sm:w-80">
+                        <div className="w-[70%] sm:w-[75%]">
                             <p className="font-Poppins font-medium text-servicie text-white">
                                 {services.description}
                             </p>
@@ -122,7 +122,7 @@ const Hero: React.FC<HeroProps> = ({
                             <ul className="uppercase text-white text-ul-servicie font-antonio font-bold">
                                 {services.list.map((service, index) => (
                                     <li key={index}>
-                                        <p className="leading-[30px] md:leading-[50px]">{service}</p>
+                                        <p>{service}</p>
                                     </li>
                                 ))}
                             </ul>

@@ -1,5 +1,31 @@
 
 .xtext-lg {
-    font-size: clamp(25px, 7.1vw, 150px);
-    line-height: clamp(25px, 7.1vw, 150px);
+    font-size: clamp(27px, 7.63vw, 165px);
+    line-height: clamp(30px, 8.33vw, 180px);
 }
+
+.text-let {
+    font-size: clamp(25px, 7.1vw, 150px);
+    line-height: clamp(50px, 14vw, 300px);
+}
+.text-virtual{
+    font-size: clamp(7px, 1.57vw, 33px);
+    line-height: clamp(15px, 2vw, 45px);
+}
+.text-caption{
+    font-size: clamp(7px, 1.57vw, 33px);
+    line-height: clamp(10px, 2vw, 45px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
