@@ -163,7 +163,7 @@ export default function VidaEstilo() {
       timeoutId = setTimeout(() => {
         let index = 0;
         intervalId = setInterval(() => {
-          setFadeOutIndex((prev) => index); // Actualiza correctamente el estado
+          setFadeOutIndex(() => index); // Actualiza correctamente el estado
           index++;
           if (index > 4 && intervalId) {
             clearInterval(intervalId);
