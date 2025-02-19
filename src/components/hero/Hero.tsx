@@ -46,14 +46,14 @@ const Hero: React.FC<HeroProps> = ({
                     }}
                 >
                     <div className="absolute inset-0 bg-black opacity-40"></div>
-                    <div className="flex flex-col justify-between pl-[100px] pr-20 pt-20 pb-14 z-10 h-[100%]">
+                    <div className="flex flex-col justify-between pl-[100px] pr-20 pt-20 pb-6 z-10 h-[100%]">
                         <div className="w-fit">
                             <div className="w-fit">
                                 <h1 className="font-antonio font-bold text-fluid text-white uppercase">
                                     {title}
                                 </h1>
                             </div>
-                            <div className="hidden sm:flex justify-between items-center w-full">
+                            <div className="hidden sm:flex justify-between items-center w-full mt-[7px]">
                                 <div className="sm:w-10 lg:w-12 h-auto">
                                     <Image
                                         className="relative object-contain"
@@ -70,7 +70,7 @@ const Hero: React.FC<HeroProps> = ({
                                 </div>
                             </div>
                         </div>
-                        <div className="max-sm:hidden w-[69%] flex justify-between text-white">
+                        <div className="max-sm:hidden w-[72%] flex justify-between text-white">
                             <div className="z-10">
                                 <h4 className="font-Poppins font-bold text-fluid-span uppercase z-10 mb-2">Date</h4>
                                 <span className="text-fluid-span font-Poppins z-10">
@@ -121,7 +121,7 @@ const Hero: React.FC<HeroProps> = ({
                         <div className='max-sm:mt-8'>
                             <ul className="uppercase text-white text-ul-servicie font-antonio font-bold">
                                 {services.list.map((service, index) => (
-                                    <li key={index}>
+                                    <li key={index} className='text-ul-servicie'>
                                         <p>{service}</p>
                                     </li>
                                 ))}

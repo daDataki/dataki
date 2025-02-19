@@ -5,7 +5,7 @@
 }
 
 .text-fluid-h4{
-    font-size: clamp(20px, 4.28vw, 90px);
+    font-size: clamp(20px, 4.16vw, 90px);
     line-height:clamp(21.3px, 4.44vw, 96px);
 }
 
@@ -23,6 +23,6 @@
 }
 
 .text-ul-servicie{
-    font-size: clamp(10px, 2vw, 45px);
-    line-height:  clamp(13px, 2.7vw, 60px);
+    font-size: clamp(10px, 2.08vw, 45px);
+    line-height:  clamp(23px, 4.86vw, 105px);
 }

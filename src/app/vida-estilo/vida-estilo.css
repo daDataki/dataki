@@ -2,13 +2,13 @@
     color: black;
     /* Color de la letra */
     text-shadow:
-        -1px -1px 0 white,
+        -2px -2px 0 white,
         /* Sombra arriba-izquierda */
-        1px -1px 0 white,
+        2px -2px 0 white,
         /* Sombra arriba-derecha */
-        -1px 1px 0 white,
+        -2px 2px 0 white,
         /* Sombra abajo-izquierda */
-        1px 1px 0 white;
+        2px 2px 0 white;
     /* Sombra abajo-derecha */
 }
 
@@ -96,7 +96,7 @@
 .text-bordered-branding {
     color: transparent;
     /* Color de la letra */
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 2px white;
    
 }
 
@@ -172,4 +172,76 @@
   .carousel-inner > * {
     flex: 0 0 100%;
     width: 100%;
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-30px); /* Opcional: Mueve ligeramente hacia arriba */
+    }
+  }
+  
+  .fade-out {
+    animation: fadeOut 1.5s ease-in-out forwards;
+  }
+  @keyframes fadeOutLeft {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+  }
+  
+  @keyframes fadeOutRight {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+  }
+  
+  @keyframes fadeOutDown {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+  }
+  @keyframes fadeOutUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100px); /* Ajusta según sea necesario */
+    }
+  }
+  
+  .fade-out-left {
+    animation: fadeOutLeft 1s ease-out forwards;
+  }
+  
+  .fade-out-right {
+    animation: fadeOutRight 1s ease-out forwards;
+  }
+  
+  .fade-out-down {
+    animation: fadeOutDown 1s ease-out forwards;
+  }
+  .fade-out-up {
+    animation: fadeOutUp 1s ease-out forwards;
   }
