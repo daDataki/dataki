@@ -277,14 +277,30 @@ export default function VidaEstilo() {
             >
               <h2 className="uppercase text-bordered-branding sm:left-3">graphic</h2>
             </div>
-            <div className='w-full flex justify-center'><Image
-              className="w-[58%]  z-10 "
-              src="/images-proyecto/Vida-Estilo-Mockup.png"
-              alt="vida-estilo"
-              layout="intrinsic"
-              width={800}
-              height={1111}
-            />
+            <div className=' w-full flex justify-center'>
+              <div className='relative w-[58%] '>
+
+                <div className="absolute bg-blue w-[82%] h-[53%] top-[8%] left-[9%] overflow-hidden">
+                  <Image
+                    className=" z-10 scrollable-image"
+                    src="/images-proyecto/scroll.png"
+                    alt="vida-estilo"
+                    layout="intrinsic"
+                    width={800}
+                    height={1111}
+                  />
+
+                </div>
+                <Image
+                  className=" z-10 "
+                  src="/images-proyecto/imac.png"
+                  alt="vida-estilo"
+                  layout="intrinsic"
+                  width={800}
+                  height={1111}
+                />
+
+              </div>
               <div id="design" className="absolute bottom-24 w-fit text-start left-20">
                 <h2 className="uppercase text-bordered-branding sm:left-3">design</h2>
               </div>
