@@ -21,7 +21,7 @@ const ImageColumn = ({ left, top, images, transitionSpeeds }: { left: string, to
     // Extraemos las velocidades para las 4 fases (subida y bajada)
     const [speed1, speed2, speed3, speed4] = transitionSpeeds;
 
-    let timeoutId: NodeJS.Timeout[] = []; // Array para almacenar los identificadores de setTimeout
+    const timeoutId: NodeJS.Timeout[] = []; // Array para almacenar los identificadores de setTimeout
 
     function moveCarousel() {
       if (!columnRef.current) return;
