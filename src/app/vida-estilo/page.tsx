@@ -278,7 +278,7 @@ export default function VidaEstilo() {
               <h2 className="uppercase text-bordered-branding sm:left-3">graphic</h2>
             </div>
             <div className=' w-full flex justify-center'>
-              <div className='relative w-[58%] '>
+              <div className='relative w-[70%] z-20'>
 
                 <div className="absolute bg-blue w-[82%] h-[53%] top-[8%] left-[9%] overflow-hidden">
                   <Image
