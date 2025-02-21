@@ -1,0 +1,23 @@
+.text-about{
+    font-size: clamp(66px, 13.88vw, 350px);
+    line-height: clamp(66px, 13.88vw, 350px);
+}
+.text-our-story{
+    font-size: clamp(46px, 9.72vw, 210px);
+    line-height: clamp(46px, 9.72vw, 210px);
+}
+
+.text-become-your-growth{
+    font-size: clamp(40px, 8.33vw, 180px);
+    line-height: clamp(40px, 8.33vw, 180px);
+}
+
+.text-we{
+    font-size: clamp(10px, 2.08vw, 45px);
+    line-height: clamp(10px, 2.08vw, 45px);
+}
+
+.text-trus-integrate{
+    font-size: clamp(13px, 2.77vw, 60px);
+    line-height: clamp(20px, 4.16vw,90px);
+}

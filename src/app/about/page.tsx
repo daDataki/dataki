@@ -1,17 +1,18 @@
 
 import Image from "next/image";
+import "./about.css";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer"
 
 
 export default function About() {
-  return (  
+  return (
     <div>
-      <Header/>
+      <Header />
       <div className="bg-black">
-        <div className="flex justify-between items-center px-4 py-6">
+        <div className="flex justify-between items-center pl-12 pt-10">
           {/* Logo */}
-          <div className="flex-shrink-0 mt-4 ml-6">
+          <div className="flex-shrink-0 ">
             <Image
               src="/images-proyecto/logo.png"
               alt="logo-dataki"
@@ -21,39 +22,40 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="bg-black pt-12  sm:pt-32">
-        <div className="left-8 px-16 sm:left-24"><h1 className=" text-8xl sm:text-[150px] lg:text-[200px] font-antonio font-bold text-white uppercase">about
-        </h1><h2 className="absolute top-44 sm:top-[300px] lg:top-80 left-[120px]  sm:left-[156px] lg:left-44 text-easternBlue font-signature font-light text-[65px] sm:text-8xl lg:text-[140px]">Our story</h2>
+      <div className="bg-black pt-12   sm:pt-20">
+        <div className="relative pl-12 sm:pl-24">
+          <h1 className=" text-about font-antonio font-bold text-white uppercase">about</h1>
+          <h2 className="absolute text-our-story  text-easternBlue font-signature font-light left-[22%] md:left-[20%] lg:left-[17%] xl:left-[15%] 2xl:left-[14%] top-[64%]">Our story</h2>
         </div>
-        <div className="flex justify-center my-28 sm:my-32 md:my-36 lg:my-60"><h2 className="uppercase font-antonio font-bold text-white leading-[50px] text-[40px] sm:text-7xl lg:text-[110px]">We are ready to <br />
+        <div className="flex justify-center my-28 sm:my-32 md:my-36 lg:my-60"><h2 className="relative left-[4.28%] lg:left-[5.28%] xl:left-[3%] uppercase font-antonio font-bold text-white text-become-your-growth">We are ready to <br />
           become your <span className="text-easternBlue">growth <br />
             & business partner</span> </h2></div>
-        <div className="bg-white py-28 px-16">
-          <div className="flex flex-row justify-center gap-16">
-            <div className="w-1/2 flex justify-end"><h4 className="uppercase font-Poppins font-extralight text-xl sm:text-3xl leading-7 text-[#131313]">We work under <br /> 5 principles</h4></div>
-            <div className="w-1/2">
-              <h6 className="font-Poppins font-medium text-lg sm:text-3xl sm:leading-[60px] border-y border-black text-[#131313]">Trust</h6>
-              <h6 className="font-Poppins font-medium text-lg sm:text-3xl sm:leading-[60px] border-b border-black text-[#131313]">Quality</h6>
-              <h6 className="font-Poppins font-medium text-lg sm:text-3xl sm:leading-[60px] border-b border-black text-[#131313]">Empathy</h6>
-              <h6 className="font-Poppins font-medium text-lg sm:text-3xl sm:leading-[60px] border-b border-black text-[#131313]">Transparency</h6>
-              <h6 className="font-Poppins font-medium text-lg sm:text-3xl sm:leading-[60px] border-b border-black text-[#131313]">50% Thinkers + 50% doers</h6>
+        <div className="bg-white py-28">
+          <div className="flex flex-row justify-center gap-16 px-28">
+            <div className="w-1/2 flex justify-end"><h4 className="uppercase font-Poppins font-extralight text-we text-[#131313]">We work under <br /> 5 principles</h4></div>
+            <div className="w-1/2 text-trus-integrate">
+              <h6 className="font-Poppins font-medium  border-y border-black text-[#131313]">Trust</h6>
+              <h6 className="font-Poppins font-medium  border-b border-black text-[#131313]">Quality</h6>
+              <h6 className="font-Poppins font-medium  border-b border-black text-[#131313]">Empathy</h6>
+              <h6 className="font-Poppins font-medium  border-b border-black text-[#131313]">Transparency</h6>
+              <h6 className="font-Poppins font-medium  border-b border-black text-[#131313]">50% Thinkers + 50% doers</h6>
             </div>
           </div>
-          <div className="flex flex-row justify-center my-12 sm:my-32 gap-16">
-            <div className="w-1/2 flex justify-end"><h4 className="uppercase font-Poppins font-extralight text-xl sm:text-3xl leading-7 text-[#131313]">We are proud of <br /> our values</h4></div>
-            <div className="w-1/2">
-              <h6 className="font-Poppins font-medium text-lg sm:text-3xl sm:leading-[60px] border-y border-black text-[#131313]">Integrated</h6>
-              <h6 className="font-Poppins font-medium text-lg sm:text-3xl sm:leading-[60px] border-b border-black text-[#131313]">Partners Mindset</h6>
-              <h6 className="font-Poppins font-medium text-lg sm:text-3xl sm:leading-[60px] border-b border-black text-[#131313]">Performance Driven</h6>
-              <h6 className="font-Poppins font-medium text-lg sm:text-3xl sm:leading-[60px] border-b border-black text-[#131313]">Customer oriented</h6>
-              <h6 className="font-Poppins font-medium text-lg sm:text-3xl sm:leading-[60px] border-b border-black text-[#131313]">Co-creators</h6>
+          <div className="flex flex-row justify-center my-12 sm:my-32 gap-16 px-28">
+            <div className="w-1/2 flex justify-end"><h4 className="uppercase font-Poppins font-extralight text-we text-[#131313]">We are proud of <br /> our values</h4></div>
+            <div className="w-1/2 text-trus-integrate">
+              <h6 className="font-Poppins font-medium  border-y border-black text-[#131313]">Integrated</h6>
+              <h6 className="font-Poppins font-medium  border-b border-black text-[#131313]">Partners Mindset</h6>
+              <h6 className="font-Poppins font-medium  border-b border-black text-[#131313]">Performance Driven</h6>
+              <h6 className="font-Poppins font-medium  border-b border-black text-[#131313]">Customer oriented</h6>
+              <h6 className="font-Poppins font-medium  border-b border-black text-[#131313]">Co-creators</h6>
             </div>
           </div>
-          <div className="relative pb-32 sm:pb-60">
+          <div className="relative pb-32 sm:pb-60 pl-12 sm:pl-24">
             <h2 className="text-[80px] sm:text-[120px] md:text-[200px] font-bold uppercase font-antonio">meet</h2>
             <h2 className="absolute top-24 sm:top-20 md:top-36 left-0 sm:left-12 md:left-24 text-[40px] sm:text-[100px] md:text-[140px] font-light font-signature text-easternBlue">Our team</h2>
           </div>
-          <div className="w-full flex flex-col lg:flex-row justify-around items-center sm:space-x-8 pb-12">
+          <div className="w-full flex flex-col lg:flex-row justify-around items-center sm:space-x-8 pb-12 px-12  sm:px-24">
             <div className="w-full lg:w-1/3 flex flex-col justify-center items-center max-lg:mb-12 lg:items-start">
               <div className="w-[80%]  h-[330px] xl:h-[440px] bg-[#d9d9d9]"></div>
               <div className="flex flex-col justify-start">
