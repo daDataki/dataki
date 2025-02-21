@@ -1,5 +1,5 @@
 .text-cases {
-    font-size: clamp(7px, 1.52vw, 33px);
+    font-size: clamp(9px, 1.94vw, 42px);
     line-height: clamp(10px, 2.08vw, 45px);
 }
 .text-work {
@@ -18,4 +18,22 @@
     .mb-responsive {
       margin-bottom: clamp(133px, 13.88vw, 300px);
     }
+}
+
+@media (min-width: 1700px) {
+    .width-major{
+     width: 550px;
+     height: 383px;
+    }
+    .work-major{
+      top: 32%;
+    }
+    .work-showcase{
+      top: 39%;
+    }
+    .our-cases-major{
+      margin-bottom: 46px;
+    }
   }
+  
+
