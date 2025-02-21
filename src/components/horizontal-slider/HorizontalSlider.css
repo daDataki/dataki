@@ -1,6 +1,6 @@
 :root{ 
-    --cant-images: 9;
-    --images-width: 230px;
+    --cant-images: 8;
+    --images-width: 170px;
 }
 
 
@@ -24,14 +24,18 @@
     animation-duration: 20s;
     animation-name: scroll-right;
 }
-.slider:nth-child(3) {
-    border-bottom: none;
+.slider:nth-child(4) .slide-track{
+    animation-duration: 20s;
+    animation-name: scroll-left;
 }
+
 .slide {
  width: var(--images-width);
  display: flex;
  justify-content: center;
  align-items: center;
+ padding-top: 12px;
+ padding-bottom: 12px;
 }
 
 .slider .slide img {
@@ -59,7 +63,7 @@
     }
 }
 .xtext-sm {
-    font-size: clamp(12px, 2.14vw, 45px);
+    font-size: clamp(9px, 1.94vw, 42px);
     line-height: clamp(12px, 2.14vw, 45px);
 }
 .xtext-lg {
@@ -68,6 +72,6 @@
 }
 
 .xtext-2xl {
-    font-size: clamp(40px, 12vw, 250px);
-    line-height: clamp(40px, 12vw, 250px);
+    font-size: clamp(50px, 10.41vw, 225px);
+    line-height: clamp(50px, 10.41vw, 225px);
 }

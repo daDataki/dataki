@@ -16,7 +16,7 @@ export default async function HorizontalSlider() {
 
   console.log(images)
   // Dividir las imágenes en grupos de 9
-  const imageGroups = chunkArray(images, 9);
+  const imageGroups = chunkArray(images, 8);
 
   return (
     <div className="bg-black text-white max-sm:pt-0 py-12 overflow-x-hidden">
@@ -25,7 +25,7 @@ export default async function HorizontalSlider() {
           <h2 className="text-center xtext-sm font-Poppins font-semibold my-6 sm:my-12 lg:my-20 uppercase">
             true partners
           </h2>
-          <h1 className="text-center xtext-lg font-antonio font-bold my-6 sm:my-12 lg:my-20 uppercase">
+          <h1 className="text-center xtext-2xl font-antonio font-bold my-6 sm:my-12 lg:my-20 uppercase">
             they <span className="text-easternBlue">trust us</span>
           </h1>
 

@@ -14,7 +14,7 @@ export default function Footer({ background = DEFAULT_BG }:FooterProps) {
                     <p className="font-normal max-sm:mb-12 text-let font-signature">
                         Let’s Talk
                     </p>
-                    <p className="font-semibold text-virtual font-Poppins">
+                    <p className="font-semibold text-caption font-Poppins">
                         Virtual team <br /> with global reach.
                     </p>
                 </div>

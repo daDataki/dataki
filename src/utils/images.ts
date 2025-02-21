@@ -2,8 +2,11 @@ import fs from "fs";
 import path from "path";
 
 export default function getImages() {
-  const imagesDir = path.join(process.cwd(), "public/images"); // Ruta a la carpeta de imágenes
+  const imagesDir = path.join(process.cwd(), "public/img-svg"); // Ruta a la carpeta de imágenes
   const files = fs.readdirSync(imagesDir);
-  const images = files.map((file) => `/images/${file}`); // Formatea las rutas de las imágenes
+  // Ordena los archivos alfabéticamente
+  const sortedFiles = files.sort((a, b) => a.localeCompare(b));
+  const images = sortedFiles.map((file) => `/img-svg/${file}`); // Formatea las rutas de las imágenes
   return images;
 }
+

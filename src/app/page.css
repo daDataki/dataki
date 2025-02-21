@@ -4,11 +4,11 @@
 }
 
 .xtext-sm {
-    font-size: clamp(15px, 2.14vw, 45px);
-    line-height: clamp(15px, 2.14vw, 45px);
+    font-size: clamp(9px, 1.94vw, 42px);
+    line-height: clamp(10px, 2.08vw, 45px);
 }
 
 .xtext-lg {
-    font-size: clamp(25px, 7.1vw, 150px);
-    line-height: clamp(25px, 7.1vw, 150px);
+    font-size: clamp(40px, 8.33vw, 180px);
+    line-height: clamp(40px, 8.33vw, 180px);
 }

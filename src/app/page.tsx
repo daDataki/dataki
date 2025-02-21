@@ -15,7 +15,7 @@ export default function Home() {
         {/* Sección del video */}
         <div className="relative">
           <video
-            className="w-full h-[35vh] sm:h-[50vh] lg:h-screen max-h-[95vh] object-cover"
+            className="w-full  object-cover"
             autoPlay
             loop
             muted
@@ -26,13 +26,13 @@ export default function Home() {
             <source src="/video/Video1_06-01.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className="flex flex-col bg-white text-black max-h-[95vh] ">
-          <div className="mt-8 md:mt-12 lg:mt-16 mb-4 lg:mb-8">
-            <h4 className="flex flex-col justify-center items-center font-Poppins font-semibold xtext-sm uppercase ">
+        <div className="flex flex-col bg-white text-black w-full  object-cover py-12 ">
+          <div className="pt-4 pb-8">
+            <h4 className="flex flex-col justify-center items-center font-Poppins font-medium xtext-sm uppercase ">
               <span>Growth &</span> <span>business partner</span>
             </h4>
           </div>
-          <div className="flex flex-col justify-center items-center font-antonio font-semibold xtext-lg mb-8 md:mb-12 lg:mb-16 uppercase ">
+          <div className="flex flex-col justify-center items-center font-antonio font-semibold xtext-lg  uppercase ">
             <h2 className='text-center'><span>we help companies</span>
               <div>
                 <span className="text-easternBlue">bring to life</span>
@@ -49,7 +49,7 @@ export default function Home() {
         </div>
         <div className='flex flex-col w-full'>
           <video
-            className="w-full h-[35vh] sm:h-[50vh] lg:h-screen max-h-[95vh] object-cover"
+            className="w-full object-cover"
             autoPlay
             loop
             muted
@@ -59,7 +59,7 @@ export default function Home() {
           </video>
         </div>
         <div><VerticalSlider /></div>
-        <div className='bg-white relative max-sm:mb-10 min-h-screen'>
+        <div className='bg-white relative max-sm:mb-10'>
           <ImageGrid />
         </div>
 
