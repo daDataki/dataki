@@ -15,22 +15,24 @@ export default function Home() {
         {/* Sección del video */}
         <div className="relative">
           <video
-            className="w-full h-[35vh]  sm:h-[50vh] lg:h-screen object-cover"
+            className="w-full h-[35vh] sm:h-[50vh] lg:h-screen max-h-[95vh] object-cover"
             autoPlay
             loop
             muted
             playsInline
+            preload="auto"
+            aria-hidden="true"
           >
             <source src="/video/Video1_06-01.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className="flex flex-col bg-white text-black">
-          <div className="my-8 md:my-12 lg:my-20">
+        <div className="flex flex-col bg-white text-black max-h-[95vh] ">
+          <div className="mt-8 md:mt-12 lg:mt-16 mb-4 lg:mb-8">
             <h4 className="flex flex-col justify-center items-center font-Poppins font-semibold xtext-sm uppercase ">
               <span>Growth &</span> <span>business partner</span>
             </h4>
           </div>
-          <div className="flex flex-col justify-center items-center font-antonio font-semibold xtext-lg mb-8 md:mb-12 lg:mb-20 uppercase ">
+          <div className="flex flex-col justify-center items-center font-antonio font-semibold xtext-lg mb-8 md:mb-12 lg:mb-16 uppercase ">
             <h2 className='text-center'><span>we help companies</span>
               <div>
                 <span className="text-easternBlue">bring to life</span>
@@ -39,13 +41,15 @@ export default function Home() {
               <span>business vision</span></h2>
 
           </div>
-          <div className="flex flex-col justify-center items-center font-Poppins font-medium xtext-xs mb-8 md:mb-12 lg:mb-20 uppercase ">
-            <h5>keep scrolling</h5>
-          </div>
+          {/*
+            <div className="flex flex-col justify-center items-center font-Poppins font-medium text-xs mb-8 md:mb-12 lg:mb-20 uppercase ">
+             <h5>keep scrolling</h5>
+           </div>
+          */}
         </div>
         <div className='flex flex-col w-full'>
           <video
-            className="w-full h-[35vh]  sm:h-[50vh] lg:h-screen object-cover"
+            className="w-full h-[35vh] sm:h-[50vh] lg:h-screen max-h-[95vh] object-cover"
             autoPlay
             loop
             muted
@@ -55,8 +59,7 @@ export default function Home() {
           </video>
         </div>
         <div><VerticalSlider /></div>
-
-        <div className='bg-white relative max-sm:mb-10'>
+        <div className='bg-white relative max-sm:mb-10 min-h-screen'>
           <ImageGrid />
         </div>
 

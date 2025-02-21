@@ -1,50 +1,119 @@
 import Image from 'next/image';
+import './ImageGrid.css';
 
 export default function ImageGrid() {
-
   return (
-    <div className="container mx-auto max-w-full sm:mb-44 ">
-      <div className="max-sm:mt-12 sm:my-20">
-        <h2 className="text-center text-3xl font-Poppins text-black font-light py-8 sm:pb-32 lg:pb-44 sm:pt-12 uppercase">our CASES</h2>
+    <div className="mx-auto w-full sm:mb-16 min-h-screen overflow-hidden max-sm:pt-10">
+      <div className="max-sm:hidden max-sm:mt-12 sm:mt-14 ">
+        <h2 className="text-center text-cases font-Poppins text-black font-light sm:pb-32 lg:pb-44 uppercase">
+          our CASES
+        </h2>
       </div>
+
+      {/* Sección 'Work' */}
       <div className="relative flex flex-col sm:hidden items-center justify-center">
-        <h2 className=" text-9xl font-bold font-antonio text-black uppercase">work</h2>
-        <h3 className=" text-7xl font-light font-signature text-easternBlue ">Showcase</h3>
-      </div>
-      <div className="max-sm:flex-col max-sm:justify-center max-sm:items-center flex justify-between items-end max-sm:gap-4 max-sm:mb-3">
-        <Image
-          src="/images-grid/Mask-group-1.png"
-          alt="Mask group 1"
-          className="sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px]"
-          width={250}
-          height={150}
-        />
-        <div> <Image src="/images-grid/Mask-group-2.png" alt="Mask group 2 " className=" sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px] sm:-translate-y-1/2" width={250}
-          height={150} /></div>
-        <div><Image src="/images-grid/Mask-group-3.png" alt="Mask group 3 " className="max-sm:h-[173px] sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px]" width={250}
-          height={150} /></div>
+        <h2 className="text-work font-bold font-antonio text-black uppercase">work</h2>
+        <h3 className="text-7xl font-light font-signature text-easternBlue">
+          Showcase
+        </h3>
       </div>
 
-      <div className="relative max-sm:hidden flex items-center justify-center">
-        <h2 className="sm:text-8xl lg:text-[140px] xl:text-[220px]  leading-[220px] -mt-16 mr-0 lg:mr-20 xl:mr-0 lg:-mt-36 font-bold font-antonio uppercase">work</h2>
-        <h3 className="absolute z-10 top-4 lg:-top-12 xl:top-0 left-1/2 -translate-x-[116px] xl:-translate-x-[76px] right-10 sm:text-7xl lg:text-[100px] xl:text-[110px] leading-[126px] font-light font-signature text-easternBlue ">Showcase</h3>
-      </div>
-
-      <div className="max-sm:flex-col max-sm:justify-center max-sm:items-center flex sm:mt-40 max-sm:gap-4">
-        <div className="flex justify-center sm:w-1/2">
+      {/* Primer grupo de imágenes */}
+      <div className="flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end mb-responsive max-sm:gap-8 max-sm:mb-8">
+        <div>
           <Image
-            src="/images-grid/Mask-group-4.png"
-            alt="Mask group 3"
-            className="sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px]" width={250}
-            height={150}
+            src="/images-grid/busy-1.png"
+            alt="busy-1.png"
+            className="sm:w-[212px] lg:w-[285px] lg:h-[198px] xl:w-[400px] sm:h-[150px] xl:h-[278px]"
+            width={400}
+            height={278}
           />
         </div>
-        <div className="flex justify-center sm:w-1/2 ">
+
+        <div>
           <Image
-            src="/images-grid/beacon-hotel-south-beach 5.png"
-            alt="beacon-hotel-south-beach"
-            className="sm:w-[250px] lg:w-auto sm:h-[150px] lg:h-[278px] sm:-translate-y-1/2" width={250}
-            height={150}
+            src="/images-grid/Maskgroup2.png"
+            alt="Mask group 2"
+            className="sm:w-[212px] lg:w-[285px] lg:h-[198px] xl:w-[400px] sm:h-[150px] xl:h-[278px] sm:-translate-y-1/2"
+            width={400}
+            height={278}
+          />
+        </div>
+
+        <div>
+          <Image
+            src="/images-grid/Mask-group33.png"
+            alt="Mask group 3"
+            className="max-sm:h-[173px] sm:w-[212px] lg:w-[285px] lg:h-[198px] xl:w-[400px] sm:h-[150px] xl:h-[278px] sm:-translate-y-1/3"
+            width={400}
+            height={278}
+          />
+        </div>
+      </div>
+
+      {/* Sección 'Work' */}
+      <div className="max-sm:hidden absolute inset-0 flex items-center justify-center">
+        <h2 className="absolute text-work font-bold font-antonio uppercase top-[37%] xl:top-[34%] left-1/2 -translate-x-1/2 -translate-y-1/2">work</h2>
+        <h3 className="absolute z-10  text-Showcase font-light font-signature text-easternBlue top-[44%] xl:top-[40%] left-[57%] -translate-x-1/2 -translate-y-1/2">
+          Showcase
+        </h3>
+      </div>
+
+
+      {/* Segundo grupo de imágenes */}
+      <div className="relative flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end sm:left-[7.3vw] mb-responsive max-sm:gap-8 max-sm:mb-8">
+        <Image
+          src="/images-grid/Mask-group4.png"
+          alt="Mask group 4"
+          className="sm:w-[212px] lg:w-[285px] lg:h-[198px] xl:w-[400px] sm:h-[150px] xl:h-[278px]"
+          width={400}
+          height={278}
+        />
+        <div>
+          <Image
+            src="/images-grid/beacon-beach5.png"
+            alt="Mask group 2"
+            className="sm:w-[212px] lg:w-[285px] lg:h-[198px] xl:w-[400px]  sm:h-[150px] xl:h-[278px] sm:-translate-y-1/2"
+            width={400}
+            height={278}
+          />
+        </div>
+        <div className="">
+          <Image
+            src="/images-grid/miroshnichenko66.png"
+            alt="Mask group 3"
+            className="max-sm:h-[173px] sm:w-[212px] lg:w-[285px] lg:h-[198px] xl:w-[400px] sm:h-[150px] xl:h-[278px] sm:-translate-y-[-20%]"
+            width={400}
+            height={278}
+          />
+        </div>
+      </div>
+
+      {/* Tercer grupo de imágenes */}
+      <div className="flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end max-sm:gap-8 max-sm:mb-8">
+        <Image
+          src="/images-grid/Macbook-Claro7.png"
+          alt="Macbook image"
+          className="sm:w-[212px] lg:w-[285px] lg:h-[198px] xl:w-[400px] sm:h-[150px] xl:h-[278px]"
+          width={400}
+            height={278}
+        />
+        <div>
+          <Image
+            src="/images-grid/TC2K_ENTRADA8.png"
+            alt="TC2K image"
+            className="sm:w-[212px] lg:w-[285px] lg:h-[198px] xl:w-[400px] sm:h-[150px] xl:h-[278px] sm:-translate-y-1/2"
+            width={400}
+            height={278}
+          />
+        </div>
+        <div>
+          <Image
+            src="/images-grid/Mask-group-99.png"
+            alt="Mask group 3"
+            className="max-sm:h-[173px] sm:w-[212px] lg:w-[285px] lg:h-[198px] xl:w-[400px] sm:h-[150px] xl:h-[278px]"
+            width={400}
+            height={278}
           />
         </div>
       </div>

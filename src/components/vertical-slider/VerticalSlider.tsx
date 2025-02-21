@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import './VerticalSlider.css';
 
 const words = ['strategy', 'design', 'technology', 'content', 'data', 'media'];
 
@@ -78,26 +79,26 @@ export default function VerticalSlider({ intervalDuration = 2000 }: { intervalDu
 
   const getPositionClass = (offset: number) => {
     const positionClasses = [
-      'font-antonio max-sm:text-5xl text-7xl md:text-[150px] font-semibold uppercase  translate-y-0 text-white font-bold scale-110 z-10', // Principal (Centro)
-      'font-antonio uppercase blur-[2px] max-sm:text-5xl text-8xl font-bold max-sm:-translate-y-[80px] -translate-y-[120px] text-gray-500 max-sm:opacity-50 opacity-30 z-0', // Primer arriba
-      'font-antonio uppercase blur-[3px] max-sm:text-5xl text-8xl font-bold max-sm:-translate-y-[150px] -translate-y-[220px] text-gray-400 max-sm:opacity-30 opacity-15 z-0', // Segundo arriba
-      'font-antonio uppercase blur-[2px] max-sm:text-5xl text-8xl font-bold max-sm:translate-y-[80px] translate-y-[120px] md:translate-y-[220px] text-gray-500 max-sm:opacity-50 opacity-30 z-0', // Primer abajo
-      'font-antonio uppercase blur-[3px] max-sm:text-5xl text-8xl font-bold translate-y-[140px] translate-y-[220px] md:translate-y-[320px] text-gray-400 max-sm:opacity-30 opacity-15 z-0', // Segundo abajo
+      'font-antonio text-fluid font-semibold uppercase  translate-y-0 text-white font-bold scale-110 z-10', // Principal (Centro)
+      'font-antonio uppercase blur-[2px] text-fluid-1 font-bold max-sm:-translate-y-[80px] -translate-y-[120px] text-gray-500 max-sm:opacity-50 opacity-30 z-0', // Primer arriba
+      'font-antonio uppercase blur-[3px] text-fluid-2 font-bold max-sm:-translate-y-[150px] -translate-y-[220px] text-gray-400 max-sm:opacity-30 opacity-15 z-0', // Segundo arriba
+      'font-antonio uppercase blur-[2px] text-fluid-2 font-bold max-sm:translate-y-[80px] translate-y-[120px] md:translate-y-[140px] text-gray-500 max-sm:opacity-50 opacity-30 z-0', // Primer abajo
+      'font-antonio uppercase blur-[3px] text-fluid-1 font-bold translate-y-[140px]  md:translate-y-[220px] text-gray-400 max-sm:opacity-30 opacity-15 z-0', // Segundo abajo
     ];
 
     return positionClasses[offset] || 'opacity-0 hidden'; // Ocultar fuera del rango visible
   };
 
   return (
-    <div className="relative bg-black text-white w-full max-sm:h-[calc(80vh-80px)] h-screen overflow-hidden flex flex-col justify-center items-center max-sm:pt-0 pt-[500px] max-sm:pb-0 pb-[600px]">
-      <div className='absolute max-sm:top-0 top-20 flex flex-col justify-center items-center md:text-xl lg:text-2xl pt-16 uppercase'>
+    <div className="relative bg-black text-white w-full h-[35vh] sm:h-[50vh]  lg:h-[75vh] object-cover overflow-hidden flex flex-col justify-center items-center max-sm:pt-0 pt-[330px] max-sm:pb-0 pb-[410px]">
+      <div className='absolute top-0 flex flex-col justify-center items-center text-we-focus pt-16 uppercase'>
         <p>services</p>
       </div>
-      <div className='max-sm:hidden absolute w-full top-52 flex justify-end mr-32 md:text-xl lg:text-xl items-center font-Poppins uppercase'>
+      {/* <div className='max-sm:hidden absolute w-full top-52 flex justify-end mr-32 md:text-xl lg:text-xl items-center font-Poppins uppercase'>
         <p>keep <br /> scrolling</p>
-      </div>
+      </div> */}
       <div className='max-sm:hidden absolute top-52 xl:top-1/2 left-12 md:left-0'>
-        <p className='font-Poppins md:ml-16 md:text-xl md-text-xl lg:text-2xl uppercase'>we focus on</p>
+        <p className='font-Poppins md:ml-16 text-we-focus uppercase'>we focus on</p>
       </div>
       <ul className="relative h-full">
         {words.map((word, index) => {
@@ -122,9 +123,9 @@ export default function VerticalSlider({ intervalDuration = 2000 }: { intervalDu
       </ul>
       
       <div  className='absolute max-sm:hidden top-[60%] md:top-[68%] left-[55%]'>
-        <ul className='w-full list-disc pl-5 z-10 md:text-xl lg:text-xl md:leading-[40px] lg:leading-[30px] font-Poppins font-semibold uppercase'>
+        <ul className='w-full list-disc pl-5 z-10 text-we-focus font-Poppins font-semibold '>
           {wordContentMap[words[currentIndex]]?.map((item, i) => (
-            <li key={i} className="text-lg">{item}</li>
+            <li key={i} className="text-we-focus">{item}</li>
           ))}
         </ul>
       </div>

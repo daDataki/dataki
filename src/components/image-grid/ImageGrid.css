@@ -1,0 +1,21 @@
+.text-cases {
+    font-size: clamp(7px, 1.52vw, 33px);
+    line-height: clamp(10px, 2.08vw, 45px);
+}
+.text-work {
+  font-size: clamp(66px, 13.88vw, 300px);
+  line-height: clamp(66px, 13.88vw, 300px);
+}
+.img-responsive {
+    @apply sm:w-[250px] lg:w-[400px] sm:h-[150px] lg:h-[278px];
+}
+.text-Showcase{
+  font-size: clamp(33px, 6.94vw, 150px);
+  line-height: clamp(133px, 13.88vw, 300px);
+}
+
+@media (min-width: 640px) {
+    .mb-responsive {
+      margin-bottom: clamp(133px, 13.88vw, 300px);
+    }
+  }
