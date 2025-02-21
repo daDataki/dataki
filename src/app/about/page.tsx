@@ -51,9 +51,9 @@ export default function About() {
               <h6 className="font-Poppins font-medium  border-b border-black text-[#131313]">Co-creators</h6>
             </div>
           </div>
-          <div className="relative pb-32 sm:pb-60 pl-12 sm:pl-24">
+          <div className="relative pb-32 sm:pb-60 sm:pl-24 max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center">
             <h2 className="text-[80px] sm:text-[120px] md:text-[200px] font-bold uppercase font-antonio">meet</h2>
-            <h2 className="absolute top-24 sm:top-20 md:top-36 left-0 sm:left-12 md:left-24 text-[40px] sm:text-[100px] md:text-[140px] font-light font-signature text-easternBlue">Our team</h2>
+            <h2 className="sm:absolute top-24 sm:top-20 md:top-36 sm:left-36 md:left-48 text-[40px] sm:text-[100px] md:text-[140px] font-light font-signature text-easternBlue">Our team</h2>
           </div>
           <div className="w-full flex flex-col lg:flex-row justify-around items-center sm:space-x-8 pb-12 px-12  sm:px-24">
             <div className="w-full lg:w-1/3 flex flex-col justify-center items-center max-lg:mb-12 lg:items-start">
