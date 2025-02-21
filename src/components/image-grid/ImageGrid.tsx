@@ -53,8 +53,8 @@ export default function ImageGrid() {
 
       {/* Sección 'Work' */}
       <div className="max-sm:hidden absolute inset-0 flex items-center justify-center">
-        <h2 className="absolute text-work font-bold font-antonio uppercase top-[22%] lg:top-[28%] xl:top-[32%] 2xl:top-[34%] left-1/2 -translate-x-1/2 -translate-y-1/2 work-major">work</h2>
-        <h3 className="absolute z-10  text-Showcase font-light font-signature text-easternBlue top-[27%] lg:top-[33%] xl:top-[38%] 2xl:top-[40%] left-[57%] -translate-x-1/2 -translate-y-1/2 work-showcase">
+        <h2 className="absolute text-work font-bold font-antonio uppercase top-[22%] sm:top-[37%]  lg:top-[38%] xl:top-[34%]  left-1/2 -translate-x-1/2 -translate-y-1/2 work-major">work</h2>
+        <h3 className="absolute z-10  text-Showcase font-light font-signature text-easternBlue top-[27%] sm:top-[44%] md:top-[45%] lg:top-[43%] xl:top-[40%] 2xl:top-[41%] left-[57%] -translate-x-1/2 -translate-y-1/2 work-showcase">
           Showcase
         </h3>
       </div>
