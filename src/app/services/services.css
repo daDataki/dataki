@@ -1,0 +1,9 @@
+.text-we{
+    font-size: clamp(46px, 9.72vw, 210px);
+    line-height: clamp(42px, 8.75vw, 189px);
+}
+
+.text-services{
+    font-size: clamp(66px, 13.88vw, 350px);
+    line-height: clamp(66px, 13.88vw, 350px);
+}
