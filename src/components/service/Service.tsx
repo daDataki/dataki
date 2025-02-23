@@ -54,7 +54,7 @@ export default function Service() {
         <div className="bg-black text-white">
             <div className="relative ">
                 {nameServicie.map((name, index) => (
-                    <div key={name} className="flex justify-between border-b-2 border-gray-600">
+                    <div key={name} className="flex justify-between border-b-2 border-gray-600 div-container">
                         {/* Número + Nombre de la categoría */}
                         <div className='w-[60%] flex justify-start items-center py-8'><h2 className="text-service font-antonio font-bold pl-24">
                             {`${numberServicie[index].toString().padStart(2, "0")} ${name}`}

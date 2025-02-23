@@ -7,3 +7,7 @@
         font-size: clamp(7px, 1.38vw, 30px);
         line-height: clamp(10px, 2.08vw, 45px);
     }
+    .div-container:first-child {
+        border-top: 2px solid #4b5563; /* Gris Tailwind border-gray-600 */
+    }
+    
