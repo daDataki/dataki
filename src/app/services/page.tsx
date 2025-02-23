@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import "./services.css";
 import Header from "../../components/header/Header";
 import Service from "../../components/service/Service";
