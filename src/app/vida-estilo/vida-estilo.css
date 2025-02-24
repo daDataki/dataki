@@ -13,8 +13,8 @@
 }
 
 .fontSize-fluid {
-  font-size: clamp(40px, 16.6vw, 360px);
-  line-height: clamp(40px, 16.6vw, 360px);
+  font-size: clamp(100px, 20.83vw, 450px);
+  line-height: clamp(100px, 20.83vw, 450px);
 }
 
 .fontSize-fluid-branding {
@@ -197,7 +197,7 @@ img {
 
 .scrollable-image {
 
-  animation: scrollImage 15s linear infinite alternate;
+  animation: scrollImage 60s linear infinite alternate;
 
 }
 

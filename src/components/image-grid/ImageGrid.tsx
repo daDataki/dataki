@@ -4,8 +4,8 @@ import './ImageGrid.css';
 export default function ImageGrid() {
   return (
     <div className="mx-auto w-full sm:mb-16 min-h-screen overflow-hidden max-sm:pt-10">
-      <div className="max-sm:hidden max-sm:mt-12 sm:mt-14 our-cases-major ">
-        <h2 className="text-center text-cases font-Poppins text-black font-light sm:pb-32 lg:pb-44 uppercase">
+      <div className="max-sm:hidden max-sm:mt-12 sm:my-12 md:my-12 mb-0 lg:my-16 lg:mb-8 xl:my-20 our-cases-major ">
+        <h2 className="text-center text-cases font-Poppins text-black font-light sm:pb-16 lg:pb-28 uppercase">
           our CASES
         </h2>
       </div>
@@ -53,8 +53,8 @@ export default function ImageGrid() {
 
       {/* Sección 'Work' */}
       <div className="max-sm:hidden absolute inset-0 flex items-center justify-center">
-        <h2 className="absolute text-work font-bold font-antonio uppercase top-[22%] sm:top-[37%]  lg:top-[38%] xl:top-[34%]  left-1/2 -translate-x-1/2 -translate-y-1/2 work-major">work</h2>
-        <h3 className="absolute z-10  text-Showcase font-light font-signature text-easternBlue top-[27%] sm:top-[44%] md:top-[45%] lg:top-[43%] xl:top-[40%] 2xl:top-[41%] left-[57%] -translate-x-1/2 -translate-y-1/2 work-showcase">
+        <h2 className="absolute text-work font-bold font-antonio uppercase top-[22%] sm:top-[29%] md:top-[31%]  lg:top-[36%] xl:top-[36%]  left-1/2 -translate-x-1/2 -translate-y-1/2 work-major">work</h2>
+        <h3 className="absolute z-10  text-Showcase font-light font-signature text-easternBlue top-[27%] sm:top-[38%] md:top-[38%] lg:top-[42%] xl:top-[42%] 2xl:top-[41%] left-[57%] -translate-x-1/2 -translate-y-1/2 work-showcase">
           Showcase
         </h3>
       </div>

@@ -112,8 +112,8 @@ export default function VerticalSlider({ intervalDuration = 2000 }: { intervalDu
               <div className="flex text-center">
                 <div className="font-antonio uppercase">{word}</div>
                 {isMain && (
-                  <span className="ml-1 text-easternBlue text-5xl font-bold">
-                    {index + 1}
+                  <span className="ml-4 text-easternBlue text-5xl font-bold">
+                    0{index + 1}
                   </span>
                 )}
               </div>

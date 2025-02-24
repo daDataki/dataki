@@ -1,0 +1,4 @@
+.text-animated {
+    font-size: clamp(66px, 13.88vw, 300px);
+    line-height: clamp(66px, 13.88vw, 300px);
+}

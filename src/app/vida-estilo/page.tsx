@@ -6,104 +6,11 @@ import Image from 'next/image';
 import './vida-estilo.css'
 import Footer from '../../components/footer/Footer'
 import PreviousNext from '../../components/previous-next/PreviousNext'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { useEffect, useState, useRef } from 'react';
+import AnimatedSequence from '@/components/animated-sequence/AnimatedSequence';
+import ImageColumn from '@/components/diagonal-slider/DiagonalSlider';
 
 
-
-const ImageColumn = ({ left, top, images, transitionSpeeds }: { left: string, top: string, images: string[], transitionSpeeds: number[] }) => {
-  const columnRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    if (!columnRef.current) return;
-
-    // Extraemos las velocidades para las 4 fases (subida y bajada)
-    const [speed1, speed2, speed3, speed4] = transitionSpeeds;
-
-    const timeoutId: NodeJS.Timeout[] = []; // Array para almacenar los identificadores de setTimeout
-
-    function moveCarousel() {
-      if (!columnRef.current) return;
-
-      // Desplazamiento vertical total (100%)
-      const yDisplacement = 100;
-
-      columnRef.current.style.transition = `transform ${speed1 / 1000}s ease-in-out`;
-      columnRef.current.style.transform = `translateY(-${yDisplacement / 3}%)`;
-
-      timeoutId.push(setTimeout(() => {
-        if (!columnRef.current) return;
-        columnRef.current.style.transition = `transform ${speed2 / 1000}s ease-in-out`;
-        columnRef.current.style.transform = `translateY(-${(2 * yDisplacement) / 3}%)`;
-
-        timeoutId.push(setTimeout(() => {
-          if (!columnRef.current) return;
-          columnRef.current.style.transition = `transform ${speed3 / 1000}s ease-in-out`;
-          columnRef.current.style.transform = `translateY(-${yDisplacement}%)`;
-
-          timeoutId.push(setTimeout(() => {
-            if (!columnRef.current) return;
-            columnRef.current.style.transition = `transform ${speed4 / 1000}s ease-in-out`;
-            columnRef.current.style.transform = `translateY(-${yDisplacement}%)`;
-
-            // Inmediatamente después de la subida, comenzamos la bajada
-            columnRef.current.style.transition = `transform ${speed4 / 1000}s ease-in-out`;
-            columnRef.current.style.transform = `translateY(-${(2 * yDisplacement) / 3}%)`;
-
-            timeoutId.push(setTimeout(() => {
-              if (!columnRef.current) return;
-              columnRef.current.style.transition = `transform ${speed3 / 1000}s ease-in-out`;
-              columnRef.current.style.transform = `translateY(-${yDisplacement / 3}%)`;
-
-              timeoutId.push(setTimeout(() => {
-                if (!columnRef.current) return;
-                columnRef.current.style.transition = `transform ${speed2 / 1000}s ease-in-out`;
-                columnRef.current.style.transform = `translateY(0%)`;
-
-                timeoutId.push(setTimeout(() => {
-                  if (!columnRef.current) return;
-                  columnRef.current.style.transition = `transform ${speed1 / 1000}s ease-in-out`;
-                  columnRef.current.style.transform = `translateY(0%)`;
-
-                  // Repite el ciclo
-                  timeoutId.push(setTimeout(moveCarousel, speed1 + speed2 + speed3 + speed4)); // Tiempo total para el ciclo completo
-                }, speed2));
-              }, speed3));
-            }, speed4));
-          }, speed3));
-        }, speed2));
-      }, speed1));
-    }
-
-    // Iniciar el ciclo
-    moveCarousel();
-
-    // Cleanup para evitar memory leaks
-    return () => {
-      timeoutId.forEach(clearTimeout); // Limpiar todos los timeouts al desmontar
-    };
-  }, [transitionSpeeds]);
-
-  return (
-    <div className={`absolute z-10 rotate-[330deg] ${top} ${left} origin-top`}>
-      <div ref={columnRef} className='flex-col gap-20 flex'>
-        {images.map((src, index) => (
-          <Image
-            key={index}
-            className="w-48 z-10"
-            src={src}
-            alt={`imagen-${index}`}
-            layout="intrinsic"
-            width={800}
-            height={1111}
-            style={{ transition: `transform ${transitionSpeeds[index] / 1000}s ease-in-out` }}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
 
 
 
@@ -142,63 +49,9 @@ export default function VidaEstilo() {
   }, []);
 
 
-  const [fadeOutIndex, setFadeOutIndex] = useState<number>(-1);
   const elementRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 3000,
-      once: true,
-      easing: "ease-out-cubic",
-    });
-
-    let timeoutId: NodeJS.Timeout | null = null;
-    let intervalId: NodeJS.Timeout | null = null;
-
-    const startFadeOutAnimation = () => {
-      setFadeOutIndex(-1); // Resetear animación cuando aparece el elemento
-
-      const totalTime = 1500 + 1100 + 2000; // Tiempo total antes de comenzar la desaparición
-
-      timeoutId = setTimeout(() => {
-        let index = 0;
-        intervalId = setInterval(() => {
-          setFadeOutIndex(() => index); // Actualiza correctamente el estado
-          index++;
-          if (index > 4 && intervalId) {
-            clearInterval(intervalId);
-          }
-        }, 1000);
-      }, totalTime);
-    };
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            startFadeOutAnimation();
-          } else {
-            // Si el usuario scrollea fuera, reiniciamos la animación
-            setFadeOutIndex(-1);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
-    }
-
-    return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
-      }
-      if (timeoutId) clearTimeout(timeoutId);
-      if (intervalId) clearInterval(intervalId);
-      AOS.refresh();
-    };
-  }, []);
+ 
 
   return (
     <>
@@ -229,7 +82,7 @@ export default function VidaEstilo() {
             ],
           }}
         /></div>
-        <div className='relative h-[50vh] sm:h-[91vh] md:h-[121vh] lg:h-[158vh] xl:h-[93vw] 2xl:h-[105vw] sm:px-52 bg-black mt-[-1px]'>
+        <div className='relative h-[50vh] sm:h-[91vh] md:h-[121vh] lg:h-[158vh] xl:h-[93vw] 2xl:h-[105vw] sm:px-12 bg-black mt-[-1px]'>
           <div className='max-sm:flex max-sm:justify-center sm:sticky font-antonio font-semibold fontSize-fluid top-0'>
             <h2 className='uppercase text-bordered text-black'>
               web <br /> design
@@ -308,81 +161,8 @@ export default function VidaEstilo() {
           </div>
         </div>
 
-        <div className="relative py-12 px-12 md:py-32 md:px-48 bg-black mt-[-1px]" ref={elementRef}>
-          <div className="md:hidden text-white font-semibold font-antonio fontSize-fluid-social">
-            <h2>Social Media</h2>
-          </div>
-
-          <div className="hidden md:flex flex-col justify-center items-center z-20">
-            <div className="relative w-full flex justify-center">
-              {/* SOCIAL */}
-              <div
-                className={`absolute w-fit top-0 lg:left-[-58px] xl:left-0 uppercase text-white font-semibold font-antonio fontSize-fluid-social z-50
-         ${fadeOutIndex >= 1 ? "" : ""}`}
-                data-aos="fade-left"
-                data-aos-delay="500"
-                data-aos-duration="3000"
-              >
-                <h2>Social</h2>
-              </div>
-
-              {/* IMAGEN 1 */}
-              <Image
-                data-aos="fade-left"
-                data-aos-delay="1200"
-                data-aos-duration="3200"
-                className={`w-[30%] z-30 ${fadeOutIndex >= 2 ? "fade-out-right" : ""}`}
-                src="/images-proyecto/MIAMI-SPACE-0.png"
-                alt="vida-estilo"
-                layout="intrinsic"
-                width={800}
-                height={800}
-              />
-            </div>
-
-            <div className="relative flex flex-col justify-center w-full top-1/2 z-20">
-              <div className="w-full flex justify-center gap-10 mt-[-6vw]">
-                {/* IMAGEN 2 */}
-                <Image
-                  data-aos="fade-right"
-                  data-aos-delay="0"
-                  data-aos-duration="3000"
-                  className={`relative lg:left-[-88px] xl:left-[-141px] w-[30%] z-30 
-          ${fadeOutIndex >= 0 ? "fade-out-up" : ""}`}
-                  src="/images-proyecto/MIAMI-SPACE1-1.png"
-                  alt="vida-estilo"
-                  layout="intrinsic"
-                  width={800}
-                  height={800}
-                />
-
-                {/* IMAGEN 3 */}
-                <Image
-                  data-aos="fade-left"
-                  data-aos-delay="1200"
-                  data-aos-duration="3500"
-                  className={`w-[30%] relative lg:top-[-67px] xl:top-[-130px] z-30 
-          ${fadeOutIndex >= 3 ? "fade-out-left" : ""}`}
-                  src="/images-proyecto/MIAMI-SPACE2-1.png"
-                  alt="vida-estilo"
-                  layout="intrinsic"
-                  width={800}
-                  height={800}
-                />
-
-                {/* MEDIA */}
-                <div
-                  className={`absolute w-full flex justify-end lg:top-[-14px] xl:top-0 uppercase text-white font-semibold font-antonio fontSize-fluid-social z-10
-          ${fadeOutIndex >= 4 ? "" : ""}`}
-                  data-aos="fade-down"
-                  data-aos-delay="1500"
-                  data-aos-duration="3500"
-                >
-                  <h2>Media</h2>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="relative py-12 px-12 md:py-24  bg-black mt-[-1px]" >
+          <AnimatedSequence />
         </div>
 
         <div className='relative flex bg-strategy mt-[-1px] h-screen overflow-hidden'  >
@@ -390,31 +170,31 @@ export default function VidaEstilo() {
             left="left-[-22rem]"
             top="top-0"
             images={["/images-proyecto/image1.png", "/images-proyecto/image2.png", "/images-proyecto/image1.png", "/images-proyecto/image2.png", "/images-proyecto/image1.png"]}
-            transitionSpeeds={[2000, 500, 8000, 1000]} // Velocidades para subida y bajada
+            transitionSpeeds={[4000, 2500, 1500]} 
           />
           <ImageColumn
             left="left-0"
             top="top-0"
             images={["/images-proyecto/image3.png", "/images-proyecto/image4.png", "/images-proyecto/image5.png", "/images-proyecto/image4.png", "/images-proyecto/image5.png"]}
-            transitionSpeeds={[1500, 8000, 6000, 2000]} // Velocidades para subida y bajada
+            transitionSpeeds={[1000, 4000, 6000]} 
           />
           <ImageColumn
             left="left-[22rem]"
             top="top-0"
             images={["/images-proyecto/image6.png", "/images-proyecto/image7.png", "/images-proyecto/image6.png", "/images-proyecto/image7.png", "/images-proyecto/image6.png"]}
-            transitionSpeeds={[16000, 1000, 2000, 8000]} // Velocidades para subida y bajada
+            transitionSpeeds={[2500, 1500, 4000]} 
           />
           <ImageColumn
             left="left-[44rem]"
             top="top-0"
             images={["/images-proyecto/image8.png", "/images-proyecto/image9.png", "/images-proyecto/image8.png", "/images-proyecto/image9.png", "/images-proyecto/image8.png"]}
-            transitionSpeeds={[8000, 2000, 4000, 1000]} // Velocidades para subida y bajada
+            transitionSpeeds={[5000, 3000, 2800]} 
           />
           <ImageColumn
             left="left-[66rem]"
             top="top-0"
             images={["/images-proyecto/image9.png", "/images-proyecto/image10.png", "/images-proyecto/image9.png", "/images-proyecto/image10.png", "/images-proyecto/image9.png"]}
-            transitionSpeeds={[7000, 5000, 7000, 5000]} // Velocidades para subida y bajada
+            transitionSpeeds={[4000, 2500, 1500]} 
           />
 
           <div className='absolute fontSize-fluid   top-1/3 left-32'><div className=''><h2 className='uppercase font-antonio font-bold text-bordered-strategy '>Digital</h2></div>

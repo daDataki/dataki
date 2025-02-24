@@ -46,21 +46,21 @@ const Hero: React.FC<HeroProps> = ({
                     }}
                 >
                     <div className="absolute inset-0 bg-black opacity-40"></div>
-                    <div className="flex flex-col justify-between pl-[100px] pr-20 pt-20 pb-6 z-10 h-[100%]">
+                    <div className="flex flex-col justify-between px-12 pt-12 py-12 z-10 h-[100%]">
                         <div className="w-fit">
                             <div className="w-fit">
                                 <h1 className="font-antonio font-bold text-fluid text-white uppercase">
                                     {title}
                                 </h1>
                             </div>
-                            <div className="hidden sm:flex justify-between items-center w-full mt-[7px]">
-                                <div className="sm:w-10 lg:w-12 h-auto">
+                            <div className="hidden sm:flex justify-between items-start w-full py-8">
+                                <div className="sm:w-14 lg:w-[126px] lg:h-[101px]">
                                     <Image
-                                        className="relative object-contain"
+                                        className="relative object-contain w-full h-full"
                                         src="/images-proyecto/arrow.png"
                                         alt="arrow"
-                                        width={83}
-                                        height={67}
+                                        width={126}
+                                        height={101}
                                     />
                                 </div>
                                 <div className="flex justify-around z-10">
@@ -70,7 +70,7 @@ const Hero: React.FC<HeroProps> = ({
                                 </div>
                             </div>
                         </div>
-                        <div className="max-sm:hidden w-[72%] flex justify-between text-white">
+                        <div className="max-sm:hidden w-[60%] flex justify-between text-white">
                             <div className="z-10">
                                 <h4 className="font-Poppins font-bold text-fluid-span uppercase z-10 mb-2">Date</h4>
                                 <span className="text-fluid-span font-Poppins z-10">
@@ -121,7 +121,7 @@ const Hero: React.FC<HeroProps> = ({
                         <div className='max-sm:mt-8'>
                             <ul className="uppercase text-white text-ul-servicie font-antonio font-bold">
                                 {services.list.map((service, index) => (
-                                    <li key={index} className='text-ul-servicie'>
+                                    <li key={index} className='text-ul-servicie first:leading-none first:mb-4 first:mt-2'>
                                         <p>{service}</p>
                                     </li>
                                 ))}

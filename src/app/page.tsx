@@ -3,6 +3,7 @@ import Header from '../components/header/Header';
 import ImageGrid from '../components/image-grid/ImageGrid'
 import VerticalSlider from '../components/vertical-slider/VerticalSlider'
 import HorizontalSlider from '../components/horizontal-slider/HorizontalSlider'
+import Image from 'next/image';
 import './page.css'
 
 export default function Home() {
@@ -25,9 +26,10 @@ export default function Home() {
           >
             <source src="/video/Video1_06-01.mp4" type="video/mp4" />
           </video>
+          <Image src="/images-proyecto/logo-dataki.svg" alt="logo" width={150} height={150} layout="fixed"  className='absolute bottom-[-25px] sm:bottom-[-50px] lg:bottom-[-75px] left-[6.66%] w-[50px] h-[50px] sm:w-[100px] sm:h-[100px] lg:w-[150px] lg:h-[150px]' />
         </div>
-        <div className="flex flex-col bg-white text-black w-full  object-cover py-12 ">
-          <div className="pt-4 pb-8">
+        <div className="flex flex-col bg-white text-black w-full  object-cover pt-12 pb-24">
+          <div className="pt-12 pb-12">
             <h4 className="flex flex-col justify-center items-center font-Poppins font-medium xtext-sm uppercase ">
               <span>Growth &</span> <span>business partner</span>
             </h4>

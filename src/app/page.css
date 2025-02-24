@@ -4,7 +4,7 @@
 }
 
 .xtext-sm {
-    font-size: clamp(9px, 1.94vw, 42px);
+    font-size: clamp(8px, 1.66vw, 36px);
     line-height: clamp(10px, 2.08vw, 45px);
 }
 
