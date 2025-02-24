@@ -23,9 +23,10 @@ export default function About() {
         </div>
       </div>
       <div className="bg-black pt-12   sm:pt-20">
-        <div className="relative pl-12 sm:pl-24">
-          <h1 className=" text-about font-antonio font-bold text-white uppercase">about</h1>
-          <h2 className="absolute text-our-story  text-easternBlue font-signature font-light left-[22%] md:left-[20%] lg:left-[17%] xl:left-[15%] 2xl:left-[14%] top-[64%]">Our story</h2>
+        <div className="pl-12 sm:pl-24">
+          <div className="relative"><h1 className=" text-about font-antonio font-bold text-white uppercase">about</h1>
+          <h2 className="absolute text-our-story  text-easternBlue font-signature font-light top-[64%]  translate-x-[20%] ">Our story</h2></div>
+          
         </div>
         <div className="flex justify-center my-28 sm:my-32 md:my-36 lg:my-60"><h2 className="relative left-[4.28%] lg:left-[5.28%] xl:left-[3%] uppercase font-antonio font-bold text-white text-become-your-growth">We are ready to <br />
           become your <span className="text-easternBlue">growth <br />
