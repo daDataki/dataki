@@ -60,7 +60,7 @@ export default function Service() {
                             {`${numberServicie[index].toString().padStart(2, "0")} ${name}`}
                         </h2></div>
                         {/* Lista de servicios */}
-                        <div className='w-[40%]'><ul className="list-disc list-inside mt-2 text-service-list font-Poppins font-medium">
+                        <div className='flex justify-start items-center w-[40%]'><ul className="list-disc list-inside text-service-list font-Poppins font-medium">
                             {descriptionService[name]?.map((service, idx) => (
                                 <li key={idx} className="text-gray-300">{service}</li>
                             ))}

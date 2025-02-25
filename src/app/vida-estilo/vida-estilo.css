@@ -41,13 +41,13 @@
   ;
   /* Color de la letra */
   text-shadow:
-    -1px -1px 0 white,
+    -2px -2px 0 white,
     /* Sombra arriba-izquierda */
-    1px -1px 0 white,
+    2px -2px 0 white,
     /* Sombra arriba-derecha */
-    -1px 1px 0 white,
+    -2px 2px 0 white,
     /* Sombra abajo-izquierda */
-    1px 1px 0 white;
+    2px 2px 0 white;
   /* Sombra abajo-derecha */
 }
 
@@ -82,18 +82,9 @@
 }
 
 .text-bordered-data {
-  color: #68725E;
-  ;
+  color: transparent;
   /* Color de la letra */
-  text-shadow:
-    -1px -1px 0 white,
-    /* Sombra arriba-izquierda */
-    1px -1px 0 white,
-    /* Sombra arriba-derecha */
-    -1px 1px 0 white,
-    /* Sombra abajo-izquierda */
-    1px 1px 0 white;
-  /* Sombra abajo-derecha */
+  -webkit-text-stroke: 2px white;
 }
 
 .fontSize-fluid-data {

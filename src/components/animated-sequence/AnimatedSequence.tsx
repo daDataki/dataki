@@ -12,7 +12,7 @@ const images = [
 ];
 
 // Duración en milisegundos de cada paso
-const stepTimes = [1500, 2000, 2000, 2000, 2000, 1500]; // Ajusta cada paso según necesites
+const stepTimes = [1500, 500, 500, 500, 500, 500]; // Ajusta cada paso según necesites
 
 export default function AnimatedSequence() {
     const [step, setStep] = useState(0);
@@ -85,10 +85,10 @@ export default function AnimatedSequence() {
                 {step >= 1 && step <= 3 && (
                     <motion.h1
                         key="socialText"  // Clave única
-                        className="absolute font-antonio text-white text-animated font-bold left-[20%] -translate-x-1/2 z-10"
+                        className="absolute uppercase font-antonio text-white text-animated font-bold left-[20%] -translate-x-1/2 z-10"
                         initial="hidden"
                         animate="visible"
-                        exit={{ y: '-100%', opacity: 0, transition: { duration: 1.5, ease: 'easeInOut' } }}
+                        exit={{ y: '-100%', opacity: 0, transition: { duration: 1, ease: 'easeInOut' } }}
                         variants={textSocialVariants}
                     >
                         Social
@@ -99,10 +99,10 @@ export default function AnimatedSequence() {
                 {step >= 2 && step <= 3 && (
                     <motion.h1
                         key="mediaText"  // Clave única
-                        className="absolute font-antonio text-white text-animated font-bold left-[40%] -translate-x-1/2 z-10"
+                        className="absolute uppercase font-antonio text-white text-animated font-bold left-[40%] -translate-x-1/2 z-10"
                         initial="hidden"
                         animate="visible"
-                        exit={{ y: '100%', opacity: 0, transition: { duration: 1.5, ease: 'easeInOut' } }}
+                        exit={{ y: '100%', opacity: 0, transition: { duration: 1, ease: 'easeInOut' } }}
                         variants={textMediaVariants}
                     >
                         Media
@@ -124,7 +124,7 @@ export default function AnimatedSequence() {
                 )}
 
                 {/* Texto 'Social Media', visible en el paso 4 */}
-                {step >= 4 && step <= 5 && (
+                {step >= 5 && step <= 6 && (
                     <motion.h1
                         key="finalText"  // Clave única
                         initial={{ opacity: 0 }}
@@ -138,7 +138,7 @@ export default function AnimatedSequence() {
                                 ease: 'easeInOut',
                             }
                         }}
-                        className="absolute text-white text-animated font-antonio font-bold"
+                        className="absolute text-white text-animated font-antonio font-bold uppercase"
                     >
                         Social Media
                     </motion.h1>

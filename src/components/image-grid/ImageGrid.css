@@ -20,6 +20,12 @@
     }
 }
 
+@media (min-width: 640px) {
+  .mt-responsive {
+    margin-top: clamp(133px, 13.88vw, 300px);
+  }
+}
+
 @media (min-width: 1700px) {
     .width-major{
      width: 550px;

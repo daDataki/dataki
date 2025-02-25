@@ -6,7 +6,7 @@ import Image from 'next/image';
 import './vida-estilo.css'
 import Footer from '../../components/footer/Footer'
 import PreviousNext from '../../components/previous-next/PreviousNext'
-import { useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import AnimatedSequence from '@/components/animated-sequence/AnimatedSequence';
 import ImageColumn from '@/components/diagonal-slider/DiagonalSlider';
 
@@ -47,7 +47,7 @@ export default function VidaEstilo() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
- 
+
 
   return (
     <>
@@ -161,40 +161,41 @@ export default function VidaEstilo() {
           <AnimatedSequence />
         </div>
 
-        <div className='relative flex bg-strategy mt-[-1px] h-screen overflow-hidden'  >
+        <div className='relative flex bg-strategy mt-[-1px] h-screen lg:h-[150vh] overflow-hidden'  >
           <ImageColumn
             left="left-[-22rem]"
             top="top-0"
             images={["/images-proyecto/image1.png", "/images-proyecto/image2.png", "/images-proyecto/image1.png", "/images-proyecto/image2.png", "/images-proyecto/image1.png"]}
-            transitionSpeeds={[4000, 2500, 1500]} 
+            transitionSpeeds={[4000, 2500, 1500]}
           />
           <ImageColumn
             left="left-0"
             top="top-0"
             images={["/images-proyecto/image3.png", "/images-proyecto/image4.png", "/images-proyecto/image5.png", "/images-proyecto/image4.png", "/images-proyecto/image5.png"]}
-            transitionSpeeds={[1000, 4000, 6000]} 
+            transitionSpeeds={[1000, 4000, 6000]}
           />
           <ImageColumn
             left="left-[22rem]"
             top="top-0"
             images={["/images-proyecto/image6.png", "/images-proyecto/image7.png", "/images-proyecto/image6.png", "/images-proyecto/image7.png", "/images-proyecto/image6.png"]}
-            transitionSpeeds={[2500, 1500, 4000]} 
+            transitionSpeeds={[2500, 1500, 4000]}
           />
           <ImageColumn
             left="left-[44rem]"
             top="top-0"
             images={["/images-proyecto/image8.png", "/images-proyecto/image9.png", "/images-proyecto/image8.png", "/images-proyecto/image9.png", "/images-proyecto/image8.png"]}
-            transitionSpeeds={[5000, 3000, 2800]} 
+            transitionSpeeds={[5000, 3000, 2800]}
           />
           <ImageColumn
             left="left-[66rem]"
             top="top-0"
             images={["/images-proyecto/image9.png", "/images-proyecto/image10.png", "/images-proyecto/image9.png", "/images-proyecto/image10.png", "/images-proyecto/image9.png"]}
-            transitionSpeeds={[4000, 2500, 1500]} 
+            transitionSpeeds={[4000, 2500, 1500]}
           />
 
-          <div className='absolute fontSize-fluid   top-1/3 left-32'><div className=''><h2 className='uppercase font-antonio font-bold text-bordered-strategy '>Digital</h2></div>
-            <div className=''><h2 className='uppercase font-antonio font-bold text-bordered-strategy '>Strategy</h2></div></div>
+          <div className='absolute fontSize-fluid bottom-0   left-0'><div className=''><h2 className='uppercase font-antonio font-bold text-bordered-strategy '>Digital</h2></div>
+            <div className=''><h2 className='uppercase font-antonio font-bold text-bordered-strategy '>Strategy</h2></div>
+          </div>
         </div>
         <div><div className='bg-[#E2DED6] w-full flex justify-center z-10 mt-[-1px]'><Image
           className=" w-full z-10 "
@@ -204,7 +205,7 @@ export default function VidaEstilo() {
           width={800}
           height={1111}
         /></div></div>
-        <div className='relative bg-[linear-gradient(to_bottom,#68725E_0_65%,#131313_65%_100%)] px-8 sm:px-28 pt-8 sm:pt-32 mt-[-1px]'>
+        <div className='relative bg-[linear-gradient(to_bottom,#68725E_0_65%,#131313_65%_100%)] px-8 sm:px-28 pt-8 sm:pt-32 mt-[-1px] z-10'>
           <div className='sticky top-0'><h2 className='uppercase text-bordered-data fontSize-fluid font-antonio'>Data <br />Analytics </h2></div>
           <div className='absolute w-[35%] left-[50%] top-[10%] h-auto z-10'><Image
             className=" w-full z-10  h-[66vh] "
@@ -249,7 +250,7 @@ export default function VidaEstilo() {
             </div>
           </div>
         </div>
-        <div className='mt-[-1px] bg-[#131313]  text-white px-24'><PreviousNext /></div>
+        <div className='mt-[-1px] bg-[#131313]  text-white px-24 z-10'><PreviousNext /></div>
         <div>
           <Footer background="bg-[#131313] " />
         </div>
