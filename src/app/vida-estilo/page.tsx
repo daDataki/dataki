@@ -47,10 +47,6 @@ export default function VidaEstilo() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-
-  const elementRef = useRef<HTMLDivElement | null>(null);
-
  
 
   return (
