@@ -6,7 +6,7 @@ import Image from 'next/image';
 import './vida-estilo.css'
 import Footer from '../../components/footer/Footer'
 import PreviousNext from '../../components/previous-next/PreviousNext'
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState} from 'react';
 import AnimatedSequence from '@/components/animated-sequence/AnimatedSequence';
 import ImageColumn from '@/components/diagonal-slider/DiagonalSlider';
 
