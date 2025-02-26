@@ -1,17 +1,17 @@
 .text-cases {
-    font-size: clamp(9px, 1.94vw, 42px);
-    line-height: clamp(10px, 2.08vw, 45px);
+    font-size: clamp(9px, 1.94vw, 42px)!important;
+    line-height: clamp(10px, 2.08vw, 45px)!important;
 }
 .text-work {
-  font-size: clamp(66px, 13.88vw, 300px);
-  line-height: clamp(66px, 13.88vw, 300px);
+  font-size: clamp(66px, 13.88vw, 300px)!important;
+  line-height: clamp(66px, 13.88vw, 300px)!important;
 }
 .img-responsive {
     @apply sm:w-[250px] lg:w-[400px] sm:h-[150px] lg:h-[278px];
 }
 .text-Showcase{
-  font-size: clamp(33px, 6.94vw, 150px);
-  line-height: clamp(133px, 13.88vw, 300px);
+  font-size: clamp(33px, 6.94vw, 150px)!important;
+  line-height: clamp(133px, 13.88vw, 300px)!important;
 }
 
 @media (min-width: 640px) {
@@ -26,7 +26,7 @@
   }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1440px) {
     .width-major{
      width: 550px;
      height: 383px;
