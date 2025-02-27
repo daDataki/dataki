@@ -87,7 +87,7 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
 
     return (
         <div className="modal bg-opacity-50 pointer-events-auto" >
-            <div className="modal-content py-10 px-24" onClick={(e) => e.stopPropagation()}> {/* Evita que el clic se propague al fondo */}
+            <div className="modal-content py-10 px-24" onClick={(e) => e.stopPropagation()}> 
                 {/* Botón de cierre */}
                 <button className="w-full m-auto uppercase text-end text-black font-text2 font-Poppins font-bold pointer-events-auto cursor-pointer" onClick={onClose}>
                     Close
