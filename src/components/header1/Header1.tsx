@@ -30,7 +30,7 @@ export default function Header({ className, logoSrc, menuIconSrc }: HeaderProps)
 
         {/* Botón hamburguesa */}
         <button
-          className="w-fit h-[46px] font-close text-black leading-none transition-opacity duration-300"
+          className="w-[40px] h-[40px] font-close text-black leading-none transition-opacity duration-300"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
