@@ -81,26 +81,27 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
         route: "/vida-estilo"
     };
     const handleNavigate = () => {
-       
+
         router.push(route); // Redirige a la página correspondiente
     };
 
     return (
-        <div className="modal bg-opacity-50 pointer-events-auto" >
-            <div className="modal-content py-10 px-24" onClick={(e) => e.stopPropagation()}> 
+        <div className="modal bg-opacity-50 pointer-events-auto " >
+            <div className="modal-content py-10 px-24 h-[55vh] lg:h-[70vh] xl:h-[85vh] 2xl:h-[95vh]" onClick={(e) => e.stopPropagation()}>
                 {/* Botón de cierre */}
-                <button className="w-full m-auto uppercase text-end text-black font-text2 font-Poppins font-bold pointer-events-auto cursor-pointer" onClick={onClose}>
-                    Close
-                </button>
-
+                <div>
+                    <button className="w-full m-auto uppercase text-end text-black font-text2 font-Poppins font-bold pointer-events-auto cursor-pointer" onClick={onClose}>
+                        Close
+                    </button>
+                </div>
                 {/* Título */}
-                <div className="relative flex flex-col justify-start">
+                <div className="w-[61vw] relative flex flex-col justify-start">
                     <h1 className="font-title font-antonio font-bold">{title}</h1>
-                    <div className="absolute top-16 left-16 lg:top-24 lg:left-20 xl:top-32 xl:left-40 ">
+                    <div className="absolute top-16 left-16 lg:top-24 lg:left-20 xl:top-[8.5rem] xl:left-40 ">
                         <h2 className=" text-easternBlue font-normal font-signature font-project">Project</h2>
                     </div>
                 </div>
-                <div className=" w-full  lg:w-[92%] xl:w-[80%]  flex  justify-between mt-2">
+                <div className=" w-full  lg:w-[92%] xl:w-[62.5vw]  flex  justify-between mt-2">
                     <div className="relative w-[70px] h-[67px]">
                         <Image
                             src="/images-proyecto/arrow-modal.png"
@@ -110,12 +111,12 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
                         />
                     </div>
 
-                    <div> <h2 className="mr-16 font-text1">{text1}</h2>
+                    <div> <h2 className="font-text1 font-antonio">{text1}</h2>
                     </div>
                 </div>
 
                 {/* Imagen y contenido */}
-                <div className="w-full lg:w-[92%] xl:w-[80%] flex justify-between items-center gap-4 mt-32">
+                <div className="w-[100%] lg:w-[85%]  flex justify-between items-center mt-12">
                     <div className="w-1/2flex flex-col gap-4">
                         <div>
                             <h6 className="font-text2 "><span className="font-bold">DATE:</span> {text2}</h6>
@@ -135,10 +136,10 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
                         </div>
                     </div>
                     <div
-                        className="relative w-1/2 h-96 cursor-pointer"
+                        className="relative w-1/2 h-[23vh] lg:h-[33vh] cursor-pointer"
                         onClick={handleNavigate} // Redirige al hacer clic
                     >
-                        <Image src={image} alt={title} layout="fill" objectFit="cover" objectPosition="right" />
+                        <Image src={image} alt={title} layout="fill" objectFit="cover" objectPosition="right" className="" />
                     </div>
                 </div>
             </div>

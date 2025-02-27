@@ -15,16 +15,12 @@
   .modal-content {
     background-color:#D9D9D9;
     border-radius: 8px;
-    width: 95%;
-    height: 90vh;
+    width: 90%;
     overflow-y: auto;
   }
   
   .modal img {
-    width: 100%;
-    max-width: 476px;
-    max-height: 331px;
-    height: auto;
+   width: 47vh;
   }
   
   .modal button {
