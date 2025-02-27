@@ -1,6 +1,6 @@
 
 import "./services.css";
-import Header from "../../components/header1/Header";
+import Header from "../../components/header1/Header1";
 import Service from "../../components/service/Service";
 import Footer from "../../components/footer/Footer"
 

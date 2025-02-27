@@ -1,5 +1,5 @@
 import Footer from '../components/footer/Footer';
-import Header1 from '../components/header1/Header';
+import Header1 from '../components/header1/Header1';
 import ImageGrid from '../components/image-grid/ImageGrid'
 import VerticalSlider from '../components/vertical-slider/VerticalSlider'
 import HorizontalSlider from '../components/horizontal-slider/HorizontalSlider'

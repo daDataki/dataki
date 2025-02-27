@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import './Header.css';
+import './Header1.css';
 
 interface HeaderProps {
   className?: string;
