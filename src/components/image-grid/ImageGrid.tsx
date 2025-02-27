@@ -25,7 +25,7 @@ export default function ImageGrid() {
   };
 
   return (
-    <div ref={ref} className="relative mx-auto w-full sm:mb-16 min-h-screen max-sm:pt-10 overflow-hidden">
+    <div ref={ref} className="relative mx-auto w-full sm:mb-16 min-h-screen max-sm:pt-10 ">
       {/* Animación del título "our CASES" */}
       {isInView && (
         <motion.div className="text-center font-Poppins text-cases text-black font-light py-16 uppercase ">
@@ -34,7 +34,7 @@ export default function ImageGrid() {
       )}
 
       {/* Sección 'Work' y 'Showcase' para pantallas grandes */}
-      <div className="max-sm:hidden sticky top-0">
+      <div className="max-sm:hidden sticky top-10">
         {isInView && (
           <div className="relative flex justify-center ">
             {/* Animación de 'WORK' */}
@@ -62,7 +62,7 @@ export default function ImageGrid() {
         )}
       </div>
 
-      <div className="relative ">
+      <div className="relative overflow-hidden">
         {/* Contenido con imágenes solo si está en vista */}
         {isInView && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5, duration: 2 }}>
