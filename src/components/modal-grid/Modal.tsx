@@ -136,7 +136,7 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
                         </div>
                     </div>
                     <div
-                        className="relative w-1/2 h-[23vh] lg:h-[33vh] cursor-pointer"
+                        className="relative w-1/2 h-[23vh] lg:h-[33vh] xl:h-[43vh]  cursor-pointer"
                         onClick={handleNavigate} // Redirige al hacer clic
                     >
                         <Image src={image} alt={title} layout="fill" objectFit="cover" objectPosition="right" className="" />
