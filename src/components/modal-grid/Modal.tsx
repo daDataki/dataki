@@ -31,7 +31,7 @@ const imageDataMap: Record<string, { title: string; text1: string; text2: string
         text1: "",
         text2: "2022-Ongoing",
         categories: ["Video & Radio Production", "Media (Online & Offline)", "Digital Campaigns", "Graphic Design"],
-        route: "/vida-estilo"
+        route: "/daytona"
     },
     "/images-grid/beacon-beach5.png": {
         title: "Vida & Estilo",
