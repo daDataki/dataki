@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <main>
-      <Header1 logoSrc="/images-proyecto/logo-svg.svg" menuIconSrc="/images-proyecto/menu.png" />
+      <Header1 logoSrc="/images-proyecto/menu.png" menuIconSrc="/images-proyecto/logo-svg.svg" />
         {/* Sección del video */}
         <div className="relative">
           <video
