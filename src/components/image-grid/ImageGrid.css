@@ -14,6 +14,12 @@
   line-height: clamp(133px, 13.88vw, 300px)!important;
 }
 
+.blur-effect {
+  filter: blur(10px); /* Ajusta el nivel de desenfoque según sea necesario */
+  transition: filter 0.3s ease; /* Añade una transición suave para el desenfoque */
+}
+
+
 @media (min-width: 640px) {
     .mb-responsive {
       margin-bottom: clamp(133px, 13.88vw, 300px);

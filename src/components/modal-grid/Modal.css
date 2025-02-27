@@ -1,0 +1,56 @@
+.modal {
+    position: fixed; 
+    opacity: .8;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color:#D9D9D9;
+    border-radius: 8px;
+    width: 95%;
+    height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .modal img {
+    width: 100%;
+    max-width: 476px;
+    max-height: 331px;
+    height: auto;
+  }
+  
+  .modal button {
+    border: none;
+    cursor: pointer;
+
+  }
+  .font-title {
+    font-size: clamp(60px, 12.5vw, 250px);
+    line-height: clamp(60px, 12.5vw, 250px);
+  
+  }
+  .font-text1 {
+    font-size: clamp(20px, 4.16vw, 90px);
+    line-height: clamp(20px, 4.44vw, 96px);
+  
+  }
+  .font-text2 {
+    font-size: clamp(8px, 1.52vw, 33px);
+    line-height: clamp(9px, 1.94vw, 42px);
+  
+  }
+
+  .font-project {
+    font-size: clamp(40px, 8.33vw, 180px);
+    line-height: clamp(48px, 10vw, 216px);
+  
+  }
+  

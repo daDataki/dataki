@@ -1,6 +1,6 @@
 
 import "./services.css";
-import Header from "../../components/header/Header";
+import Header from "../../components/header1/Header";
 import Service from "../../components/service/Service";
 import Footer from "../../components/footer/Footer"
 
@@ -8,7 +8,7 @@ import Footer from "../../components/footer/Footer"
 export default function Servicies() {
   return (
     <div>
-      <Header />
+      <Header className="text-white" logoSrc="/images-proyecto/logo.png" menuIconSrc="/images-proyecto/menu-1.png" />
       <div className="bg-black">
         <div className="relative pl-24 py-56">
           <h1 className="uppercase text-white  font-antonio font-bold text-services" >services</h1>

@@ -1,5 +1,5 @@
 import Footer from '../components/footer/Footer';
-import Header from '../components/header/Header';
+import Header1 from '../components/header1/Header';
 import ImageGrid from '../components/image-grid/ImageGrid'
 import VerticalSlider from '../components/vertical-slider/VerticalSlider'
 import HorizontalSlider from '../components/horizontal-slider/HorizontalSlider'
@@ -11,8 +11,8 @@ export default function Home() {
 
   return (
     <>
-      <Header />
       <main>
+      <Header1 logoSrc="/images-proyecto/logo-svg.svg" menuIconSrc="/images-proyecto/menu.png" />
         {/* Sección del video */}
         <div className="relative">
           <video

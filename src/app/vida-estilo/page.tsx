@@ -88,7 +88,7 @@ export default function VidaEstilo() {
             {/* Primera imagen (adelante) */}
             <Image
               className="relative w-[70%] xl:w-[50%] !max-w-[800px] right-[2vw] xl:right-[7vw] z-20"
-              src="/images-proyecto/Vida&Estilo-Web-1-Donatella-Restaurant1.png"
+              src="/images-proyecto/Vida&EstiloWeb-1.png"
               alt="vida-estilo"
               layout="intrinsic"
               width={800}
@@ -98,7 +98,7 @@ export default function VidaEstilo() {
             {/* Segunda imagen (detrás) */}
             <Image
               className="absolute top-[41%] left-[2vw] xl:left-[8vw] w-[70%] xl:w-[50%] !max-w-[800px] z-10 "
-              src="/images-proyecto/Vida&Estilo-Web-1-DonatellaRestaurant2.png"
+              src="/images-proyecto/Vida&EstiloWeb-2.png"
               alt="vida-estilo"
               layout="intrinsic"
               width={800}

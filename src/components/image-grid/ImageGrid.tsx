@@ -1,22 +1,34 @@
 "use client";
-
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useState, useRef } from "react";
 import "./ImageGrid.css";
+import Modal from "../modal-grid/Modal";
 
 export default function ImageGrid() {
   const [applyClasses, setApplyClasses] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState({ image: '' });
 
   // Referencia para Intersection Observer
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: "-100px 0px" });
 
+  const handleImageClick = (image: string) => {
+    setModalContent({ image });
+    setIsModalOpen(true);  // Abre el modal
+  };
+
+  const handleModalClose = () => {
+    console.log("Cerrando modal desde el componente padre");
+    setIsModalOpen(false); // Cierra el modal
+  };
+
   return (
-    <div ref={ref} className="relative mx-auto w-full sm:mb-16 min-h-screen max-sm:pt-10">
+    <div ref={ref} className="relative mx-auto w-full sm:mb-16 min-h-screen max-sm:pt-10 overflow-hidden">
       {/* Animación del título "our CASES" */}
       {isInView && (
-        <motion.div className="text-center font-Poppins text-cases text-black font-light py-16 uppercase">
+        <motion.div className="text-center font-Poppins text-cases text-black font-light py-16 uppercase ">
           our CASES
         </motion.div>
       )}
@@ -27,22 +39,22 @@ export default function ImageGrid() {
           <div className="relative flex justify-center ">
             {/* Animación de 'WORK' */}
             <motion.h2
-              initial={{ opacity: 0, scale: 4 }}  // Empieza con gran tamaño y opacidad 0
-              animate={{ opacity: 1, scale: 1 }}  // Se reduce el tamaño y aumenta la opacidad
+              initial={{ fontSize: "300px", opacity: 0, scale: 4 }}  // Empieza con gran tamaño y opacidad 0
+              animate={{ fontSize: "100px", opacity: 1, scale: 1 }}  // Se reduce el tamaño y aumenta la opacidad
               transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}  // Transición suave
               onAnimationComplete={() => setApplyClasses(true)}  // Aplicar clases después de la animación
-              className={`relative font-bold font-antonio uppercase ${applyClasses ? "text-work" : ""}`}
+              className={`relative font-bold font-antonio uppercase ${isModalOpen ? "blur-effect" : ""} ${applyClasses ? "text-work" : ""}`}
             >
               WORK
             </motion.h2>
 
             {/* Animación de 'Showcase' */}
             <motion.h3
-              initial={{ opacity: 0, scale: 4 }}  // Empieza con gran tamaño y opacidad 0
-              animate={{ opacity: 1, scale: 1 }}  // Se reduce el tamaño y aumenta la opacidad
+              initial={{ fontSize: "300px", opacity: 0, scale: 4 }}  // Empieza con gran tamaño y opacidad 0
+              animate={{ fontSize: "100px", opacity: 1, scale: 1 }}  // Se reduce el tamaño y aumenta la opacidad
               transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}  // Transición suave
               onAnimationComplete={() => setApplyClasses(true)}  // Aplicar clases después de la animación
-              className={`absolute top-[44%] left-[45%] z-10 font-light font-signature text-easternBlue ${applyClasses ? "text-Showcase" : ""}`}
+              className={`absolute top-[44%] left-[45%] z-10 font-light font-signature text-easternBlue ${isModalOpen ? "blur-effect" : ""} ${applyClasses ? "text-Showcase" : ""}`}
             >
               Showcase
             </motion.h3>
@@ -50,46 +62,46 @@ export default function ImageGrid() {
         )}
       </div>
 
-      <div className="relative pt-[17%]">
+      <div className="relative ">
         {/* Contenido con imágenes solo si está en vista */}
         {isInView && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2, duration: 1 }}>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5, duration: 2 }}>
 
             {/* Primer grupo de imágenes */}
-            <div className="flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end mb-responsive mt-responsivemax-sm:gap-8 max-sm:mb-8 gap-12">
-              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major">
+            <div className={`flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end mb-responsive mt-responsive max-sm:gap-8 max-sm:mb-8 gap-12 ${isModalOpen ? "blur-effect" : ""}`}>
+              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major" onClick={() => handleImageClick('/images-grid/busy-1.png')}>
                 <Image src="/images-grid/busy-1.png" alt="busy-1.png" layout="fill" objectFit="cover" />
               </div>
-              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major sm:-translate-y-1/2">
+              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major sm:-translate-y-1/2" onClick={() => handleImageClick('/images-grid/Maskgroup2.png')}>
                 <Image src="/images-grid/Maskgroup2.png" alt="Mask group 2" layout="fill" objectFit="cover" />
               </div>
-              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major">
+              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major" onClick={() => handleImageClick('/images-grid/Mask-group33.png')}>
                 <Image src="/images-grid/Mask-group33.png" alt="Mask group 3" layout="fill" objectFit="cover" />
               </div>
             </div>
 
             {/* Segundo grupo de imágenes */}
-            <div className="relative flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end sm:left-[7.3vw] mb-responsive max-sm:gap-8 max-sm:mb-8 gap-12">
-              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major">
+            <div className={`relative flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end sm:left-[7.3vw] mb-responsive max-sm:gap-8 max-sm:mb-8 gap-12 ${isModalOpen ? "blur-effect" : ""}`}>
+              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major" onClick={() => handleImageClick('/images-grid/Mask-group4.png')}>
                 <Image src="/images-grid/Mask-group4.png" alt="Mask group 4" layout="fill" objectFit="cover" />
               </div>
-              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major sm:-translate-y-1/2">
+              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major sm:-translate-y-1/2" onClick={() => handleImageClick('/images-grid/beacon-beach5.png')}>
                 <Image src="/images-grid/beacon-beach5.png" alt="Beacon Beach" layout="fill" objectFit="cover" />
               </div>
-              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major sm:-translate-y-[-20%]">
+              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major sm:-translate-y-[-20%]" onClick={() => handleImageClick('/images-grid/miroshnichenko66.png')}>
                 <Image src="/images-grid/miroshnichenko66.png" alt="Miroshnichenko" layout="fill" objectFit="cover" />
               </div>
             </div>
 
             {/* Tercer grupo de imágenes */}
-            <div className="flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end max-sm:gap-8 gap-12">
-              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major">
+            <div className={`flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end max-sm:gap-8 gap-12 ${isModalOpen ? "blur-effect" : ""}`}>
+              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major" onClick={() => handleImageClick('/images-grid/Macbook-Claro7.png')}>
                 <Image src="/images-grid/Macbook-Claro7.png" alt="Macbook Claro" layout="fill" objectFit="cover" />
               </div>
-              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major sm:-translate-y-1/2">
+              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major sm:-translate-y-1/2" onClick={() => handleImageClick('/images-grid/TC2K_ENTRADA8.png')}>
                 <Image src="/images-grid/TC2K_ENTRADA8.png" alt="Forked Road" layout="fill" objectFit="cover" />
               </div>
-              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major ">
+              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major" onClick={() => handleImageClick('/images-grid/Mask-group-9.png')}>
                 <Image src="/images-grid/Mask-group-9.png" alt="Rolling Stone" layout="fill" objectFit="cover" />
               </div>
             </div>
@@ -97,6 +109,11 @@ export default function ImageGrid() {
           </motion.div>
         )}
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <Modal image={modalContent.image} onClose={handleModalClose} />
+      )}
     </div>
   );
 }

@@ -56,7 +56,7 @@ export default function Service() {
                 {nameServicie.map((name, index) => (
                     <div key={name} className="flex justify-between border-b-2 border-gray-600 div-container">
                         {/* Número + Nombre de la categoría */}
-                        <div className='w-[60%] flex justify-start items-center py-8'><h2 className="text-service font-antonio font-bold pl-24">
+                        <div className='w-[60%] flex justify-start items-center sm:py-8 lg:py-16 2xl:py-20'><h2 className="text-service font-antonio font-bold pl-24 uppercase">
                             {`${numberServicie[index].toString().padStart(2, "0")} ${name}`}
                         </h2></div>
                         {/* Lista de servicios */}
