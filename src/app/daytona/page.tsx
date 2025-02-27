@@ -48,7 +48,7 @@ export default function Daytona() {
           </video>
 
         </div>
-        <div className='relative pt-32 pb-10 sm:pb-20 bg-[#ca262c] bg-gradient-to-t from-black/90 to-transparent h-[200vh]'>
+        <div className='relative pt-32 pb-10 sm:pb-20 bg-[#ca262c] bg-gradient-to-t from-black/90 to-transparent sm:h-[120vh] md:h-[130vh] lg:h-[150vh] xl:h-[180vh] 2xl:h-[200vh]'>
           <div className="phone-container">
             <Image src="/images-proyecto/Daytona-Phone-Mockup.png" alt="Phone Mockup" className="phone-mockup z-10" width={450} height={800} />
             <video className="phone-video z-20" autoPlay loop muted playsInline>
@@ -118,9 +118,9 @@ export default function Daytona() {
             height={1000}
           /></div>
         </div>
-        <div className='relative  bg-[#ca262c] bg-gradient-to-b from-black/90 to-transparent min-h-[178vh]'>
+        <div className='relative  bg-[#ca262c] bg-gradient-to-b from-black/90 to-transparent sm:h-[80vh] md:h-[100vh] lg:h-[110vh] xl:h-[160vh] 2xl:h-[180vh]' >
           <div className='absolute top-0 flex justify-end w-full h-[150vh]'>
-            <h2 className='absolute w-full h-[218px] font-antonio font-normal font-road top-[17%] left-[25%] text-white uppercase z-20'>Road-ready <br /> solutions through <br /> creative campaigns.</h2>
+            <h2 className='absolute w-full h-[218px] font-antonio font-normal font-road sm:top-[7%] md:top-[9%]  xl:top-[13%] 2xl:top-[15%] left-[25%] text-white uppercase z-20'>Road-ready <br /> solutions through <br /> creative campaigns.</h2>
             <div className="absolute top-0 right-0 w-[65%] ">
               <Image
                 className="z-20"
