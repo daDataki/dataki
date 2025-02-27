@@ -9,7 +9,7 @@ import Footer from '../../components/footer/Footer'
 export default function Daytona() {
   return (
     <>
-      <div>
+      <div className='bg-[#ca262c]'>
         <div><Hero
           title="Daytona"
           backgroundImage={daytona.src}
@@ -48,25 +48,21 @@ export default function Daytona() {
           </video>
 
         </div>
-        <div className='relative h-auto pb-10 sm:pb-20 bg-[#ca262c] bg-gradient-to-t from-black/90 to-transparent'>
-          <div className='absolute w-[55%] top-[17%] z-10'><Image
-            className="w-[100%]"
-            src="/images-proyecto/Daytona-Phone-Mockup.png"
-            alt="vida-estilo"
-            width={829}
-            height={1125}
-          /></div>
-          <div className='relative flex justify-end w-[77%] ml-auto'>
-            <Image
-              className="w-[100%]"
-              src="/images-proyecto/Group.png"
-              alt="vida-estilo"
-              width={1110}
-              height={1055}
-            />
-            <h2 className='absolute top-[45%] left-12 font-antonio font-semibold text-white text-[14vw] sm:text-[16vw] leading-[14vw] sm:leading-[17vw] uppercase'>Video <br /> production</h2>
+        <div className='relative pt-32 pb-10 sm:pb-20 bg-[#ca262c] bg-gradient-to-t from-black/90 to-transparent h-[200vh]'>
+          <div className="phone-container">
+            <Image src="/images-proyecto/Daytona-Phone-Mockup.png" alt="Phone Mockup" className="phone-mockup z-10" width={450} height={800} />
+            <video className="phone-video z-20" autoPlay loop muted playsInline>
+              <source src="/video/Nutricion1.mp4" type="video/mp4" />
+            </video>
+            <video className="phone-video1 z-20" autoPlay loop muted playsInline>
+              <source src="/video/cansancio.mp4" type="video/mp4" />
+            </video>
           </div>
-          <div className='relative flex justify-end w-full'>
+          <div className='relative top-[30vh] flex justify-center w-full'>
+
+            <h2 className='text-center font-antonio font-normal text-white font-production  uppercase z-0'>Video <br /> production</h2>
+          </div>
+          <div className='relative flex justify-end w-full top-[40vh]'>
             <Image
               className="w-1/4"
               src="/images-proyecto/pngwing.png"
@@ -88,28 +84,32 @@ export default function Daytona() {
             <source src="/video/Video6_08-01.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className='bg-black text-[18vw] leading-[19vw] font-antonio font-semibold uppercase py-10 lg:py-14'>
-          <h2 className=' text-white'>Media</h2>
-          <h2 className='relative left-[18%] text-[#CB262C]'>Online</h2>
+        <div className='relative bg-black text-[18vw] leading-[19vw] font-antonio font-semibold uppercase py-10 lg:py-14'>
+          <div className='sticky top-[24vh]'>
+            <h2 className=' text-white'>Media</h2>
+            <h2 className='relative left-[18%] text-[#CB262C]'>Online</h2></div>
+
+          <div className='flex justify-end w-full'>
+            <Image
+              className="w-full"
+              src="/images-proyecto/Daytona-Via-publica-Mockup.png"
+              alt="vida-estilo"
+              width={1440}
+              height={1320}
+            />
+          </div>
         </div>
-        <div className='flex justify-end w-full'>
-          <Image
-            className="w-full"
-            src="/images-proyecto/Daytona-Via-publica-Mockup.png"
-            alt="vida-estilo"
-            width={1440}
-            height={1320}
-          />
-        </div>
-        <div className='flex flex-col relative bg-black  w-ful pt-12'>
-          <div className='absolute left-0 top-12 w-1/2 z-10'><Image
+
+        <div className='relative flex flex-col  bg-black  w-ful pt-12'>
+          <div className='absolute left-0 top-12 w-1/2 z-10 '><Image
             className="w-full"
             src="/images-proyecto/Group-1.png"
             alt="vida-estilo"
             width={1440}
             height={1320}
-          /></div>
-          <div className='flex justify-end z-20'><h2 className='text-[22vw] font-antonio font-semibold uppercase text-[#CB262C]' >& offline</h2></div>
+          />
+          </div>
+          <div className='sticky top-[20vh] z-20'><h2 className='text-[22vw] font-antonio font-semibold uppercase text-[#CB262C] text-end' >& offline</h2></div>
           <div className='relative w-full'><Image
             className="w-full h-auto"
             src="/images-proyecto/GRAFICAS_MM-01.png"
@@ -118,40 +118,45 @@ export default function Daytona() {
             height={1000}
           /></div>
         </div>
-        <div className='relative h-auto pb-40 bg-[#ca262c] bg-gradient-to-b from-black/90 to-transparent'>
-          <div className='relative flex justify-end w-[77%] ml-auto'>
-            <Image
-              className="w-[100%]"
-              src="/images-proyecto/Group.png"
-              alt="vida-estilo"
-              width={1110}
-              height={1055}
-            />
-            <h2 className='absolute font-antonio font-light top-[23%] left-[6%] text-white text-[3vw] leading-[3vw] uppercase'>Road-ready <br /> solutions through <br /> creative campaigns.</h2>
-            <Image
-              className="absolute top-[53%] w-[63%] left-[6%]"
-              src="/images-proyecto/GRAFICAS_MM-03.png"
-              alt="vida-estilo"
-              width={912}
-              height={300}
-            />
+        <div className='relative  bg-[#ca262c] bg-gradient-to-b from-black/90 to-transparent min-h-[178vh]'>
+          <div className='absolute top-0 flex justify-end w-full h-[150vh]'>
+            <h2 className='absolute w-full h-[218px] font-antonio font-normal font-road top-[17%] left-[25%] text-white uppercase z-20'>Road-ready <br /> solutions through <br /> creative campaigns.</h2>
+            <div className="absolute top-0 right-0 w-[65%] ">
+              <Image
+                className="z-20"
+                src="/images-proyecto/Group1-1.png"
+                alt="vida-estilo"
+                width={1110}
+                height={1055}
+              />
+            </div>
           </div>
-          <div className='relative flex justify-end w-[77%] left-[23%] z-20'><Image
-            className="relative top-[53%] w-[63%]"
-            src="/images-proyecto/GRAFICAS_MM-03.png"
-            alt="vida-estilo"
-            width={912}
-            height={300}
-          /></div>
-          <div className='absolute w-full top-[42%] transform -translate-y-[50px]  z-10'>
+          <div className='sticky top-[30vh] z-10'>
             <div className="w-full flex flex-col font-antonio text-white  uppercase text-bordered fontSize-fluid-branding">
               <span>GRAPHIC</span>
               <span className='text-center'>design</span>
             </div>
           </div>
-          <div className='w-[80%] mt-[10vw] mx-auto'>
-            <PreviousNext />
-          </div>
+          <div className=' w-[77%] z-20'>
+            <Image
+              className="absolute top-[32%] w-[54%] left-1/2 -translate-x-1/2 z-20"
+              src="/images-proyecto/GRAFICAS_MM-03.png"
+              alt="vida-estilo"
+              width={912}
+              height={300}
+            />
+            <Image
+              className="absolute bottom-0 w-[54%] right-0"
+              src="/images-proyecto/GRAFICAS_MM-02.png"
+              alt="vida-estilo"
+              width={912}
+              height={300}
+            /></div>
+
+
+        </div>
+        <div className='w-[80%] mt-[10vw] mx-auto bg-[#ca262c]'>
+          <PreviousNext className='text-white' />
         </div>
         <div>
           <Footer background="bg-black " />

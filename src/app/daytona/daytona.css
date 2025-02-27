@@ -1,6 +1,6 @@
 .text-bordered {
     color: transparent; /* Hace que el relleno del texto sea transparente */
-    -webkit-text-stroke: 1px white; /* Agrega un contorno blanco al texto */
+    -webkit-text-stroke: 2px white; /* Agrega un contorno blanco al texto */
     
     
 }
@@ -11,3 +11,58 @@
 
 }
 
+.font-road {
+    font-size: clamp(20px, 4.16vW, 90px);
+    line-height: clamp(23px, 4.72vw, 102px);
+
+}
+
+.font-production {
+    font-size: clamp(100px, 20.8vW, 450px);
+    line-height: clamp(100px, 20.8vW, 450px);
+
+}
+
+
+.phone-container {
+    position: absolute;
+    width: 53%; /* Ajusta según el tamaño del mockup */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 13%;
+  }
+  
+  .phone-mockup {
+    width: 100%;
+    height: auto;
+  }
+  
+  .phone-video {
+    position: absolute;
+    top: -9%;
+    left: -7%;
+    width: 60%;
+    height: 77%;
+    object-fit: cover;
+    border-radius: 12px;
+  
+    /* Transformaciones 3D ajustadas */
+    transform: perspective(5000px) rotateX(53deg) rotateY(-20deg) rotateZ(25.5deg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  .phone-video1 {
+    position: absolute;
+    top: 18%;
+    left: 28%;
+    width: 43%;
+    height: 77%;
+    object-fit: cover;
+    border-radius: 25px;
+  
+    /* Transformaciones 3D ajustadas */
+    transform: perspective(5000px) rotateX(53deg) rotateY(-20deg) rotateZ(25deg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
