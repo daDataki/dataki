@@ -42,14 +42,14 @@
   .phone-video {
     position: absolute;
     top: -9%;
-    left: -7%;
-    width: 60%;
+    left: -5%;
+    width: 57%;
     height: 77%;
     object-fit: cover;
     border-radius: 12px;
   
     /* Transformaciones 3D ajustadas */
-    transform: perspective(5000px) rotateX(53deg) rotateY(-20deg) rotateZ(25.5deg);
+    transform: perspective(10000px) rotateX(53deg) rotateY(-20deg) rotateZ(25deg);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
   .phone-video1 {
