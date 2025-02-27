@@ -8,10 +8,12 @@ import './Header1.css';
 interface HeaderProps {
   className?: string;
   logoSrc: string; // Logo dinámico
+  logoSrcOpen: string; 
   menuIconSrc: string; // Imagen del botón de menú
+  
 }
 
-export default function Header({ className, logoSrc, menuIconSrc }: HeaderProps) {
+export default function Header({ className, logoSrc, logoSrcOpen,  menuIconSrc }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
@@ -25,7 +27,7 @@ export default function Header({ className, logoSrc, menuIconSrc }: HeaderProps)
       {/* Logo */}
       <div className="flex justify-between items-center">
         <div className="w-[120px] h-[22px] flex items-center">
-          <Image src={logoSrc} alt="Dataki" width={150} height={150} layout="fixed" />
+          <Image src={isOpen ? logoSrcOpen : logoSrc} alt="Dataki" width={150} height={150} layout="fixed" />
         </div>
 
         {/* Botón hamburguesa */}
