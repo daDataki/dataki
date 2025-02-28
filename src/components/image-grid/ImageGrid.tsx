@@ -12,7 +12,7 @@ export default function ImageGrid() {
 
   // Referencia para Intersection Observer
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, margin: "-100px 0px" });
+  const isInView = useInView(ref, { once: true, margin: "-100px 0px" });
 
   const handleImageClick = (image: string) => {
     setModalContent({ image });
@@ -20,7 +20,6 @@ export default function ImageGrid() {
   };
 
   const handleModalClose = () => {
-    console.log("Cerrando modal desde el componente padre");
     setIsModalOpen(false); // Cierra el modal
   };
 
