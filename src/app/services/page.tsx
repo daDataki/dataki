@@ -8,7 +8,13 @@ import Footer from "../../components/footer/Footer"
 export default function Servicies() {
   return (
     <div>
-      <Header className="text-white" logoSrc="/images-proyecto/logo.png" menuIconSrc="/images-proyecto/menuWhite.png" logoSrcOpen="/images-proyecto/logo.png" />
+      <Header
+        className="text-white"
+        logoSrc="/images-proyecto/logo.png"
+        menuIconSrc="/images-proyecto/menuWhite.png"
+        logoSrcOpen="/images-proyecto/logo.png"
+        menuCloseIcon="/images-proyecto/closeMenuWhite.svg"
+      />
       <div className="bg-black">
         <div className="relative pl-24 py-56">
           <h1 className="uppercase text-white  font-antonio font-bold text-services" >services</h1>

@@ -198,7 +198,7 @@ export default function VidaEstilo() {
           </div>
         </div>
         <div><div className='bg-[#E2DED6] w-full flex justify-center z-10 mt-[-1px]'><Image
-          className=" w-full z-10 "
+          className="w-full z-10"
           src="/images-proyecto/Mockup V&E.png"
           alt="vida-estilo"
           layout="intrinsic"
