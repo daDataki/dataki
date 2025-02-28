@@ -79,8 +79,8 @@ export default function VidaEstilo() {
           }}
         /></div>
         <div className='relative h-[50vh] sm:h-[91vh] md:h-[121vh] lg:h-[158vh] xl:h-[93vw] 2xl:h-[105vw] sm:px-12 bg-black mt-[-1px]'>
-          <div className='max-sm:flex max-sm:justify-center sm:sticky font-antonio font-semibold fontSize-fluid top-0'>
-            <h2 className='uppercase text-bordered text-black'>
+          <div className='max-sm:flex max-sm:justify-center sm:sticky font-antonio font-medium fontSize-fluid top-0'>
+            <h2 className='uppercase text-bordered'>
               web <br /> design
             </h2>
           </div>
@@ -150,7 +150,7 @@ export default function VidaEstilo() {
                 />
 
               </div>
-              <div id="design" className="absolute bottom-24 w-fit text-start left-20">
+              <div id="design" className="absolute bottom-24 w-fit text-start left-12">
                 <h2 className="uppercase text-bordered-branding sm:left-3">design</h2>
               </div>
             </div>
@@ -193,7 +193,7 @@ export default function VidaEstilo() {
             transitionSpeeds={[4000, 2500, 1500]}
           />
 
-          <div className='absolute fontSize-fluid bottom-0   left-0'><div className=''><h2 className='uppercase font-antonio font-bold text-bordered-strategy '>Digital</h2></div>
+          <div className='absolute fontSize-fluid bottom-0   left-12'><div className=''><h2 className='uppercase font-antonio font-bold text-bordered-strategy '>Digital</h2></div>
             <div className=''><h2 className='uppercase font-antonio font-bold text-bordered-strategy '>Strategy</h2></div>
           </div>
         </div>
@@ -205,8 +205,8 @@ export default function VidaEstilo() {
           width={800}
           height={1111}
         /></div></div>
-        <div className='relative bg-[linear-gradient(to_bottom,#68725E_0_65%,#131313_65%_100%)] px-8 sm:px-28 pt-8 sm:pt-32 mt-[-1px] z-10'>
-          <div className='sticky top-0'><h2 className='uppercase text-bordered-data fontSize-fluid font-antonio'>Data <br />Analytics </h2></div>
+        <div className='relative bg-[#68725E] px-12 sm:px-12 pt-8 sm:pt-32 mt-[-1px] z-10'>
+          <div className='sticky top-0'><h2 className='uppercase text-bordered-data fontSize-fluid font-antonio '>Data <br />Analytics </h2></div>
           <div className='absolute w-[35%] left-[50%] top-[10%] h-auto z-10'><Image
             className=" w-full z-10  h-[66vh] "
             src="/images-proyecto/Profit (1).png"
@@ -250,7 +250,7 @@ export default function VidaEstilo() {
             </div>
           </div>
         </div>
-        <div className='mt-[-1px] bg-[#131313]  text-white px-24 z-10'><PreviousNext /></div>
+        <div className='mt-[-1px] bg-[#68725E]  text-white px-24 z-10'><PreviousNext /></div>
         <div>
           <Footer background="bg-[#131313] " />
         </div>

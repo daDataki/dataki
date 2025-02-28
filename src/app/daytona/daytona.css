@@ -1,8 +1,6 @@
 .text-bordered {
     color: transparent; /* Hace que el relleno del texto sea transparente */
-    -webkit-text-stroke: 2px white; /* Agrega un contorno blanco al texto */
-    
-    
+    -webkit-text-stroke: 2px white; /* Agrega un contorno blanco al texto */    
 }
 
 .fontSize-fluid-branding {
@@ -18,11 +16,27 @@
 }
 
 .font-production {
-    font-size: clamp(100px, 20.8vW, 450px);
-    line-height: clamp(100px, 20.8vW, 450px);
-
+    font-size: clamp(80px, 16.66vw, 360px);
+    line-height: clamp(80px, 16.66vw, 360px);
 }
-
+.font-performance {
+  font-size: clamp(16px, 3.33vw, 72px);
+  line-height: clamp(22.6px, 4.72vw, 102px);
+}
+.font-media-online {
+  font-size: clamp(80px, 16.6vw, 360px);
+  line-height: clamp(80px, 16.6vw, 360px);
+}
+.text-media-online {
+  color: transparent;
+  /* Color de la letra */
+  -webkit-text-stroke: 2px red;
+}
+.text-media {
+  color: transparent;
+  /* Color de la letra */
+  -webkit-text-stroke: 2px white;
+}
 
 .phone-container {
     position: absolute;

@@ -1,20 +1,12 @@
 .text-bordered {
-  color: black;
+  color: transparent;
   /* Color de la letra */
-  text-shadow:
-    -2px -2px 0 white,
-    /* Sombra arriba-izquierda */
-    2px -2px 0 white,
-    /* Sombra arriba-derecha */
-    -2px 2px 0 white,
-    /* Sombra abajo-izquierda */
-    2px 2px 0 white;
-  /* Sombra abajo-derecha */
+  -webkit-text-stroke: 2px white;
 }
 
 .fontSize-fluid {
-  font-size: clamp(100px, 20.83vw, 450px);
-  line-height: clamp(100px, 20.83vw, 450px);
+  font-size: clamp(80px, 16.66vw, 360px);
+  line-height: clamp(80px, 16.66vw, 360px);
 }
 
 .fontSize-fluid-branding {

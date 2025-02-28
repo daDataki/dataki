@@ -17,7 +17,7 @@ interface HeaderProps {
 const menuOptions = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
-  { name: "Work", path: "/vida-estilo" },
+  { name: "Work", path: "/#work" },
   { name: "Services", path: "/services" },
   { name: "Contact", path: "/contact" }
 ]
@@ -35,7 +35,7 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuIconSrc, m
 
       {/* Logo */}
       <div className="flex justify-between items-center">
-        <div className="w-[120px] h-[22px] flex items-center">
+        <div className="w-[120px] h-[22px] flex items-center z-50">
           <Image src={isOpen ? logoSrcOpen : logoSrc} alt="Dataki" width={150} height={150} layout="fixed" />
         </div>
 
@@ -56,15 +56,15 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuIconSrc, m
 
       {/* Menú de navegación */}
       <div
-        className={`fixed top-0 py-6 left-0 pl-4 pr-20 bg-gray-800 text-white overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'h-screen opacity-100' : 'max-h-0 opacity-0'}`}
+        className={`fixed top-0 py-6 left-0 pl-4 pr-20 bg-black text-white overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'h-screen opacity-100' : 'max-h-0 opacity-0'}`}
       >
         <nav className="px-6">
-          <ul className="flex flex-col text-5xl md:text-6xl font-antonio font-semibold">
+          <ul className="flex flex-col pt-16 text-5xl md:text-6xl font-antonio font-semibold">
             {menuOptions.map((link, index) => (
               <li key={link.path}>
                 <Link
                   href={link.path}
-                  className={`block py-3 hover:py-8 transition-all duration-300 hover:text-easternBlue ${pathname === link.path ? 'text-easternBlue' : ''}`}
+                  className={`block py-2 uppercase hover:py-8 transition-all duration-300 hover:text-easternBlue ${pathname === link.path ? "text-easternBlue" : "text-white blur-sm hover:blur-none hover:text-easternBlue"}`}
                 >
                   {/*${pathname === link.path ? "text-easternBlue" : "text-white blur hover:blur-none"}*/}
                   <span className='max-sm:hidden'>0{index + 1}</span> {link.name}
@@ -73,10 +73,6 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuIconSrc, m
             ))}
           </ul>
         </nav>
-
-        <div className="w-[140px] flex items-center absolute bottom-6 left-6">
-          <Image src='/images-proyecto/logo-svg-white.svg' alt="Dataki" width={150} height={150} layout="fixed" />
-        </div>
       </div>
     </header>
   );
