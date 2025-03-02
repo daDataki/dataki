@@ -128,6 +128,7 @@ export default function Aos() {
         <div className="bg-[#131313]">
           {/* Título "Busine" */}
           <AnimatePresence>
+          {showBusine && (
             <motion.h2
               initial={{ x: -200, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -136,6 +137,7 @@ export default function Aos() {
             >
               Busine
             </motion.h2>
+          )}
           </AnimatePresence>
           {/* Imagenes entrando de izquierda y derecha */}
           <div className="flex justify-between items-center">
@@ -233,6 +235,7 @@ export default function Aos() {
           {/* Título "Strategy" y Slider 5 */}
           <div className="relative flex justify-between items-center mt-8 pb-[32vw]">
             <AnimatePresence>
+            {showStrategy && (
               <motion.h2
                 initial={{ x: 200, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -241,6 +244,7 @@ export default function Aos() {
               >
                 strategy
               </motion.h2>
+            )}
             </AnimatePresence>
 
             <AnimatePresence>
