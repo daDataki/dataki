@@ -1,0 +1,10 @@
+.text-bordered {
+    color: transparent; /* Hace que el relleno del texto sea transparente */
+    -webkit-text-stroke: 2px white; /* Agrega un contorno blanco al texto */    
+}
+
+.fontSize-gra-desig {
+    font-size: clamp(13vw, 21vw, 27vw);
+    line-height: clamp(13vw, 21vw, 27vw);
+
+}
