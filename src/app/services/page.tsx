@@ -13,7 +13,7 @@ export default function Servicies() {
         logoSrc="/images-proyecto/logo.png"
         menuIconSrc="/images-proyecto/menuWhite.png"
         logoSrcOpen="/images-proyecto/logo.png"
-        menuCloseIcon="/images-proyecto/closeMenuWhite.svg"
+        menuCloseIcon="/images-proyecto/closeMenu.svg"
       />
       <div className="bg-black">
         <div className="relative pl-24 py-56">
