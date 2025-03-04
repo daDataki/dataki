@@ -1,11 +1,58 @@
 .text-bordered {
-    color: transparent; /* Hace que el relleno del texto sea transparente */
-    -webkit-text-stroke: 2px white; /* Agrega un contorno blanco al texto */    
+    color: transparent;
+    /* Hace que el relleno del texto sea transparente */
+    -webkit-text-stroke: 2px white;
+    /* Agrega un contorno blanco al texto */
 }
 
 .fontSize-gra-desig {
-    font-size: clamp(13vw, 21vw, 27vw);
-    line-height: clamp(13vw, 21vw, 27vw);
+    font-size: clamp(13px, 21vw, 27px);
+    line-height: clamp(13px, 21vw, 27px);
 
 }
 
+.font-empowering {
+    font-size: clamp(23px, 4.86vw, 105px);
+    line-height: clamp(23px, 4.86vw, 105px);
+}
+
+.parallax-container {
+    position: relative;
+    overflow-y: auto;
+    height: 60vh;
+    /* Asegura suficiente espacio para el scroll */
+    overflow: hidden;
+    transform: perspective(5000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.parallax-image {
+    position: absolute;
+    width: 15%;
+    top: 0;
+    left: 40%;
+
+    transition: transform 0.2s ease-out;
+    z-index: 10;
+    /* Asegura que las imágenes estén por encima de otros elementos */
+}
+
+.parallax-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+videos {
+    position: absolute;
+    
+    left: 7%;
+    width: 51%;
+   
+    object-fit: cover;
+    overflow: hidden;
+    /* Asegura que el contenido que sobresalga se recorte */
+    clip-path: polygon(0 0, 99% 9%, 100% 100%, 0 99%);
+}

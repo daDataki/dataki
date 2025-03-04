@@ -1,0 +1,16 @@
+.parallax-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 20px;
+  }
+  
+  .parallax-image img {
+    width: 100%;
+    max-width: 600px;
+    margin: 15px 0;
+    transition: transform 0.2s ease-out;
+  }
+  

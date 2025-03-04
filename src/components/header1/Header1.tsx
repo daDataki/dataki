@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
+
 interface HeaderProps {
   className?: string;
   logoSrc: string;
@@ -15,7 +16,7 @@ interface HeaderProps {
 const menuOptions = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
-  { name: "Work", path: "/#work" },  // 🔥 Este tiene un #id
+  { name: "Work", path: "/#work" },  //Este tiene un #id
   { name: "Services", path: "/services" },
   { name: "Contact", path: "/contact" }
 ];

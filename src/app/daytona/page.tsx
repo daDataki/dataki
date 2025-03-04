@@ -39,12 +39,10 @@ export default function Daytona() {
         <div className='flex justify-center bg-black mt-[-1px] pb-10'>
           <video
             className="w-[90%] h-[716px] object-cover"
-            autoPlay
-            loop
-            muted
+            controls
             playsInline
           >
-            <source src="/video/Video6_08-01.mp4" type="video/mp4" />
+            <source src="/video/Video5-con-audio.mp4" type="video/mp4" />
           </video>
 
         </div>

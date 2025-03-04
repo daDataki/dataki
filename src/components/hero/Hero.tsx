@@ -38,11 +38,12 @@ const Hero: React.FC<HeroProps> = ({
             <Header />
             <div className="relative w-full z-10">
                 <div
-                    className="relative flex flex-col justify-between w-full h-[50vh] sm:h-[65vh] md:h-[80vh] lg:h-screen "
+                    className="relative flex flex-col justify-between w-full h-[50vh] sm:h-[65vh] md:h-[80vh] lg:h-screen 2xl:h-[120vh]"
                     style={{
                         backgroundImage: `url(${bgImage})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',  // Ajusta la imagen para que se vea completa sin recortes
+                        backgroundPosition: 'center', // Mantiene la imagen centrada
+                        backgroundRepeat: 'no-repeat',
                     }}
                 >
                     <div className="absolute inset-0 bg-black opacity-40"></div>
