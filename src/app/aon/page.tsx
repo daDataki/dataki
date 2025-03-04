@@ -4,10 +4,8 @@ import Hero from '../../components/hero/Hero';
 import aon from '../../../public/images-proyecto/aon-busy-business.png';
 import Image from 'next/image';
 import './aon.css'
-import PreviousNext from '../../components/previous-next/PreviousNext'
 import Footer from '../../components/footer/Footer'
 import AnimatedAos from '../../components/animated-aos/AnimatedAos'
-import ParallaxGallery from '../../components/parallax-gallery/ParallaxGallery'
 import { useRef } from "react";
 
 
