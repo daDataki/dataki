@@ -110,6 +110,7 @@ export default function Aos() {
           </div>
         </div>
       </div>
+    
       {/*<div className="bg-[#141414] bg-gradient-to-t from-[#ff0010]/90 to-transparent">
         <div>
           <h2 className="fontSize-gra-desig font-antonio font-medium text-bordered px-8 uppercase">

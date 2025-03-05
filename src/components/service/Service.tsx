@@ -52,23 +52,27 @@ const descriptionService: Record<string, string[]> = {
 export default function Service() {
     return (
         <div className="bg-black text-[#959595]">
-            <div className="relative ">
+            <div className="relative">
                 {nameServicie.map((name, index) => (
-                    <div key={name} className="flex justify-between border-b-2 border-gray-600 div-container hover:text-white">
+                    <div key={name} className="group flex justify-between border-b-2 border-gray-600  transition duration-300">
                         {/* Número + Nombre de la categoría */}
-                        <div className='w-[60%] flex justify-start items-center sm:py-8 lg:py-16 2xl:py-20'><h2 className="text-service font-antonio font-bold pl-24 uppercase ">
-                            {`${numberServicie[index].toString().padStart(2, "0")} ${name}`}
-                        </h2></div>
+                        <div className="w-[60%] flex justify-start items-center sm:py-8 lg:py-16 2xl:py-20">
+                            <h2 className="text-service font-antonio font-bold pl-24 uppercase group-hover:text-white">
+                                {`${numberServicie[index].toString().padStart(2, "0")} ${name}`}
+                            </h2>
+                        </div>
                         {/* Lista de servicios */}
-                        <div className='flex justify-start items-center w-[40%]'><ul className="list-disc list-inside text-service-list font-Poppins font-medium">
-                            {descriptionService[name]?.map((service, idx) => (
-                                <li key={idx} className="text-gray-300">{service}</li>
-                            ))}
-                        </ul></div>
-
+                        <div className="flex justify-start items-center w-[40%]">
+                            <ul className="list-disc list-inside text-service-list font-Poppins font-medium group-hover:text-white">
+                                {descriptionService[name]?.map((service, idx) => (
+                                    <li key={idx} className="text-[#959595] group-hover:text-white">{service}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 ))}
             </div>
         </div>
+
     );
 }

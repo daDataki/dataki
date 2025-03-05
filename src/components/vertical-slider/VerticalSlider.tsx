@@ -90,7 +90,7 @@ export default function VerticalSlider({ intervalDuration = 2000 }: { intervalDu
   };
 
   return (
-    <div className="relative bg-black text-white w-full h-[35vh] sm:h-[50vh]  lg:h-[75vh] object-cover overflow-hidden flex flex-col justify-center items-center max-sm:pt-0 pt-[330px] max-sm:pb-0 pb-[410px]">
+    <div className="relative bg-black text-white w-full h-[35vh] sm:h-[50vh]  lg:h-[85vh] xl:h-[110vh] object-cover overflow-hidden flex flex-col justify-center items-center max-sm:pt-0 pt-[330px] max-sm:pb-0 pb-[410px] mt-[-2px]">
       <div className='absolute top-0 flex flex-col justify-center items-center text-we-focus pt-16 uppercase'>
         <p>services</p>
       </div>
@@ -100,7 +100,7 @@ export default function VerticalSlider({ intervalDuration = 2000 }: { intervalDu
       <div className='max-sm:hidden absolute top-52 xl:top-1/2 left-12 md:left-0'>
         <p className='font-Poppins md:ml-16 text-we-focus uppercase'>we focus on</p>
       </div>
-      <ul className="relative h-full">
+      <ul className="relative h-full ">
         {words.map((word, index) => {
           const offset = (index - currentIndex + words.length) % words.length; // Cálculo del desplazamiento relativo
           const isMain = offset === 0; // Verifica si es el elemento principal

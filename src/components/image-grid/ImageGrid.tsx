@@ -9,6 +9,7 @@ export default function ImageGrid() {
   const [applyClasses, setApplyClasses] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState({ image: '' });
+  const [hoveredImage, setHoveredImage] = useState<string | null>(null);
 
   // Referencia para Intersection Observer
   const ref = useRef(null);
@@ -22,6 +23,19 @@ export default function ImageGrid() {
   const handleModalClose = () => {
     setIsModalOpen(false); // Cierra el modal
   };
+
+  const ImageItem = ({ src, alt, onClick, clase }: { src: string, alt: string, clase: string, onClick: () => void }) => (
+    <div
+      className={`relative w-[400px] h-[200px] lg:h-[278px]  width-major cursor-pointer transition duration-300 ${hoveredImage && hoveredImage !== src ? "blur-sm" : ""
+        }`}
+      onMouseEnter={() => setHoveredImage(src)}
+      onMouseLeave={() => setHoveredImage(null)}
+      onClick={onClick}
+    >
+      <Image src={src} alt={alt} className={clase} layout="fill" objectFit="cover" />
+    </div>
+  );
+
 
   return (
     <div ref={ref} className="relative mx-auto w-full sm:mb-16 min-h-screen max-sm:pt-10 ">
@@ -68,41 +82,76 @@ export default function ImageGrid() {
 
             {/* Primer grupo de imágenes */}
             <div className={`flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end mb-responsive mt-responsive max-sm:gap-8 max-sm:mb-8 gap-12 ${isModalOpen ? "blur-effect" : ""}`}>
-              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major cursor-pointer" onClick={() => handleImageClick('/images-grid/busy-1.png')}>
-                <Image src="/images-grid/busy-1.png" alt="busy-1.png" layout="fill" objectFit="cover" />
-              </div>
-              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major cursor-pointer sm:-translate-y-1/2" onClick={() => handleImageClick('/images-grid/Maskgroup2.png')}>
-                <Image src="/images-grid/Maskgroup2.png" alt="Mask group 2" layout="fill" objectFit="cover" />
-              </div>
-              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major cursor-pointer" onClick={() => handleImageClick('/images-grid/Mask-group33.png')}>
-                <Image src="/images-grid/Mask-group33.png" alt="Mask group 3" layout="fill" objectFit="cover" />
-              </div>
+              <ImageItem
+                clase=""
+                src="/images-grid/busy-1.png"
+                alt="busy-1.png"
+                onClick={() => handleImageClick('/images-grid/busy-1.png')}
+              />
+
+              <ImageItem
+                clase="sm:-translate-y-1/2"
+                src="/images-grid/Maskgroup2.png"
+                alt="busy-1.png"
+                onClick={() => handleImageClick('/images-grid/Maskgroup2.png')}
+              />
+
+              <ImageItem
+                clase=""
+                src="/images-grid/Mask-group33.png"
+                alt="busy-1.png"
+                onClick={() => handleImageClick('/images-grid/Mask-group33.png')}
+              />
             </div>
 
             {/* Segundo grupo de imágenes */}
             <div className={`relative flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end sm:left-[7.3vw] mb-responsive max-sm:gap-8 max-sm:mb-8 gap-12 ${isModalOpen ? "blur-effect" : ""}`}>
-              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major cursor-pointer" onClick={() => handleImageClick('/images-grid/Mask-group4.png')}>
-                <Image src="/images-grid/Mask-group4.png" alt="Mask group 4" layout="fill" objectFit="cover" />
-              </div>
-              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major cursor-pointer sm:-translate-y-1/2" onClick={() => handleImageClick('/images-grid/beacon-beach5.png')}>
-                <Image src="/images-grid/beacon-beach5.png" alt="Beacon Beach" layout="fill" objectFit="cover" />
-              </div>
-              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major cursor-pointer sm:-translate-y-[-20%]" onClick={() => handleImageClick('/images-grid/miroshnichenko66.png')}>
-                <Image src="/images-grid/miroshnichenko66.png" alt="Miroshnichenko" layout="fill" objectFit="cover" />
-              </div>
+              
+              <ImageItem
+                clase=""
+                src="/images-grid/Mask-group4.png"
+                alt="busy-1.png"
+                onClick={() => handleImageClick('/images-grid/Mask-group4.png')}
+              />
+              
+              <ImageItem
+                clase="sm:-translate-y-1/2"
+                src="/images-grid/beacon-beach5.png"
+                alt="Mask-group4.png"
+                onClick={() => handleImageClick('/images-grid/beacon-beach5.png.png')}
+              />
+              
+              <ImageItem
+                clase="sm:-translate-y-[20%]"
+                src="/images-grid/miroshnichenko66.png"
+                alt="Mask-group4.png"
+                onClick={() => handleImageClick('/images-grid/miroshnichenko66.png')}
+              />
             </div>
 
             {/* Tercer grupo de imágenes */}
             <div className={`flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end max-sm:gap-8 gap-12 ${isModalOpen ? "blur-effect" : ""}`}>
-              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major cursor-pointer" onClick={() => handleImageClick('/images-grid/Macbook-Claro7.png')}>
-                <Image src="/images-grid/Macbook-Claro7.png" alt="Macbook Claro" layout="fill" objectFit="cover" />
-              </div>
-              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major cursor-pointer sm:-translate-y-1/2" onClick={() => handleImageClick('/images-grid/TC2K_ENTRADA8.png')}>
-                <Image src="/images-grid/TC2K_ENTRADA8.png" alt="Forked Road" layout="fill" objectFit="cover" />
-              </div>
-              <div className="relative w-[400px] h-[200px] lg:h-[278px] overflow-hidden width-major cursor-pointer" onClick={() => handleImageClick('/images-grid/Mask-group-9.png')}>
-                <Image src="/images-grid/Mask-group-9.png" alt="Rolling Stone" layout="fill" objectFit="cover" />
-              </div>
+            
+              <ImageItem
+                clase=""
+                src="/images-grid/Macbook-Claro7.png"
+                alt="Macbook-Claro7.png"
+                onClick={() => handleImageClick('/images-grid/Macbook-Claro7.png')}
+              />
+              
+              <ImageItem
+                clase="sm:-translate-y-1/2"
+                src="/images-grid/TC2K_ENTRADA8.png"
+                alt="TC2K_ENTRADA8.png"
+                onClick={() => handleImageClick('/images-grid/TC2K_ENTRADA8.png')}
+              />
+             
+              <ImageItem
+                clase=""
+                src="/images-grid/Mask-group-9.png"
+                alt="Mask-group-9.png"
+                onClick={() => handleImageClick('/images-grid/Mask-group-9.png')}
+              />
             </div>
 
           </motion.div>
