@@ -90,7 +90,7 @@ export default function VerticalSlider({ intervalDuration = 2000 }: { intervalDu
   };
 
   return (
-    <div className="relative bg-black text-white w-full h-[35vh] sm:h-[50vh]  lg:h-[85vh] xl:h-[110vh] object-cover overflow-hidden flex flex-col justify-center items-center max-sm:pt-0 pt-[330px] max-sm:pb-0 pb-[410px] mt-[-2px]">
+    <div className="relative bg-black text-white w-full h-[35vh] sm:h-[50vh]  lg:h-[85vh] xl:h-[120vh] object-cover overflow-hidden flex flex-col justify-center items-center max-sm:pt-0 pt-[330px] max-sm:pb-0 pb-[410px] mt-[-2px]">
       <div className='absolute top-0 flex flex-col justify-center items-center text-we-focus pt-16 uppercase'>
         <p>services</p>
       </div>
