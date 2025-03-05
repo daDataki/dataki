@@ -4,15 +4,24 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 // Mapa de imágenes con su información
-const imageDataMap: Record<string, { title: string; text1: string; text2: string; categories: string[]; route: string }> = {
+const imageDataMap: Record<string, {
+  src: string;
+  title: string;
+  text1: string;
+  text2: string;
+  categories: string[];
+  route: string
+}> = {
   "/images-grid/busy-1.png": {
+    src: "/images-grid/busy-1.png",  // Aquí es necesario asignar correctamente la propiedad src
     title: "AON",
     text1: "",
     text2: "2024-Ongoing",
     categories: ["Video Production", "Front-End Development", "Business & Digital Strategy", "Graphic & Digital Design"],
-    route: "/vida-estilo"
+    route: "/aon"
   },
   "/images-grid/Maskgroup2.png": {
+    src: "/images-grid/Maskgroup2.png",
     title: "CIS Latam",
     text1: "",
     text2: "2022-Ongoing",
@@ -20,6 +29,7 @@ const imageDataMap: Record<string, { title: string; text1: string; text2: string
     route: "/vida-estilo"
   },
   "/images-grid/Mask-group33.png": {
+    src: "/images-grid/Mask-group33.png",
     title: "Milaires",
     text1: "",
     text2: "2024-Ongoing",
@@ -27,6 +37,7 @@ const imageDataMap: Record<string, { title: string; text1: string; text2: string
     route: "/vida-estilo"
   },
   "/images-grid/Mask-group4.png": {
+    src: "/images-grid/Mask-group4.png",
     title: "Daytona",
     text1: "",
     text2: "2022-Ongoing",
@@ -34,6 +45,7 @@ const imageDataMap: Record<string, { title: string; text1: string; text2: string
     route: "/daytona"
   },
   "/images-grid/beacon-beach5.png": {
+    src: "/images-grid/beacon-beach5.png",
     title: "Vida & Estilo",
     text1: "Hospitality Group",
     text2: "2023-Ongoing",
@@ -41,6 +53,7 @@ const imageDataMap: Record<string, { title: string; text1: string; text2: string
     route: "/vida-estilo"
   },
   "/images-grid/miroshnichenko66.png": {
+    src: "/images-grid/miroshnichenko66.png",
     title: "ENVEEDO",
     text1: "",
     text2: "2022",
@@ -48,6 +61,7 @@ const imageDataMap: Record<string, { title: string; text1: string; text2: string
     route: "/vida-estilo"
   },
   "/images-grid/Macbook-Claro7.png": {
+    src: "/images-grid/Macbook-Claro7.png",
     title: "CLARO",
     text1: "",
     text2: "2020-2025",
@@ -55,6 +69,7 @@ const imageDataMap: Record<string, { title: string; text1: string; text2: string
     route: "/vida-estilo"
   },
   "/images-grid/TC2K_ENTRADA8.png": {
+    src: "/images-grid/TC2K_ENTRADA8.png",
     title: "TANGO Motorsports",
     text1: "",
     text2: "2022-2024",
@@ -62,6 +77,7 @@ const imageDataMap: Record<string, { title: string; text1: string; text2: string
     route: "/vida-estilo"
   },
   "/images-grid/Mask-group-9.png": {
+    src: "/images-grid/Mask-group-9.png",
     title: "VML",
     text1: "",
     text2: "2020-Ongoing",
@@ -71,6 +87,7 @@ const imageDataMap: Record<string, { title: string; text1: string; text2: string
 };
 
 const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
+  
   const router = useRouter();
 
   const { title, text1, text2, categories, route } = imageDataMap[image] || {
@@ -116,18 +133,20 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
         </div>
 
         {/* Imagen y contenido */}
-        <div className="w-[100%] lg:w-[85%]  flex justify-between items-center mt-12">
-          <div className="w-1/2flex flex-col gap-4">
+        <div className="w-[100%] lg:w-[85%] flex justify-between items-center mt-12">
+          <div className="w-1/2 flex flex-col gap-4">
             <div>
-              <h6 className="font-text2 "><span className="font-bold">DATE:</span> {text2}</h6>
+              <h6 className="font-text2 ">
+                <span className="font-bold">DATE:</span> {imageDataMap[image].text2 }
+              </h6>
             </div>
             <div>
               {/* Categorías */}
-              {categories.length > 0 && (
+              {imageDataMap[image].categories.length > 0 && (
                 <div className="mt-4">
                   <h3 className="font-bold font-Poppins font-text2">CATEGORIES:</h3>
                   <ul className="list-disc list-inside font-Poppins font-text2">
-                    {categories.map((category, index) => (
+                    {imageDataMap[image].categories.map((category, index) => (
                       <li key={index} className="text-gray-700">{category}</li>
                     ))}
                   </ul>
@@ -139,7 +158,13 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
             className="relative w-1/2 h-[23vh] lg:h-[33vh] xl:h-[43vh]  cursor-pointer"
             onClick={handleNavigate} // Redirige al hacer clic
           >
-            <Image src={image} alt={title} layout="fill" objectFit="cover" objectPosition="right" className="" />
+            <Image
+              src={imageDataMap[image].src}
+              alt={imageDataMap[image].title}
+              layout="fill"
+              objectFit="cover"
+              objectPosition="right"
+            />
           </div>
         </div>
       </div>

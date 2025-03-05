@@ -8,7 +8,7 @@ import Footer from '../../components/footer/Footer'
 import PreviousNext from '../../components/previous-next/PreviousNext'
 import { useEffect, useState } from 'react';
 import AnimatedSequence from '@/components/animated-sequence/AnimatedSequence';
-import ImageColumn from '@/components/diagonal-slider/DiagonalSlider';
+import DiagonalSlider from '@/components/diagonal-slider/DiagonalSlider';
 
 
 
@@ -161,36 +161,36 @@ export default function VidaEstilo() {
           <AnimatedSequence />
         </div>
 
-        <div className='relative flex bg-strategy mt-[-1px] h-screen lg:h-[150vh] overflow-hidden'  >
-          <ImageColumn
-            left="left-[-22rem]"
+        <div className='relative px-[10vw] flex bg-strategy mt-[-1px] h-screen  overflow-hidden'  >
+          <DiagonalSlider
+            left="left-[-18rem]"
             top="top-0"
             images={["/images-proyecto/image1.png", "/images-proyecto/image2.png", "/images-proyecto/image1.png", "/images-proyecto/image2.png", "/images-proyecto/image1.png"]}
-            transitionSpeeds={[4000, 2500, 1500]}
+            
           />
-          <ImageColumn
-            left="left-0"
+          <DiagonalSlider
+            left="left-[8rem]"
             top="top-0"
             images={["/images-proyecto/image3.png", "/images-proyecto/image4.png", "/images-proyecto/image5.png", "/images-proyecto/image4.png", "/images-proyecto/image5.png"]}
-            transitionSpeeds={[1000, 4000, 6000]}
+            
           />
-          <ImageColumn
-            left="left-[22rem]"
+          <DiagonalSlider
+            left="left-[34rem]"
             top="top-0"
             images={["/images-proyecto/image6.png", "/images-proyecto/image7.png", "/images-proyecto/image6.png", "/images-proyecto/image7.png", "/images-proyecto/image6.png"]}
-            transitionSpeeds={[2500, 1500, 4000]}
+            
           />
-          <ImageColumn
-            left="left-[44rem]"
+          <DiagonalSlider
+            left="left-[60rem]"
             top="top-0"
             images={["/images-proyecto/image8.png", "/images-proyecto/image9.png", "/images-proyecto/image8.png", "/images-proyecto/image9.png", "/images-proyecto/image8.png"]}
-            transitionSpeeds={[5000, 3000, 2800]}
+            
           />
-          <ImageColumn
-            left="left-[66rem]"
+          <DiagonalSlider
+            left="left-[86rem]"
             top="top-0"
             images={["/images-proyecto/image9.png", "/images-proyecto/image10.png", "/images-proyecto/image9.png", "/images-proyecto/image10.png", "/images-proyecto/image9.png"]}
-            transitionSpeeds={[4000, 2500, 1500]}
+            
           />
 
           <div className='absolute fontSize-fluid bottom-0   left-12'><div className=''><h2 className='uppercase font-antonio font-bold text-bordered-strategy '>Digital</h2></div>

@@ -1,73 +1,72 @@
 "use client";
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const DiagonalSlider = ({
   left,
   top,
   images,
-  transitionSpeeds,
+  speed = 30000, // Velocidad en milisegundos (ajusta aquí)
 }: {
   left: string;
   top: string;
   images: string[];
-  transitionSpeeds: number[];
+  speed?: number;
 }) => {
   const columnRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (!columnRef.current) return;
 
-    let position = 0; // Posición inicial (0%)
-    let speedIndex = 0; // Controla qué velocidad se usa
-    let direction = -1; // -1 = Subiendo, 1 = Bajando
-    let timeoutId: NodeJS.Timeout | null = null;
+    let position = 0;
+    let frameId: number;
+    const speedLevels = [0.05, 0.01, 0.1]; // Diferentes velocidades
+    let currentSpeed = speedLevels[0]; // Comienza con la velocidad más baja
+    const segmentDuration = speed / 6; // Cada segmento de velocidad será un tercio de la duración total
+    let timeElapsed = 0; // Tiempo transcurrido para controlar la velocidad
 
     function animate() {
       if (!columnRef.current) return;
 
-      // Obtener la velocidad actual
-      const speed = transitionSpeeds[speedIndex] / 1000;
+      // Controlar el tiempo transcurrido
+      timeElapsed += 16.67; // Aproximadamente 60 FPS (1000ms / 60 = 16.67ms por frame)
 
-      // Calcular el nuevo desplazamiento
-      position += direction * (100 / transitionSpeeds.length);
-
-      // Aplicar la transformación
-      columnRef.current.style.transition = `transform ${speed}s ease-in-out`;
-      columnRef.current.style.transform = `translateY(${position}%)`;
-
-      // Avanzar en el índice de velocidad
-      speedIndex++;
-
-      // Si se completaron los tres cambios de velocidad, invertir la dirección
-      if (speedIndex >= transitionSpeeds.length) {
-        speedIndex = 0;
-        direction *= -1;
+      // Cambiar velocidad después de cada fase
+      if (timeElapsed >= segmentDuration * 2) {
+        currentSpeed = speedLevels[2]; // Fase 3 (más rápido)
+      } else if (timeElapsed >= segmentDuration) {
+        currentSpeed = speedLevels[1]; // Fase 2 (medio)
+      } else {
+        currentSpeed = speedLevels[0]; // Fase 1 (más lento)
       }
 
-      // Esperar el tiempo de la transición y luego llamar nuevamente a `animate`
-      timeoutId = setTimeout(animate, transitionSpeeds[speedIndex]);
+      // Actualizar la posición
+      position -= currentSpeed; // Controla la velocidad del desplazamiento
+
+      // Cuando la posición llegue a -70, reiniciar la posición a 0 y mantener la velocidad
+      if (position <= -70) {
+        position = 0; // Reinicia la posición
+        timeElapsed = 0; // Reinicia el tiempo para la siguiente fase
+        currentSpeed = speedLevels[0]; // Establece la velocidad a la más baja
+      }
+    
+      columnRef.current.style.transform = `translateY(${position}%)`;
+      frameId = requestAnimationFrame(animate);
     }
 
-    // Iniciar animación
-    animate();
+    frameId = requestAnimationFrame(animate);
 
-    return () => {
-      if (timeoutId) clearTimeout(timeoutId);
-      if (columnRef.current) columnRef.current.style.transition = "none";
-    };
-  }, [transitionSpeeds]);
+    return () => cancelAnimationFrame(frameId);
+  }, [speed]);
 
   return (
-    <div className={`absolute z-10 rotate-[330deg] ${top} ${left} origin-top`}>
+    <div className={`absolute z-10  rotate-[330deg] ${top} ${left} origin-top`}>
       <div ref={columnRef} className="flex-col gap-20 flex">
-        {images.map((src, index) => (
-          <Image
+        {images.concat(images).map((src, index) => (
+          <img
             key={index}
             className="w-48 z-10"
             src={src}
             alt={`imagen-${index}`}
-            layout="intrinsic"
             width={800}
             height={1111}
           />

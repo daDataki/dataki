@@ -23,6 +23,6 @@
 }
 
 .text-ul-servicie{
-    font-size: clamp(10.66px, 2.22vw, 48px);
+    font-size: clamp(15.33px, 3.19vw, 69px);
     line-height:  clamp(23px, 4.86vw, 105px);
 }

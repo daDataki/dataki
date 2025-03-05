@@ -28,9 +28,12 @@ export default function ImageGrid() {
     <div
       className={`relative w-[400px] h-[200px] lg:h-[278px]  width-major cursor-pointer transition duration-300 ${hoveredImage && hoveredImage !== src ? "blur-sm" : ""
         }`}
-      onMouseEnter={() => setHoveredImage(src)}
+        onMouseEnter={() => {
+          setHoveredImage(src); // Se ejecuta la función para abrir el modal al hacer hover
+        }}
       onMouseLeave={() => setHoveredImage(null)}
       onClick={onClick}
+     
     >
       <Image src={src} alt={alt} className={clase} layout="fill" objectFit="cover" />
     </div>
@@ -118,7 +121,7 @@ export default function ImageGrid() {
                 clase="sm:-translate-y-1/2"
                 src="/images-grid/beacon-beach5.png"
                 alt="Mask-group4.png"
-                onClick={() => handleImageClick('/images-grid/beacon-beach5.png.png')}
+                onClick={() => handleImageClick('/images-grid/beacon-beach5.png')}
               />
               
               <ImageItem
