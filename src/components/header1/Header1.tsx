@@ -92,7 +92,7 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuIconSrc, m
               <li key={link.path}>
                 <Link href={link.path} 
                   onClick={(e) => handleLinkClick(e, link.path)}
-                  className={`block py-2 uppercase hover:py-8 transition-all duration-300 hover:text-easternBlue ${pathname === link.path ? "text-easternBlue" : "text-white blur-sm hover:blur-none hover:text-easternBlue"}`}
+                  className={`block py-2 uppercase hover:py-8 transition-all duration-300  ${pathname === link.path ? "text-white blur-sm" : "text-white blur-sm hover:blur-none hover:text-easternBlue"}`}
                 >
                   <span className='max-sm:hidden'>0{index + 1}</span> {link.name}
                 </Link>
