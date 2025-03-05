@@ -90,12 +90,11 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
   
   const router = useRouter();
 
-  const { title, text1, text2, categories, route } = imageDataMap[image] || {
+  const { title, text1, route } = imageDataMap[image] || {
     title: "Project",
     text1: "",
-    text2: "No date available",
-    categories: [],
-    route: "/vida-estilo"
+    
+    route: ""
   };
   const handleNavigate = () => {
 
