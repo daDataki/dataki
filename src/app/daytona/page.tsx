@@ -108,8 +108,8 @@ export default function Daytona() {
             <source src="/video/Video6_08-01.mp4" type="video/mp4" />
           </video>
         </div>
-     
-        <div className='relative bg-black bg-gradient-to-t from-[#ca262c]/100 to-transparent mt-[-1px]'>
+
+        <div className='relative bg-[#ca262c] bg-gradient-to-t from-[#ca262c] via-[black] to-transparent mt-[-1px]'>
           <Image
             src="/images-proyecto/Mask-group-end.png"
             alt="Phone Mockup"
@@ -165,9 +165,12 @@ export default function Daytona() {
             </div>
           </div>
         </div>
-        <div className='w-[80%] my-[5vw] mx-auto bg-[#ca262c]'>
-          <PreviousNext className='text-white' />
+        <div className='w-full mt-[2px]'>
+          <div className='w-[80%] my-[5vw] mx-auto bg-[#ca262c] '>
+            <PreviousNext className='text-white' />
+          </div>
         </div>
+
         <div>
           <Footer background="bg-black " />
         </div>

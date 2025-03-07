@@ -6,6 +6,7 @@ import Image from 'next/image';
 import './aon.css'
 import Footer from '../../components/footer/Footer'
 import AnimatedAos from '../../components/animated-aos/AnimatedAos'
+import PreviousNext from '../../components/previous-next/PreviousNext'
 import { useRef } from "react";
 
 
@@ -20,7 +21,7 @@ export default function Aos() {
 
   return (
 
-    <div className=''>
+    <div className='bg-[#ff0010]'>
       <div>
         <Hero
           title="Aon"
@@ -223,14 +224,14 @@ export default function Aos() {
 
 </div>
 </div> */}
-      <div className="relative flex flex-col items-center justify-center py-20 bg-[#141414] bg-gradient-to-t from-[#ff0010]/90 to-transparent ">
+      <div className="relative flex flex-col items-center justify-center py-20 bg-[#141414] bg-gradient-to-t from-[#ff0010]/100 to-transparent ">
         <div className="w-full ml-[21.5vw] font-empowering pb-20">
           <h2 className="uppercase font-antonio font-normal text-white">
             Strategies and <br /> visuals aligned <br /> for a changing <br /> world.
           </h2>
         </div>
-
-        <div className=' flex w-full z-20'>
+      </div>
+      <div className=' flex w-full z-20'>
 
           <video
             className="w-full object-cover "
@@ -242,8 +243,9 @@ export default function Aos() {
             <source src="/video/Aon.mp4" type="video/mp4" />
           </video>
         </div>
-      </div>
-      
+      <div className='w-[80%] my-[5vw] mx-auto bg-[#ff0010]'>
+          <PreviousNext className='text-white' />
+        </div>
       <div>
         <Footer background="bg-black " />
       </div>
