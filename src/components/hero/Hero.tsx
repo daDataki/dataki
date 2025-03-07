@@ -21,6 +21,8 @@ interface HeroProps {
     clientInfo: ClientInfo;
     aboutInfo: string | React.ReactNode;
     services: Services;
+    overlayColor?: string;
+    textBlack?: string;
 
 }
 
@@ -30,6 +32,10 @@ const Hero: React.FC<HeroProps> = ({
     clientInfo,
     aboutInfo,
     services,
+    overlayColor,
+    textBlack,
+ 
+    
 
 }) => {
     const bgImage = typeof backgroundImage === 'string' ? backgroundImage : backgroundImage.src;
@@ -44,9 +50,11 @@ const Hero: React.FC<HeroProps> = ({
                         backgroundSize: 'cover',  // Ajusta la imagen para que se vea completa sin recortes
                         backgroundPosition: 'center', // Mantiene la imagen centrada
                         backgroundRepeat: 'no-repeat',
+                        
                     }}
                 >
-                    <div className="absolute inset-0 bg-black opacity-40"></div>
+                    <div className="absolute inset-0bg-black opacity-40 "></div>
+
                     <div className="flex flex-col justify-between px-12 pt-12 py-12 z-10 h-[100%]">
                         <div className="w-fit">
                             <div className="w-fit">
@@ -105,22 +113,23 @@ const Hero: React.FC<HeroProps> = ({
                     </div>
                 </div>
             </div>
-            <div className="relative bg-black py-12 sm:py-20 px-12 mt-[-1px] z-20">
-                <div className="font-Poppins text-white text-sm sm:text-2xl">
+            <div className={`relative ${overlayColor || "bg-black"} py-12 sm:pt-20 xl:pb-36 sm:pb-20 px-12 mt-[-1px] z-20`}>
+
+                <div className={`font-Poppins ${textBlack || "text-white"} text-sm sm:text-2xl`}>
                     <div className="uppercase font-bold">About</div>
                     <p className='font-light'>{aboutInfo}</p>
                 </div>
                 <div className="flex max-sm:flex-col py-8 sm:pt-16">
                     <div className="w-full sm:w-1/2">
                         <div className="w-[70%] sm:w-[75%]">
-                            <p className="font-Poppins font-medium text-servicie text-white">
+                            <p className={`font-Poppins font-medium text-servicie ${textBlack || "text-white"}`}>
                                 {services.description}
                             </p>
                         </div>
                     </div>
                     <div className="w-1/2">
                         <div className='max-sm:mt-8'>
-                            <ul className="uppercase text-white text-ul-servicie font-antonio font-bold">
+                            <ul className={`uppercase ${textBlack || "text-white"} text-ul-servicie font-antonio font-bold`}>
                                 {services.list.map((service, index) => (
                                     <li key={index} className='text-ul-servicie first:leading-none first:mb-4 first:mt-2'>
                                         <p>{service}</p>

@@ -48,7 +48,7 @@ export default function AnimatedAos() {
         return () => clearInterval(interval);
     }, []);
     return (
-        <div className="bg-[#131313] sm:h-[70vh] md:h-[90vh] lg:h-[120vh] xl:h-[140vh] 2xl:h-[160vh] overflow-hidden">
+        <div className="bg-[#131313]  sm:h-[70vh] md:h-[90vh] lg:h-[120vh] xl:h-[140vh] 2xl:h-[160vh] overflow-hidden">
             {/* Título "Busine" */}
             <div className='relative'>
             <AnimatePresence>

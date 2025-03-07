@@ -112,7 +112,7 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
         </div>
         {/* Título */}
         <div className="w-[61vw] relative flex flex-col justify-start">
-          <h1 className="font-title font-antonio font-bold">{title}</h1>
+          <h1 className="font-title font-antonio font-bold uppercase">{title}</h1>
           <div className="absolute top-16 left-16 lg:top-24 lg:left-20 xl:top-[8.5rem] xl:left-40 ">
             <h2 className=" text-easternBlue font-normal font-signature font-project">Project</h2>
           </div>
@@ -127,7 +127,7 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
             />
           </div>
 
-          <div> <h2 className="font-text1 font-antonio">{text1}</h2>
+          <div> <h2 className="font-text1 font-antonio uppercase">{text1}</h2>
           </div>
         </div>
 

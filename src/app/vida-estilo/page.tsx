@@ -22,15 +22,17 @@ export default function VidaEstilo() {
       const branding = document.getElementById("branding");
       const graphic = document.getElementById("graphic");
       const design = document.getElementById("design");
+      const elevating = document.getElementById("elevating");
 
-      if (!branding || !graphic || !design) return;
+      if (!branding || !graphic || !design || !elevating) return;
 
       const brandingRect = branding.getBoundingClientRect();
       const graphicRect = graphic.getBoundingClientRect();
       const designRect = design.getBoundingClientRect();
+      const elevatingReact = elevating.getBoundingClientRect();
 
       // Ocultar branding cuando graphic esté a 2px de distancia
-      if (graphicRect.top - brandingRect.bottom <= 2) {
+      if (elevatingReact.top - brandingRect.bottom <= 2) {
         setBrandingHidden(true);
       } else {
         setBrandingHidden(false);
@@ -117,7 +119,7 @@ export default function VidaEstilo() {
             branding
           </h2>
           <div className='flex flex-col items-center w-full xl:items-start  mt-8 sm:mt-[50%]  md:mt-[15%] lg:mt-[33%] xl:mt-[63%] 2xl:mt-[54%] h-auto'>
-            <div className='flex max-lg:justify-center'> <h4 className='relative  uppercase pt-12 pb-32 text-white font-antonio font-medium text-elevating'>Elevating brands <br /> through design, data, <br />   and strategy.
+            <div className='flex max-lg:justify-center'> <h4 id='elevating' className='relative  uppercase pt-12 pb-32 text-white font-antonio font-medium text-elevating'>Elevating brands <br /> through design, data, <br />   and strategy.
             </h4></div>
             <div
               id="graphic"
@@ -193,7 +195,7 @@ export default function VidaEstilo() {
             
           />
 
-          <div className='absolute fontSize-fluid bottom-0   left-12'><div className=''><h2 className='uppercase font-antonio font-bold text-bordered-strategy '>Digital</h2></div>
+          <div className='absolute fontSize-fluid bottom-0  pb-24  left-12  '><div className=''><h2 className='uppercase font-antonio font-bold text-bordered-strategy '>Digital</h2></div>
             <div className=''><h2 className='uppercase font-antonio font-bold text-bordered-strategy '>Strategy</h2></div>
           </div>
         </div>
@@ -219,7 +221,7 @@ export default function VidaEstilo() {
             <h2 className='text-metric font-inter font-bold'>Metric evolution</h2>
             <p className='text-caption font-inter font-light'>December</p>
             <div className='relative text-xl md:text-2xl xl:text-2xl font-inter font-bold my-2 '>
-              <div className='absolute w-[62%] sm:w-[70%] md:w-[76%] top-[35%] md:top-[52%] lg:top-[43%] xl:top-[31%] left-10 h-auto z-10'><Image
+              <div className='absolute w-[62%] sm:w-[70%] md:w-[76%] bottom-0 left-10 h-auto z-10'><Image
                 className=" w-full z-10 "
                 src="/images-proyecto/Vector-346.png"
                 alt="vida-estilo"
@@ -227,7 +229,7 @@ export default function VidaEstilo() {
                 width={800}
                 height={1111}
               /></div>
-              <div className='absolute w-[50%] md:w-[68%] top-[31%] md:top-[41%] lg:top-[30%] xl:top-[13%] left-12 lg:left-20 xl:left-32 h-auto z-10'><Image
+              <div className='absolute w-[50%] md:w-[68%] bottom-0 left-12 lg:left-20 xl:left-32 h-auto z-10'><Image
                 className=" w-full z-10 "
                 src="/images-proyecto/Vector-347.png"
                 alt="vida-estilo"

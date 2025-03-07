@@ -36,7 +36,7 @@ export default function Daytona() {
             ],
           }}
         /></div>
-        <div className='flex justify-center bg-black mt-[-1px] pb-10'>
+        <div className='flex justify-center bg-black mt-[-1px]  pt-24 pb-32'>
           <video
             className="w-[90%] h-[716px] object-cover"
             controls
@@ -47,7 +47,7 @@ export default function Daytona() {
 
         </div>
         <div className='relative pt-32  bg-[#ca262c] bg-gradient-to-t from-black/90 to-transparent '>
-          <Image src="/images-proyecto/Mask-group-daytona.png" alt="Phone Mockup" className="absolute w-[80%] top-0 right-0  z-10" width={450} height={800} />
+          <Image src="/images-proyecto/Mask-group-daytona.png" alt="Phone Mockup" className="absolute w-[80%] top-0 right-0" width={450} height={800} />
           {/* <div className="phone-container">
             <Image src="/images-proyecto/Daytona-Phone-Mockup.png" alt="Phone Mockup" className="phone-mockup z-10" width={450} height={800} />
             <video className="phone-video z-20" autoPlay loop muted playsInline>
@@ -65,7 +65,7 @@ export default function Daytona() {
             <span className='font-production font-semibold font-antonio'>Video</span>
             <span className="ml-[12vw] font-production font-semibold font-antonio">Production</span>
           </div>
-          <div className='relative flex flex-col justify-end w-full '>
+          <div className='relative flex flex-col justify-end w-full pt-36 '>
             <h2 className='relative self-end mr-[11vw] sm:top-[10vh] md:top-[15vh] lg:top-[20vh] xl:top-[25vh] 2xl:top-[35vh] font-antonio font-normal text-white font-performance uppercase'>Performance- <br /> driven solutions <br /> for an impactful <br /> digital presence.</h2>
             <div className='relative bg-transparent font-antonio font-medium uppercase '>
               <div className='sticky top-[24vh] font-media-online'>
@@ -96,8 +96,8 @@ export default function Daytona() {
             </div>
           </div>
         </div>
-        <div className='bg-black pb-24 z-20'><h2 className='font-media-online font-antonio font-semibold uppercase text-[#CB262C] text-end' >& offline</h2></div>
-        <div className='flex flex-col w-full'>
+        <div className='bg-black pb-24 z-20 mt-[-2px] mb-[-2px]'><h2 className='font-media-online font-antonio font-semibold uppercase text-[#CB262C] text-end ' >& offline</h2></div>
+        <div className='flex flex-col w-full bg-black py-32'>
           <video
             className="w-full h-[810px] object-cover"
             autoPlay
@@ -108,17 +108,18 @@ export default function Daytona() {
             <source src="/video/Video6_08-01.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className='relative bg-black bg-gradient-to-t from-[#ca262c]/100 to-transparent'>
+     
+        <div className='relative bg-black bg-gradient-to-t from-[#ca262c]/100 to-transparent mt-[-1px]'>
           <Image
             src="/images-proyecto/Mask-group-end.png"
             alt="Phone Mockup"
-            className="absolute w-[70%] top-0 right-0 z-0"
+            className="absolute w-[70%] right-0 z-0"
             width={450}
             height={800}
           />
 
-          <div className="absolute  left-0 w-full h-screen lg:h-[138vh] 2xl:h-[206vh]">
-            <div className='sticky top-40 font-media-online text-bordered font-antonio font-medium z-40'>
+          <div className="absolute  left-0 py-32 w-full h-screen lg:h-[138vh] 2xl:h-[206vh]">
+            <div className='absolute w-full top-[66%] font-media-online text-bordered font-antonio font-medium z-0'>
               <h2 className='relative ml-[6.94vw] uppercase'>graphic</h2>
               <h2 className='uppercase text-end mr-[5.34vw]'>design</h2>
             </div>
@@ -153,7 +154,7 @@ export default function Daytona() {
                 </div>
               </div>
             </div>
-            <div className='relative w-1/2 h-full z-30 left-[24.35vw]'>
+            <div className='relative w-1/2 h-full z-30 left-[24.35vw] top-[5vw]'>
               <Image
                 className="w-[42vw]"
                 src="/images-proyecto/GRAFICAS_MM-01.png"

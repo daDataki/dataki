@@ -95,6 +95,14 @@ export default function Header() {
                 tango
               </Link>
             </li>
+            <li>
+              <Link
+                href="/vml"
+                className="block px-4 py-2 sm:p-0 hover:text-gray-400"
+              >
+                vml
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

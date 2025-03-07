@@ -6,7 +6,7 @@
 
 .text-fluid-h4{
     font-size: clamp(20px, 4.16vw, 90px);
-    line-height:clamp(21.3px, 4.44vw, 96px);
+    line-height:clamp(21.3px, 4vw, 96px);
 }
 
 .text-fluid-span{

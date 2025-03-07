@@ -20,7 +20,7 @@ export default function Aos() {
 
   return (
 
-    <div className='bg-[#ca262c]'>
+    <div className=''>
       <div>
         <Hero
           title="Aon"
@@ -49,18 +49,18 @@ export default function Aos() {
           }}
         />
       </div>
-      <div ref={ref} className='pt-24 bg-[#141414] bg-gradient-to-t from-[#5d5d5d]/100 to-transparent'>
+      <div ref={ref} className='py-28 bg-gradient-to-t from-[#585858] via-[#5d5d5d] to-[#141414]'>
         {/* Título */}
-        <div className='sticky top-0 fontSize-gra-desig font-antonio font-medium text-bordered px-8'>
+        <div className='sticky top-0 fontSize-gra-desig font-antonio font-medium text-bordered px-24'>
           <h2>GRAPHIC</h2>
           <h2>DESIGN</h2>
         </div>
 
         {/* Contenedor de imágenes */}
-        <div className='relative w-full mt-[-31vw]'>
+        <div className='relative flex justify-center w-full mt-[-35vw]'>
           {/* Imagen de la tele */}
           <Image
-            className='relative w-[95vw] h-auto'
+            className='relative w-[78vw] h-auto'
             src="/images-proyecto/Aon-Mockup-tele.png"
             alt="Aon"
             width={1382}
@@ -71,14 +71,16 @@ export default function Aos() {
           <motion.img
             initial={{ y: 0, opacity: 1 }} // Empieza visible en su posición original
             animate={isInView ? { y: -1000 } : { y: 0 }} // Sube cuando entra en vista
-            transition={{ duration: 5, ease: "easeOut", delay: 1.5 }} // Suaviza el movimiento
-            className="absolute right-[4vw] w-[35vw] h-auto top-16"
+            transition={{ duration: 5, ease: "easeOut", delay: 1 }} // Suaviza el movimiento
+            className="absolute right-[8vw] w-[30vw] h-auto top-0"
             src="/images-proyecto/Aon-Globo.png"
             alt="Aon-globo"
           />
         </div>
       </div>
+   
       <AnimatedAos />
+      <div className="bg-[#131313] w-full h-[30vh] mt-[-2px]"></div>
       <div className=" bg-[#ca262c] bg-gradient-to-t from-black/100 to-transparent">
         <div className=" flex flex-col ">
           <div className="relative flex mt-[-13.7vw] pl-[6.94vw]"><Image
@@ -96,7 +98,7 @@ export default function Aos() {
             height={896}
           /></div>
         </div>
-        <div className="flex">
+        <div className="flex pt-40">
           <div className="relative w-1/2 flex justify-center items-center mt-[-6.94vw] "><Image
             className='relative w-[38.4vw] h-auto '
             src="/images-proyecto/Aon-Globo1-2.png"
@@ -106,7 +108,7 @@ export default function Aos() {
           />
           </div>
           <div className="w-1/2">
-            <h2 className="relative top-[6vw] font-normal font-antonio font-empowering text-white uppercase ">Empowering <br /> businesses <br /> with smarter, <br /> safer solutions <br /> for tomorrow.</h2>
+            <h2 className="relative top-[6vw] font-normal font-antonio font-empowering text-white uppercase ">Empowering businesses <br /> with smarter,  safer <br /> solutions  for tomorrow.</h2>
           </div>
         </div>
       </div>
@@ -221,7 +223,7 @@ export default function Aos() {
 
 </div>
 </div> */}
-      <div className="relative flex flex-col items-center justify-center py-20 bg-[#ff0010]">
+      <div className="relative flex flex-col items-center justify-center py-20 bg-[#141414] bg-gradient-to-t from-[#ff0010]/90 to-transparent ">
         <div className="w-full ml-[21.5vw] font-empowering pb-20">
           <h2 className="uppercase font-antonio font-normal text-white">
             Strategies and <br /> visuals aligned <br /> for a changing <br /> world.
