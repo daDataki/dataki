@@ -48,24 +48,27 @@ export default function Daytona() {
         </div>
         <div className='relative pt-32  bg-[#ca262c] bg-gradient-to-t from-black/90 to-transparent '>
           <Image src="/images-proyecto/Mask-group-daytona.png" alt="Phone Mockup" className="absolute w-[80%] top-0 right-0" width={450} height={800} />
-          {/* <div className="phone-container">
-            <Image src="/images-proyecto/Daytona-Phone-Mockup.png" alt="Phone Mockup" className="phone-mockup z-10" width={450} height={800} />
-            <video className="phone-video z-20" autoPlay loop muted playsInline>
-              <source src="/video/Nutricion1.mp4" type="video/mp4" />
-            </video>
-            <video className="phone-video1 z-20" autoPlay loop muted playsInline>
-              <source src="/video/cansancio.mp4" type="video/mp4" />
-            </video>
-          </div> */}
-
           <div className="relative flex flex-col justify-center items-start pl-[7.35vw] sm:top-[1vh] md:top-[2vh] lg:top-[8vh] xl:top-[13vh] 2xl:top-[17vh] text-white font-antonio font-semibold font-production uppercase">
-            <div className='absolute top-[-20%] left-1/3 -translate-x-[7.35vw]'>
-              <Image src="/images-proyecto/Daytona-Phone-Mockup1.png" alt="Phone Mockup" className="w-[42vw]  z-10" width={450} height={800} />
+            <div className='absolute top-[-20%] left-[25%] -translate-x-[7.35vw] z-10'>
+              <Image src="/images-proyecto/IphoneDaytona.png" alt="Phone Mockup" className="w-[50vw]  z-10 rounded-xl" width={450} height={800} />
+              <div className='container-phone'>
+                <video className="phone-video z-20" autoPlay loop muted playsInline>
+                  <source src="/video/Nutricion1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+            <div className='absolute top-[25%] left-[35%] -translate-x-[7.35vw]'>
+              <Image src="/images-proyecto/IphoneDaytona.png" alt="Phone Mockup" className="w-[50vw]  z-10 rounded-xl" width={450} height={800} />
+              <div className='container-phone'>
+                <video className="phone-video z-20" autoPlay loop muted playsInline>
+                  <source src="/video/Cansancio.mp4" type="video/mp4" />
+                </video>
+              </div>
             </div>
             <span className='font-production font-semibold font-antonio'>Video</span>
             <span className="ml-[12vw] font-production font-semibold font-antonio">Production</span>
           </div>
-          <div className='relative flex flex-col justify-end w-full pt-36 '>
+          <div className='relative flex flex-col justify-end w-full pt-80 '>
             <h2 className='relative self-end mr-[11vw] sm:top-[10vh] md:top-[15vh] lg:top-[20vh] xl:top-[25vh] 2xl:top-[35vh] font-antonio font-normal text-white font-performance uppercase'>Performance- <br /> driven solutions <br /> for an impactful <br /> digital presence.</h2>
             <div className='relative bg-transparent font-antonio font-medium uppercase '>
               <div className='sticky top-[24vh] font-media-online'>

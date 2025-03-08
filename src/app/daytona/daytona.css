@@ -38,45 +38,30 @@
   -webkit-text-stroke: 2px white;
 }
 
-.phone-container {
-    position: absolute;
-    width: 53%; /* Ajusta según el tamaño del mockup */
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 13%;
-  }
-  
-  .phone-mockup {
-    width: 100%;
-    height: auto;
-  }
-  
-  .phone-video {
-    position: absolute;
-    top: -9%;
-    left: -5%;
-    width: 57%;
-    height: 77%;
-    object-fit: cover;
-    border-radius: 12px;
-  
-    /* Transformaciones 3D ajustadas */
-    transform: perspective(10000px) rotateX(53deg) rotateY(-20deg) rotateZ(25deg);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  }
-  .phone-video1 {
-    position: absolute;
-    top: 18%;
-    left: 28%;
-    width: 43%;
-    height: 77%;
-    object-fit: cover;
-    border-radius: 25px;
-  
-    /* Transformaciones 3D ajustadas */
-    transform: perspective(5000px) rotateX(53deg) rotateY(-20deg) rotateZ(25deg);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  }
-  
+
+
+.container-phone1{
+ 
+  overflow: hidden;
+  width: 98vw;
+  mask-image: inset(0px round 20px)!important;
+  -webkit-mask-image: inset(0px round 20px);
+}
+
+.phone-video{
+  position: absolute;
+  border-radius: 55px 44px 37px 44px;
+
+  object-fit:cover; 
+  top: 9%;
+  left: 28%;
+  width: 37%;
+  height: 79%;
+  overflow: hidden;
+  transform: rotateX(6deg) rotateY(12deg) skewX(-30deg) scaleX(1.05) scaleY(1.029);
+  clip-path: polygon(0% 1.29%, 100% 0%, 100% 100%, 0% 100%);
+
+ 
+}
+
+
