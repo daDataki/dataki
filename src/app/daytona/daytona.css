@@ -50,18 +50,17 @@
 
 .phone-video{
   position: absolute;
-  border-radius: 35px 29px 37px 30px;
-
+  border-radius: 41px 29px 37px 30px;
   object-fit:cover; 
   top: 9%;
   left: 28%;
   width: 37%;
-  height: 79%;
+  height: 78%;
   overflow: hidden;
-  transform: rotateX(6deg) rotateY(12deg) skewX(-30deg) scaleX(1.05) scaleY(1.029);
-  clip-path: polygon(0% 1.29%, 100% 0%, 100% 100%, 0% 100%);
-
+  transform: rotateX(6deg) rotateY(9deg) skewX(-30deg) skewY(-0deg) scaleX(1.05) scaleY(1.029);
+  
  
 }
+
 
 

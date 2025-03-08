@@ -50,8 +50,8 @@ export default function Daytona() {
           <Image src="/images-proyecto/Mask-group-daytona.png" alt="Phone Mockup" className="absolute w-[80%] top-0 right-0" width={450} height={800} />
           <div className="relative flex flex-col justify-center items-start pl-[7.35vw] sm:top-[1vh] md:top-[2vh] lg:top-[8vh] xl:top-[13vh] 2xl:top-[17vh] text-white font-antonio font-semibold font-production uppercase">
             <div className='absolute top-[-20%] left-[25%] -translate-x-[7.35vw] z-10'>
-              <Image src="/images-proyecto/IphoneDaytona.png" alt="Phone Mockup" className="w-[50vw]  z-10 rounded-xl" width={450} height={800} />
-              <div className='container-phone'>
+              <div className='container-phone relative overflow-hidden'>
+                <Image src="/images-proyecto/IphoneDaytona.png" alt="Phone Mockup" className="w-[50vw]  z-50 rounded-xl" width={450} height={800} />
                 <video className="phone-video z-20" autoPlay loop muted playsInline>
                   <source src="/video/Nutricion1.mp4" type="video/mp4" />
                 </video>
@@ -64,6 +64,7 @@ export default function Daytona() {
                   <source src="/video/Cansancio.mp4" type="video/mp4" />
                 </video>
               </div>
+              
             </div>
             <span className='font-production font-semibold font-antonio'>Video</span>
             <span className="ml-[12vw] font-production font-semibold font-antonio">Production</span>
