@@ -49,18 +49,25 @@
 }
 
 .phone-video{
-  position: absolute;
-  border-radius: 41px 29px 37px 30px;
+  position: relative;
+  border-radius: 4vw 4vw 2vw 2vw;
   object-fit:cover; 
-  top: 9%;
-  left: 28%;
-  width: 37%;
-  height: 78%;
+  top: 4.12vw;
+  left: 14vw;
+  width: 20vw;
+  height: auto;
   overflow: hidden;
-  transform: rotateX(6deg) rotateY(9deg) skewX(-30deg) skewY(-0deg) scaleX(1.05) scaleY(1.029);
-  
- 
+  transform: rotateX(6deg) rotateY(-8deg) skewX(-30deg) skewY(3deg) scaleX(1.07) scaleY(1.01); 
 }
 
-
-
+.phone-video1{
+  position: relative;
+  border-radius: 4vw 4vw 2vw 2vw;
+  object-fit:cover; 
+  top: 4.12vw;
+  left: 14vw;
+  width: 20vw;
+  height: auto;
+  overflow: hidden;
+  transform: rotateX(6deg) rotateY(-8deg) skewX(-30deg) skewY(3deg) scaleX(1.07) scaleY(1.01); 
+}

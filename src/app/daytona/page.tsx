@@ -49,27 +49,28 @@ export default function Daytona() {
         <div className='relative pt-32  bg-[#ca262c] bg-gradient-to-t from-black/90 to-transparent '>
           <Image src="/images-proyecto/Mask-group-daytona.png" alt="Phone Mockup" className="absolute w-[80%] top-0 right-0" width={450} height={800} />
           <div className="relative flex flex-col justify-center items-start pl-[7.35vw] sm:top-[1vh] md:top-[2vh] lg:top-[8vh] xl:top-[13vh] 2xl:top-[17vh] text-white font-antonio font-semibold font-production uppercase">
-            <div className='absolute top-[-20%] left-[25%] -translate-x-[7.35vw] z-10'>
-              <div className='container-phone relative overflow-hidden'>
-                <Image src="/images-proyecto/IphoneDaytona.png" alt="Phone Mockup" className="w-[50vw]  z-50 rounded-xl" width={450} height={800} />
+            <div className='absolute w-full top-[-20%] left-[28%] -translate-x-[7.35vw] z-20'>
+              <div className='relative'>
+                <Image src="/images-proyecto/IphoneDaytona1.png" alt="Phone Mockup" className="w-[50vw]  z-50 rounded-xl absolute top-0" width={450} height={800} />
                 <video className="phone-video z-20" autoPlay loop muted playsInline>
                   <source src="/video/Nutricion1.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
-            <div className='absolute top-[25%] left-[35%] -translate-x-[7.35vw]'>
-              <Image src="/images-proyecto/IphoneDaytona.png" alt="Phone Mockup" className="w-[50vw]  z-10 rounded-xl" width={450} height={800} />
-              <div className='container-phone'>
+            <div className='absolute w-full top-[30%] left-[35%] -translate-x-[7.35vw] z-10'>
+              <div className='relative'>
+                <Image src="/images-proyecto/IphoneDaytona1.png" alt="Phone Mockup" className="w-[50vw]  z-50 rounded-xl absolute top-0" width={450} height={800} />
                 <video className="phone-video z-20" autoPlay loop muted playsInline>
                   <source src="/video/Cansancio.mp4" type="video/mp4" />
                 </video>
               </div>
-              
             </div>
-            <span className='font-production font-semibold font-antonio'>Video</span>
-            <span className="ml-[12vw] font-production font-semibold font-antonio">Production</span>
+            <div className='relative flex flex-col top-[6vw]'>
+              <span className='font-production font-semibold font-antonio'>Video</span>
+              <span className="ml-[12vw] font-production font-semibold font-antonio">Production</span>
+            </div>
           </div>
-          <div className='relative flex flex-col justify-end w-full pt-80 '>
+          <div className='relative flex flex-col justify-end w-full sm:pt-32 lg:pt-52 xl:pt-72 2xl:pt-96 '>
             <h2 className='relative self-end mr-[11vw] sm:top-[10vh] md:top-[15vh] lg:top-[20vh] xl:top-[25vh] 2xl:top-[35vh] font-antonio font-normal text-white font-performance uppercase'>Performance- <br /> driven solutions <br /> for an impactful <br /> digital presence.</h2>
             <div className='relative bg-transparent font-antonio font-medium uppercase '>
               <div className='sticky top-[24vh] font-media-online'>
