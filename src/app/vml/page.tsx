@@ -224,7 +224,7 @@ export default function Vml() {
               Belvita
             </h2>
           </div>
-          <div className='absolute w-full top-1/2'>
+          <div className='absolute w-full top-[40%]'>
             <h2 className='fontSize-fluid font-antonio font-medium text-bordered uppercase'>
               FRONT END
             </h2>
