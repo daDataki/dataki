@@ -246,8 +246,8 @@ export default function Vml() {
                     transition: '0.2s',
                   }}
                 >
-                  {images.map((img) => (
-                    <Image
+                  {images.map((img, index) => (
+                    <Image key={index}
                       className="w-[100%]"
                       src={img}
                       alt={`Slide ${1}`}
