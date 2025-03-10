@@ -246,7 +246,7 @@ export default function Vml() {
                     transition: '0.2s',
                   }}
                 >
-                  {images.map((img, index) => (
+                  {images.map((img) => (
                     <Image
                       className="w-[100%]"
                       src={img}
