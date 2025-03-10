@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import './Header1.css'
 
 
 interface HeaderProps {
@@ -23,6 +24,7 @@ const menuOptions = [
 
 export default function Header({ className, logoSrc, logoSrcOpen, menuIconSrc, menuCloseIcon }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState<number | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -47,7 +49,7 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuIconSrc, m
     if (path.startsWith("/#")) {
       event.preventDefault(); // Evita la recarga
       const id = path.replace("/#", ""); // Extrae "work" de "/#work"
-  
+
       if (pathname === "/") {
         // Si ya estamos en home, hacer scroll directo
         const element = document.getElementById(id);
@@ -89,12 +91,17 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuIconSrc, m
         <nav className="px-6">
           <ul className="flex flex-col pt-16 text-5xl md:text-6xl font-antonio font-semibold">
             {menuOptions.map((link, index) => (
-              <li key={link.path}>
-                <Link href={link.path} 
+              <li key={link.path} className="transition-all duration-300 group"
+              onMouseEnter={() => setSelectedItem(index)}
+              onMouseLeave={() => setSelectedItem(null)}
+              
+              >
+                <Link
+                  href={link.path}
                   onClick={(e) => handleLinkClick(e, link.path)}
-                  className={`block py-2 uppercase hover:py-8 transition-all duration-300  ${pathname === link.path ? "text-white blur-sm" : "text-white blur-sm hover:blur-none hover:text-easternBlue"}`}
+                  className={`block py-2 uppercase text-white transition-all duration-300 hover:text-easternBlue hover:py-8 ${selectedItem !== null && selectedItem !== index ? 'blur-sm': ''}`}
                 >
-                  <span className='max-sm:hidden'>0{index + 1}</span> {link.name}
+                  <span className="max-sm:hidden">0{index + 1}</span> {link.name}
                 </Link>
               </li>
             ))}

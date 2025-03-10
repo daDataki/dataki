@@ -23,14 +23,14 @@ export default function Footer({ background = DEFAULT_BG }: FooterProps) {
           <p className="font-antonio font-bold   xtext-lg1  uppercase">Tell us about <br /> your idea.</p>
         </div>
         <div className="block sm:flex justify-between w-full max-sm:text-center xl:w-1/2 ">
-          <div> <p className="text-caption font-Poppins">
+          <div> <p className="text-captions font-Poppins">
             <span className="block font-bold">Buenos Aires</span>
             <span className="block sm:mb-10 font-bold">Argentina</span>
             <span className="block">Av. Libertador 1398</span>
             <span className="block">+54 11 8765 4345</span>
             <span className="block">Mail: xxxxxxxx</span>
           </p></div>
-          <div className="text-caption font-Poppins">
+          <div className="text-captions font-Poppins">
             <span className="block font-bold">New York</span>
             <span className="block sm:mb-10 font-bold">United States</span>
             <span className="block">118 3rd St, S, Brooklyn</span>

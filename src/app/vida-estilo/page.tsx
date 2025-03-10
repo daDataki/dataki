@@ -53,7 +53,7 @@ export default function VidaEstilo() {
 
   return (
     <>
-      <div>
+      <div className='overflow-x-hidden '>
         <div><Hero
           title="Vida & Estilo"
           backgroundImage={beacon.src}
@@ -217,7 +217,7 @@ export default function VidaEstilo() {
             width={611}
             height={672}
           /></div>
-          <div className='max-sm:hidden relative max-sm:m-auto px-4 sm:px-14 py-8 w-full  md:w-[73%] h-[45%] md:h-[66vh] bg-black rounded-2xl top-0 text-white z-10'>
+          <div className='max-sm:hidden relative max-sm:m-auto px-4 sm:px-14 py-8 w-full  md:w-[73%] bg-black rounded-2xl top-0 text-white z-10'>
             <h2 className='text-metric font-inter font-bold'>Metric evolution</h2>
             <p className='text-caption font-inter font-light'>December</p>
             <div className='relative text-xl md:text-2xl xl:text-2xl font-inter font-bold my-2 '>

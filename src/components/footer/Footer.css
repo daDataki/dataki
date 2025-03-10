@@ -8,7 +8,7 @@
     font-size: clamp(33px, 6.94vw, 150px);
     line-height: clamp(50px, 14vw, 300px);
 }
-.text-caption{
+.text-captions{
     font-size: clamp(7px, 1.52vw, 33px);
     line-height: clamp(10px, 2.08vw, 45px);
 }

@@ -21,7 +21,7 @@ export default function Aos() {
 
   return (
 
-    <div className='bg-[#ff0010]'>
+    <div className='bg-[#ff0010] overflow-x-hidden'>
       <div>
         <Hero
           title="Aon"

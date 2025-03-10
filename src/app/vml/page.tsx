@@ -6,19 +6,45 @@ import Image from 'next/image';
 import './vml.css'
 import Footer from '../../components/footer/Footer'
 import PreviousNext from '../../components/previous-next/PreviousNext'
+import { useState, useEffect } from "react";
 
 
 
-
+const images = [
+  "/images-proyecto/Mesa-de-trabajo1.png",
+  "/images-proyecto/Mesa-de-trabajo2.png",
+  "/images-proyecto/mesa-3.png",
+];
 
 
 
 export default function Vml() {
+  const [currentIndex, setCurrentIndex] = useState(2);
 
+
+  useEffect(() => {
+    let direction = 1; // 1 para incrementar, -1 para decrementar
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => {
+        // Cambia la dirección si llegas a los límites
+        if (prevIndex === images.length - 1) {
+          direction = -1; // Cambia a decrementar
+        } else if (prevIndex === 0) {
+          direction = 1; // Cambia a incrementar
+        }
+
+        // Retorna el nuevo índice basado en la dirección
+        return prevIndex + direction;
+      });
+    }, 1000); // Cambia cada 1 segundo
+
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   return (
     <>
-      <div>
+      <div className='overflow-x-hidden '>
         <div><Hero
           overlayColor='bg-white'
           textBlack='text-black'
@@ -60,7 +86,7 @@ export default function Vml() {
             <source src="/video/VML-SIN-AUDIO.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className='relative pt-40 pb-16 px-24'>
+        <div className='relative pt-40 pb-16 px-12'>
           <div className='relative'>
             <div>
               <h2 className='font-antonio font-bold uppercase text-caption1'>
@@ -129,13 +155,13 @@ export default function Vml() {
 
           </div>
         </div>
-        <div className='relative pt-40 pb-16   bg-[#3a0f4e] bg-gradient-to-t from-black/100 to-transparent'>
+        <div className='relative pt-40 pb-16 px-12  bg-[#3a0f4e] bg-gradient-to-t from-black/100 to-transparent'>
           <div className='relative'>
-            <h2 className='font-antonio font-bold uppercase text-caption1 text-white pl-24 max-lg:pl-12'>
+            <h2 className='font-antonio font-bold uppercase text-caption1 text-white'>
               glade
             </h2>
           </div>
-          <div className='relative flex flex-col items-center justify-center'>
+          <div className='sticky top-40 flex flex-col items-center justify-center'>
             <h2 className='absolute fontSize-fluid font-antonio font-medium text-bordered-back uppercase top-[-4vw]'>
               BACK END
             </h2>
@@ -190,60 +216,115 @@ export default function Vml() {
               />
             </div>
           </div>
-          <div className='relative w-full flex flex-col pt-40 pb-32 px-24 bg-[#ffcb11]'>
-            <div className='relative w-full pb-36'>
-              <h2 className='font-antonio font-bold uppercase text-caption1 ml-4'>
-                Belvita
-              </h2>
-            </div>
-            <div className='w-full'>
-              <h2 className='fontSize-fluid font-antonio font-medium text-bordered uppercase'>
-                FRONT END
-              </h2>
-            </div>
-            <div className='flex'>
-              <div><Image
-                className="relative"
-                src="/images-proyecto/Hellmans-Mockup.png"
-                alt="PHONE-110"
-                layout="intrinsic"
-                width={800}
-                height={1111}
-              />
+
+        </div>
+        <div className='relative w-full flex flex-col pt-20 pb-32 px-12 bg-[#ffcb11]'>
+          <div className='relative w-full pb-12'>
+            <h2 className='font-antonio font-bold uppercase text-caption1 '>
+              Belvita
+            </h2>
+          </div>
+          <div className='absolute w-full top-1/2'>
+            <h2 className='fontSize-fluid font-antonio font-medium text-bordered uppercase'>
+              FRONT END
+            </h2>
+          </div>
+          <div className='flex w-full overflow-hidden justify-center'>
+            <div className="flex justify-center items-center relative">
               <Image
-                className="relative"
-                src="/images-proyecto/Mesa-trabajo-180.png"
-                alt="PHONE-110"
+                className="relative w-[300px] z-10"
+                src="/images-proyecto/Hellmans-Mockup2.png"
+                alt="Main Image"
                 layout="intrinsic"
                 width={800}
                 height={1111}
               />
+              <div className='w-[88%] absolute'>
+                <div className='flex gap-8'
+                  style={{
+                    transform: `translateX(calc(-${currentIndex * 100}% - ${2 * currentIndex}rem))`,
+                    transition: '0.2s',
+                  }}
+                >
+                  {images.map((img, index) => (
+                    <Image
+                      className="w-[100%]"
+                      src={img}
+                      alt={`Slide ${1}`}
+                      layout="intrinsic"
+                      width={800}
+                      height={1111}
+                      style={{
+                        flexShrink: 0
+                      }}
+                    />
+                  ))}
+                </div>
               </div>
-              
-              <Image
-                className="relative"
-                src="/images-proyecto/Mesa-trabajo-181 .png"
-                alt="PHONE-110"
-                layout="intrinsic"
-                width={800}
-                height={1111}
-              />
-              <div className='relative'>
-              <Image
-                className="relative"
-                src="/images-proyecto/Mesa-trabajo-181-2.png"
-                alt="PHONE-110"
-                layout="intrinsic"
-                width={800}
-                height={1111}
-              />
-              
-              </div>
-              
+
             </div>
           </div>
-        </div>
 
+        </div>
+        <div className='w-full py-32 bg-[#E7DCCE] px-12'>
+          <div className='relative w-full'>
+            <h2 className='font-antonio font-bold uppercase text-caption1'>
+            DIGIORNO
+            </h2>
+          </div>
+          <div className='w-full flex justify-center items-center'>
+            <div className=''><Image
+              className="relative w-[18vw] z-10"
+              src="/images-proyecto/dig1.png"
+              alt="Main Image"
+              layout="intrinsic"
+              width={800}
+              height={1111}
+            /></div>
+            <div className='relative top-[-5vw] '><Image
+              className="relative w-[18vw] z-10"
+              src="/images-proyecto/dig2.png"
+              alt="Main Image"
+              layout="intrinsic"
+              width={800}
+              height={1111}
+            /></div>
+            <div className=''><Image
+              className="relative w-[18vw] z-10"
+              src="/images-proyecto/dig3.png"
+              alt="Main Image"
+              layout="intrinsic"
+              width={800}
+              height={1111}
+            /></div>
+          </div>
+          <div className='w-full flex justify-center items-center'>
+            <div className=''><Image
+              className="relative w-[18vw] z-10"
+              src="/images-proyecto/dig4.png"
+              alt="Main Image"
+              layout="intrinsic"
+              width={800}
+              height={1111}
+            /></div>
+            <div className='relative top-[-5vw]'><Image
+              className="relative w-[18vw] z-10"
+              src="/images-proyecto/dig5.png"
+              alt="Main Image"
+              layout="intrinsic"
+              width={800}
+              height={1111}
+            /></div>
+            <div className=''><Image
+              className="relative w-[18vw] z-10"
+              src="/images-proyecto/dig6.png"
+              alt="Main Image"
+              layout="intrinsic"
+              width={800}
+              height={1111}
+            /></div>
+          </div>
+        </div>
         <div className='mt-[-1px] bg-[#68725E]  text-white px-24 z-10'><PreviousNext /></div>
         <div>
           <Footer background="bg-[#131313] " />
