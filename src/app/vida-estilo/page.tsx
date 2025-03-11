@@ -53,7 +53,7 @@ export default function VidaEstilo() {
 
   return (
     <>
-      <div className='overflow-x-hidden '>
+      <div className='overflow-clip'>
         <div><Hero
           title="Vida & Estilo"
           backgroundImage={beacon.src}

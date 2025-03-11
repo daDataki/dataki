@@ -3,10 +3,14 @@
 import Hero from '../../components/hero/Hero';
 import beacon from '../../../public/images-proyecto/vml-hero.png';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './vml.css'
 import Footer from '../../components/footer/Footer'
 import PreviousNext from '../../components/previous-next/PreviousNext'
 import { useState, useEffect } from "react";
+
 
 
 
@@ -17,12 +21,22 @@ const images = [
 ];
 
 
-
 export default function Vml() {
   const [currentIndex, setCurrentIndex] = useState(2);
 
+  const [oreoPhones, setOreoPhones] = useState([
+    { id: 1, src: "/images-proyecto/PHONE11.png", position: 0, },
+    { id: 2, src: "/images-proyecto/PHONE22.png", position: 1, },
+    { id: 3, src: "/images-proyecto/PHONE33.png", position: 2, },
+  ]);
+
 
   useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true,
+    });
     let direction = 1; // 1 para incrementar, -1 para decrementar
 
     const interval = setInterval(() => {
@@ -39,12 +53,26 @@ export default function Vml() {
       });
     }, 1000); // Cambia cada 1 segundo
 
-    return () => clearInterval(interval);
+    const intervalAnime = setInterval(() => {
+      setOreoPhones(prev => {
+        const newPhones = [...prev];
+        // Rotamos las posiciones: 0->2, 1->0, 2->1
+        newPhones.forEach(phone => {
+          phone.position = (phone.position + 2) % 3;
+        });
+        return newPhones;
+      });
+    }, 3000); // Cambia cada 3 segundos
+
+    return () => {
+      clearInterval(interval);
+      clearInterval(intervalAnime);
+    }
   }, [images.length]);
 
   return (
     <>
-      <div className='overflow-x-hidden '>
+      <div className='overflow-clip'>
         <div><Hero
           overlayColor='bg-white'
           textBlack='text-black'
@@ -155,19 +183,19 @@ export default function Vml() {
 
           </div>
         </div>
-        <div className='relative pt-40 pb-16 px-12  bg-[#3a0f4e] bg-gradient-to-t from-black/100 to-transparent'>
+        <div className='relative pt-40 pb-16 px-12 bg-[#3a0f4e] bg-gradient-to-t from-black/100 to-transparent min-h-[150vh]'>
           <div className='relative'>
             <h2 className='font-antonio font-bold uppercase text-caption1 text-white'>
               glade
             </h2>
           </div>
-          <div className='sticky top-40 flex flex-col items-center justify-center'>
-            <h2 className='absolute fontSize-fluid font-antonio font-medium text-bordered-back uppercase top-[-4vw]'>
+          <div className='sticky top-20 z-0 flex flex-col items-center justify-center py-10'>
+            <h2 className='fontSize-fluid font-antonio font-medium text-bordered-back uppercase'>
               BACK END
             </h2>
           </div>
           <div className='relative w-full flex flex-col'>
-            <div className='relative flex justify-center items-center w-full top-[8vw]'>
+            <div className='relative flex justify-center items-center w-full top-[8vw] z-20'>
               <Image
                 className="relative w-[45vw] h-auto"
                 src="/images-proyecto/Glade-Mockup1.png"
@@ -269,7 +297,7 @@ export default function Vml() {
         <div className='w-full py-32 bg-[#E7DCCE] px-12'>
           <div className='relative w-full'>
             <h2 className='font-antonio font-bold uppercase text-caption1'>
-            DIGIORNO
+              DIGIORNO
             </h2>
           </div>
           <div className='w-full flex justify-center items-center'>
@@ -325,7 +353,124 @@ export default function Vml() {
             /></div>
           </div>
         </div>
-        <div className='mt-[-1px] bg-[#68725E]  text-white px-24 z-10'><PreviousNext /></div>
+        <div className='flex flex-col w-full py-32 px-12 bg-[#ffde00]'>
+          <div className='relative w-full'>
+            <motion.h2
+              className='font-antonio font-bold uppercase text-caption1'
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              RAID
+            </motion.h2>
+          </div>
+          <div className='flex justify-center'>
+            <motion.div
+              className='relative left-[15vw] top-[6vw] w-[32.5%]'
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <Image
+                className="w-full z-10"
+                src="/images-proyecto/RAID-PHONE1.png"
+                alt="RAID Phone 1"
+                layout="intrinsic"
+                width={800}
+                height={1111}
+                data-aos="fade-right"
+                data-aos-delay="200"
+              />
+            </motion.div>
+            <motion.div
+              className='w-[35%] z-10'
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <Image
+                className="w-full z-10"
+                src="/images-proyecto/RAID-PHONE2.png"
+                alt="RAID Phone 2"
+                layout="intrinsic"
+                width={800}
+                height={1111}
+                data-aos="zoom-in"
+                data-aos-delay="400"
+              />
+            </motion.div>
+            <motion.div
+              className='relative right-[15vw] top-[6vw] w-[32.5%]'
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <Image
+                className="w-full z-10"
+                src="/images-proyecto/RAID-PHONE3.png"
+                alt="RAID Phone 3"
+                layout="intrinsic"
+                width={800}
+                height={1111}
+                data-aos="fade-left"
+                data-aos-delay="600"
+              />
+            </motion.div>
+          </div>
+        </div>
+        <div className='bg-[#bababa] px-12 py-32 '>
+          <div className='flex'>
+            <div className='w-1/5'>
+              <h2 className='font-antonio font-bold uppercase text-caption1'>
+                OREO
+              </h2>
+            </div>
+            <div className='w-[80%]'>
+              <h2 className='fontSize-fluid font-antonio font-medium text-bordered uppercase'>
+                FRONT END
+              </h2>
+            </div>
+          </div>
+          <div className='flex justify-center items-center w-full relative '>
+            {oreoPhones.map((phone, index) => (
+              <motion.div
+                key={phone.id}
+                className='absolute flex justify-end items-center'
+                initial={false}
+                animate={{
+                  left: phone.position === 0 ? '0%' : phone.position === 1 ? '60%' : '25%',
+                  top: phone.position === 0 ? '-12vw' : phone.position === 1 ? '-7vw' : '-7vw',
+                  x: phone.position === 0
+                    ? '22%'
+                    : phone.position === 1
+                      ? '30%'
+                      : '50%',
+                  zIndex: phone.position === 1 ? 20 : phone.position === 0 ? 10 : 5,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 20,
+                  duration: 0.8
+                }}
+              >
+                <Image
+                  className={`z-10 ${index === 0 ? "w-[38vw]" : index === 1 ? "w-[38vw]" : "w-[38vw]"
+                    }`}
+                  src={phone.src}
+                  alt={`OREO Phone ${phone.id}`}
+                  layout="intrinsic"
+                  width={800}
+                  height={1111}
+                />
+              </motion.div>
+            ))}
+          </div>
+          <div className='bg-[#bababa] w-full sm:h-[35vw] xl:h-[40vw] 2xl:h-[43vw]'>
+          
+          </div>
+        </div>
+        <div className='mt-[-1px] bg-[#bababa]  text-[#131313] px-24 z-10'><PreviousNext /></div>
         <div>
           <Footer background="bg-[#131313] " />
         </div>

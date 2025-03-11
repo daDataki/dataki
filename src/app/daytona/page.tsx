@@ -9,7 +9,7 @@ import Footer from '../../components/footer/Footer'
 export default function Daytona() {
   return (
     <>
-      <div className='bg-[#ca262c] overflow-x-hidden'>
+      <div className='bg-[#ca262c] overflow-clip'>
         <div><Hero
           title="Daytona"
           backgroundImage={daytona.src}
