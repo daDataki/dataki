@@ -360,6 +360,7 @@ export default function Vml() {
               initial={{ opacity: 0, y: -50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
+              viewport={{ once: false, amount: 0.2 }} // 🔥 Se activa antes
             >
               RAID
             </motion.h2>
@@ -370,6 +371,7 @@ export default function Vml() {
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: false, amount: 0.2 }} // ⚡ Se activa más rápido
             >
               <Image
                 className="w-full z-10"
@@ -378,8 +380,6 @@ export default function Vml() {
                 layout="intrinsic"
                 width={800}
                 height={1111}
-                data-aos="fade-right"
-                data-aos-delay="200"
               />
             </motion.div>
             <motion.div
@@ -387,6 +387,7 @@ export default function Vml() {
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: false, amount: 0.2 }} // ⚡ Se activa más rápido
             >
               <Image
                 className="w-full z-10"
@@ -395,8 +396,6 @@ export default function Vml() {
                 layout="intrinsic"
                 width={800}
                 height={1111}
-                data-aos="zoom-in"
-                data-aos-delay="400"
               />
             </motion.div>
             <motion.div
@@ -404,6 +403,7 @@ export default function Vml() {
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: false, amount: 0.2 }} // ⚡ Se activa más rápido
             >
               <Image
                 className="w-full z-10"
@@ -412,12 +412,11 @@ export default function Vml() {
                 layout="intrinsic"
                 width={800}
                 height={1111}
-                data-aos="fade-left"
-                data-aos-delay="600"
               />
             </motion.div>
           </div>
         </div>
+
         <div className='bg-[#bababa] px-12 py-32 '>
           <div className='flex'>
             <div className='w-1/5'>
@@ -467,7 +466,7 @@ export default function Vml() {
             ))}
           </div>
           <div className='bg-[#bababa] w-full sm:h-[35vw] xl:h-[40vw] 2xl:h-[43vw]'>
-          
+
           </div>
         </div>
         <div className='mt-[-1px] bg-[#bababa]  text-[#131313] px-24 z-10'><PreviousNext /></div>
