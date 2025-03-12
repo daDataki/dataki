@@ -50,7 +50,7 @@ export default function Aos() {
           }}
         />
       </div>
-      <div ref={ref} className='py-28 bg-gradient-to-t from-[#585858] via-[#5d5d5d] to-[#141414]'>
+      <div ref={ref} className='py-28 bg-gradient-to-t from-[#585858] from-0% via-[#5d5d5d] via-50% to-[#141414] to-100%'>
         {/* Título */}
         <div className='sticky top-0 fontSize-gra-desig font-antonio font-medium text-bordered px-24'>
           <h2>GRAPHIC</h2>

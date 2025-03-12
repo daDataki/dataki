@@ -25,9 +25,10 @@ export default function Vml() {
   const [currentIndex, setCurrentIndex] = useState(2);
 
   const [oreoPhones, setOreoPhones] = useState([
-    { id: 1, src: "/images-proyecto/PHONE11.png", position: 0, },
-    { id: 2, src: "/images-proyecto/PHONE22.png", position: 1, },
-    { id: 3, src: "/images-proyecto/PHONE33.png", position: 2, },
+    { id: 1, src: "/images-proyecto/phone1.png", position: 0, },
+    { id: 1, src: "/images-proyecto/phone1.png", position: 1, },
+    { id: 1, src: "/images-proyecto/phone1.png", position: 2, },
+
   ]);
 
 
@@ -51,18 +52,18 @@ export default function Vml() {
         // Retorna el nuevo índice basado en la dirección
         return prevIndex + direction;
       });
-    }, 1000); // Cambia cada 1 segundo
+    }, 1000);
 
     const intervalAnime = setInterval(() => {
       setOreoPhones(prev => {
         const newPhones = [...prev];
-        // Rotamos las posiciones: 0->2, 1->0, 2->1
+
         newPhones.forEach(phone => {
           phone.position = (phone.position + 2) % 3;
         });
         return newPhones;
       });
-    }, 3000); // Cambia cada 3 segundos
+    }, 3000);
 
     return () => {
       clearInterval(interval);
@@ -360,7 +361,7 @@ export default function Vml() {
               initial={{ opacity: 0, y: -50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              viewport={{ once: false, amount: 0.2 }} // 🔥 Se activa antes
+              viewport={{ once: false, amount: 0.2 }}
             >
               RAID
             </motion.h2>
@@ -371,7 +372,7 @@ export default function Vml() {
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: false, amount: 0.2 }} // ⚡ Se activa más rápido
+              viewport={{ once: false, amount: 0.2 }} 
             >
               <Image
                 className="w-full z-10"
@@ -437,13 +438,13 @@ export default function Vml() {
                 className='absolute flex justify-end items-center'
                 initial={false}
                 animate={{
-                  left: phone.position === 0 ? '0%' : phone.position === 1 ? '60%' : '25%',
+                  left: phone.position === 0 ? '0%' : phone.position === 1 ? '70%' : '40%',
                   top: phone.position === 0 ? '-12vw' : phone.position === 1 ? '-7vw' : '-7vw',
                   x: phone.position === 0
-                    ? '22%'
+                    ? '55%'
                     : phone.position === 1
-                      ? '30%'
-                      : '50%',
+                      ? '60%'
+                      : '100%',
                   zIndex: phone.position === 1 ? 20 : phone.position === 0 ? 10 : 5,
                 }}
                 transition={{
@@ -454,7 +455,7 @@ export default function Vml() {
                 }}
               >
                 <Image
-                  className={`z-10 ${index === 0 ? "w-[38vw]" : index === 1 ? "w-[38vw]" : "w-[38vw]"
+                  className={`z-10 ${index === 0 ? "w-[18vw]" : index === 1 ? "w-[18vw]" : "w-[18vw]"
                     }`}
                   src={phone.src}
                   alt={`OREO Phone ${phone.id}`}
