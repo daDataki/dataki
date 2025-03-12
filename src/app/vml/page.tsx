@@ -26,8 +26,8 @@ export default function Vml() {
 
   const [oreoPhones, setOreoPhones] = useState([
     { id: 1, src: "/images-proyecto/phone1.png", position: 0, },
-    { id: 1, src: "/images-proyecto/phone1.png", position: 1, },
-    { id: 1, src: "/images-proyecto/phone1.png", position: 2, },
+    { id: 2, src: "/images-proyecto/phone1.png", position: 1, },
+    { id: 3, src: "/images-proyecto/phone1.png", position: 2, },
 
   ]);
 
@@ -296,8 +296,8 @@ export default function Vml() {
 
         </div>
         <div className='w-full py-32 bg-[#E7DCCE] px-12'>
-          <div className='relative w-full'>
-            <h2 className='font-antonio font-bold uppercase text-caption1'>
+          <div className='w-full sticky top-0'>
+            <h2 className=' font-antonio font-bold uppercase text-caption1'>
               DIGIORNO
             </h2>
           </div>
