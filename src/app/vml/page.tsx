@@ -372,7 +372,7 @@ export default function Vml() {
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: false, amount: 0.2 }} 
+              viewport={{ once: false, amount: 0.2 }}
             >
               <Image
                 className="w-full z-10"
@@ -466,7 +466,7 @@ export default function Vml() {
               </motion.div>
             ))}
           </div>
-          <div className='bg-[#bababa] w-full sm:h-[35vw] xl:h-[40vw] 2xl:h-[43vw]'>
+          <div className='bg-[#bababa] w-full sm:h-[18vw] lg:h-[24vw] xl:h-[28vw]'>
 
           </div>
         </div>
