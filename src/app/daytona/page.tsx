@@ -113,8 +113,8 @@ export default function Daytona() {
             <source src="/video/Video6_08-01.mp4" type="video/mp4" />
           </video>
         </div>
-
-        <div className='relative bg-[#ca262c] bg-gradient-to-t from-[#ca262c] via-[black] to-transparent mt-[-1px]'>
+  
+        <div className='relative bg-gradient-to-b from-black from-0% via-[#141414] via-30% to-[#ca262c] to-100%  mt-[-1px]'>
           <Image
             src="/images-proyecto/Mask-group-end.png"
             alt="Phone Mockup"
