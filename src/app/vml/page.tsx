@@ -139,9 +139,9 @@ export default function Vml() {
         </div>
         <div className='relative flex justify-center items-center bg-[#d8e7f2] py-[11.11vw] px-[13.33vw]'>
 
-          <div className='w-full'>
+          <div className='w-full flex justify-center'>
             <Image
-              className="relative"
+              className="relative w-full"
               src="/images-proyecto/Ellipse-104.png"
               alt="Ellipse-104"
               layout="intrinsic"
@@ -149,7 +149,7 @@ export default function Vml() {
               height={1111}
             />
           </div>
-          <div className='absolute flex justify-center left-[8vw] items-center top-1/2 -translate-y-[39%]'>
+          <div className='absolute flex justify-center left-[7vw] items-center top-1/2 -translate-y-[39%]'>
 
             <div className='relative w-[26.31vw] left-[15vw] h-auto '>
               <Image
@@ -171,7 +171,7 @@ export default function Vml() {
                 height={1111}
               />
             </div>
-            <div className='relative w-[26.31vw] right-[14vw] top-[-3vw] h-auto '>
+            <div className='relative w-[29vw] right-[14vw] top-[-1vw] h-auto '>
               <Image
                 className="relative w-full h-auto"
                 src="/images-proyecto/PHONE-18.png"
