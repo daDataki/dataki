@@ -15,10 +15,9 @@ interface HeaderProps {
   menuCloseIcon?: string;
 }
 
-export default function Header({ className, logoSrc, logoSrcOpen, menuIconSrc, menuCloseIcon }: HeaderProps) {
+export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<number | null>(null);
-  const [openSubMenu, setOpenSubMenu] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -82,11 +81,11 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuIconSrc, m
                 className="relative transition-all duration-300 group"
                 onMouseEnter={() => {
                   setSelectedItem(index);
-                  if (link.subMenu) setOpenSubMenu(true);
+                 
                 }}
                 onMouseLeave={() => {
                   setSelectedItem(null);
-                  setOpenSubMenu(false);
+                  
                 }}
               >
                 <Link
@@ -101,8 +100,7 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuIconSrc, m
                 {link.subMenu && (
                   <div
                     className={`absolute z-10 left-[20vw] w-fit top-[-9vw] mt-2 bg-black text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300`}
-                    onMouseEnter={() => setOpenSubMenu(true)}
-                    onMouseLeave={() => setOpenSubMenu(false)}
+                    
                   >
                     <ul className="p-8 bg-black border-l border-white">
                       {link.subMenu.map((subLink, subIndex) => (
