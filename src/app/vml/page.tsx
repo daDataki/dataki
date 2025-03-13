@@ -123,7 +123,7 @@ export default function Vml() {
               </h2>
             </div>
             <div className='flex flex-col items-center justify-center'>
-              <h2 className='absolute fontSize-fluid font-antonio font-medium text-bordered uppercase'>
+              <h2 className='sticky top-0 fontSize-fluid font-antonio font-medium text-bordered uppercase'>
                 FRONT END
               </h2>
               <Image

@@ -11,7 +11,6 @@ export default function AnimatedAos() {
     const [showSlide2, setShowSlide2] = useState(true);
     const [showSlide3, setShowSlide3] = useState(true);
     const [showSlide4, setShowSlide4] = useState(true);
-    const [showSlide5, setShowSlide5] = useState(true);
     const [showSlide6, setShowSlide6] = useState(true);
     const [showSlide7, setShowSlide7] = useState(true);
     const [showBusine, setShowBusine] = useState(true)
@@ -25,7 +24,6 @@ export default function AnimatedAos() {
             setShowSlide2(false);
             setShowSlide3(false);
             setShowSlide4(false);
-            setShowSlide5(false);
             setShowSlide6(false);
             setShowSlide7(false);
             setShowBusine(false);
@@ -37,7 +35,6 @@ export default function AnimatedAos() {
                 setShowSlide2(true);
                 setShowSlide3(true);
                 setShowSlide4(true);
-                setShowSlide5(true);
                 setShowSlide6(true);
                 setShowSlide7(true);
                 setShowBusine(true);
@@ -48,7 +45,7 @@ export default function AnimatedAos() {
         return () => clearInterval(interval);
     }, []);
     return (
-        <div className="bg-[#131313]  sm:h-[70vh] md:h-[90vh] lg:h-[120vh] xl:h-[140vh] 2xl:h-[160vh] overflow-hidden">
+        <div className="bg-[#131313]  sm:h-[70vh] md:h-[90vh] lg:h-[120vh] xl:h-[140vh] 2xl:h-[160vh] overflow-hidden z-20">
             {/* Título "Busine" */}
             <div className='relative'>
             <AnimatePresence>
@@ -57,7 +54,7 @@ export default function AnimatedAos() {
                         initial={{ x: -200, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 1.5, delay: 2 }}
-                        exit={{ x: -1000, opacity: 0 }}
+                        exit={{ opacity: 0, transition: { duration: 3 } }}
                         className="relative top-[9vw] text-end fontSize-gra-desig font-antonio font-medium text-bordered uppercase"
                     >
                         Busine
@@ -75,7 +72,7 @@ export default function AnimatedAos() {
                             initial={{ x: -300, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ duration: 1 }}
-                            exit={{ x: 1000, y: -400, opacity: 0 }}
+                            exit={{ opacity: 0, transition: { duration: 3 } }}
                             className='relative w-[21.6vw] h-auto'
                             src="/images-proyecto/Slide1.png"
                             alt="Aon"
@@ -89,7 +86,7 @@ export default function AnimatedAos() {
                             initial={{ x: 300, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ duration: 1 }}
-                            exit={{ x: -1000, y: 400, opacity: 0 }}
+                            exit={{ opacity: 0, transition: { duration: 3 } }}
                             className='relative w-[13.75vw] h-auto'
                             src="/images-proyecto/Slide2.png"
                             alt="Aon"
@@ -107,7 +104,7 @@ export default function AnimatedAos() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 2, delay: 1 }}
-                            exit={{ opacity: 0 }}
+                            exit={{ opacity: 0, transition: { duration: 3 } }}
                             className='relative w-[22.7vw] h-auto top-[-7vw]'
                             src="/images-proyecto/Slide6.png"
                             alt="Aon"
@@ -121,7 +118,7 @@ export default function AnimatedAos() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 2, delay: 2 }}
-                            exit={{ opacity: 0 }}
+                            exit={{ opacity: 0, transition: { duration: 3 } }}
                             className='absolute top-0 w-[40.69vw] h-auto z-10'
                             src="/images-proyecto/Slide7-1.png"
                             alt="Aon"
@@ -138,7 +135,7 @@ export default function AnimatedAos() {
                             initial={{ x: -300, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ duration: 1 }}
-                            exit={{ x: 300, y: -400, opacity: 0 }}
+                            exit={{ opacity: 0, transition: { duration: 3 } }}
                             className='relative w-[32.7vw] h-auto z-10'
                             src="/images-proyecto/Slide3.png"
                             alt="Aon"
@@ -151,7 +148,7 @@ export default function AnimatedAos() {
                             initial={{ x: 300, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ duration: 1 }}
-                            exit={{ x: -300, y: 400, opacity: 0 }}
+                            exit={{ opacity: 0, transition: { duration: 3 } }}
                             className='relative w-[32.7vw] h-auto top-[-3vw]'
                             src="/images-proyecto/Slide4.png"
                             alt="Aon"
@@ -166,29 +163,14 @@ export default function AnimatedAos() {
                 <AnimatePresence>
                     {showStrategy && (
                         <motion.h2
-                            initial={{ x: 200, opacity: 0 }}
+                            initial={{ x: 200, y: -200, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ duration: 1.5, delay: 2 }}
-                            exit={{ x: 1000, opacity: 0 }}
+                            exit={{ opacity: 0, transition: { duration: 3 } }}
                             className="relative top-[-7vw] fontSize-gra-desig font-antonio font-medium text-bordered uppercase"
                         >
                             strategy
                         </motion.h2>
-                    )}
-                </AnimatePresence>
-
-                <AnimatePresence>
-                    {showSlide5 && (
-                        <motion.img
-                            key="slide5"
-                            initial={{ x: 300, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 1, delay: .5 }}
-                            exit={{ x: -1000, opacity: 0 }}
-                            className='relative w-[21.45vw] h-auto'
-                            src="/images-proyecto/Slide5.png"
-                            alt="Aon"
-                        />
                     )}
                 </AnimatePresence>
             </div>

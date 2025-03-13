@@ -4,7 +4,7 @@
 }
 
 .fontSize-gra-desig {
-    font-size: clamp(13vw, 21vw, 27vw);
-    line-height: clamp(13vw, 21vw, 27vw);
+    font-size: clamp(80px, 16.66vw, 360px);
+    line-height: clamp(80px, 16.66vw, 360px);
 
 }

@@ -1,4 +1,4 @@
-import Header from '../header/Header';
+import Header1 from '../../components/header1/Header1';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import './Hero.css';
@@ -23,37 +23,42 @@ interface HeroProps {
     services: Services;
     overlayColor?: string;
     textBlack?: string;
+    backgroundPosition?: string;
 
 }
 
 const Hero: React.FC<HeroProps> = ({
     title,
     backgroundImage,
+    backgroundPosition,
     clientInfo,
     aboutInfo,
     services,
     overlayColor,
     textBlack,
- 
-    
-
 }) => {
     const bgImage = typeof backgroundImage === 'string' ? backgroundImage : backgroundImage.src;
+    const bgPosition = backgroundPosition || 'center';
     return (
         <div>
-            <Header />
+            <Header1
+        
+                menuIconSrc="/images-proyecto/menuBlack.png"
+                menuCloseIcon="/images-proyecto/closeMenu.svg"
+                logoSrcOpen="/images-proyecto/logo.png"
+            />
             <div className="relative w-full z-10">
                 <div
                     className="relative flex flex-col justify-between w-full h-[50vh] sm:h-[65vh] md:h-[80vh] lg:h-screen 2xl:h-[120vh]"
                     style={{
                         backgroundImage: `url(${bgImage})`,
-                        backgroundSize: 'cover',  // Ajusta la imagen para que se vea completa sin recortes
-                        backgroundPosition: 'center', // Mantiene la imagen centrada
+                        backgroundSize: 'cover',
+                        backgroundPosition: `${bgPosition}`,
                         backgroundRepeat: 'no-repeat',
-                        
+
                     }}
                 >
-                    <div className="absolute inset-0bg-black opacity-40 "></div>
+                    <div className="absolute inset-0 bg-black opacity-40 "></div>
 
                     <div className="flex flex-col justify-between px-12 pt-12 py-12 z-10 h-[100%]">
                         <div className="w-fit">

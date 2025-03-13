@@ -14,6 +14,7 @@ import DiagonalSlider from '@/components/diagonal-slider/DiagonalSlider';
 
 
 
+
 export default function VidaEstilo() {
   const [brandingHidden, setBrandingHidden] = useState(false);
   const [graphicHidden, setGraphicHidden] = useState(false);

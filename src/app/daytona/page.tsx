@@ -1,18 +1,40 @@
+"use client"
 import Hero from '../../components/hero/Hero';
 import daytona from '../../../public/images-proyecto/AUTO-2-AI.png';
 import Image from 'next/image';
 import './daytona.css'
 import PreviousNext from '../../components/previous-next/PreviousNext'
 import Footer from '../../components/footer/Footer'
+import { useEffect, useState } from 'react';
 
 
 export default function Daytona() {
+  const [graphicHidden, setGraphicHidden] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const graphic = document.getElementById("graphic");
+      const texto = document.getElementById("texto");
+      if (!graphic || !texto) return;
+      const graphicRect = graphic.getBoundingClientRect();
+      const textoRect = texto.getBoundingClientRect();
+      if (graphicRect.bottom - textoRect.top  <= 428) {        
+        setGraphicHidden(true);
+      } else {
+        setGraphicHidden(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <div className='bg-[#ca262c] overflow-clip'>
         <div><Hero
           title="Daytona"
           backgroundImage={daytona.src}
+          backgroundPosition="right"
           clientInfo={{
             group: "",
             date: "2022 Ongoing",
@@ -102,7 +124,7 @@ export default function Daytona() {
           </div>
         </div>
         <div className='bg-black pb-24 z-20 mt-[-2px] mb-[-2px]'><h2 className='font-media-online font-antonio font-semibold uppercase text-[#CB262C] text-end ' >& offline</h2></div>
-        <div className='flex flex-col w-full bg-black py-32'>
+        <div className='flex flex-col w-full bg-black pt-32'>
           <video
             className="w-full h-[810px] object-cover"
             autoPlay
@@ -122,16 +144,15 @@ export default function Daytona() {
             width={450}
             height={800}
           />
-
-          <div className="absolute  left-0 py-32 w-full h-screen lg:h-[138vh] 2xl:h-[206vh]">
-            <div className='absolute w-full top-[66%] font-media-online text-bordered font-antonio font-medium z-0'>
-              <h2 className='relative ml-[6.94vw] uppercase'>graphic</h2>
+          <div className="absolute  left-0 pt-32 w-full h-screen lg:h-[138vh] 2xl:h-[206vh]">
+            <div className='sticky top-0 w-full font-media-online text-bordered font-antonio font-medium z-0'>
+              <h2 id='graphic' className={`relative ml-[6.94vw] uppercase ${graphicHidden ? "opacity-0" : "opacity-100"}`}>graphic</h2>
               <h2 className='uppercase text-end mr-[5.34vw]'>design</h2>
             </div>
           </div>
 
           <div className='w-full flex justify-start items-start ml-[6.94vw] pt-[11vw]'>
-            <h2 className='font-antonio font-semibold font-performance uppercase text-white'>
+            <h2 id='texto' className='font-antonio font-semibold font-performance uppercase text-white'>
               Road-ready <br /> solutions through <br /> creative campaigns.
             </h2>
           </div>
@@ -171,7 +192,7 @@ export default function Daytona() {
           </div>
         </div>
         <div className='w-full mt-[2px]'>
-          <div className='w-[80%] my-[5vw] mx-auto bg-[#ca262c] '>
+          <div className='px-24  my-[5vw] mx-auto bg-[#ca262c] '>
             <PreviousNext className='text-white' />
           </div>
         </div>

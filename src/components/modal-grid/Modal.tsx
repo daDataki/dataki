@@ -82,7 +82,7 @@ const imageDataMap: Record<string, {
     text1: "",
     text2: "2020-Ongoing",
     categories: ["Front & Back-End Development", "Digital Campaigns", "Video Production", "Graphic Design"],
-    route: "/vida-estilo"
+    route: "/vml"
   }
 };
 
@@ -106,8 +106,8 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
       <div className="modal-content py-10 px-24 h-[55vh] lg:h-[70vh] xl:h-[85vh] 2xl:h-[95vh] relative" onClick={(e) => e.stopPropagation()}>
         {/* Botón de cierre */}
         <div>
-          <button className="w-8 cursor-pointer absolute top-4 right-4" onClick={onClose}>
-            <Image src='/images-proyecto/closeMenu.svg' width={32} height={32} alt="close-button" />
+          <button className="w-24 cursor-pointer absolute top-4 right-4" onClick={onClose}>
+            <Image src='/images-proyecto/closeMenu.svg' width={52} height={52} alt="close-button" />
           </button>
         </div>
         {/* Título */}
@@ -118,7 +118,7 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
           </div>
         </div>
         <div className=" w-full  lg:w-[92%] xl:w-[62.5vw]  flex  justify-between mt-2">
-          <div className="relative w-[70px] h-[67px]">
+          <div className="relative w-[80px] h-[80px]">
             <Image
               src="/images-proyecto/arrow-modal.png"
               alt={title}
@@ -136,7 +136,7 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
           <div className="w-1/2 flex flex-col gap-4">
             <div>
               <h6 className="font-text2 ">
-                <span className="font-bold">DATE:</span> {imageDataMap[image].text2 }
+                <span className="font-bold">DATE:<br/></span> {imageDataMap[image].text2 }
               </h6>
             </div>
             <div>
@@ -146,7 +146,7 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
                   <h3 className="font-bold font-Poppins font-text2">CATEGORIES:</h3>
                   <ul className="list-disc list-inside font-Poppins font-text2">
                     {imageDataMap[image].categories.map((category, index) => (
-                      <li key={index} className="text-gray-700">{category}</li>
+                      <li key={index} className="text-black list-none font-Poppins">{category}</li>
                     ))}
                   </ul>
                 </div>
@@ -154,14 +154,14 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
             </div>
           </div>
           <div
-            className="relative w-1/2 h-[23vh] lg:h-[33vh] xl:h-[43vh]  cursor-pointer"
-            onClick={handleNavigate} // Redirige al hacer clic
+            className="relative w-[60%] h-[23vh] lg:h-[33vh] xl:h-[43vh]  cursor-pointer"
+            onClick={handleNavigate} 
           >
             <Image
               src={imageDataMap[image].src}
               alt={imageDataMap[image].title}
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
               objectPosition="right"
             />
           </div>
