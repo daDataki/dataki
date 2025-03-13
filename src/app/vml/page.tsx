@@ -103,14 +103,10 @@ export default function Vml() {
           }}
         /></div>
         <div className='relative '>
-          <video
-            className="w-full h-auto  object-cover"
-            autoPlay
-            loop
-            muted
+        <video
+            className="w-full h-auto object-cover"
+            controls
             playsInline
-            preload="auto"
-            aria-hidden="true"
           >
             <source src="/video/VML-SIN-AUDIO.mp4" type="video/mp4" />
           </video>
