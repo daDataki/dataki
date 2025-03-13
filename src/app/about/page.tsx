@@ -1,20 +1,13 @@
 
-import Image from "next/image";
 import "./about.css";
-import Header from "../../components/header1/Header1";
+
 import Footer from "../../components/footer/Footer"
 
 
 export default function About() {
   return (
     <div>
-      <Header
-        className="text-white"
-        logoSrc="/images-proyecto/logo.png"
-        menuIconSrc="/images-proyecto/menuWhite.png"
-        logoSrcOpen="/images-proyecto/logo.png"
-        menuCloseIcon="/images-proyecto/closeMenu.svg"
-      />
+     
       
       <div className="bg-black pt-12   sm:pt-20">
         <div className="pl-12 sm:pl-24">
