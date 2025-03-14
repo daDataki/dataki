@@ -99,7 +99,7 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon 
                 {/* Submenú visible solo si está abierto */}
                 {link.subMenu && (
                   <div
-                    className={`absolute z-10 left-[20vw] w-fit top-[-9vw] mt-2 bg-black text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300`}
+                    className={`absolute z-10 left-[24vw] w-fit top-[-9vw] mt-2 bg-black text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300`}
                     
                   >
                     <ul className="p-8 bg-black border-l border-white">

@@ -21,7 +21,7 @@ export default function Aos() {
 
   return (
 
-    <div className='bg-[#ff0010] overflow-clip'>
+    <div className='bg-black overflow-clip'>
       <div>
         <Hero
           title="Aon"
@@ -132,7 +132,7 @@ export default function Aos() {
             <source src="/video/Aon.mp4" type="video/mp4" />
           </video>
         </div>
-      <div className='px-24  my-[5vw] mx-auto bg-[#ff0010]'>
+      <div className='px-24  my-[5vw] mx-auto bg-black'>
           <PreviousNext className='text-white' />
         </div>
       <div>
