@@ -25,8 +25,8 @@ interface HeroProps {
     overlayColor?: string;
     textBlack?: string;
     backgroundPosition?: string;
-    prev?: string;
-    next?: string;
+    prev: string;
+    next: string;
 }
 
 const Hero: React.FC<HeroProps> = ({

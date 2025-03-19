@@ -12,6 +12,8 @@ export default function VidaEstilo() {
         <div><Hero
           title={<h1 className="text-tango-title">TANGO Motorsports</h1>}
           backgroundImage={tango.src}
+          prev='/cis-latam'
+          next='/vida-estilo'
           clientInfo={{
             group: "Hospitality Group",
             date: "2022 - 2024",

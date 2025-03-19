@@ -83,10 +83,10 @@ export default function Vml() {
           next='/aon'
           clientInfo={{
             group: "",
-            date: "2020 Ongoing",
+            date: "2020-Ongoing",
             name: "VML USA",
             categories: [
-              "front & back-end Development",
+              "Front & back-end Development",
               "Digital Campaigns",
               "Video Production",
               "Graphic Design",
@@ -117,7 +117,7 @@ export default function Vml() {
           <div className='relative'>
             <div>
               <h2 className='font-antonio font-bold uppercase text-caption1 text-black'>
-                hellmans
+                hellman&apos;s
               </h2>
             </div>
             <div className='flex flex-col items-center justify-center'>

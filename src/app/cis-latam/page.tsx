@@ -35,6 +35,8 @@ export default function CisLatam() {
         <div><Hero
           title="CIS latam"
           backgroundImage={cis.src}
+          prev='/vml'
+          next='/vida-estilo'
           clientInfo={{
             group: "",
             date: "2022 Ongoing",
