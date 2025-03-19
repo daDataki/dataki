@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Modal.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -100,24 +100,32 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
 
     router.push(route); // Redirige a la página correspondiente
   };
+   
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
 
+  const titleSize = title.length > 13 ? "text-[7rem]" : "text-[10rem]";
   return (
     <div className="modal bg-opacity-50 pointer-events-auto " >
       <div className="modal-content py-10 px-24 h-[55vh] lg:h-[70vh] xl:h-[85vh] 2xl:h-[95vh] relative" onClick={(e) => e.stopPropagation()}>
         {/* Botón de cierre */}
         <div>
-          <button className="w-14 cursor-pointer absolute top-4 right-4" onClick={onClose}>
+          <button className="w-8 cursor-pointer absolute top-4 right-4" onClick={onClose}>
             <Image src='/images-proyecto/closeMenu.svg' width={20} height={20} alt="close-button" />
           </button>
         </div>
         {/* Título */}
-        <div className="w-[61vw] relative flex flex-col justify-start">
-          <h1 className="font-title font-antonio font-bold uppercase text-black">{title}</h1>
-          <div className="absolute top-16 left-16 lg:top-24 lg:left-20 xl:top-[8.5rem] xl:left-40 ">
-            <h2 className=" text-easternBlue font-normal font-signature font-project">Project</h2>
+        <div className="relative flex flex-col justify-start">
+          <h1 className={`font-antonio font-bold uppercase text-black leading-none ${titleSize}`}>{title}</h1>
+          <div className="absolute top-16 left-16 lg:left-20 top-[50%] xl:left-40 ">
+            <h2 className="text-easternBlue font-normal font-signature text-[5.5rem]">Project</h2>
           </div>
         </div>
-        <div className=" w-full  lg:w-[92%] xl:w-[62.5vw]  flex  justify-between mt-2">
+        <div className=" w-full  lg:w-[88%] xl:w-[58vw]  flex  justify-between mt-2">
           <div className="relative w-[80px] h-[80px]">
             <Image
               src="/images-proyecto/arrow-modal.png"

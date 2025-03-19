@@ -21,7 +21,7 @@ export default function Home() {
         {/* Sección del video */}
         <div className="relative">
           <video
-            className="w-full  object-cover"
+            className="w-full h-screen object-cover"
             autoPlay
             loop
             muted
