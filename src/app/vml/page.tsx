@@ -111,10 +111,10 @@ export default function Vml() {
             <source src="/video/VML-SIN-AUDIO.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className='relative pt-40 pb-16 px-12'>
+        <div className='relative pt-40 pb-16 px-12 bg-white'>
           <div className='relative'>
             <div>
-              <h2 className='font-antonio font-bold uppercase text-caption1'>
+              <h2 className='font-antonio font-bold uppercase text-caption1 text-black'>
                 hellmans
               </h2>
             </div>
@@ -353,7 +353,7 @@ export default function Vml() {
         <div className='flex flex-col w-full py-32 px-12 bg-[#ffde00]'>
           <div className='relative w-full'>
             <motion.h2
-              className='font-antonio font-bold uppercase text-caption1'
+              className='font-antonio font-bold uppercase text-caption1 text-black'
               initial={{ opacity: 0, y: -50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
@@ -417,7 +417,7 @@ export default function Vml() {
         <div className='bg-[#bababa] px-12 py-32 '>
           <div className='flex'>
             <div className='w-1/5'>
-              <h2 className='font-antonio font-bold uppercase text-caption1'>
+              <h2 className='font-antonio font-bold uppercase text-caption1 text-black'>
                 OREO
               </h2>
             </div>

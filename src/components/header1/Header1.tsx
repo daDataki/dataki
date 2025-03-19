@@ -73,12 +73,12 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon 
 
       {/* Menú de navegación */}
       <div className={`fixed w-full top-0 py-6 left-0 pl-4 pr-20 bg-black text-white overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
-        <nav className="px-6">
-          <ul className="flex flex-col pt-32 text-7xl  font-antonio font-semibold">
+        <nav className="px-6 flex justify-start">
+          <ul className="flex flex-col pt-32 text-7xl  font-antonio font-semibold relative">
             {menuOptions.map((link, index) => (
               <li
                 key={link.path}
-                className="relative transition-all duration-300 group"
+                className="transition-all duration-300 group"
                 onMouseEnter={() => {
                   setSelectedItem(index);
                  
@@ -99,7 +99,7 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon 
                 {/* Submenú visible solo si está abierto */}
                 {link.subMenu && (
                   <div
-                    className={`absolute z-10 left-[24vw] w-fit top-[-9vw] mt-2 bg-black text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300`}
+                    className={`absolute z-10 left-[100%] ml-8 w-fit top-[50%] -translate-y-1/2 mt-2 bg-black text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300`}
                     
                   >
                     <ul className="p-8 bg-black border-l border-white">
@@ -107,7 +107,7 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon 
                         <li key={subIndex}>
                           <Link
                             href={subLink.path}
-                            className="block text-5xl p-3 uppercase  hover:text-easternBlue transition-colors"
+                            className="whitespace-nowrap block text-5xl p-3 uppercase  hover:text-easternBlue transition-colors"
                           >
                             {subLink.name}
                           </Link>
