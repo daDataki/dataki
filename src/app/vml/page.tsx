@@ -34,7 +34,6 @@ export default function Vml() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000,
       once: false,
       mirror: true,
     });
@@ -295,12 +294,13 @@ export default function Vml() {
         </div>
         <div className='w-full py-32 bg-[#E7DCCE] px-12'>
           <div className='w-full sticky top-0'>
-            <h2 className=' font-antonio font-bold uppercase text-caption1'>
+            <h2 className=' font-antonio font-bold uppercase text-caption1 text-black'>
               DIGIORNO
             </h2>
           </div>
           <div className='w-full flex justify-center items-center'>
             <div className=''><Image
+              data-aos="flip-left"
               className="relative w-[18vw] z-10"
               src="/images-proyecto/dig1.png"
               alt="Main Image"
@@ -309,6 +309,8 @@ export default function Vml() {
               height={1111}
             /></div>
             <div className='relative top-[-5vw] '><Image
+              data-aos="flip-left"
+              data-aos-delay="100"
               className="relative w-[18vw] z-10"
               src="/images-proyecto/dig2.png"
               alt="Main Image"
@@ -317,6 +319,9 @@ export default function Vml() {
               height={1111}
             /></div>
             <div className=''><Image
+
+              data-aos="flip-left"
+              data-aos-delay="150"
               className="relative w-[18vw] z-10"
               src="/images-proyecto/dig3.png"
               alt="Main Image"
@@ -327,6 +332,8 @@ export default function Vml() {
           </div>
           <div className='w-full flex justify-center items-center'>
             <div className=''><Image
+              data-aos="flip-left"
+              data-aos-delay="200"
               className="relative w-[18vw] z-10"
               src="/images-proyecto/dig4.png"
               alt="Main Image"
@@ -335,6 +342,8 @@ export default function Vml() {
               height={1111}
             /></div>
             <div className='relative top-[-5vw]'><Image
+              data-aos="flip-left"
+              data-aos-delay="250"
               className="relative w-[18vw] z-10"
               src="/images-proyecto/dig5.png"
               alt="Main Image"
@@ -343,6 +352,8 @@ export default function Vml() {
               height={1111}
             /></div>
             <div className=''><Image
+              data-aos="flip-left"
+              data-aos-delay="300"
               className="relative w-[18vw] z-10"
               src="/images-proyecto/dig6.png"
               alt="Main Image"
@@ -366,7 +377,7 @@ export default function Vml() {
           </div>
           <div className='flex justify-center'>
             <motion.div
-              className='relative left-[15vw] top-[6vw] w-[32.5%]'
+              className='relative left-[3vw] top-[6vw] w-[20%]'
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -374,7 +385,7 @@ export default function Vml() {
             >
               <Image
                 className="w-full z-10"
-                src="/images-proyecto/RAID-PHONE1.png"
+                src="/images-proyecto/raid1.png"
                 alt="RAID Phone 1"
                 layout="intrinsic"
                 width={800}
@@ -382,7 +393,7 @@ export default function Vml() {
               />
             </motion.div>
             <motion.div
-              className='w-[35%] z-10'
+              className='w-[25%] z-10'
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -390,7 +401,7 @@ export default function Vml() {
             >
               <Image
                 className="w-full z-10"
-                src="/images-proyecto/RAID-PHONE2.png"
+                src="/images-proyecto/raid2.png"
                 alt="RAID Phone 2"
                 layout="intrinsic"
                 width={800}
@@ -398,7 +409,7 @@ export default function Vml() {
               />
             </motion.div>
             <motion.div
-              className='relative right-[15vw] top-[6vw] w-[32.5%]'
+              className='relative right-[3vw] top-[6vw] w-[20%]'
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -406,7 +417,7 @@ export default function Vml() {
             >
               <Image
                 className="w-full z-10"
-                src="/images-proyecto/RAID-PHONE3.png"
+                src="/images-proyecto/raid3.png"
                 alt="RAID Phone 3"
                 layout="intrinsic"
                 width={800}
