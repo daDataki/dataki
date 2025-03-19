@@ -1,4 +1,5 @@
 import Header1 from '../../components/header1/Header1';
+import Link from 'next/link';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import './Hero.css';
@@ -24,7 +25,8 @@ interface HeroProps {
     overlayColor?: string;
     textBlack?: string;
     backgroundPosition?: string;
-
+    prev?: string;
+    next?: string;
 }
 
 const Hero: React.FC<HeroProps> = ({
@@ -36,6 +38,8 @@ const Hero: React.FC<HeroProps> = ({
     services,
     overlayColor,
     textBlack,
+    prev,
+    next,
 }) => {
     const bgImage = typeof backgroundImage === 'string' ? backgroundImage : backgroundImage.src;
     const bgPosition = backgroundPosition || 'center';
@@ -111,8 +115,8 @@ const Hero: React.FC<HeroProps> = ({
                         </div>
                         <div className="flex max-sm:justify-between justify-end text-white font-semibold font-Poppins">
                             <div className="z-10  font-pre-next max-sm:w-full max-sm:flex max-sm:justify-between">
-                                <span className="mr-6 uppercase font-Poppins">previous</span>
-                                <span className="uppercase font-Poppins">next</span>
+                                <Link href={prev} className="mr-6 uppercase font-Poppins">previous</Link>
+                                <Link href={next} className="uppercase font-Poppins">next</Link>
                             </div>
                         </div>
                     </div>

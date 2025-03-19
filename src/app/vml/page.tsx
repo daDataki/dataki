@@ -79,6 +79,8 @@ export default function Vml() {
           textBlack='text-black'
           title="VML"
           backgroundImage={beacon.src}
+          prev='/daytona'
+          next='/aon'
           clientInfo={{
             group: "",
             date: "2020 Ongoing",

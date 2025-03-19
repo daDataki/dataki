@@ -26,6 +26,8 @@ export default function Aos() {
         <Hero
           title="Aon"
           backgroundImage={aon.src}
+            prev='/vml'
+            next='/vida-estilo'
           clientInfo={{
             group: "",
             date: "2024 Ongoing",

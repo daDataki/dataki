@@ -58,6 +58,8 @@ export default function VidaEstilo() {
         <div><Hero
           title="Vida & Estilo"
           backgroundImage={beacon.src}
+          prev='/aon'
+          next='/daytona'
           clientInfo={{
             group: "Hospitality Group",
             date: "2023 Ongoing",
