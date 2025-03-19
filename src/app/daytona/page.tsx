@@ -39,7 +39,7 @@ export default function Daytona() {
           next='/vml'
           clientInfo={{
             group: "",
-            date: "2022 Ongoing",
+            date: "2022-Ongoing",
             name: "Daytona",
             categories: [
               "Video & Radio Production",
@@ -48,7 +48,7 @@ export default function Daytona() {
               "Graphic Design",
             ],
           }}
-          aboutInfo="Daytona work showcase"
+          aboutInfo={<span>Daytona <br/>Work Showcase</span>}
           services={{
             description:
               "Daytona’s campaign was a hit with our all-in-one solution: video production, radio spots, digital campaigns, and standout graphics, driving strong engagement from day one.",

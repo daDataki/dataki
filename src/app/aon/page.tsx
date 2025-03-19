@@ -30,16 +30,16 @@ export default function Aos() {
             next='/vida-estilo'
           clientInfo={{
             group: "",
-            date: "2024 Ongoing",
+            date: "2024-Ongoing",
             name: "Aon",
             categories: [
               "Video Production",
               "Front-End Development",
               "Business & Digital Strategy",
-              "graphic & digital design",
+              "Graphic & digital design",
             ],
           }}
-          aboutInfo="Aon work showcase"
+          aboutInfo={<span>Aon <br/>Work Showcase</span>}
           services={{
             description:
               "Aon trusted us to bring their new division to life, from video production to front-end design, giving them a strong digital foundation.",

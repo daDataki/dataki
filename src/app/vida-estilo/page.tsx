@@ -62,7 +62,7 @@ export default function VidaEstilo() {
           next='/daytona'
           clientInfo={{
             group: "Hospitality Group",
-            date: "2023 Ongoing",
+            date: "2023-Ongoing",
             name: "Vida & Estilo<br />Hospitality<br />Group",
             categories: [
               "SEO & Data Analytics",

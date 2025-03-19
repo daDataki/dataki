@@ -24,7 +24,7 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon 
     setIsOpen(false);
   }, [pathname]);
 
-  const menuIcon = menuOptions.find(option => option.path === pathname)?.menuIcon || "/images-proyecto/menuWhite.png";
+  const menuIcon = menuOptions.find(option => option.path === pathname)?.menuIcon || "/images-proyecto/menuWhite.svg";
 
   // Bloquea el scroll cuando el menú está abierto
   useEffect(() => {
