@@ -167,7 +167,7 @@ export default function Vml() {
                 width={800}
                 height={1111}
               />
-              <div className="absolute top-[5.5vw] left-[6.5vw] w-[14vw] h-auto">
+              <div className="absolute hidden top-[5.5vw] left-[6.5vw] w-[14vw] h-auto">
                 <Image
                   className="needle"
                   src="/images-proyecto/SCREEN-AGUJA.png"
