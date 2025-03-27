@@ -3,18 +3,22 @@ import { motion, useInView } from "framer-motion";
 import Hero from '../../components/hero/Hero';
 import aon from '../../../public/images-proyecto/aon-busy-business.png';
 import Image from 'next/image';
+import AOS from 'aos';
+import "aos/dist/aos.css"
 import './aon.css'
 import Footer from '../../components/footer/Footer'
 import AnimatedAos from '../../components/animated-aos/AnimatedAos'
 import PreviousNext from '../../components/previous-next/PreviousNext'
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 
 
 
 export default function Aos() {
 
-
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
   const ref = useRef(null);
 
   const isInView = useInView(ref, { once: false, margin: "-100px 0px" });
@@ -26,8 +30,8 @@ export default function Aos() {
         <Hero
           title="Aon"
           backgroundImage={aon.src}
-            prev='/vml'
-            next='/vida-estilo'
+          prev='/vml'
+          next='/vida-estilo'
           clientInfo={{
             group: "",
             date: "2024-Ongoing",
@@ -39,7 +43,7 @@ export default function Aos() {
               "Graphic & digital design",
             ],
           }}
-          aboutInfo={<span>Aon <br/>Work Showcase</span>}
+          aboutInfo={<span>Aon <br />Work Showcase</span>}
           services={{
             description:
               "Aon trusted us to bring their new division to life, from video production to front-end design, giving them a strong digital foundation.",
@@ -59,9 +63,9 @@ export default function Aos() {
           <h2>DESIGN</h2>
         </div>
 
-       
+
         <div className='relative flex justify-center w-full mt-[-35vw]'>
-        
+
           <Image
             className='relative w-[78vw] h-auto'
             src="/images-proyecto/Aon-Mockup-tele.png"
@@ -70,7 +74,7 @@ export default function Aos() {
             height={896}
           />
 
-         
+
           <motion.img
             initial={{ y: 0, opacity: 1 }} // Empieza visible en su posición original
             animate={isInView ? { y: -1000 } : { y: 0 }} // Sube cuando entra en vista
@@ -81,9 +85,9 @@ export default function Aos() {
           />
         </div>
       </div>
-   
+
       <AnimatedAos />
-      <div className="bg-[#131313] w-full h-[5vh] mt-[-2px]"></div>
+      <div className="bg-[#131313] w-full h-[15vh] 2xl:h-[60vh]"></div>
       <div className=" bg-[#ca262c] bg-gradient-to-t from-black/100 to-transparent">
         <div className=" flex ">
           <div className="relative w-[55%] flex justify-end top-[-20vw]"><Image
@@ -115,8 +119,34 @@ export default function Aos() {
           </div>
         </div>
       </div>
-      <div className="relative flex flex-col items-center justify-center py-20 bg-black bg-gradient-to-t from-[#ff0010]/100 to-transparent ">
-        <div className="w-full ml-[21.5vw] font-empowering pb-20">
+      <div className="relative flex flex-col items-center justify-center py-20 bg-black bg-gradient-to to-transparent ">
+        <div className="relative w-full px-24">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center w-full">
+            <Image data-aos="fade-up"
+              data-aos-delay="300"
+              className='relative w-[38.4vw] h-auto z-10 left-[6vw] top-[2vw] '
+              src="/images-proyecto/LogIn-Eleccion.png"
+              alt="LogIn-Eleccion"
+              width={1382}
+              height={896}
+            />
+            <Image data-aos="fade-up"
+              data-aos-delay="500"
+              className='relative w-[38.4vw] h-auto right-[9vw] top-[10vw]'
+              src="/images-proyecto/aon-imagen.png"
+              alt="aon-imagen"
+              width={1382}
+              height={896}
+            />
+          </div>
+          <div className="flex justify-start">
+            <h2 className="fontSize-gra-desig font-antonio font-medium text-bordered uppercase">DIGITAL</h2>
+          </div>
+          <div className="flex justify-end">
+            <h2 className="fontSize-gra-desig font-antonio font-medium text-bordered uppercase">DESIGN</h2>
+          </div>
+        </div>
+        <div className="w-full ml-[21.5vw] font-empowering pt-64">
           <h2 className="uppercase font-antonio font-normal text-white">
             Strategies and <br /> visuals aligned <br /> for a changing <br /> world.
           </h2>
@@ -124,19 +154,19 @@ export default function Aos() {
       </div>
       <div className=' flex w-full z-20'>
 
-          <video
-            className="w-full object-cover "
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
-            <source src="/video/Aon.mp4" type="video/mp4" />
-          </video>
-        </div>
+        <video
+          className="w-full object-cover "
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/video/Aon.mp4" type="video/mp4" />
+        </video>
+      </div>
       <div className='px-24  my-[5vw] mx-auto bg-black'>
-          <PreviousNext className='text-white' />
-        </div>
+        <PreviousNext className='text-white' />
+      </div>
       <div>
         <Footer background="bg-black " />
       </div>

@@ -104,7 +104,7 @@ export default function Vml() {
           }}
         /></div>
         <div className='relative '>
-        <video
+          <video
             className="w-full h-auto object-cover"
             controls
             playsInline
@@ -158,7 +158,7 @@ export default function Vml() {
                 height={1111}
               />
             </div>
-            <div className='w-[37.91vw] h-auto] z-10'>
+            <div className="relative w-[37.91vw] h-auto z-10">
               <Image
                 className="relative w-full h-auto"
                 src="/images-proyecto/PHONE-111.png"
@@ -167,7 +167,18 @@ export default function Vml() {
                 width={800}
                 height={1111}
               />
+              <div className="absolute top-[5.5vw] left-[6.5vw] w-[14vw] h-auto">
+                <Image
+                  className="needle"
+                  src="/images-proyecto/SCREEN-AGUJA.png"
+                  alt="Needle"
+                  layout="intrinsic"
+                  width={800}
+                  height={1111}
+                />
+              </div>
             </div>
+
             <div className='relative w-[29vw] right-[14vw] top-[-1vw] h-auto '>
               <Image
                 className="relative w-full h-auto"

@@ -5,28 +5,11 @@ import Image from 'next/image';
 import './daytona.css'
 import PreviousNext from '../../components/previous-next/PreviousNext'
 import Footer from '../../components/footer/Footer'
-import { useEffect, useState } from 'react';
+
 
 
 export default function Daytona() {
-  const [graphicHidden, setGraphicHidden] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      const graphic = document.getElementById("graphic");
-      const texto = document.getElementById("texto");
-      if (!graphic || !texto) return;
-      const graphicRect = graphic.getBoundingClientRect();
-      const textoRect = texto.getBoundingClientRect();
-      if (graphicRect.bottom - textoRect.top  <= 428) {        
-        setGraphicHidden(true);
-      } else {
-        setGraphicHidden(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+ 
 
   return (
     <>
@@ -147,8 +130,8 @@ export default function Daytona() {
             height={800}
           />
           <div className="absolute  left-0 pt-32 w-full h-screen lg:h-[138vh] 2xl:h-[206vh]">
-            <div className='sticky top-0 w-full font-media-online text-bordered font-antonio font-medium z-0'>
-              <h2 id='graphic' className={`relative ml-[6.94vw] uppercase ${graphicHidden ? "opacity-0" : "opacity-100"}`}>graphic</h2>
+            <div className='sticky top-0 mt-56 w-full font-media-online text-bordered font-antonio font-medium z-0'>
+              <h2 className="relative ml-[6.94vw] uppercase">graphic</h2>
               <h2 className='uppercase text-end mr-[5.34vw]'>design</h2>
             </div>
           </div>

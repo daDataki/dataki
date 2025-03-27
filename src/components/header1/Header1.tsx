@@ -74,7 +74,7 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon 
       {/* Menú de navegación */}
       <div className={`fixed w-full top-0 py-6 left-0 pl-4 pr-20 bg-black text-white overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
         <nav className="px-6 flex justify-start">
-          <ul className="flex flex-col pt-32 text-7xl  font-antonio font-semibold relative">
+          <ul className="flex flex-col pt-32 text-4xl lg:text-7xl  font-antonio font-semibold relative">
             {menuOptions.map((link, index) => (
               <li
                 key={link.path}
@@ -107,7 +107,7 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon 
                         <li key={subIndex}>
                           <Link
                             href={subLink.path}
-                            className="whitespace-nowrap block text-5xl p-3 uppercase  hover:text-easternBlue transition-colors"
+                            className="whitespace-nowrap block text-2xl lg:text-5xl p-3 uppercase  hover:text-easternBlue transition-colors"
                           >
                             {subLink.name}
                           </Link>

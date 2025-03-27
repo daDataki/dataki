@@ -45,7 +45,7 @@ export default async function HorizontalSlider() {
                     >
                       <Image
                         src={src}
-                        alt={`Partner logo ${groupIndex * 9 + index}`}
+                        alt={`Partner logo ${groupIndex * 8 + index}`}
                         className="carousel-image"
                         width={200}
                         height={100}
@@ -60,7 +60,7 @@ export default async function HorizontalSlider() {
                     >
                       <Image
                         src={src}
-                        alt={`Partner logo duplicate ${groupIndex * 9 + index}`}
+                        alt={`Partner logo duplicate ${groupIndex * 8 + index}`}
                         className="carousel-image"
                         width={200}
                         height={100}

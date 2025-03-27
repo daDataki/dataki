@@ -110,7 +110,7 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
 
   const titleSize = title.length > 13 ? "text-[7rem]" : "text-[10rem]";
   return (
-    <div className="modal bg-opacity-50 pointer-events-auto " >
+    <div className="modal  pointer-events-auto " >
       <div className="modal-content py-10 px-24 h-[55vh] lg:h-[70vh] xl:h-[85vh] 2xl:h-[95vh] relative" onClick={(e) => e.stopPropagation()}>
         {/* Botón de cierre */}
         <div>
@@ -121,7 +121,7 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
         {/* Título */}
         <div className="relative flex flex-col justify-start">
           <h1 className={`font-antonio font-bold uppercase text-black leading-none ${titleSize}`}>{title}</h1>
-          <div className="absolute top-16 left-16 lg:left-20 top-[50%] xl:left-40 ">
+          <div className="absolute top-16 left-16 lg:left-20  xl:left-40 ">
             <h2 className="text-easternBlue font-normal font-signature text-[5.5rem]">Project</h2>
           </div>
         </div>
