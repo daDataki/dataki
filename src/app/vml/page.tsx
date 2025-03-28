@@ -4,12 +4,11 @@ import Hero from '../../components/hero/Hero';
 import beacon from '../../../public/images-proyecto/vml-hero.png';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import './vml.css'
 import Footer from '../../components/footer/Footer'
 import PreviousNext from '../../components/previous-next/PreviousNext'
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
+import AosProvider from '@/components/Aos/Aos';
 
 
 
@@ -22,8 +21,8 @@ const images = [
 
 
 export default function Vml() {
+  const [degrees, setDegrees] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(2);
-
   const [oreoPhones, setOreoPhones] = useState([
     { id: 1, src: "/images-proyecto/oreo1.png", position: 0, },
     { id: 2, src: "/images-proyecto/oreo2.png", position: 1, },
@@ -31,12 +30,17 @@ export default function Vml() {
 
   ]);
 
-
+  
   useEffect(() => {
-    AOS.init({
-      once: false,
-      mirror: true,
-    });
+    const interval = setInterval(() => {
+      setDegrees((prevDegrees) => (prevDegrees + 4) % 182); // Se reinicia cuando llega a 270°
+    }, 100); // Velocidad de giro ajustada para suavidad
+
+    return () => clearInterval(interval); // Limpia el intervalo al desmontar
+  }, []);
+
+ 
+  useEffect(() => {      
     let direction = 1; // 1 para incrementar, -1 para decrementar
 
     const interval = setInterval(() => {
@@ -71,7 +75,7 @@ export default function Vml() {
   }, [images.length]);
 
   return (
-    <>
+    <AosProvider>
       <div className='overflow-clip'>
         <div><Hero
           overlayColor='bg-white'
@@ -167,10 +171,14 @@ export default function Vml() {
                 width={800}
                 height={1111}
               />
-              <div className="absolute hidden top-[5.5vw] left-[6.5vw] w-[14vw] h-auto">
+              <div className="absolute top-[16.5vw] left-[7.2vw] w-[18vw] h-auto">
                 <Image
-                  className="needle"
-                  src="/images-proyecto/SCREEN-AGUJA.png"
+                  className="relative rotate"
+                  style={{
+                    transform: `rotate(${degrees}deg)`,
+                    transition: "transform 0.1s linear",
+                  }}
+                  src="/images-proyecto/mayometer-pointer.png"
                   alt="Needle"
                   layout="intrinsic"
                   width={800}
@@ -321,7 +329,6 @@ export default function Vml() {
             /></div>
             <div className='relative top-[-5vw] '><Image
               data-aos="flip-left"
-              data-aos-delay="100"
               className="relative w-[18vw] z-10"
               src="/images-proyecto/dig2.png"
               alt="Main Image"
@@ -330,9 +337,7 @@ export default function Vml() {
               height={1111}
             /></div>
             <div className=''><Image
-
               data-aos="flip-left"
-              data-aos-delay="150"
               className="relative w-[18vw] z-10"
               src="/images-proyecto/dig3.png"
               alt="Main Image"
@@ -344,7 +349,6 @@ export default function Vml() {
           <div className='w-full flex justify-center items-center'>
             <div className=''><Image
               data-aos="flip-left"
-              data-aos-delay="200"
               className="relative w-[18vw] z-10"
               src="/images-proyecto/dig4.png"
               alt="Main Image"
@@ -354,7 +358,6 @@ export default function Vml() {
             /></div>
             <div className='relative top-[-5vw]'><Image
               data-aos="flip-left"
-              data-aos-delay="250"
               className="relative w-[18vw] z-10"
               src="/images-proyecto/dig5.png"
               alt="Main Image"
@@ -364,7 +367,6 @@ export default function Vml() {
             /></div>
             <div className=''><Image
               data-aos="flip-left"
-              data-aos-delay="300"
               className="relative w-[18vw] z-10"
               src="/images-proyecto/dig6.png"
               alt="Main Image"
@@ -495,6 +497,6 @@ export default function Vml() {
           <Footer background="bg-[#131313] " />
         </div>
       </div>
-    </>
+    </AosProvider>
   );
 }

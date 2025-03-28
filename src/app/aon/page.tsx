@@ -3,22 +3,14 @@ import { motion, useInView } from "framer-motion";
 import Hero from '../../components/hero/Hero';
 import aon from '../../../public/images-proyecto/aon-busy-business.png';
 import Image from 'next/image';
-import AOS from 'aos';
-import "aos/dist/aos.css"
 import './aon.css'
 import Footer from '../../components/footer/Footer'
 import AnimatedAos from '../../components/animated-aos/AnimatedAos'
 import PreviousNext from '../../components/previous-next/PreviousNext'
-import { useRef, useEffect } from "react";
-
-
+import { useRef } from "react";
 
 
 export default function Aos() {
-
-  useEffect(() => {
-    AOS.init({ duration: 1500 });
-  }, []);
   const ref = useRef(null);
 
   const isInView = useInView(ref, { once: false, margin: "-100px 0px" });
@@ -87,22 +79,22 @@ export default function Aos() {
       </div>
 
       <AnimatedAos />
-      <div className="bg-[#131313] w-full h-[15vh] 2xl:h-[60vh]"></div>
+      <div className="bg-[#131313] w-full"></div>
       <div className=" bg-[#ca262c] bg-gradient-to-t from-black/100 to-transparent">
-        <div className=" flex ">
-          <div className="relative w-[55%] flex justify-end top-[-20vw]"><Image
-            className='relative w-[35vw] h-auto left-[5.32vw]'
+        <div className="w-full flex justify-center ">
+          <div className="relative w-1/3 flex justify-end top-[-20vw]"><Image
+            className='relative object-contain left-[5.32vw]'
             src="/images-proyecto/Banner-Hogar-1.png"
             alt="Aon"
-            width={1382}
-            height={896}
+            width={504}
+            height={796}
           /></div>
-          <div className="relative w-[45%] flex justify-start top-[-4vw] "><Image
-            className='relative w-[27.7vw] h-auto right-[5vw]'
+          <div className="relative w-[30%] flex justify-start top-[-4vw] "><Image
+            className='relative object-contain right-[5vw] '
             src="/images-proyecto/Banner-Petlove-1.png"
             alt="Aon"
-            width={1382}
-            height={896}
+            width={400}
+            height={647}
           /></div>
         </div>
         <div className="flex">
@@ -122,21 +114,19 @@ export default function Aos() {
       <div className="relative flex flex-col items-center justify-center py-20 bg-black bg-gradient-to to-transparent ">
         <div className="relative w-full px-24">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center w-full">
-            <Image data-aos="fade-up"
+            <img data-aos="fade-up"
               data-aos-delay="300"
-              className='relative w-[38.4vw] h-auto z-10 left-[6vw] top-[2vw] '
+              className='relative w-[38.8vw] h-auto z-10 left-[6vw] top-[2vw] object-contain'
               src="/images-proyecto/LogIn-Eleccion.png"
               alt="LogIn-Eleccion"
-              width={1382}
-              height={896}
+
             />
-            <Image data-aos="fade-up"
+            <img data-aos="fade-up"
               data-aos-delay="500"
-              className='relative w-[38.4vw] h-auto right-[9vw] top-[10vw]'
+              className='relative w-[38.8vw] h-auto right-[9vw] top-[10vw] object-contain'
               src="/images-proyecto/aon-imagen.png"
               alt="aon-imagen"
-              width={1382}
-              height={896}
+             
             />
           </div>
           <div className="flex justify-start">

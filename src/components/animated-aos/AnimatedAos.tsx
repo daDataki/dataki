@@ -6,22 +6,14 @@ import 'aos/dist/aos.css';
 import './AnimatedAos.css';
 
 export default function AnimatedAos() {
-    useEffect(() => {
-        AOS.init({
-            duration: 500, // Duración de las animaciones en ms
-            once: false, // Repite la animación cuando se vuelve a entrar en la pantalla
-            easing: 'ease-in-out',
-        });
-    }, []);
-
     return (
-        <div className="px-24 bg-[#131313] sm:h-[70vh] md:h-[90vh] lg:h-[120vh] xl:h-[140vh] 2xl:h-[170vh] overflow-hidden z-20">
-            
+        <div className="px-24 bg-[#131313]  overflow-hidden z-20">
+
             {/* Título animado */}
-            <h2 
-                className="relative px-24 top-[13vw] text-end fontSize-gra-desig font-antonio font-medium text-bordered uppercase"
+            <h2
+                className="relative top-[13vw] text-end fontSize-gra-desig font-antonio font-medium text-bordered uppercase"
             >
-                Busine
+                BUSINESS
             </h2>
 
             {/* Imágenes entrando de izquierda y derecha */}
@@ -69,8 +61,8 @@ export default function AnimatedAos() {
                 />
             </div>
             {/* Título animado */}
-            <h2 
-                className="relative px-24 top-[-28vw] text-left fontSize-gra-desig font-antonio font-medium text-bordered uppercase"
+            <h2
+                className="relative top-[-28vw] text-left fontSize-gra-desig font-antonio font-medium text-bordered uppercase"
             >
                 STRATEGY
             </h2>
