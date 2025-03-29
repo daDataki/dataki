@@ -38,18 +38,4 @@
   background: linear-gradient(180deg, #D1CEAE 0%, #131313 100%);
   height: auto;
 }
-.needle {
-  position: absolute;
-  transform-origin: 50% 100%; /* Pivote en la base de la aguja */
-  transform: rotate(175deg); /* Inicia en 0 grados (horizontal) */
-  animation: rotateNeedle1 2s ease-in-out forwards; /* Animación para girar */
-}
 
-@keyframes rotateNeedle {
-  0% {
-    transform: rotate(0deg); /* Empieza en 0 grados (horizontal) */
-  }
-  100% {
-    transform: rotate(140deg); /* Gira hasta 140 grados */
-  }
-}

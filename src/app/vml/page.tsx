@@ -7,8 +7,7 @@ import { motion } from 'framer-motion';
 import './vml.css'
 import Footer from '../../components/footer/Footer'
 import PreviousNext from '../../components/previous-next/PreviousNext'
-import { useState, useEffect} from "react";
-import AosProvider from '@/components/Aos/Aos';
+import { useState, useEffect } from "react";
 
 
 
@@ -30,7 +29,48 @@ export default function Vml() {
 
   ]);
 
-  
+  const [visibility, setVisibility] = useState({
+    image1: false,
+    image2: false,
+    image3: false,
+    image4: false,
+    image5: false,
+    image6: false
+  });
+
+  // Detectar si la imagen es visible en la pantalla
+  const checkVisibility = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const rect = element.getBoundingClientRect();
+      return rect.top <= window.innerHeight && rect.bottom >= 0;
+    }
+    return false;
+  };
+
+  // Función para manejar el scroll y actualizar la visibilidad de cada imagen
+  useEffect(() => {
+    const handleScroll = () => {
+      setVisibility((prevState) => ({
+        image1: checkVisibility("flip-image-1"),
+        image2: checkVisibility("flip-image-2"),
+        image3: checkVisibility("flip-image-3"),
+        image4: checkVisibility("flip-image-4"),
+        image5: checkVisibility("flip-image-5"),
+        image6: checkVisibility("flip-image-6"),
+      }));
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Verifica si ya está visible al cargar
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
+
   useEffect(() => {
     const interval = setInterval(() => {
       setDegrees((prevDegrees) => (prevDegrees + 4) % 182); // Se reinicia cuando llega a 270°
@@ -39,8 +79,8 @@ export default function Vml() {
     return () => clearInterval(interval); // Limpia el intervalo al desmontar
   }, []);
 
- 
-  useEffect(() => {      
+
+  useEffect(() => {
     let direction = 1; // 1 para incrementar, -1 para decrementar
 
     const interval = setInterval(() => {
@@ -75,7 +115,7 @@ export default function Vml() {
   }, [images.length]);
 
   return (
-    <AosProvider>
+    <>
       <div className='overflow-clip'>
         <div><Hero
           overlayColor='bg-white'
@@ -179,7 +219,7 @@ export default function Vml() {
                     transition: "transform 0.1s linear",
                   }}
                   src="/images-proyecto/mayometer-pointer.png"
-                  alt="Needle"
+                  alt="mayometer-pointer"
                   layout="intrinsic"
                   width={800}
                   height={1111}
@@ -317,64 +357,146 @@ export default function Vml() {
               DIGIORNO
             </h2>
           </div>
-          <div className='w-full flex justify-center items-center'>
-            <div className=''><Image
-              data-aos="flip-left"
-              className="relative w-[18vw] z-10"
-              src="/images-proyecto/dig1.png"
-              alt="Main Image"
-              layout="intrinsic"
-              width={800}
-              height={1111}
-            /></div>
-            <div className='relative top-[-5vw] '><Image
-              data-aos="flip-left"
-              className="relative w-[18vw] z-10"
-              src="/images-proyecto/dig2.png"
-              alt="Main Image"
-              layout="intrinsic"
-              width={800}
-              height={1111}
-            /></div>
-            <div className=''><Image
-              data-aos="flip-left"
-              className="relative w-[18vw] z-10"
-              src="/images-proyecto/dig3.png"
-              alt="Main Image"
-              layout="intrinsic"
-              width={800}
-              height={1111}
-            /></div>
-          </div>
-          <div className='w-full flex justify-center items-center'>
-            <div className=''><Image
-              data-aos="flip-left"
-              className="relative w-[18vw] z-10"
-              src="/images-proyecto/dig4.png"
-              alt="Main Image"
-              layout="intrinsic"
-              width={800}
-              height={1111}
-            /></div>
-            <div className='relative top-[-5vw]'><Image
-              data-aos="flip-left"
-              className="relative w-[18vw] z-10"
-              src="/images-proyecto/dig5.png"
-              alt="Main Image"
-              layout="intrinsic"
-              width={800}
-              height={1111}
-            /></div>
-            <div className=''><Image
-              data-aos="flip-left"
-              className="relative w-[18vw] z-10"
-              src="/images-proyecto/dig6.png"
-              alt="Main Image"
-              layout="intrinsic"
-              width={800}
-              height={1111}
-            /></div>
-          </div>
+          <div className="w-full flex justify-center items-center">
+      {/* Primera Imagen */}
+      <motion.div
+        id="flip-image-1"
+        className="relative z-10 w-[18vw]"
+        initial={{ rotateY: 0 }}
+        animate={{
+          rotateY: visibility.image1 ? 180 : 0,
+        }}
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+        }}
+      >
+        <Image
+          className="relative w-full"
+          src="/images-proyecto/dig1.png"
+          alt="Main Image"
+          layout="intrinsic"
+          width={800}
+          height={1111}
+        />
+      </motion.div>
+
+      {/* Segunda Imagen */}
+      <motion.div
+        id="flip-image-2"
+        className="relative top-[-5vw] z-10 w-[18vw]"
+        initial={{ rotateY: 0 }}
+        animate={{
+          rotateY: visibility.image2 ? 180 : 0,
+        }}
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+        }}
+      >
+        <Image
+          className="relative w-full"
+          src="/images-proyecto/dig2.png"
+          alt="Second Image"
+          layout="intrinsic"
+          width={800}
+          height={1111}
+        />
+      </motion.div>
+
+      {/* Tercera Imagen */}
+      <motion.div
+        id="flip-image-3"
+        className="relative z-10 w-[18vw]"
+        initial={{ rotateY: 0 }}
+        animate={{
+          rotateY: visibility.image3 ? 180 : 0,
+        }}
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+        }}
+      >
+        <Image
+          className="relative w-full"
+          src="/images-proyecto/dig3.png"
+          alt="Third Image"
+          layout="intrinsic"
+          width={800}
+          height={1111}
+        />
+      </motion.div>
+    </div>
+    <div className="w-full flex justify-center items-center">
+      {/* Cuarta Imagen */}
+      <motion.div
+        id="flip-image-4"
+        className="relative z-10 w-[18vw]"
+        initial={{ rotateY: 0 }}
+        animate={{
+          rotateY: visibility.image4 ? 180 : 0,
+        }}
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+        }}
+      >
+        <Image
+          className="relative w-full"
+          src="/images-proyecto/dig4.png"
+          alt="Fourth Image"
+          layout="intrinsic"
+          width={800}
+          height={1111}
+        />
+      </motion.div>
+
+      {/* Quinta Imagen */}
+      <motion.div
+        id="flip-image-5"
+        className="relative top-[-5vw] z-10 w-[18vw]"
+        initial={{ rotateY: 0 }}
+        animate={{
+          rotateY: visibility.image5 ? 180 : 0,
+        }}
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+        }}
+      >
+        <Image
+          className="relative w-full"
+          src="/images-proyecto/dig5.png"
+          alt="Fifth Image"
+          layout="intrinsic"
+          width={800}
+          height={1111}
+        />
+      </motion.div>
+
+      {/* Sexta Imagen */}
+      <motion.div
+        id="flip-image-6"
+        className="relative z-10 w-[18vw]"
+        initial={{ rotateY: 0 }}
+        animate={{
+          rotateY: visibility.image6 ? 180 : 0,
+        }}
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+        }}
+      >
+        <Image
+          className="relative w-full"
+          src="/images-proyecto/dig6.png"
+          alt="Sixth Image"
+          layout="intrinsic"
+          width={800}
+          height={1111}
+        />
+      </motion.div>
+    </div>
         </div>
         <div className='flex flex-col w-full py-32 px-12 bg-[#ffde00]'>
           <div className='relative w-full'>
@@ -497,6 +619,6 @@ export default function Vml() {
           <Footer background="bg-[#131313] " />
         </div>
       </div>
-    </AosProvider>
+    </>
   );
 }
