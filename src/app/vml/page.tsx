@@ -51,7 +51,7 @@ export default function Vml() {
   // Función para manejar el scroll y actualizar la visibilidad de cada imagen
   useEffect(() => {
     const handleScroll = () => {
-      setVisibility((prevState) => ({
+      setVisibility(() => ({
         image1: checkVisibility("flip-image-1"),
         image2: checkVisibility("flip-image-2"),
         image3: checkVisibility("flip-image-3"),
