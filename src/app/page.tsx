@@ -3,7 +3,6 @@ import Header1 from '../components/header1/Header1';
 import ImageGrid from '../components/image-grid/ImageGrid'
 import VerticalSlider from '../components/vertical-slider/VerticalSlider'
 import HorizontalSlider from '../components/horizontal-slider/HorizontalSlider'
-import Image from 'next/image';
 import './page.css'
 
 export default function Home() {
