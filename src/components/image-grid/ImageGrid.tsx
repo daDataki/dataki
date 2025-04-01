@@ -28,18 +28,18 @@ export default function ImageGrid() {
     <div
       className={`relative w-[400px] h-[200px] lg:h-[278px]  width-major cursor-pointer transition duration-300 ${hoveredImage && hoveredImage !== src ? "blur-sm" : ""
         }`}
-        onMouseEnter={() => {
-          setHoveredImage(src); // Se ejecuta la función para abrir el modal al hacer hover
-        }}
+      onMouseEnter={() => {
+        setHoveredImage(src); // Se ejecuta la función para abrir el modal al hacer hover
+      }}
       onMouseLeave={() => setHoveredImage(null)}
       onClick={onClick}
-     
+
     >
-      <img 
-  src={src} 
-  alt={alt} 
-  className={`${clase} w-full h-full object-cover`}  
-/>
+      <img
+        src={src}
+        alt={alt}
+        className={`${clase} w-full h-full object-cover`}
+      />
 
     </div>
   );
@@ -114,21 +114,21 @@ export default function ImageGrid() {
 
             {/* Segundo grupo de imágenes */}
             <div className={`relative flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end sm:left-[7.3vw] mb-responsive max-sm:gap-8 max-sm:mb-8 gap-12 ${isModalOpen ? "blur-effect" : ""}`}>
-              
+
               <ImageItem
                 clase=""
                 src="/images-grid/Mask-group4.png"
                 alt="busy-1.png"
                 onClick={() => handleImageClick('/images-grid/Mask-group4.png')}
               />
-              
+
               <ImageItem
                 clase="sm:-translate-y-1/2"
                 src="/images-grid/beacon-beach5.png"
                 alt="Mask-group4.png"
                 onClick={() => handleImageClick('/images-grid/beacon-beach5.png')}
               />
-              
+
               <ImageItem
                 clase="sm:-translate-y-[20%]"
                 src="/images-grid/miroshnichenko66.png"
@@ -139,21 +139,21 @@ export default function ImageGrid() {
 
             {/* Tercer grupo de imágenes */}
             <div className={`flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end max-sm:gap-8 gap-12 ${isModalOpen ? "blur-effect" : ""}`}>
-            
+
               <ImageItem
                 clase=""
                 src="/images-grid/Macbook-Claro7.png"
                 alt="Macbook-Claro7.png"
                 onClick={() => handleImageClick('/images-grid/Macbook-Claro7.png')}
               />
-              
+
               <ImageItem
                 clase="sm:-translate-y-1/2"
                 src="/images-grid/TC2K_ENTRADA8.png"
                 alt="TC2K_ENTRADA8.png"
                 onClick={() => handleImageClick('/images-grid/TC2K_ENTRADA8.png')}
               />
-             
+
               <ImageItem
                 clase=""
                 src="/images-grid/Mask-group-9.png"
