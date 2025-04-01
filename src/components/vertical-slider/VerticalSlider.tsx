@@ -100,14 +100,14 @@ export default function VerticalSlider({ intervalDuration = 2000 }: { intervalDu
       <div className='max-sm:hidden absolute top-52 xl:top-1/2 left-12 md:left-0'>
         <p className='font-Poppins md:ml-16 text-we-focus uppercase'>we focus on</p>
       </div>
-      <ul className="relative h-full ">
+      <ul className="relative h-full w-full flex  justify-center items-center ">
         {words.map((word, index) => {
           const offset = (index - currentIndex + words.length) % words.length; // Cálculo del desplazamiento relativo
           const isMain = offset === 0; // Verifica si es el elemento principal
           return (
             <li
               key={index}
-              className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-500 ${getPositionClass(offset)}`}
+              className={`absolute w-full flex justify-center items-center top-1/2  transition-all duration-500 ${getPositionClass(offset)}`}
             >
               <div className="flex text-center">
                 <div className="font-antonio uppercase">{word}</div>

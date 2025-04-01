@@ -31,7 +31,7 @@ export default function Home() {
           >
             <source src="/video/Video1_06-01.mp4" type="video/mp4" />
           </video>
-          <Image src="/images-proyecto/logo-dataki.svg" alt="logo" width={150} height={150} layout="fixed" className='absolute bottom-[-25px] sm:bottom-[-50px] lg:bottom-[-75px] left-[6.66%] w-[50px] h-[50px] sm:w-[100px] sm:h-[100px] lg:w-[150px] lg:h-[150px]' />
+         
         </div>
         <div className="flex flex-col bg-white text-black w-full  object-cover pt-12 pb-24">
           <div className="pt-12 pb-12">
