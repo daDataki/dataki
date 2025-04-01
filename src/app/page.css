@@ -6,9 +6,15 @@
 .xtext-sm {
     font-size: clamp(8px, 1.66vw, 36px);
     line-height: clamp(10px, 2.08vw, 45px);
+
 }
 
 .xtext-lg {
     font-size: clamp(40px, 8.33vw, 180px);
     line-height: clamp(40px, 8.33vw, 180px);
+    
+}
+
+.prueba{
+    text-rendering: geometricPrecision; 
 }

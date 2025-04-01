@@ -39,7 +39,7 @@ export default function Home() {
             </h4>
           </div>
           <div className="flex flex-col justify-center items-center font-antonio font-semibold xtext-lg  uppercase ">
-            <h2 className='text-center'><span>we help companies</span>
+            <h2 className='text-center'><span className='prueba'>we help companies</span>
               <div>
                 <span className="text-easternBlue">bring to life</span>
                 <span> their</span>

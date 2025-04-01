@@ -35,7 +35,11 @@ export default function ImageGrid() {
       onClick={onClick}
      
     >
-      <Image src={src} alt={alt} className={clase} layout="intrinsic" width={400} height={278} objectFit="cover" priority/>
+      <img 
+  src={src} 
+  alt={alt} 
+  className={`${clase} w-full h-full object-cover`}  
+/>
 
     </div>
   );

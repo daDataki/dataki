@@ -14,8 +14,7 @@ const chunkArray = (arr: string[], size: number) => {
 export default async function HorizontalSlider() {
   const images = await getImages();
 
-  console.log(images)
-  // Dividir las imágenes en grupos de 9
+  
   const imageGroups = chunkArray(images, 8);
 
   return (
