@@ -1,6 +1,5 @@
 "use client";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
 import { useState, useRef } from "react";
 import "./ImageGrid.css";
 import Modal from "../modal-grid/Modal";
