@@ -41,7 +41,7 @@ export default function Home() {
           <div className="flex flex-col justify-center items-center font-antonio font-extrabold xtext-lg  uppercase ">
             <h2 className='text-center'
             style={{ WebkitTextStrokeWidth: '2px' }}
-            ><span className='prueba' style={{ WebkitTextStrokeColor: 'black' }} >we help companies</span>
+            ><span  style={{ WebkitTextStrokeColor: 'black' }} >we help companies</span>
               <div>
                 <span className="text-easternBlue stroke-easternBlue stroke-1" >bring to life</span>
                 <span> their</span>

@@ -27,6 +27,12 @@
   font-size: clamp(80px, 16.6vw, 360px);
   line-height: clamp(80px, 16.6vw, 360px);
 }
+
+.font-graphic {
+  font-size: clamp(50px, 10.41vw, 225px);
+  line-height: clamp(50px, 10.41vw, 225px);
+}
+
 .text-media-online {
   color: transparent;
   /* Color de la letra */

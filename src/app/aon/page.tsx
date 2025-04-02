@@ -10,6 +10,7 @@ import PreviousNext from '../../components/previous-next/PreviousNext'
 import { useRef } from "react";
 
 
+
 export default function Aos() {
   const ref = useRef(null);
 

@@ -54,7 +54,7 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon 
   return (
     <header className={`absolute flex flex-col top-0 left-0 right-0 z-50 bg-transparent text-white p-10 ${className}`}>
       <div className="flex justify-between items-center">
-       {(logoSrc || isOpen) && <div className="w-[120px] h-[22px] flex items-center z-50">
+        {(logoSrc || isOpen) && <div className="w-[120px] h-[22px] flex items-center z-50">
           <Image src={isOpen ? logoSrcOpen : (logoSrc || '')} alt="Dataki" width={150} height={150} layout="fixed" />
         </div>}
 
@@ -81,11 +81,11 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon 
                 className="transition-all duration-300 group"
                 onMouseEnter={() => {
                   setSelectedItem(index);
-                 
+
                 }}
                 onMouseLeave={() => {
                   setSelectedItem(null);
-                  
+
                 }}
               >
                 <Link
@@ -100,20 +100,24 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon 
                 {link.subMenu && (
                   <div
                     className={`absolute z-10 left-[100%] ml-8 w-fit top-[50%] -translate-y-1/2 mt-2 bg-black text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300`}
-                    
+
                   >
                     <ul className="p-8 bg-black border-l border-white">
                       {link.subMenu.map((subLink, subIndex) => (
                         <li key={subIndex}>
                           <Link
                             href={subLink.path}
-                            className="whitespace-nowrap block text-2xl lg:text-5xl p-3 uppercase  hover:text-easternBlue transition-colors"
+                            className="whitespace-nowrap block text-2xl lg:text-5xl p-3 uppercase hover:text-easternBlue transition-colors"
+                            onClick={() => {
+                              setTimeout(() => setIsOpen(false), 300); // Retraso de 300ms antes de cerrar
+                            }} // Cierra el menú al hacer clic
                           >
                             {subLink.name}
                           </Link>
                         </li>
                       ))}
                     </ul>
+
                   </div>
                 )}
               </li>

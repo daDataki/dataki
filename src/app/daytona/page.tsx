@@ -5,11 +5,20 @@ import Image from 'next/image';
 import './daytona.css'
 import PreviousNext from '../../components/previous-next/PreviousNext'
 import Footer from '../../components/footer/Footer'
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 
 export default function Daytona() {
- 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Duración en milisegundos
+      once: true, // Para que la animación ocurra solo una vez
+    });
+  }, []);
 
   return (
     <>
@@ -31,7 +40,7 @@ export default function Daytona() {
               "Graphic Design",
             ],
           }}
-          aboutInfo={<span>Daytona <br/>Work Showcase</span>}
+          aboutInfo={<span>Daytona <br />Work Showcase</span>}
           services={{
             description:
               "Daytona’s campaign was a hit with our all-in-one solution: video production, radio spots, digital campaigns, and standout graphics, driving strong engagement from day one.",
@@ -55,8 +64,8 @@ export default function Daytona() {
         </div>
         <div className='relative pt-32  bg-[#ca262c] bg-gradient-to-t from-black/90 to-transparent '>
           <Image src="/images-proyecto/Mask-group-daytona.png" alt="Phone Mockup" className="absolute w-[80%] top-0 right-0" width={450} height={800} />
-          <div className="relative flex flex-col justify-center items-start pl-[7.35vw] sm:top-[1vh] md:top-[2vh] lg:top-[8vh] xl:top-[13vh] 2xl:top-[17vh] text-white font-antonio font-semibold font-production uppercase">
-            <div className='absolute w-full top-[-20%] left-[28%] -translate-x-[7.35vw] z-20'>
+          <div className="relative flex flex-col justify-center items-start pb-32 pl-[7.35vw] sm:top-[1vh] md:top-[2vh] lg:top-[8vh] xl:top-[13vh] 2xl:top-[17vh] text-white font-antonio font-semibold font-production uppercase">
+            <div className='absolute w-full top-[-20%] left-[20%] -translate-x-[7.35vw] z-20'>
               <div className='relative'>
                 <Image src="/images-proyecto/IphoneDaytona1.png" alt="Phone Mockup" className="w-[50vw]  z-50 rounded-xl absolute top-0" width={450} height={800} />
                 <video className="phone-video z-20" autoPlay loop muted playsInline>
@@ -64,7 +73,7 @@ export default function Daytona() {
                 </video>
               </div>
             </div>
-            <div className='absolute w-full top-[30%] left-[35%] -translate-x-[7.35vw] z-10'>
+            <div className='absolute w-full top-[30%] left-[27%] -translate-x-[7.35vw] z-10'>
               <div className='relative'>
                 <Image src="/images-proyecto/IphoneDaytona1.png" alt="Phone Mockup" className="w-[50vw]  z-50 rounded-xl absolute top-0" width={450} height={800} />
                 <video className="phone-video z-20" autoPlay loop muted playsInline>
@@ -72,9 +81,11 @@ export default function Daytona() {
                 </video>
               </div>
             </div>
-            <div className='relative flex flex-col top-[6vw]'>
-              <span className='font-production font-semibold font-antonio'>Video</span>
-              <span className="ml-[12vw] font-production font-semibold font-antonio">Production</span>
+            <div className='relative flex flex-col w-full'>
+              <span data-aos="zoom-in"
+                data-aos-duration="1000"
+                data-aos-delay="100" className='font-graphic font-semibold font-antonio'>Video</span>
+              <span data-aos="zoom-in" data-aos-duration="1000" className="relative top-[23vw] text-end font-graphic font-semibold font-antonio">Production</span>
             </div>
           </div>
           <div className='relative flex flex-col justify-end w-full sm:pt-32 lg:pt-52 xl:pt-72 2xl:pt-96 '>
@@ -82,7 +93,7 @@ export default function Daytona() {
             <div className='relative bg-transparent font-antonio font-medium uppercase '>
               <div className='sticky top-[24vh] font-media-online'>
                 <h2 className=' text-media'>Media</h2>
-                <h2 className='relative left-[18%] text-media-online'>Online</h2>
+                <h2 className='relative top-[20vw] left-[18%] text-media-online'>Online</h2>
               </div>
               <div className='flex  justify-start items-end  w-full h-full'>
                 <div className='relative w-1/2 h-full'>
@@ -120,7 +131,7 @@ export default function Daytona() {
             <source src="/video/Video6_08-01.mp4" type="video/mp4" />
           </video>
         </div>
-  
+
         <div className='relative bg-gradient-to-b from-black from-0% via-[#141414] via-30% to-[#ca262c] to-100%  mt-[-1px]'>
           <Image
             src="/images-proyecto/Mask-group-end.png"
@@ -129,10 +140,10 @@ export default function Daytona() {
             width={450}
             height={800}
           />
-          <div className="absolute  left-0 pt-32 w-full h-screen lg:h-[138vh] 2xl:h-[206vh]">
-            <div className='sticky top-0 mt-56 w-full font-media-online text-bordered font-antonio font-medium z-0'>
-              <h2 className="relative ml-[6.94vw] uppercase">graphic</h2>
-              <h2 className='uppercase text-end mr-[5.34vw]'>design</h2>
+          <div className="absolute  left-0 pt-32 w-full h-screen lg:h-[138vh] 2xl:h-[206vh] pr-24">
+            <div className='sticky top-0 w-full font-graphic text-bordered font-antonio font-medium z-0'>
+              <h2 className="relative text-end uppercase">graphic</h2>
+              <h2 className='uppercase text-end '>design</h2>
             </div>
           </div>
 
