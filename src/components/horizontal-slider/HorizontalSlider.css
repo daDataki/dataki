@@ -40,7 +40,7 @@
 }
 
 .slider .slide img {
-    width: 60%;
+    width: auto;
     max-height: 150px;
     object-fit: contain;
 }

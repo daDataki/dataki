@@ -61,7 +61,7 @@ export default function ImageGrid() {
             <motion.h2
               initial={{ fontSize: "300px", opacity: 0, scale: 4 }}  // Empieza con gran tamaño y opacidad 0
               animate={{ fontSize: "100px", opacity: 1, scale: 1 }}  // Se reduce el tamaño y aumenta la opacidad
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}  // Transición suave
+              transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}  // Transición suave
               onAnimationComplete={() => setApplyClasses(true)}  // Aplicar clases después de la animación
               className={`relative font-bold font-antonio text-black uppercase ${isModalOpen ? "blur-effect" : ""} ${applyClasses ? "text-work" : ""}`}
             >
