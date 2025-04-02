@@ -93,7 +93,7 @@ export default function Daytona() {
             <div className='relative bg-transparent font-antonio font-medium uppercase '>
               <div className='sticky top-[24vh] font-media-online'>
                 <h2 className=' text-media'>Media</h2>
-                <h2 className='relative top-[20vw] left-[18%] text-media-online'>Online</h2>
+                <h2 className='relative top-[17vw] left-0 text-media-online'>Online</h2>
               </div>
               <div className='flex  justify-start items-end  w-full h-full'>
                 <div className='relative w-1/2 h-full'>
