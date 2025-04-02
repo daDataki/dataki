@@ -84,9 +84,7 @@ export default function ImageGrid() {
 
       <div className="relative overflow-hidden">
         {/* Contenido con imágenes solo si está en vista */}
-        {isInView && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1, duration: 1 }}>
-
+       
             {/* Primer grupo de imágenes */}
             <div className={`flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end mb-responsive mt-responsive max-sm:gap-8 max-sm:mb-8 gap-12 ${isModalOpen ? "blur-effect" : ""}`}>
               <ImageItem
@@ -161,8 +159,7 @@ export default function ImageGrid() {
               />
             </div>
 
-          </motion.div>
-        )}
+        
       </div>
 
       {/* Modal */}
