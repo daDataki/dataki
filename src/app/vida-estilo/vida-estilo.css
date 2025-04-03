@@ -179,21 +179,37 @@ img {
 }
 
 .scrollable-image {
-
+  -webkit-animation: scrollImage 60s linear infinite alternate;
   animation: scrollImage 60s linear infinite alternate;
+  will-change: transform;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 
+  /* 🔥 SOLUCIÓN: Agregar esto para Safari */
+  transform: translateY(0); /* Evita el retraso de renderizado */
+  opacity: 1; /* Asegura que no se oculte */
+  transition: transform 0s ease-out; /* Evita bloqueos al cargar */
 }
 
-@keyframes scrollImage {
-  0% {
+@-webkit-keyframes scrollImage {
+  from {
     transform: translateY(0%);
   }
-
-  100% {
+  to {
     transform: translateY(-93%);
   }
 }
 
+@keyframes scrollImage {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-93%);
+  }
+}
 @keyframes fadeOut {
   0% {
     opacity: 1;
