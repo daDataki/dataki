@@ -7,6 +7,7 @@
 
 .slider .slide-track {
     display: flex;
+    height: 150px;
     animation: scroll 20s linear infinite;
     -webkit-animation: scroll 20s linear infinite;
     width: calc(var(--images-width) * 2 * var(--cant-images));
@@ -28,13 +29,18 @@
     animation-duration: 20s;
     animation-name: scroll-left;
 }
+.slider:nth-child(5) .slide-track{
+    animation-duration: 20s;
+    animation-name: scroll-right;
+}
 
 .slide {
  width: var(--images-width);
  display: flex;
  justify-content: center;
  align-items: center;
-
+ margin-left: 30px;
+ margin-right: 30px;
  padding-top: 12px;
  padding-bottom: 12px;
 }

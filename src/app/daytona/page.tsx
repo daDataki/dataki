@@ -15,8 +15,8 @@ import 'aos/dist/aos.css';
 export default function Daytona() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Duración en milisegundos
-      once: true, // Para que la animación ocurra solo una vez
+      duration: 1000,
+      once: false,
     });
   }, []);
 
@@ -132,7 +132,7 @@ export default function Daytona() {
           </video>
         </div>
 
-        <div className='relative bg-gradient-to-b from-black from-0% via-[#141414] via-30% to-[#ca262c] to-100%  mt-[-1px]'>
+        <div className='relative px-12 bg-gradient-to-b from-black from-0% via-[#141414] via-30% to-[#ca262c] to-100%  mt-[-1px]'>
           <Image
             src="/images-proyecto/Mask-group-end.png"
             alt="Phone Mockup"
@@ -140,12 +140,7 @@ export default function Daytona() {
             width={450}
             height={800}
           />
-          <div className="absolute  left-0 pt-32 w-full h-screen lg:h-[138vh] 2xl:h-[206vh] pr-24">
-            <div className='sticky top-0 w-full font-graphic text-bordered font-antonio font-medium z-0'>
-              <h2 className="relative text-end uppercase">graphic</h2>
-              <h2 className='uppercase text-end '>design</h2>
-            </div>
-          </div>
+          
 
           <div className='w-full flex justify-start items-start ml-[6.94vw] pt-[11vw]'>
             <h2 id='texto' className='font-antonio font-semibold font-performance uppercase text-white'>
@@ -153,20 +148,27 @@ export default function Daytona() {
             </h2>
           </div>
 
-          <div className='flex flex-col'>
-            <div className='flex mt-[5.90vw] z-10'>
-              <div className='relative flex w-1/2 h-full left-[14.23vw]'>
-                <Image
-                  className="w-[49.65vw]"
+          <div className="absolute  left-0 pt-32 w-full h-screen lg:h-[138vh] 2xl:h-[206vh] pr-24">
+            <div className='sticky px-12 top-[11vw]  w-full font-media-online text-bordered font-antonio font-medium z-0'>
+              <h2 className="relative text-start uppercase">graphic</h2>
+              <h2 className='uppercase text-start '>design</h2>
+            </div>
+          </div>
+
+          <div className='flex '>
+            <div className='flex flex-col mt-[5.90vw] z-10 w-full'>
+              <div data-aos="flip-left" className='relative flex justify-end w-full h-full top-[4vw] right-[15vw]'>
+                <Image 
+                  className="w-[42vw]"
                   src="/images-proyecto/GRAFICAS_MM-03.png"
                   alt="vida-estilo"
                   width={1440}
                   height={1320}
                 />
               </div>
-              <div className='relative w-1/2 h-full top-[18.19vw] z-20'>
+              <div className='relative w-full h-full  z-20'>
                 <div className='flex justify-end'>
-                  <Image
+                  <Image data-aos="flip-left"
                     className="w-[42vw]"
                     src="/images-proyecto/GRAFICAS_MM-02.png"
                     alt="vida-estilo"
@@ -175,15 +177,16 @@ export default function Daytona() {
                   />
                 </div>
               </div>
-            </div>
-            <div className='relative w-1/2 h-full z-30 left-[24.35vw] top-[5vw]'>
-              <Image
-                className="w-[42vw]"
-                src="/images-proyecto/GRAFICAS_MM-01.png"
-                alt="vida-estilo"
-                width={1440}
-                height={1320}
-              />
+
+              <div className='relative w-full h-full z-30 flex justify-end bottom-[4vw] right-[10vw]'>
+                <Image data-aos="flip-left"
+                  className="w-[42vw]"
+                  src="/images-proyecto/GRAFICAS_MM-01.png"
+                  alt="vida-estilo"
+                  width={1440}
+                  height={1320}
+                />
+              </div>
             </div>
           </div>
         </div>

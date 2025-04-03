@@ -107,7 +107,7 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon 
                         <li key={subIndex}>
                           <Link
                             href={subLink.path}
-                            className="whitespace-nowrap block text-2xl lg:text-5xl p-3 uppercase hover:text-easternBlue transition-colors"
+                            className="whitespace-nowrap block text-xl lg:text-2xl p-3 uppercase hover:text-easternBlue transition-colors"
                             onClick={() => {
                               setTimeout(() => setIsOpen(false), 300); // Retraso de 300ms antes de cerrar
                             }} // Cierra el menú al hacer clic

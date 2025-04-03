@@ -8,10 +8,19 @@ import Footer from '../../components/footer/Footer'
 import AnimatedAos from '../../components/animated-aos/AnimatedAos'
 import PreviousNext from '../../components/previous-next/PreviousNext'
 import { useRef } from "react";
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+import AOS from 'aos';
 
 
 
 export default function Aos() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
   const ref = useRef(null);
 
   const isInView = useInView(ref, { once: false, margin: "-100px 0px" });
@@ -49,30 +58,45 @@ export default function Aos() {
           }}
         />
       </div>
-      <div ref={ref} className='py-28 mt-[-2px] bg-gradient-to-t from-[#585858] from-0% via-[#5d5d5d] via-50% to-black to-100%'>
+      <div ref={ref} className='pb-28 mt-[-2px] bg-gradient-to-t from-[#585858] from-0% via-[#5d5d5d] via-50% to-black to-100%'>
         {/* Título */}
         <div className='sticky top-0 fontSize-gra-desig font-antonio font-medium text-bordered px-24'>
           <h2>GRAPHIC</h2>
           <h2>DESIGN</h2>
         </div>
+        <div className='relative flex justify-center w-full'>
+          <div className="relative flex justify-center w-full h-auto">
+            {/* Contenedor del monitor (posicionamiento relativo) */}
+            <div className="relative w-[60vw] h-auto">
+              {/* Imagen del monitor */}
+              <Image
+                className="w-full h-[92%]"
+                src="/images-proyecto/Aon-Mockup-tele.png"
+                alt="Aon"
+                width={1382}
+                height={896}
+              />
 
-
-        <div className='relative flex justify-center w-full mt-[-35vw]'>
-
-          <Image
-            className='relative w-[78vw] h-auto'
-            src="/images-proyecto/Aon-Mockup-tele.png"
-            alt="Aon"
-            width={1382}
-            height={896}
-          />
-
+              {/* Video posicionado dentro de la pantalla */}
+              <div className="absolute top-[1.5%] left-[9%] w-[82%] h-[81%] overflow-hidden rounded-md">
+                <video
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  <source src="/video/Globos.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
 
           <motion.img
-            initial={{ y: 0, opacity: 1 }} // Empieza visible en su posición original
+            initial={{ y: 0, opacity: .5 }} // Empieza visible en su posición original
             animate={isInView ? { y: -1000 } : { y: 0 }} // Sube cuando entra en vista
-            transition={{ duration: 5, ease: "easeOut", delay: 1 }} // Suaviza el movimiento
-            className="absolute right-[8vw] w-[30vw] h-auto top-0"
+            transition={{ duration: 12, ease: "easeOut", delay: 1 }} // Suaviza el movimiento
+            className="absolute right-[25vw] w-[15vw] h-auto top-[25%]"
             src="/images-proyecto/Aon-Globo.png"
             alt="Aon-globo"
           />
@@ -83,14 +107,14 @@ export default function Aos() {
       <div className="bg-[#131313] w-full"></div>
       <div className=" bg-[#ca262c] bg-gradient-to-t from-black/100 to-transparent">
         <div className="w-full flex justify-center ">
-          <div className="relative w-1/3 flex justify-end top-[-20vw]"><Image
+          <div className="relative w-1/3 flex justify-end top-[-20vw]"><Image data-aos="zoom-in-right"
             className='relative object-contain left-[5.32vw]'
             src="/images-proyecto/Banner-Hogar-1.png"
             alt="Aon"
             width={504}
             height={796}
           /></div>
-          <div className="relative w-[30%] flex justify-start top-[-4vw] "><Image
+          <div className="relative w-[30%] flex justify-start top-[-4vw] "><Image data-aos="zoom-in-left"
             className='relative object-contain right-[5vw] '
             src="/images-proyecto/Banner-Petlove-1.png"
             alt="Aon"
@@ -114,28 +138,31 @@ export default function Aos() {
       </div>
       <div className="relative flex flex-col items-center justify-center py-20 bg-black bg-gradient-to to-transparent ">
         <div className="relative w-full px-24">
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center w-full">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center w-full z-10">
             <img data-aos="fade-up"
               data-aos-delay="300"
-              className='relative w-[38.8vw] h-auto z-10 left-[6vw] top-[2vw] object-contain'
+              className='relative w-[38.8vw] h-auto z-20 left-[6vw] top-[2vw] object-contain'
               src="/images-proyecto/LogIn-Eleccion.png"
               alt="LogIn-Eleccion"
 
             />
             <img data-aos="fade-up"
               data-aos-delay="500"
-              className='relative w-[38.8vw] h-auto right-[9vw] top-[10vw] object-contain'
+              className='relative w-[38.8vw] h-auto right-[9vw] top-[10vw] object-contain z-10'
               src="/images-proyecto/aon-imagen.png"
               alt="aon-imagen"
-             
+
             />
           </div>
-          <div className="flex justify-start">
-            <h2 className="fontSize-gra-desig font-antonio font-medium text-bordered uppercase">DIGITAL</h2>
+          <div className="flex flex-col  w-full gap-[11vw] ">
+            <div className="reltive flex justify-start">
+              <h2 className="fontSize-gra-desig font-antonio font-medium text-bordered uppercase">DIGITAL</h2>
+            </div>
+            <div className="relative flex justify-end top-[15vw] ">
+              <h2 className="fontSize-gra-desig font-antonio font-medium text-bordered uppercase">DESIGN</h2>
+            </div>
           </div>
-          <div className="flex justify-end">
-            <h2 className="fontSize-gra-desig font-antonio font-medium text-bordered uppercase">DESIGN</h2>
-          </div>
+
         </div>
         <div className="w-full ml-[21.5vw] font-empowering pt-64">
           <h2 className="uppercase font-antonio font-normal text-white">
