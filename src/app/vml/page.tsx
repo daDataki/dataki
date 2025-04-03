@@ -614,7 +614,7 @@ export default function Vml() {
 
           </div>
         </div>
-        <div className='mt-[-1px] bg-[#bababa]  text-[#131313] px-24 z-10'><PreviousNext /></div>
+        <div className='mt-[-1px] bg-[#bababa]  text-[#131313] px-24 z-10'><PreviousNext previousUrl="/daytona" nextUrl="/aon" /></div>
         <div>
           <Footer background="bg-[#131313] " />
         </div>

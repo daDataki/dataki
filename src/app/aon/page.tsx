@@ -183,7 +183,7 @@ export default function Aos() {
         </video>
       </div>
       <div className='px-24  my-[5vw] mx-auto bg-black'>
-        <PreviousNext className='text-white' />
+        <PreviousNext className='text-white' previousUrl="/vml" nextUrl="/vida-estilo" />
       </div>
       <div>
         <Footer background="bg-black " />

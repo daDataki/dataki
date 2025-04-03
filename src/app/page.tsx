@@ -5,9 +5,9 @@ import VerticalSlider from '../components/vertical-slider/VerticalSlider'
 import HorizontalSlider from '../components/horizontal-slider/HorizontalSlider'
 import './page.css'
 
+
+
 export default function Home() {
-
-
   return (
     <>
       <main>

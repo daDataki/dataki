@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { menuOptions } from './config';
+import './Header1.css'
 
 
 interface HeaderProps {
@@ -32,8 +33,14 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon 
     return () => { document.body.style.overflow = ""; };
   }, [isOpen]);
 
-  // Función para manejar los clics en los enlaces
-  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+  // Función para manejar los clics en los enlacesc
+  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, path: string, onClick?: () => void) => {
+    if(onClick) {
+      event.preventDefault();
+      onClick();
+      setIsOpen(false);
+      return;
+    }
     if (path.startsWith("/#")) {
       event.preventDefault();
       const id = path.replace("/#", "");
@@ -74,7 +81,7 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon 
       {/* Menú de navegación */}
       <div className={`fixed w-full top-0 py-6 left-0 pl-4 pr-20 bg-black text-white overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
         <nav className="px-6 flex justify-start">
-          <ul className="flex flex-col pt-32 text-4xl   font-antonio font-semibold relative">
+          <ul className="flex flex-col pt-32 fontSize-menu  font-antonio font-semibold relative">
             {menuOptions.map((link, index) => (
               <li
                 key={link.path}
@@ -90,7 +97,7 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon 
               >
                 <Link
                   href={link.path}
-                  onClick={(e) => handleLinkClick(e, link.path)}
+                  onClick={(e) => handleLinkClick(e, link.path, link.onClick)}
                   className={`block py-2 uppercase text-white transition-all duration-300 hover:text-easternBlue hover:py-8 ${selectedItem !== null && selectedItem !== index ? 'blur-sm' : ''}`}
                 >
                   <span className="max-sm:hidden">0{index + 1}</span> {link.name}
@@ -107,7 +114,7 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon 
                         <li key={subIndex}>
                           <Link
                             href={subLink.path}
-                            className="whitespace-nowrap block text-xl lg:text-2xl p-3 uppercase hover:text-easternBlue transition-colors"
+                            className="whitespace-nowrap block text-xl lg:text-4xl p-3 uppercase hover:text-easternBlue transition-colors"
                             onClick={() => {
                               setTimeout(() => setIsOpen(false), 300); // Retraso de 300ms antes de cerrar
                             }} // Cierra el menú al hacer clic

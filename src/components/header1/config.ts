@@ -1,3 +1,7 @@
+const scrollToFooter = () => {
+    document.getElementById('footer')?.scrollIntoView({ behavior: "smooth" });
+};
+
 export const menuOptions = [
     { name: "Home", path: "/", menuIcon: "/images-proyecto/menuBlack.png" },
     { name: "About", path: "/about", menuIcon: "/images-proyecto/menuWhite.png" },
@@ -13,5 +17,6 @@ export const menuOptions = [
         ]
     },
     { name: "Services", path: "/services", menuIcon: "/images-proyecto/menuWhite.png" },
-    { name: "Contact", path: "/contact", menuIcon: "/images-proyecto/menuWhite.png" }
+    { name: "Contact", path: "/#footer", onClick: scrollToFooter, menuIcon: "/images-proyecto/menuWhite.png" }
+
 ];

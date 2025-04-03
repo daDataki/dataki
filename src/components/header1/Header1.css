@@ -1,6 +1,11 @@
 .fontSize-menu {
-    font-size: clamp(33px, 6.94vw, 150px);
-    line-height: clamp(30px, 6.25vw, 135px);
+    font-size: clamp(20px, 4.16vw, 90px);
+    line-height: clamp(26px, 4.55vw, 120px);
+  
+  }
+  .fontSize-submenu {
+    font-size: clamp(12px, 2.5vw, 54px);
+    line-height: clamp(26px, 4.55vw, 120px);
   
   }
 

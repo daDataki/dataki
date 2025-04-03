@@ -255,7 +255,7 @@ export default function VidaEstilo() {
             </div>
           </div>
         </div>
-        <div className='mt-[-1px] bg-[#68725E]  text-white px-24 z-10'><PreviousNext /></div>
+        <div className='mt-[-1px] bg-[#68725E]  text-white px-24 z-10'><PreviousNext previousUrl="/aon" nextUrl="/daytona" /></div>
         <div>
           <Footer background="bg-[#131313] " />
         </div>

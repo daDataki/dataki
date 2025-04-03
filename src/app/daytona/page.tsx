@@ -192,7 +192,7 @@ export default function Daytona() {
         </div>
         <div className='w-full mt-[2px]'>
           <div className='px-24  my-[5vw] mx-auto bg-[#ca262c] '>
-            <PreviousNext className='text-white' />
+            <PreviousNext className='text-white' previousUrl="/vida-estilo" nextUrl="/vml" />
           </div>
         </div>
 
