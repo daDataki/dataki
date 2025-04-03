@@ -132,29 +132,35 @@ export default function VidaEstilo() {
               <h2 className="uppercase text-bordered-branding sm:left-3">graphic</h2>
             </div>
             <div className=' w-full flex justify-center'>
-              <div className='relative w-[70%] z-20'>
-
+              <div className="relative w-[70%] z-20">
+                {/* Contenedor con overflow-hidden para simular el marco de la pantalla */}
                 <div className="absolute bg-blue w-[82%] h-[53%] top-[8%] left-[9%] overflow-hidden">
-                  <Image
-                    className=" z-10 scrollable-image"
-                    src="/images-proyecto/scroll.png"
-                    alt="vida-estilo"
-                    layout="intrinsic"
-                    width={800}
-                    height={1111}
-                  />
-
+                  <div className="relative w-full h-full">
+                    {/* Imagen con animación de desplazamiento */}
+                    <Image
+                      className="scrollable-image"
+                      src="/images-proyecto/scroll.png"
+                      alt="vida-estilo"
+                      width={800}
+                      height={1111}
+                      layout="intrinsic"
+                      priority={true} // 🔥 Asegura que cargue antes
+                    />
+                  </div>
                 </div>
+
+                {/* Imagen estática de la pantalla */}
                 <Image
-                  className=" z-10 "
+                  className="z-10"
                   src="/images-proyecto/imac.png"
                   alt="vida-estilo"
-                  layout="intrinsic"
                   width={800}
                   height={1111}
+                  layout="intrinsic"
+                  priority={true} // 🔥 Carga la imagen inmediatamente
                 />
-
               </div>
+
               <div id="design" className="absolute bottom-24 w-fit text-start left-12">
                 <h2 className="uppercase text-bordered-branding sm:left-3">design</h2>
               </div>
@@ -171,31 +177,31 @@ export default function VidaEstilo() {
             left="left-[-18rem]"
             top="top-0"
             images={["/images-proyecto/image1.png", "/images-proyecto/image2.png", "/images-proyecto/image1.png", "/images-proyecto/image2.png", "/images-proyecto/image1.png"]}
-            
+
           />
           <DiagonalSlider
             left="left-[8rem]"
             top="top-0"
             images={["/images-proyecto/image3.png", "/images-proyecto/image4.png", "/images-proyecto/image5.png", "/images-proyecto/image4.png", "/images-proyecto/image5.png"]}
-            
+
           />
           <DiagonalSlider
             left="left-[34rem]"
             top="top-0"
             images={["/images-proyecto/image6.png", "/images-proyecto/image7.png", "/images-proyecto/image6.png", "/images-proyecto/image7.png", "/images-proyecto/image6.png"]}
-            
+
           />
           <DiagonalSlider
             left="left-[60rem]"
             top="top-0"
             images={["/images-proyecto/image8.png", "/images-proyecto/image9.png", "/images-proyecto/image8.png", "/images-proyecto/image9.png", "/images-proyecto/image8.png"]}
-            
+
           />
           <DiagonalSlider
             left="left-[86rem]"
             top="top-0"
             images={["/images-proyecto/image9.png", "/images-proyecto/image10.png", "/images-proyecto/image9.png", "/images-proyecto/image10.png", "/images-proyecto/image9.png"]}
-            
+
           />
 
           <div className='absolute fontSize-fluid bottom-0  pb-24  left-12  '><div className=''><h2 className='uppercase font-antonio font-bold text-bordered-strategy '>Digital</h2></div>
