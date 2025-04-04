@@ -65,7 +65,7 @@ export default function Daytona() {
         <div className='relative pt-32  bg-[#ca262c] bg-gradient-to-t from-black/90 to-transparent '>
           <Image src="/images-proyecto/Mask-group-daytona.png" alt="Phone Mockup" className="absolute w-[80%] top-0 right-0" width={450} height={800} />
           <div className="relative flex flex-col justify-center items-start pb-32 pl-[7.35vw] sm:top-[1vh] md:top-[2vh] lg:top-[8vh] xl:top-[13vh] 2xl:top-[17vh] text-white font-antonio font-semibold font-production uppercase">
-            <div className='absolute w-full top-[-20%] left-[20%] -translate-x-[7.35vw] z-20'>
+            <div className='absolute w-full top-[-7%] left-[40%] -translate-x-[7.35vw] z-20'>
               <div className='relative'>
                 <Image src="/images-proyecto/IphoneDaytona1.png" alt="Phone Mockup" className="w-[50vw]  z-50 rounded-xl absolute top-0" width={450} height={800} />
                 <video className="phone-video z-20" autoPlay loop muted playsInline>
@@ -73,7 +73,7 @@ export default function Daytona() {
                 </video>
               </div>
             </div>
-            <div className='absolute w-full top-[30%] left-[27%] -translate-x-[7.35vw] z-10'>
+            <div className='absolute w-full top-[10%] left-[52%] -translate-x-[7.35vw] z-10'>
               <div className='relative'>
                 <Image src="/images-proyecto/IphoneDaytona1.png" alt="Phone Mockup" className="w-[50vw]  z-50 rounded-xl absolute top-0" width={450} height={800} />
                 <video className="phone-video z-20" autoPlay loop muted playsInline>
@@ -84,8 +84,8 @@ export default function Daytona() {
             <div className='relative flex flex-col w-full'>
               <span data-aos="zoom-in"
                 data-aos-duration="1000"
-                data-aos-delay="100" className='font-graphic font-semibold font-antonio'>Video</span>
-              <span data-aos="zoom-in" data-aos-duration="1000" className="relative top-[23vw] text-end font-graphic font-semibold font-antonio">Production</span>
+                data-aos-delay="100" className='relative top-[23vw] font-media-online font-semibold font-antonio'>Video</span>
+              <span data-aos="zoom-in" data-aos-duration="1000" className="relative top-[23vw] text-end font-media-online font-semibold font-antonio">Production</span>
             </div>
           </div>
           <div className='relative flex flex-col justify-end w-full sm:pt-32 lg:pt-52 xl:pt-72 2xl:pt-96 '>

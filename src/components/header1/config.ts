@@ -4,7 +4,7 @@ const scrollToFooter = () => {
 
 export const menuOptions = [
     { name: "Home", path: "/", menuIcon: "/images-proyecto/menuBlack.png" },
-    { name: "About", path: "/about", menuIcon: "/images-proyecto/menuWhite.png" },
+   // { name: "About", path: "/about", menuIcon: "/images-proyecto/menuWhite.png" },
     {
         name: "Work",
         path: "/#work",

@@ -57,13 +57,24 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon 
       setIsOpen(false);
     }
   };
+  const handleClick = () => {
+    if (typeof window !== "undefined" && window.location.pathname === "/") {
+      setIsOpen(false); // Cierra el menú si ya estás en Home
+    }
+  };
 
   return (
     <header className={`absolute flex flex-col top-0 left-0 right-0 z-50 bg-transparent text-white p-10 ${className}`}>
       <div className="flex justify-between items-center">
-        {(logoSrc || isOpen) && <div className="w-[120px] h-[22px] flex items-center z-50">
-          <Image src={isOpen ? logoSrcOpen : (logoSrc || '')} alt="Dataki" width={150} height={150} layout="fixed" />
-        </div>}
+        {(logoSrc || isOpen) &&  <Link href="/" onClick={handleClick} className="w-[120px] h-[22px] flex items-center z-50">
+    <Image
+      src={isOpen ? logoSrcOpen : logoSrc || ""}
+      alt="Dataki"
+      width={150}
+      height={150}
+      layout="fixed"
+    />
+  </Link>}
 
         {/* Botón hamburguesa */}
         <button className="w-6 h-6 font-close text-black leading-none transition-opacity duration-300 z-20 ml-auto"

@@ -10,7 +10,7 @@ export default function AnimatedAos() {
 
                 {/* Título animado */}
                 <h2
-                    className="relative top-[10vw] text-end fontSize-gra-desig font-antonio font-medium text-bordered uppercase"
+                    className="relative top-[10vw] text-end right-[5vw] fontSize-gra-desig font-antonio font-medium text-bordered uppercase"
                 >
                     BUSINESS
                 </h2>
@@ -19,13 +19,13 @@ export default function AnimatedAos() {
                 <div className="flex justify-between items-center">
                     <img
                         data-aos="fade-up"
-                        className="relative w-[25vw] h-[15vw]"
+                        className="relative w-[25vw] h-auto"
                         src="/images-proyecto/Slide1.png"
                         alt="Aon"
                     />
                     <img
                         data-aos="fade-down"
-                        className="relative w-[25vw] h-[15vw]"
+                        className="relative w-[25vw] h-auto"
                         src="/images-proyecto/Slide2.png"
                         alt="Aon"
                     />
@@ -36,7 +36,7 @@ export default function AnimatedAos() {
                     <img
                         data-aos="zoom-in"
                         data-aos-delay="500"
-                        className="relative top-[-9vw] w-[40vw] h-[19vw] z-20"
+                        className="relative top-[-9vw] w-[40vw] h-auto z-20"
                         src="/images-proyecto/Slide7-1.png"
                         alt="Aon"
                     />
@@ -47,14 +47,14 @@ export default function AnimatedAos() {
                     <img
                         data-aos="fade-down"
                         data-aos-delay="300"
-                        className="relative w-[25vw] h-[15vw] z-10"
+                        className="relative w-[25vw] h-auto z-10"
                         src="/images-proyecto/Slide3.png"
                         alt="Aon"
                     />
                     <img
                         data-aos="fade-up"
                         data-aos-delay="500"
-                        className="relative w-[25vw] h-[15vw] z-10"
+                        className="relative w-[25vw] h-auto z-10"
                         src="/images-proyecto/Slide4.png"
                         alt="Aon"
                     />

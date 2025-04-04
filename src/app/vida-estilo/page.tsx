@@ -144,7 +144,7 @@ export default function VidaEstilo() {
                       width={800}
                       height={1111}
                       layout="intrinsic"
-                      priority={true} // 🔥 Asegura que cargue antes
+                      priority={true} 
                     />
                   </div>
                 </div>
@@ -157,7 +157,7 @@ export default function VidaEstilo() {
                   width={800}
                   height={1111}
                   layout="intrinsic"
-                  priority={true} // 🔥 Carga la imagen inmediatamente
+                  priority={true} 
                 />
               </div>
 

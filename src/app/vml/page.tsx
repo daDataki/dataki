@@ -74,7 +74,7 @@ export default function Vml() {
   useEffect(() => {
     const interval = setInterval(() => {
       setDegrees((prevDegrees) => (prevDegrees + 4) % 182); // Se reinicia cuando llega a 270°
-    }, 100); // Velocidad de giro ajustada para suavidad
+    }, 150); // Velocidad de giro ajustada para suavidad
 
     return () => clearInterval(interval); // Limpia el intervalo al desmontar
   }, []);
@@ -178,9 +178,8 @@ export default function Vml() {
             </div>
           </div>
         </div>
-        <div className='relative flex justify-center items-center bg-[#d8e7f2] py-[11.11vw] px-[13.33vw]'>
-
-          <div className='w-full flex justify-center'>
+        <div className='relative flex justify-center items-center bg-[#d8e7f2] py-[11vw] px-[11vw]'>
+          <div className='relative w-full flex justify-center'>
             <Image
               className="relative w-full"
               src="/images-proyecto/Ellipse-104.png"
@@ -189,56 +188,55 @@ export default function Vml() {
               width={800}
               height={1111}
             />
-          </div>
-          <div className='absolute flex justify-center left-[7vw] items-center top-1/2 -translate-y-[39%]'>
-
-            <div className='relative w-[26.31vw] left-[15vw] h-auto '>
-              <Image
-                className="relative w-full h-auto"
-                src="/images-proyecto/PHONE-110.png"
-                alt="PHONE-110"
-                layout="intrinsic"
-                width={800}
-                height={1111}
-              />
-            </div>
-            <div className="relative w-[37.91vw] h-auto z-10">
-              <Image
-                className="relative w-full h-auto"
-                src="/images-proyecto/PHONE-111.png"
-                alt="PHONE-111"
-                layout="intrinsic"
-                width={800}
-                height={1111}
-              />
-              <div className="absolute top-[16.5vw] left-[7.2vw] w-[18vw] h-auto">
+            <div className='absolute w-full flex justify-center items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+              <div className='relative w-[26.31vw] left-[11vw] top-[5vw] h-auto '>
                 <Image
-                  className="relative rotate"
-                  style={{
-                    transform: `rotate(${degrees}deg)`,
-                    transition: "transform 0.1s linear",
-                  }}
-                  src="/images-proyecto/mayometer-pointer.png"
-                  alt="mayometer-pointer"
+                  className="relative w-full h-auto"
+                  src="/images-proyecto/PHONE-110.png"
+                  alt="PHONE-110"
+                  layout="intrinsic"
+                  width={800}
+                  height={1111}
+                />
+              </div>
+              <div className="relative w-[24vw] top-[-1vw] left-[2vw] h-auto z-10">
+                <Image
+                  className="relative w-full h-auto"
+                  src="/images-proyecto/PHONE-111.png"
+                  alt="PHONE-111"
+                  layout="intrinsic"
+                  width={800}
+                  height={1111}
+                />
+                <div className="absolute top-[18.5vw] left-[3vw] w-[18vw]  h-auto">
+                  <Image
+                    className="relative rotate"
+                    style={{
+                      transform: `rotate(${degrees}deg)`,
+                      transition: "transform 0.1s linear",
+                    }}
+                    src="/images-proyecto/mayometer-pointer.png"
+                    alt="mayometer-pointer"
+                    layout="intrinsic"
+                    width={800}
+                    height={1111}
+                  />
+                </div>
+              </div>
+
+              <div className='relative w-[29vw] right-[2vw] top-[5vw] h-auto '>
+                <Image
+                  className="relative w-full h-auto"
+                  src="/images-proyecto/PHONE-18.png"
+                  alt="PHONE-18"
                   layout="intrinsic"
                   width={800}
                   height={1111}
                 />
               </div>
             </div>
-
-            <div className='relative w-[29vw] right-[14vw] top-[-1vw] h-auto '>
-              <Image
-                className="relative w-full h-auto"
-                src="/images-proyecto/PHONE-18.png"
-                alt="PHONE-18"
-                layout="intrinsic"
-                width={800}
-                height={1111}
-              />
-            </div>
-
           </div>
+
         </div>
         <div className='relative pt-40 pb-16 px-12 bg-[#3a0f4e] bg-gradient-to-t from-black/100 to-transparent min-h-[150vh]'>
           <div className='relative'>
@@ -358,145 +356,145 @@ export default function Vml() {
             </h2>
           </div>
           <div className="w-full flex justify-center items-center">
-      {/* Primera Imagen */}
-      <motion.div
-        id="flip-image-1"
-        className="relative z-10 w-[18vw]"
-        initial={{ rotateY: 0 }}
-        animate={{
-          rotateY: visibility.image1 ? 180 : 0,
-        }}
-        transition={{
-          duration: 1,
-          ease: "easeInOut",
-        }}
-      >
-        <Image
-          className="relative w-full"
-          src="/images-proyecto/dig1.png"
-          alt="Main Image"
-          layout="intrinsic"
-          width={800}
-          height={1111}
-        />
-      </motion.div>
+            {/* Primera Imagen */}
+            <motion.div
+              id="flip-image-1"
+              className="relative z-10 w-[18vw]"
+              initial={{ rotateY: 0 }}
+              animate={{
+                rotateY: visibility.image1 ? 180 : 0,
+              }}
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                className="relative w-full"
+                src="/images-proyecto/dig1.png"
+                alt="Main Image"
+                layout="intrinsic"
+                width={800}
+                height={1111}
+              />
+            </motion.div>
 
-      {/* Segunda Imagen */}
-      <motion.div
-        id="flip-image-2"
-        className="relative top-[-5vw] z-10 w-[18vw]"
-        initial={{ rotateY: 0 }}
-        animate={{
-          rotateY: visibility.image2 ? 180 : 0,
-        }}
-        transition={{
-          duration: 1,
-          ease: "easeInOut",
-        }}
-      >
-        <Image
-          className="relative w-full"
-          src="/images-proyecto/dig2.png"
-          alt="Second Image"
-          layout="intrinsic"
-          width={800}
-          height={1111}
-        />
-      </motion.div>
+            {/* Segunda Imagen */}
+            <motion.div
+              id="flip-image-2"
+              className="relative top-[-5vw] z-10 w-[18vw]"
+              initial={{ rotateY: 0 }}
+              animate={{
+                rotateY: visibility.image2 ? 180 : 0,
+              }}
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                className="relative w-full"
+                src="/images-proyecto/dig2.png"
+                alt="Second Image"
+                layout="intrinsic"
+                width={800}
+                height={1111}
+              />
+            </motion.div>
 
-      {/* Tercera Imagen */}
-      <motion.div
-        id="flip-image-3"
-        className="relative z-10 w-[18vw]"
-        initial={{ rotateY: 0 }}
-        animate={{
-          rotateY: visibility.image3 ? 180 : 0,
-        }}
-        transition={{
-          duration: 1,
-          ease: "easeInOut",
-        }}
-      >
-        <Image
-          className="relative w-full"
-          src="/images-proyecto/dig3.png"
-          alt="Third Image"
-          layout="intrinsic"
-          width={800}
-          height={1111}
-        />
-      </motion.div>
-    </div>
-    <div className="w-full flex justify-center items-center">
-      {/* Cuarta Imagen */}
-      <motion.div
-        id="flip-image-4"
-        className="relative z-10 w-[18vw]"
-        initial={{ rotateY: 0 }}
-        animate={{
-          rotateY: visibility.image4 ? 180 : 0,
-        }}
-        transition={{
-          duration: 1,
-          ease: "easeInOut",
-        }}
-      >
-        <Image
-          className="relative w-full"
-          src="/images-proyecto/dig4.png"
-          alt="Fourth Image"
-          layout="intrinsic"
-          width={800}
-          height={1111}
-        />
-      </motion.div>
+            {/* Tercera Imagen */}
+            <motion.div
+              id="flip-image-3"
+              className="relative z-10 w-[18vw]"
+              initial={{ rotateY: 0 }}
+              animate={{
+                rotateY: visibility.image3 ? 180 : 0,
+              }}
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                className="relative w-full"
+                src="/images-proyecto/dig3.png"
+                alt="Third Image"
+                layout="intrinsic"
+                width={800}
+                height={1111}
+              />
+            </motion.div>
+          </div>
+          <div className="w-full flex justify-center items-center">
+            {/* Cuarta Imagen */}
+            <motion.div
+              id="flip-image-4"
+              className="relative z-10 w-[18vw]"
+              initial={{ rotateY: 0 }}
+              animate={{
+                rotateY: visibility.image4 ? 180 : 0,
+              }}
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                className="relative w-full"
+                src="/images-proyecto/dig4.png"
+                alt="Fourth Image"
+                layout="intrinsic"
+                width={800}
+                height={1111}
+              />
+            </motion.div>
 
-      {/* Quinta Imagen */}
-      <motion.div
-        id="flip-image-5"
-        className="relative top-[-5vw] z-10 w-[18vw]"
-        initial={{ rotateY: 0 }}
-        animate={{
-          rotateY: visibility.image5 ? 180 : 0,
-        }}
-        transition={{
-          duration: 1,
-          ease: "easeInOut",
-        }}
-      >
-        <Image
-          className="relative w-full"
-          src="/images-proyecto/dig5.png"
-          alt="Fifth Image"
-          layout="intrinsic"
-          width={800}
-          height={1111}
-        />
-      </motion.div>
+            {/* Quinta Imagen */}
+            <motion.div
+              id="flip-image-5"
+              className="relative top-[-5vw] z-10 w-[18vw]"
+              initial={{ rotateY: 0 }}
+              animate={{
+                rotateY: visibility.image5 ? 180 : 0,
+              }}
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                className="relative w-full"
+                src="/images-proyecto/dig5.png"
+                alt="Fifth Image"
+                layout="intrinsic"
+                width={800}
+                height={1111}
+              />
+            </motion.div>
 
-      {/* Sexta Imagen */}
-      <motion.div
-        id="flip-image-6"
-        className="relative z-10 w-[18vw]"
-        initial={{ rotateY: 0 }}
-        animate={{
-          rotateY: visibility.image6 ? 180 : 0,
-        }}
-        transition={{
-          duration: 1,
-          ease: "easeInOut",
-        }}
-      >
-        <Image
-          className="relative w-full"
-          src="/images-proyecto/dig6.png"
-          alt="Sixth Image"
-          layout="intrinsic"
-          width={800}
-          height={1111}
-        />
-      </motion.div>
-    </div>
+            {/* Sexta Imagen */}
+            <motion.div
+              id="flip-image-6"
+              className="relative z-10 w-[18vw]"
+              initial={{ rotateY: 0 }}
+              animate={{
+                rotateY: visibility.image6 ? 180 : 0,
+              }}
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                className="relative w-full"
+                src="/images-proyecto/dig6.png"
+                alt="Sixth Image"
+                layout="intrinsic"
+                width={800}
+                height={1111}
+              />
+            </motion.div>
+          </div>
         </div>
         <div className='flex flex-col w-full py-32 px-12 bg-[#ffde00]'>
           <div className='relative w-full'>
