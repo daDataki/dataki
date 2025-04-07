@@ -153,7 +153,7 @@ export default function Vml() {
             controls
             playsInline
           >
-            <source src="/video/VML-SIN-AUDIO.mp4" type="video/mp4" />
+            <source src="/video/VML_13.mp4" type="video/mp4" />
           </video>
         </div>
         <div className='relative pt-40 pb-16 px-12 bg-white'>
@@ -176,7 +176,7 @@ export default function Vml() {
                 width={800}
                 height={1111}
               />
-              <div className="absolute top-[30vw] left-[37.5vw] w-[18vw]  h-auto">
+              <div className="absolute top-[30vw] left-[37.5vw] w-[18vw]  h-auto z-20">
                   <Image
                     className="relative rotate"
                     style={{
