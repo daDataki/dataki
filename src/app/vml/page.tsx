@@ -167,14 +167,29 @@ export default function Vml() {
               <h2 className='sticky top-0 fontSize-fluid font-antonio font-medium text-bordered uppercase'>
                 FRONT END
               </h2>
+              <div className='relative'></div>
               <Image
-                className="relative w-[47vw] h-auto z-10 top-[-4vw]"
-                src="/images-proyecto/Hellmans-Mockup.png"
+                className="relative w-[24vw] h-auto z-10 top-[-4vw]"
+                src="/images-proyecto/Hellmans-Mockup1.png"
                 alt="Hellmans-Mockup"
                 layout="intrinsic"
                 width={800}
                 height={1111}
               />
+              <div className="absolute top-[30vw] left-[37.5vw] w-[18vw]  h-auto">
+                  <Image
+                    className="relative rotate"
+                    style={{
+                      transform: `rotate(${degrees}deg)`,
+                      transition: "transform 0.1s linear",
+                    }}
+                    src="/images-proyecto/mayometer-pointer.png"
+                    alt="mayometer-pointer"
+                    layout="intrinsic"
+                    width={800}
+                    height={1111}
+                  />
+                </div>
             </div>
           </div>
         </div>
@@ -261,7 +276,7 @@ export default function Vml() {
               />
 
               <Image
-                className="relative w-[45vw] h-auto z-20"
+                className="relative w-[45vw] h-auto z-30"
                 src="/images-proyecto/Glade-Mockup3.png"
                 alt="PHONE-110"
                 layout="intrinsic"
@@ -282,7 +297,7 @@ export default function Vml() {
 
             <div className='relative flex justify-center items-center w-full mt-[-13vw]'>
               <Image
-                className="relative w-[45vw] h-auto left-[11vw] z-10"
+                className="relative w-[45vw] h-auto left-[11vw] z-20"
                 src="/images-proyecto/Glade-Mockup4.png"
                 alt="PHONE-110"
                 layout="intrinsic"
@@ -349,7 +364,7 @@ export default function Vml() {
           </div>
 
         </div>
-        <div className='w-full py-32 bg-[#E7DCCE] px-12'>
+        <div className='w-full pt-32 bg-[#E7DCCE] px-12'>
           <div className='w-full sticky top-0'>
             <h2 className=' font-antonio font-bold uppercase text-caption1 text-black'>
               DIGIORNO
@@ -359,10 +374,10 @@ export default function Vml() {
             {/* Primera Imagen */}
             <motion.div
               id="flip-image-1"
-              className="relative z-10 w-[18vw]"
+              className="relative z-10 w-[31vw]"
               initial={{ rotateY: 0 }}
               animate={{
-                rotateY: visibility.image1 ? 180 : 0,
+                rotateY: visibility.image1 ? 360 : 0,
               }}
               transition={{
                 duration: 1,
@@ -382,13 +397,14 @@ export default function Vml() {
             {/* Segunda Imagen */}
             <motion.div
               id="flip-image-2"
-              className="relative top-[-5vw] z-10 w-[18vw]"
+              className="relative top-[-7vw] z-10 w-[31vw]"
               initial={{ rotateY: 0 }}
               animate={{
-                rotateY: visibility.image2 ? 180 : 0,
+                rotateY: visibility.image2 ? 360 : 0,
               }}
               transition={{
                 duration: 1,
+                delay: 0.3,
                 ease: "easeInOut",
               }}
             >
@@ -405,13 +421,14 @@ export default function Vml() {
             {/* Tercera Imagen */}
             <motion.div
               id="flip-image-3"
-              className="relative z-10 w-[18vw]"
+              className="relative z-10 w-[31vw]"
               initial={{ rotateY: 0 }}
               animate={{
-                rotateY: visibility.image3 ? 180 : 0,
+                rotateY: visibility.image3 ? 360 : 0,
               }}
               transition={{
                 duration: 1,
+                delay: 0.5,
                 ease: "easeInOut",
               }}
             >
@@ -429,13 +446,14 @@ export default function Vml() {
             {/* Cuarta Imagen */}
             <motion.div
               id="flip-image-4"
-              className="relative z-10 w-[18vw]"
+              className="relative z-10 w-[31vw]"
               initial={{ rotateY: 0 }}
               animate={{
-                rotateY: visibility.image4 ? 180 : 0,
+                rotateY: visibility.image4 ? 360 : 0,
               }}
               transition={{
                 duration: 1,
+                delay: 0.7,
                 ease: "easeInOut",
               }}
             >
@@ -452,13 +470,14 @@ export default function Vml() {
             {/* Quinta Imagen */}
             <motion.div
               id="flip-image-5"
-              className="relative top-[-5vw] z-10 w-[18vw]"
+              className="relative top-[-7vw] z-10 w-[31vw]"
               initial={{ rotateY: 0 }}
               animate={{
-                rotateY: visibility.image5 ? 180 : 0,
+                rotateY: visibility.image5 ? 360 : 0,
               }}
               transition={{
                 duration: 1,
+                delay: 0.9,
                 ease: "easeInOut",
               }}
             >
@@ -475,13 +494,14 @@ export default function Vml() {
             {/* Sexta Imagen */}
             <motion.div
               id="flip-image-6"
-              className="relative z-10 w-[18vw]"
+              className="relative z-10 w-[31vw]"
               initial={{ rotateY: 0 }}
               animate={{
-                rotateY: visibility.image6 ? 180 : 0,
+                rotateY: visibility.image6 ? 360 : 0,
               }}
               transition={{
                 duration: 1,
+                delay: 1.1,
                 ease: "easeInOut",
               }}
             >
@@ -502,8 +522,9 @@ export default function Vml() {
               className='font-antonio font-bold uppercase text-caption1 text-black'
               initial={{ opacity: 0, y: -50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.3,   delay: 0.5, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.2 }}
+            
             >
               RAID
             </motion.h2>
