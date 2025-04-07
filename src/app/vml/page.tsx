@@ -265,9 +265,9 @@ export default function Vml() {
             </h2>
           </div>
           <div className='relative w-full flex flex-col'>
-            <div className='relative flex justify-center items-center w-full top-[8vw] z-20'>
+            <div className='relative flex justify-center items-center w-full top-[8vw]'>
               <Image
-                className="relative w-[45vw] h-auto"
+                className="relative w-[45vw] h-auto "
                 src="/images-proyecto/Glade-Mockup1.png"
                 alt="PHONE-110"
                 layout="intrinsic"
@@ -285,7 +285,7 @@ export default function Vml() {
               />
 
               <Image
-                className="absolute w-[45vw] h-auto z-20"
+                className="absolute w-[45vw] h-auto z-50"
                 src="/images-proyecto/Glade-Mockup2.png"
                 alt="PHONE-110"
                 layout="intrinsic"
@@ -297,7 +297,7 @@ export default function Vml() {
 
             <div className='relative flex justify-center items-center w-full mt-[-13vw]'>
               <Image
-                className="relative w-[45vw] h-auto left-[11vw] z-20"
+                className="relative w-[45vw] h-auto left-[11vw] z-10"
                 src="/images-proyecto/Glade-Mockup4.png"
                 alt="PHONE-110"
                 layout="intrinsic"
