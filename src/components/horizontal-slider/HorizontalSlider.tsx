@@ -21,10 +21,10 @@ export default async function HorizontalSlider() {
     <div className="bg-black text-white max-sm:pt-0 py-12 overflow-x-hidden">
       {images.length > 0 ? (
         <>
-          <h2 className="text-center xtext-sm font-Poppins font-normal my-6 sm:my-12 lg:my-20 uppercase">
+          <h2 className="text-center safari-text-stroke xtext-sm font-Poppins font-normal my-6 sm:my-12 lg:my-20 uppercase">
             true partners
           </h2>
-          <h1 className="text-center xtext-2xl font-antonio font-bold my-6 sm:my-12 lg:my-20 uppercase">
+          <h1 className="text-center safari-text-stroke xtext-2xl font-antonio font-bold my-6 sm:my-12 lg:my-20 uppercase">
             they <span className="text-easternBlue">trust us</span>
           </h1>
 

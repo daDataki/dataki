@@ -20,7 +20,7 @@ export default function Footer({ background = DEFAULT_BG }: FooterProps) {
         </div>
 
         <div className="max-sm:justify-center max-sm:text-center flex  mb-8">
-          <p className="font-antonio font-bold   xtext-lg1  uppercase">Tell us about <br /> your idea.</p>
+          <p className="font-antonio font-bold safari-text-stroke  xtext-lg1  uppercase">Tell us about <br /> your idea.</p>
         </div>
         <div className="block sm:flex justify-between w-full max-sm:text-center xl:w-1/2 ">
           <div> <p className="text-captions font-Poppins">

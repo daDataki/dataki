@@ -110,7 +110,7 @@ export default function VerticalSlider({ intervalDuration = 2000 }: { intervalDu
               className={`absolute w-full flex justify-center items-center top-1/2  transition-all duration-500 ${getPositionClass(offset)}`}
             >
               <div className="flex text-center">
-                <div className="font-antonio uppercase">{word}</div>
+                <div className="font-antonio safari-text-stroke uppercase">{word}</div>
                 {isMain && (
                   <span className="ml-4 text-easternBlue text-5xl font-bold">
                     0{index + 1}

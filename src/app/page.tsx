@@ -38,12 +38,11 @@ export default function Home() {
               <span>Growth &</span> <span>business partner</span>
             </h4>
           </div>
-          <div className="flex flex-col justify-center items-center font-antonio font-extrabold xtext-lg  uppercase ">
-            <h2 className='text-center'
-            style={{ WebkitTextStrokeWidth: '2px' }}
-            ><span  style={{ WebkitTextStrokeColor: 'black' }} >we help companies</span>
+          <div className="flex flex-col justify-center items-center font-antonio font-semibold xtext-lg  uppercase ">
+            <h2 className='text-center safari-text-stroke'     
+            ><span >we help companies</span>
               <div>
-                <span className="text-easternBlue stroke-easternBlue stroke-1" >bring to life</span>
+                <span className="text-easternBlue stroke-easternBlue" >bring to life</span>
                 <span> their</span>
               </div>
               <span>business vision</span></h2>

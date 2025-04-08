@@ -67,7 +67,7 @@ const Hero: React.FC<HeroProps> = ({
                     <div className="flex flex-col justify-between px-12 pt-12 py-12 z-10 h-[100%]">
                         <div className="w-fit">
                             <div className="w-fit">
-                                <h1 className="font-antonio font-bold text-fluid text-white uppercase">
+                                <h1 className="font-antonio safari-text-stroke font-bold text-fluid text-white uppercase">
                                     {title}
                                 </h1>
                             </div>
