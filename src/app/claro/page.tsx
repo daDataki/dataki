@@ -240,7 +240,7 @@ export default function Claro() {
                             </div>
                             <div className='relative w-[40%] right-[9vw]  z-50'>
                                 <img className='absolute w-[70%] h-auto z-10 left-[1.3vw] top-[5vw]' src="/images-proyecto/Claro-iPhone-11-Pro.png" alt="Claro-iPhone-11-Pro" />
-                                <img className='relative w-[77%] h-auto' src="/images-proyecto/Claro-MIl-Aires-Mockup.png" alt="/images-proyecto/Claro-MIl-Aires-Mockup1" />
+                                <img className='relative w-[77%] h-auto' src="/images-proyecto/claro-MIl-Aires-Mockup-copy.png" alt="claro-MIl-Aires-Mockup-copy" />
                             </div>
                         </div>
                     </div>
