@@ -13,7 +13,8 @@ export const menuOptions = [
             { name: "vml", path: "/vml" },
             { name: "aon", path: "/aon" },
             { name: "vida y estilo", path: "/vida-estilo" },
-            { name: "daytona", path: "/daytona" }
+            { name: "daytona", path: "/daytona" },
+            { name: "claro", path: "/claro" }
         ]
     },
     { name: "Services", path: "/services", menuIcon: "/images-proyecto/menuWhite.png" },

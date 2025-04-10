@@ -1,0 +1,42 @@
+.font-empowering {
+    font-size: clamp(16px, 3.33vw, 72px);
+    line-height: clamp(22px, 4.72vw, 102px);
+  }
+
+  .font-media {
+    font-size: clamp(50px, 10.47vw, 225px);
+    line-height: clamp(50px, 10.47vw, 225px);
+  }
+
+  .font-web {
+    font-size: clamp(80px, 16.66vw, 360px);
+    line-height: clamp(80px, 16.66vw, 360px);
+  }
+  .text-bordered {
+    color: transparent;
+    /* Color de la letra */
+    -webkit-text-stroke: 2px white;
+  }
+
+  .scrollable-image {
+    animation: scrollImage 15s linear infinite alternate;
+    will-change: transform;
+   
+  }
+  
+  /* 🔥 FIX para Safari */
+  @supports (-webkit-touch-callout: none) {
+    .scrollable-image {
+      animation: scrollImage 15s linear infinite alternate !important;
+    }
+  }
+  
+  @keyframes scrollImage {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-65%);
+    }
+  }
+  

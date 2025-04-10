@@ -51,6 +51,6 @@ body {
   
 
   .only-safari .safari-text-stroke {
-    -webkit-text-stroke: 3px;
+    -webkit-text-stroke: 4px;
     font-weight: bold;
   }

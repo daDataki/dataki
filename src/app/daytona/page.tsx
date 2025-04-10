@@ -28,7 +28,7 @@ export default function Daytona() {
           backgroundImage={daytona.src}
           backgroundPosition="right"
           prev='/vida-estilo'
-          next='/vml'
+          next='/claro'
           clientInfo={{
             group: "",
             date: "2022-Ongoing",
