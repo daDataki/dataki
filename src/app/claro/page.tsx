@@ -11,7 +11,7 @@ export default function Claro() {
 
     return (
         <>
-            <div className='overflow-hidden'>
+            <div className='overflow-clip'>
                 <div className='overflow-clip'>
                     <div><Hero
                         title="CLARO"
@@ -165,7 +165,7 @@ export default function Claro() {
                     </div>
                 </div>
                 <div className='bg-[#E20001] mt-[-1px]'>
-                    <h2 className=' text-center font-antonio font-medium text-white font-web text-bordered'>web <br />
+                    <h2 className=' text-center font-antonio font-medium text-white font-web text-bordered uppercase'>web <br />
                         design</h2>
                     <div className="relative w-[70%] z-20 mx-auto top-[-10vw] ">
                         {/* Contenedor con overflow-hidden para simular el marco de la pantalla */}
