@@ -9,18 +9,12 @@ import AnimatedAos from '../../components/animated-aos/AnimatedAos'
 import PreviousNext from '../../components/previous-next/PreviousNext'
 import { useRef } from "react";
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
-import AOS from 'aos';
+
 
 
 
 export default function Aos() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: false,
-    });
-  }, []);
+
   const ref = useRef(null);
 
   const isInView = useInView(ref, { once: false, margin: "-100px 0px" });
@@ -136,25 +130,31 @@ export default function Aos() {
           </div>
         </div>
       </div>
-      <div className="relative flex flex-col items-center justify-center py-20 bg-black bg-gradient-to to-transparent ">
-        <div className="relative w-full px-24">
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center w-full z-10">
-            <img data-aos="fade-up"
-              data-aos-delay="300"
-              className='relative w-[38.8vw] h-auto z-20 left-[6vw] top-[2vw] object-contain'
+      <div  className="relative flex flex-col items-center justify-center py-20 bg-black bg-gradient-to to-transparent ">
+        <div ref={ref}  className="relative w-full px-24">
+          <div
+           
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center w-full z-10"
+          >
+            <motion.img
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 1, delay: 2 }}
+              className="relative w-[38.8vw] h-auto z-20 left-[6vw] top-[2vw] object-contain"
               src="/images-proyecto/LogIn-Eleccion.png"
               alt="LogIn-Eleccion"
-
             />
-            <img data-aos="fade-up"
-              data-aos-delay="500"
-              className='relative w-[38.8vw] h-auto right-[9vw] top-[10vw] object-contain z-10'
+
+            <motion.img
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 1, delay: 2.3 }}
+              className="relative w-[38.8vw] h-auto right-[9vw] top-[10vw] object-contain z-10"
               src="/images-proyecto/aon-imagen.png"
               alt="aon-imagen"
-
             />
           </div>
-          <div className="flex flex-col  w-full gap-[11vw] ">
+          <div  className="flex flex-col  w-full gap-[11vw] ">
             <div className="reltive flex justify-start">
               <h2 className="fontSize-gra-desig font-antonio font-medium text-bordered uppercase">DIGITAL</h2>
             </div>

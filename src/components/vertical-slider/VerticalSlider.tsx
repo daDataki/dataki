@@ -98,7 +98,7 @@ export default function VerticalSlider({ intervalDuration = 2000 }: { intervalDu
         <p>keep <br /> scrolling</p>
       </div> */}
       <div className='max-sm:hidden absolute top-52 xl:top-1/2 left-12 md:left-0'>
-        <p className='font-Poppins md:ml-16 text-we-focus uppercase'>we focus on</p>
+        <p className='hidden font-Poppins md:ml-16 text-we-focus uppercase'>we focus on</p>
       </div>
       <ul className="relative h-full w-full flex  justify-center items-center ">
         {words.map((word, index) => {
