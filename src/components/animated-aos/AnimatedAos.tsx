@@ -6,7 +6,7 @@ import AosProvider from '../Aos/Aos'
 export default function AnimatedAos() {
     return (
         <AosProvider>
-            <div className="px-24 bg-[#131313]  overflow-hidden z-20">
+            <div className="px-24 bg-[#131313]  overflow-hidden z-20 pb-32">
 
                 {/* Título animado */}
                 <h2
@@ -61,7 +61,7 @@ export default function AnimatedAos() {
                 </div>
                 {/* Título animado */}
                 <h2
-                    className="relative top-[-25vw] text-left fontSize-gra-desig font-antonio font-medium text-bordered uppercase"
+                    className="relative mt-[-25vw] text-left fontSize-gra-desig font-antonio font-medium text-bordered uppercase"
                 >
                     STRATEGY
                 </h2>

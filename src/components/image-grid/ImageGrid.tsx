@@ -9,7 +9,16 @@ export default function ImageGrid() {
   const [applyClasses, setApplyClasses] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px 0px" });
+  const isInView = useInView(ref, { once: false, margin: "-100px 0px" });
+   // Refs para cada fila
+   const row1Ref = useRef(null);
+   const isRow1InView = useInView(row1Ref, { once: false, margin: "-50px 0px" });
+ 
+   const row2Ref = useRef(null);
+   const isRow2InView = useInView(row2Ref, { once: false, margin: "-50px 0px" });
+ 
+   const row3Ref = useRef(null);
+   const isRow3InView = useInView(row3Ref, { once: false, margin: "-50px 0px" });
 
   const ImageItem = ({
     src,
@@ -30,7 +39,7 @@ export default function ImageGrid() {
 
     return (
       <div
-        className="relative w-[27.77svw] h-[19.30vw] perspective cursor-pointer"
+        className="relative w-[27.77svw] h-[300px] perspective cursor-pointer"
         onMouseEnter={() => setHoveredIndex(index)}
         onMouseLeave={() => setHoveredIndex(null)}
       >
@@ -88,7 +97,7 @@ export default function ImageGrid() {
           <div className="relative flex justify-center">
             <motion.h2
               initial={{ fontSize: "300px", opacity: 0, scale: 4 }}
-              animate={{ fontSize: "100px", opacity: 1, scale: 1 }}
+              animate={{ fontSize: "-100px", opacity: 1, scale: 1 }}
               transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
               onAnimationComplete={() => setApplyClasses(true)}
               className={`relative font-bold safari-text-stroke font-antonio text-black uppercase ${applyClasses ? "text-work" : ""
@@ -113,48 +122,90 @@ export default function ImageGrid() {
       {/* Grid de imágenes */}
       <div className="relative overflow-hidden px-24">
         {/* Primer fila */}
-        <div className="flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end mb-responsive mt-responsive max-sm:gap-8 max-sm:mb-8 gap-12">
-          {images.slice(0, 3).map((src, i) => (
-            <ImageItem
-              key={i}
-              index={i}
-              hoveredIndex={hoveredIndex}
-              setHoveredIndex={setHoveredIndex}
-              clase=""
-              src={src}
-              alt={`image-${i}`}
-            />
-          ))}
+        <div ref={row1Ref} className="flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end mb-responsive mt-responsive max-sm:gap-8 max-sm:mb-8 gap-12">
+          {images.slice(0, 3).map((src, i) => {
+            const globalIndex = i; // 0, 1, 2
+            return (
+              <motion.div
+                key={globalIndex}
+                initial={{ scale: 0.1, opacity: 0 }}
+                animate={isRow1InView ? { scale: 1, opacity: 1 } : {}}
+                transition={{
+                  delay: globalIndex * 0.3,
+                  duration: 0.6,
+                  ease: "easeOut",
+                }}
+              >
+                <ImageItem
+                  key={globalIndex}
+                  index={globalIndex}
+                  hoveredIndex={hoveredIndex}
+                  setHoveredIndex={setHoveredIndex}
+                  clase=""
+                  src={src}
+                  alt={`image-${globalIndex}`}
+                />
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* Segunda fila */}
-        <div className="flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end mb-responsive max-sm:gap-8 max-sm:mb-8 gap-12">
-          {images.slice(3, 6).map((src, i) => (
-            <ImageItem
-              key={i + 3}
-              index={i + 3}
-              hoveredIndex={hoveredIndex}
-              setHoveredIndex={setHoveredIndex}
-              clase=""
-              src={src}
-              alt={`image-${i + 3}`}
-            />
-          ))}
+        <div ref={row2Ref} className="flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end mb-responsive max-sm:gap-8 max-sm:mb-8 gap-12">
+          {images.slice(3, 6).map((src, i) => {
+            const globalIndex = i + 3; // 3, 4, 5
+            return (
+              <motion.div
+                key={globalIndex}
+                initial={{ scale: 0.1, opacity: 0 }}
+                animate={isRow2InView ? { scale: 1, opacity: 1 } : {}}
+                transition={{
+                  delay: globalIndex * 0.3,
+                  duration: 0.6,
+                  ease: "easeOut",
+                }}
+              >
+                <ImageItem
+                  key={globalIndex}
+                  index={globalIndex}
+                  hoveredIndex={hoveredIndex}
+                  setHoveredIndex={setHoveredIndex}
+                  clase=""
+                  src={src}
+                  alt={`image-${globalIndex}`}
+                />
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* Tercera fila */}
-        <div className="flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end mb-responsive max-sm:gap-8 max-sm:mb-8 gap-12">
-          {images.slice(6, 9).map((src, i) => (
-            <ImageItem
-              key={i + 6}
-              index={i + 6}
-              hoveredIndex={hoveredIndex}
-              setHoveredIndex={setHoveredIndex}
-              clase=""
-              src={src}
-              alt={`image-${i + 6}`}
-            />
-          ))}
+        <div ref={row3Ref} className="flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end mb-responsive max-sm:gap-8 max-sm:mb-8 gap-12">
+          {images.slice(6, 9).map((src, i) => {
+            const globalIndex = i + 6; // 6, 7, 8
+            return (
+              <motion.div
+                key={globalIndex}
+                initial={{ scale: 0.1, opacity: 0 }}
+                animate={isRow3InView ? { scale: 1, opacity: 1 } : {}}
+                transition={{
+                  delay: globalIndex * 0.3,
+                  duration: 0.6,
+                  ease: "easeOut",
+                }}
+              >
+                <ImageItem
+                  key={globalIndex}
+                  index={globalIndex}
+                  hoveredIndex={hoveredIndex}
+                  setHoveredIndex={setHoveredIndex}
+                  clase=""
+                  src={src}
+                  alt={`image-${globalIndex}`}
+                />
+              </motion.div>
+            );
+          })}
         </div>
 
       </div>

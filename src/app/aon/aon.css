@@ -56,3 +56,14 @@ videos {
     /* Asegura que el contenido que sobresalga se recorte */
     clip-path: polygon(0 0, 99% 9%, 100% 100%, 0 99%);
 }
+.bg-custom-aon {
+    background: linear-gradient(
+      to bottom,
+      #131313 0%,
+      #131313 20%,
+      #ca262c 20%,
+      #ca262c 60%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+  

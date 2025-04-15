@@ -22,7 +22,7 @@
 
 @media (min-width: 640px) {
     .mb-responsive {
-      margin-bottom: clamp(133px, 13.88vw, 300px);
+      margin-bottom: clamp(33px, 6.94vw, 150px);
     }
 }
 

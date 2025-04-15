@@ -107,13 +107,13 @@ const CardBack = ({ image}: { image: string;  }) => {
 
   const titleSize = title.length > 13 ? "text-[3rem]" : "text-[4rem]";
   return (
-    <div   onClick={handleNavigate}  className="pointer-events-auto w-[27.77svw] h-[19.30vw] bg-[#BFAEFF] px-2 py-2" >
-      <div className="w-full">
+    <div   onClick={handleNavigate}  className="pointer-events-auto w-[27.77svw] h-[300px] bg-[#BFAEFF] px-2 py-2" >
+      <div className="w-full flex flex-col h-full">
         {/* Título */}
         <div className="relative flex flex-col justify-start">
           <h1 className={`font-antonio font-bold uppercase text-black leading-none ${titleSize}`}>{title}</h1>
         </div>
-        <div className=" w-full  lg:w-[88%] xl:w-[58vw]  flex  justify-between mt-2">
+        <div className=" w-full flex  justify-between mt-2">
           <div className="relative w-[30px] h-[30px]">
             <Image
               src="/images-proyecto/arrow-modal.png"
@@ -128,19 +128,14 @@ const CardBack = ({ image}: { image: string;  }) => {
         </div>
 
         {/* Imagen y contenido */}
-        <div className="w-[100%] lg:w-[85%] flex justify-between items-center mt-4">
-          <div className="w-1/2 flex gap-4">
-            <div>
-              <h6 className=" text-[9px] text-black">
-                <span className="font-bold">DATE:<br/></span> {imageDataMap[image].text2 }
-              </h6>
-            </div>
-            <div className="">
+          <div className="flex flex-1 flex-col">
+           
+            <div className="mt-3">
               {/* Categorías */}
               {imageDataMap[image].categories.length > 0 && (
                 <div className="">
-                  <h3 className="font-bold font-Poppins text-[9px] text-black">CATEGORIES:</h3>
-                  <ul className="list-disc list-inside font-Poppins text-[9px]">
+                  <h3 className="font-bold font-Poppins text-sm text-black">CATEGORIES:</h3>
+                  <ul className="list-disc list-inside font-Poppins text-sm">
                     {imageDataMap[image].categories.map((category, index) => (
                       <li key={index} className="text-black list-none font-Poppins">{category}</li>
                     ))}
@@ -148,9 +143,13 @@ const CardBack = ({ image}: { image: string;  }) => {
                 </div>
               )}
             </div>
+            <div className="mt-auto ml-auto">
+              <h6 className=" text-xs text-black">
+                <span className="font-bold">DATE:</span> {imageDataMap[image].text2 }
+              </h6>
+            </div>
           </div>
-       
-        </div>
+        
       </div>
     </div>
   );

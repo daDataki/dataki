@@ -4,17 +4,17 @@
   }
   
   .text-we-focus {
-    font-size: clamp(7px, 1.52vw, 33px);
-    line-height: clamp(10px, 2.08vw, 45px);
+    font-size: clamp(7px, 1.52vw, 28px);
+    line-height: clamp(10px, 2.08vw, 35px);
   }
 
   .text-fluid {
-    font-size: clamp(43px, 9.02vw, 195px);
+    font-size: clamp(43px, 9.02vw, 156px);
     line-height: clamp(43px, 9.02vw, 195px);
   }
 
   .text-fluid-1 {
-    font-size: clamp(33px, 6.94vw, 150px);
+    font-size: clamp(33px, 6.94vw, 130px);
     line-height: clamp(33px, 6.94vw, 150px);
   }
   .text-fluid-2 {

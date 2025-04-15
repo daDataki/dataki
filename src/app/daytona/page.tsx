@@ -92,11 +92,11 @@ export default function Daytona() {
             <h2 className='relative self-end mr-[11vw] sm:top-[10vh] md:top-[15vh] lg:top-[20vh] xl:top-[25vh] 2xl:top-[35vh] font-antonio font-normal text-white font-performance uppercase'>Performance- <br /> driven solutions <br /> for an impactful <br /> digital presence.</h2>
             <div className='relative bg-transparent font-antonio font-medium uppercase '>
               <div className='sticky top-[24vh]  font-media-online'>
-                <h2 className='relative top-[-5vw] text-media mb-[6vw]'>Media</h2>
-                <h2 className='relative left-[26vw] top-[-8vw] text-media-online'>Online</h2>
+                <h2 className='relative top-0 text-media '>Media</h2>
+                <h2 className='relative left-[26vw] top-0 text-media-online'>Online</h2>
               </div>
               <div className='flex  justify-start items-end  w-full h-full'>
-                <div className='relative w-1/2 h-full'>
+                <div className='relative w-1/2 h-full top-[15vw]'>
                   <Image
                     className="w-[30%] rotate-180"
                     src="/images-proyecto/pngwing.png"
