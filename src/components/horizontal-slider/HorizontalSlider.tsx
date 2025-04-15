@@ -6,10 +6,19 @@ import getImages from '@/utils/images';
 const chunkArray = (arr: string[], size: number) => {
   const result = [];
   for (let i = 0; i < arr.length; i += size) {
-    result.push(arr.slice(i, i + size));
+    let chunk = arr.slice(i, i + size);
+
+    // Si el chunk está incompleto, rellenar desde el inicio
+    if (chunk.length < size) {
+      const needed = size - chunk.length;
+      chunk = [...chunk, ...arr.slice(0, needed)];
+    }
+
+    result.push(chunk);
   }
   return result;
 };
+
 
 export default async function HorizontalSlider() {
   const images = await getImages();

@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   title: "Dataki | Growth & Business Partner",
   description: "We help companies shape and bring to life their marketing & business needs. We focus on Design & Creativity, Data Analytics, Branding & Marketing Solutions, Content Strategies and Technological Developments.",
   icons: {
-    icon: "/dataki-favicon.ico", 
-    shortcut: "/dataki-favicon.ico", 
+    icon: "/logo-dataki.svg", 
+    shortcut: "/logo-dataki.svg", 
   },
 };
 
