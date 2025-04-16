@@ -10,15 +10,15 @@ export default function ImageGrid() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: "-100px 0px" });
-   // Refs para cada fila
-   const row1Ref = useRef(null);
-   const isRow1InView = useInView(row1Ref, { once: false, margin: "-50px 0px" });
- 
-   const row2Ref = useRef(null);
-   const isRow2InView = useInView(row2Ref, { once: false, margin: "-50px 0px" });
- 
-   const row3Ref = useRef(null);
-   const isRow3InView = useInView(row3Ref, { once: false, margin: "-50px 0px" });
+  // Refs para cada fila
+  const row1Ref = useRef(null);
+  const isRow1InView = useInView(row1Ref, { once: false, margin: "-50px 0px" });
+
+  const row2Ref = useRef(null);
+  const isRow2InView = useInView(row2Ref, { once: false, margin: "-50px 0px" });
+
+  const row3Ref = useRef(null);
+  const isRow3InView = useInView(row3Ref, { once: false, margin: "-50px 0px" });
 
   const ImageItem = ({
     src,
@@ -122,9 +122,12 @@ export default function ImageGrid() {
       {/* Grid de imágenes */}
       <div className="relative overflow-hidden px-24">
         {/* Primer fila */}
-        <div ref={row1Ref} className="flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end mb-responsive mt-responsive max-sm:gap-8 max-sm:mb-8 gap-12">
+        <div
+          ref={row1Ref}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center mb-responsive mt-responsive max-sm:mb-8"
+        >
           {images.slice(0, 3).map((src, i) => {
-            const globalIndex = i; // 0, 1, 2
+            const globalIndex = i;
             return (
               <motion.div
                 key={globalIndex}
@@ -151,9 +154,12 @@ export default function ImageGrid() {
         </div>
 
         {/* Segunda fila */}
-        <div ref={row2Ref} className="flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end mb-responsive max-sm:gap-8 max-sm:mb-8 gap-12">
+        <div
+          ref={row2Ref}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center mb-responsive mt-responsive max-sm:mb-8"
+        >
           {images.slice(3, 6).map((src, i) => {
-            const globalIndex = i + 3; // 3, 4, 5
+            const globalIndex = i + 3;
             return (
               <motion.div
                 key={globalIndex}
@@ -180,9 +186,12 @@ export default function ImageGrid() {
         </div>
 
         {/* Tercera fila */}
-        <div ref={row3Ref} className="flex max-sm:flex-col justify-center items-center sm:justify-between sm:items-end mb-responsive max-sm:gap-8 max-sm:mb-8 gap-12">
+        <div
+          ref={row3Ref}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center mb-responsive mt-responsive max-sm:mb-8"
+        >
           {images.slice(6, 9).map((src, i) => {
-            const globalIndex = i + 6; // 6, 7, 8
+            const globalIndex = i + 6;
             return (
               <motion.div
                 key={globalIndex}
@@ -207,7 +216,6 @@ export default function ImageGrid() {
             );
           })}
         </div>
-
       </div>
     </div>
   );

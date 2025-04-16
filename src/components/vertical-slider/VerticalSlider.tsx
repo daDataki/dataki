@@ -73,11 +73,11 @@ export default function VerticalSlider() {
 
       const top = containerRef.current.offsetTop;
       const scroll = window.scrollY;
-      const height = window.innerHeight;
       const scrollInside = scroll - top;
+      const stepHeight = window.innerHeight * 0.5; // cada paso: 50vh
 
-      if (scrollInside >= 0 && scrollInside < height * words.length) {
-        const index = Math.floor(scrollInside / height);
+      if (scrollInside >= 0 && scrollInside < stepHeight * words.length) {
+        const index = Math.floor(scrollInside / stepHeight);
         setCurrentIndex(index);
       }
     };
@@ -89,22 +89,26 @@ export default function VerticalSlider() {
   const getPositionClass = (offset: number) => {
     switch (offset) {
       case 0:
-        return 'font-antonio text-fluid text-white font-bold uppercase translate-y-0 scale-110 z-10'; // Principal
+        return 'font-antonio text-fluid text-white font-bold uppercase translate-y-0 scale-110 z-10';
       case -1:
-        return 'font-antonio uppercase blur-[2px] text-fluid-1 text-gray-500 opacity-30 -translate-y-[120px] z-0'; // Uno arriba
+        return 'font-antonio uppercase blur-[2px] text-fluid-1 text-gray-500 opacity-30 -translate-y-[120px] z-0';
       case -2:
-        return 'font-antonio uppercase blur-[3px] text-fluid-2 text-gray-400 opacity-15 -translate-y-[220px] z-0'; // Dos arriba
+        return 'font-antonio uppercase blur-[3px] text-fluid-2 text-gray-400 opacity-15 -translate-y-[220px] z-0';
       case 1:
-        return 'font-antonio uppercase blur-[2px] text-fluid-2 text-gray-500 opacity-30 translate-y-[120px] z-0'; // Uno abajo
+        return 'font-antonio uppercase blur-[2px] text-fluid-2 text-gray-500 opacity-30 translate-y-[120px] z-0';
       case 2:
-        return 'font-antonio uppercase blur-[3px] text-fluid-1 text-gray-400 opacity-15 translate-y-[220px] z-0'; // Dos abajo
+        return 'font-antonio uppercase blur-[3px] text-fluid-1 text-gray-400 opacity-15 translate-y-[220px] z-0';
       default:
         return 'opacity-0 hidden';
     }
   };
 
   return (
-    <div ref={containerRef} className="relative w-full h-[600vh] ">
+    <div
+      ref={containerRef}
+      className="relative w-full"
+      style={{ height: `${(words.length + 1.5) * 50}vh` }} 
+    >
       {/* Sticky content */}
       <div className="sticky top-0 h-screen bg-black text-white flex flex-col justify-center items-center overflow-hidden">
 
@@ -124,6 +128,7 @@ export default function VerticalSlider() {
             let offset = index - currentIndex;
             if (offset < -2) offset += words.length;
             if (offset > 2) offset -= words.length;
+
             const isMain = offset === 0;
             return (
               <li
@@ -131,7 +136,7 @@ export default function VerticalSlider() {
                 className={`absolute w-full h-full flex justify-center items-center transition-all duration-500 ${getPositionClass(offset)}`}
               >
                 <div className="flex text-center">
-                  <div className="font-antonio safari-text-stroke uppercase">{word}</div>
+                  <div className="font-antonio text-fluid safari-text-stroke uppercase">{word}</div>
                   {isMain && (
                     <span className="ml-4 text-easternBlue text-5xl font-bold">
                       0{index + 1}
