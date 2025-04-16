@@ -16,7 +16,7 @@ import 'aos/dist/aos.css';
 export default function Aos() {
 
   const ref1 = useRef(null);
-const ref2 = useRef(null);
+  const ref2 = useRef(null);
 
   const isInView = useInView(ref1, { once: false, margin: "-100px 0px" });
   const isInView2 = useInView(ref2, { once: false, margin: "-100px 0px" });
@@ -88,7 +88,7 @@ const ref2 = useRef(null);
             </div>
           </div>
           <motion.img
-            initial={{ y:0, opacity: .5 }} // Empieza visible en su posición original
+            initial={{ y: 0, opacity: .5 }} // Empieza visible en su posición original
             animate={isInView ? { y: -1000 } : { y: 0 }} // Sube cuando entra en vista
             transition={{ duration: 12, ease: "easeOut", delay: 1 }} // Suaviza el movimiento
             className="absolute right-[25vw] w-[15vw] h-auto top-[25%]"
@@ -99,7 +99,7 @@ const ref2 = useRef(null);
       </div>
 
       <AnimatedAos />
-  
+
       <div className="bg-custom-aon">
         <div className="w-full flex justify-center ">
           <div className="relative w-1/3 flex justify-end "><Image data-aos="zoom-in-right"
@@ -148,7 +148,7 @@ const ref2 = useRef(null);
 
             <motion.img
               initial={{ opacity: 0, y: 30 }}
-              animate={isInView2? { opacity: 1, y: 0 } : {}}
+              animate={isInView2 ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1, delay: 1 }}
               className="relative w-[38.8vw] h-auto right-[9vw] top-[10vw] object-contain z-10"
               src="/images-proyecto/aon-imagen.png"

@@ -5,68 +5,68 @@ const DiagonalSlider = ({
   left,
   top,
   images,
-  speed = 30000, // Velocidad en milisegundos (ajusta aquí)
+  speed = 30000,
+  reverse = false,
 }: {
   left: string;
   top: string;
   images: string[];
   speed?: number;
+  reverse?: boolean;
 }) => {
   const columnRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (!columnRef.current) return;
+    const el = columnRef.current;
+    if (!el) return;
 
-    let position = 0;
+    // Posición inicial
+    let position = reverse ? -50 : 0;
     let frameId: number;
-    const speedLevels = [0.05, 0.01, 0.1]; // Diferentes velocidades
-    let currentSpeed = speedLevels[0]; // Comienza con la velocidad más baja
-    const segmentDuration = speed / 6; // Cada segmento de velocidad será un tercio de la duración total
-    let timeElapsed = 0; // Tiempo transcurrido para controlar la velocidad
+    const pixelsPerFrame = 0.05;
 
-    function animate() {
-      if (!columnRef.current) return;
+    const step = () => {
+      if (!el) return;
 
-      // Controlar el tiempo transcurrido
-      timeElapsed += 16.67; // Aproximadamente 60 FPS (1000ms / 60 = 16.67ms por frame)
+      // Mover
+      position += reverse ? pixelsPerFrame : -pixelsPerFrame;
+      el.style.transform = `translateY(${position}%)`;
 
-      // Cambiar velocidad después de cada fase
-      if (timeElapsed >= segmentDuration * 2) {
-        currentSpeed = speedLevels[2]; // Fase 3 (más rápido)
-      } else if (timeElapsed >= segmentDuration) {
-        currentSpeed = speedLevels[1]; // Fase 2 (medio)
-      } else {
-        currentSpeed = speedLevels[0]; // Fase 1 (más lento)
+      // Cuando llegue a fin, reiniciar sin transición
+      if ((!reverse && position <= -50) || (reverse && position >= 0)) {
+        el.style.transition = "none";
+        position = reverse ? -50 : 0;
+        el.style.transform = `translateY(${position}%)`;
+
+        // Forzar reflow para aplicar el nuevo transform sin transición
+        el.getBoundingClientRect();
+
+        // Activar transición de nuevo
+        el.style.transition = "transform 0.1s linear";
       }
 
-      // Actualizar la posición
-      position -= currentSpeed; // Controla la velocidad del desplazamiento
+      frameId = requestAnimationFrame(step);
+    };
 
-      // Cuando la posición llegue a -70, reiniciar la posición a 0 y mantener la velocidad
-      if (position <= -70) {
-        position = 0; // Reinicia la posición
-        timeElapsed = 0; // Reinicia el tiempo para la siguiente fase
-        currentSpeed = speedLevels[0]; // Establece la velocidad a la más baja
-      }
-    
-      columnRef.current.style.transform = `translateY(${position}%)`;
-      frameId = requestAnimationFrame(animate);
-    }
-
-    frameId = requestAnimationFrame(animate);
+    // Iniciar con transición
+    el.style.transition = "transform 0.1s linear";
+    frameId = requestAnimationFrame(step);
 
     return () => cancelAnimationFrame(frameId);
-  }, [speed]);
+  }, [reverse]);
+
+  // Duplicamos para crear un bucle suave
+  const duplicatedImages = [...images, ...images];
 
   return (
-    <div className={`absolute z-10  rotate-[330deg] ${top} ${left} origin-top`}>
-      <div ref={columnRef} className="flex-col gap-20 flex">
-        {images.concat(images).map((src, index) => (
+    <div className={`absolute z-10 rotate-[330deg] ${top} ${left} origin-top`}>
+      <div ref={columnRef} className="flex flex-col gap-20">
+        {duplicatedImages.map((src, i) => (
           <img
-            key={index}
+            key={i}
             className="w-48 z-10"
             src={src}
-            alt={`imagen-${index}`}
+            alt={`img-${i}`}
             width={800}
             height={1111}
           />

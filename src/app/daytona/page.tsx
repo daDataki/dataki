@@ -62,7 +62,7 @@ export default function Daytona() {
           </video>
 
         </div>
-        <div className='relative pt-32  bg-[#ca262c] bg-gradient-to-t from-black/90 to-transparent '>
+        <div className='relative pt-12 lg:pt-0 bg-[#ca262c] bg-gradient-to-t from-black/90 to-transparent '>
           <Image src="/images-proyecto/Mask-group-daytona.png" alt="Phone Mockup" className="absolute w-[80%] top-0 right-0" width={450} height={800} />
           <div className="relative flex flex-col justify-center items-start pb-32 pl-[7.35vw] sm:top-[1vh] md:top-[2vh] lg:top-[8vh] xl:top-[13vh] 2xl:top-[17vh] text-white font-antonio font-semibold font-production uppercase">
             <div className='absolute w-full top-[-7%] left-[40%] -translate-x-[7.35vw] z-20'>

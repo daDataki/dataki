@@ -1,4 +1,6 @@
 
+"use client";
+import { useRef } from "react";
 import Hero from '../../components/hero/Hero';
 import claro from '../../../public/images-proyecto/heroClaro.png';
 import Image from 'next/image';
@@ -6,9 +8,17 @@ import './claro.css'
 import PreviousNext from '../../components/previous-next/PreviousNext'
 import Footer from '../../components/footer/Footer'
 import ClaroSessions from '@/components/claro-sessions/page';
+import { motion, useInView } from "framer-motion";
+
 
 export default function Claro() {
+   const ref1 = useRef(null);
+const ref2 = useRef(null);
+const ref3 = useRef(null);
 
+const isInView1 = useInView(ref1, { once: false, margin: "-100px 0px" });
+const isInView2 = useInView(ref2, { once: false, margin: "-100px 0px" });
+const isInView3 = useInView(ref3, { once: false, margin: "-100px 0px" });
     return (
         <>
             <div className='overflow-clip'>
@@ -45,7 +55,7 @@ export default function Claro() {
                     <div className='flex justify-center bg-black mt-[-1px] pb-32'>
                         <video
                             className="object-cover"
-                            autoPlay
+                            loop
                             muted
                             playsInline
                             controls
@@ -77,7 +87,11 @@ export default function Claro() {
                             <span>media</span>
                             <span>media</span>
                         </div>
-                        <Image
+                         <motion.img
+                           ref={ref1}
+                           initial={{ scale: .2 }}
+                           animate={isInView1 ? { scale: 1 } : { scale: .2 }}
+                           transition={{ duration: 3, ease: "easeOut" }}
                             className="w-[20.48vw] h-[20.48vw] object-cover"
                             src="/images-proyecto/Claro-Portabilidad-Plan5GB-1.png"
                             alt="Claro-Portabilidad-Plan5GB-1"
@@ -93,13 +107,17 @@ export default function Claro() {
                         />
                     </div>
                     <div className='w-full flex justify-center items-center'>
-                        <Image
-                            className="w-[20.48vw] h-[20.48vw] object-cover z-10"
+                    <motion.img
+                           ref={ref2}
+                           initial={{ scale: .2 }}
+                           animate={isInView2 ? { scale: 1 } : { scale: .2 }}
+                           transition={{ duration: 3, ease: "easeOut" }}
+                            className="w-[20.48vw] h-[20.48vw] object-cover z-30"
                             src="/images-proyecto/Claro-Portabilidad-2.png"
-                            alt="Claro-Portabilidad-Plan5GB-1"
-                            width={295}
-                            height={295}
+                            alt="Claro-Portabilidad-Plan5GB-2"
+                     
                         />
+                        
                     </div>
                     <div className='relative flex justify-between items-center bottom-[3vw]'>
                         <Image
@@ -116,13 +134,17 @@ export default function Claro() {
                             width={295}
                             height={295}
                         />
-                        <Image
+                         <motion.img
+                           ref={ref3}
+                           initial={{ scale: .2 }}
+                           animate={isInView3 ? { scale: 1 } : { scale: .2 }}
+                           transition={{ duration: 3, ease: "easeOut" }}
                             className="w-[20.48vw] h-[20.48vw] object-cover"
                             src="/images-proyecto/Claro-Portabilidad-Plan5GB-3.png"
-                            alt="Claro-Portabilidad-Plan5GB-1"
-                            width={295}
-                            height={295}
+                            alt="Claro-Portabilidad-Plan5GB-2"
+                     
                         />
+                        
 
                     </div>
 

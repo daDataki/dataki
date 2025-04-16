@@ -180,6 +180,7 @@ export default function VidaEstilo() {
 
           />
           <DiagonalSlider
+            reverse
             left="left-[8rem]"
             top="top-0"
             images={["/images-proyecto/image3.png", "/images-proyecto/image4.png", "/images-proyecto/image5.png", "/images-proyecto/image4.png", "/images-proyecto/image5.png"]}
@@ -192,6 +193,7 @@ export default function VidaEstilo() {
 
           />
           <DiagonalSlider
+            reverse
             left="left-[60rem]"
             top="top-0"
             images={["/images-proyecto/image8.png", "/images-proyecto/image9.png", "/images-proyecto/image8.png", "/images-proyecto/image9.png", "/images-proyecto/image8.png"]}
