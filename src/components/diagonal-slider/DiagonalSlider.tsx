@@ -5,13 +5,13 @@ const DiagonalSlider = ({
   left,
   top,
   images,
-  speed = 30000,
+  //speed = 30000,
   reverse = false,
 }: {
   left: string;
   top: string;
   images: string[];
-  speed?: number;
+  //speed?: number;
   reverse?: boolean;
 }) => {
   const columnRef = useRef<HTMLDivElement | null>(null);
