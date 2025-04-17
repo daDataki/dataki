@@ -5,13 +5,11 @@ const DiagonalSlider = ({
   left,
   top,
   images,
-  //speed = 30000,
   reverse = false,
 }: {
   left: string;
   top: string;
   images: string[];
-  //speed?: number;
   reverse?: boolean;
 }) => {
   const columnRef = useRef<HTMLDivElement | null>(null);
@@ -20,42 +18,56 @@ const DiagonalSlider = ({
     const el = columnRef.current;
     if (!el) return;
 
-    // Posición inicial
     let position = reverse ? -50 : 0;
     let frameId: number;
-    const pixelsPerFrame = 0.05;
+    const cycleLength = 50; // % de movimiento
+
+    // Fases con easing suave
+    const speedPhases = [
+      { start: 0, end: 0.33, min: 0.02, max: 0.05 },
+      { start: 0.33, end: 0.66, min: 0.05, max: 0.08 },
+      { start: 0.66, end: 1.0, min: 0.08, max: 0.03 },
+    ];
+
+    // Easing: easeInOutQuad
+    const easeInOutQuad = (t: number) =>
+      t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+    const getCurrentSpeed = () => {
+      const progress = Math.abs(position / cycleLength); // de 0 a 1
+      const phase = speedPhases.find(p => progress >= p.start && progress <= p.end);
+      if (!phase) return 0.05;
+
+      const phaseProgress = (progress - phase.start) / (phase.end - phase.start); // 0 a 1
+      const eased = easeInOutQuad(phaseProgress);
+      return phase.min + (phase.max - phase.min) * eased;
+    };
 
     const step = () => {
       if (!el) return;
 
-      // Mover
-      position += reverse ? pixelsPerFrame : -pixelsPerFrame;
+      const speed = getCurrentSpeed();
+      position += reverse ? speed : -speed;
       el.style.transform = `translateY(${position}%)`;
 
-      // Cuando llegue a fin, reiniciar sin transición
+      // Reset cuando llega al final
       if ((!reverse && position <= -50) || (reverse && position >= 0)) {
         el.style.transition = "none";
         position = reverse ? -50 : 0;
         el.style.transform = `translateY(${position}%)`;
-
-        // Forzar reflow para aplicar el nuevo transform sin transición
-        el.getBoundingClientRect();
-
-        // Activar transición de nuevo
+        el.getBoundingClientRect(); // Forzar reflow
         el.style.transition = "transform 0.1s linear";
       }
 
       frameId = requestAnimationFrame(step);
     };
 
-    // Iniciar con transición
     el.style.transition = "transform 0.1s linear";
     frameId = requestAnimationFrame(step);
 
     return () => cancelAnimationFrame(frameId);
   }, [reverse]);
 
-  // Duplicamos para crear un bucle suave
   const duplicatedImages = [...images, ...images];
 
   return (

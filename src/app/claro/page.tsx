@@ -1,6 +1,6 @@
 
 "use client";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import Hero from '../../components/hero/Hero';
 import claro from '../../../public/images-proyecto/heroClaro.png';
 import Image from 'next/image';
@@ -12,13 +12,37 @@ import { motion, useInView } from "framer-motion";
 
 
 export default function Claro() {
-   const ref1 = useRef(null);
-const ref2 = useRef(null);
-const ref3 = useRef(null);
+    const ref1 = useRef(null);
+    const ref2 = useRef(null);
+    const ref3 = useRef(null);
 
-const isInView1 = useInView(ref1, { once: false, margin: "-100px 0px" });
-const isInView2 = useInView(ref2, { once: false, margin: "-100px 0px" });
-const isInView3 = useInView(ref3, { once: false, margin: "-100px 0px" });
+    const isInView1 = useInView(ref1, { once: false, margin: "-100px 0px" });
+    const isInView2 = useInView(ref2, { once: false, margin: "-100px 0px" });
+    const isInView3 = useInView(ref3, { once: false, margin: "-100px 0px" });
+
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setOrder(([a, b, c]) => [c, a, b]); // Rotación simple
+        }, 3000); // Cada 3 segundos
+
+        return () => clearInterval(interval);
+    }, []);
+
+    const images = [
+        "/images-proyecto/Claro-1.png",
+        "/images-proyecto/Claro-2.png",
+        "/images-proyecto/Claro-3.png"
+    ];
+
+    const positions = [
+        { x: "-24vw", y: "4.5vw", zIndex: 10 }, // izquierda
+        { x: "1vw", y: "-5vw", zIndex: 10 },   // centro (sobre el mockup)
+        { x: "26vw", y: "4vw", zIndex: 40 },   // derecha
+    ];
+
+    const [order, setOrder] = useState([0, 1, 2]);
+
     return (
         <>
             <div className='overflow-clip'>
@@ -87,11 +111,11 @@ const isInView3 = useInView(ref3, { once: false, margin: "-100px 0px" });
                             <span>media</span>
                             <span>media</span>
                         </div>
-                         <motion.img
-                           ref={ref1}
-                           initial={{ scale: .2 }}
-                           animate={isInView1 ? { scale: 1 } : { scale: .2 }}
-                           transition={{ duration: 3, ease: "easeOut" }}
+                        <motion.img
+                            ref={ref1}
+                            initial={{ scale: .2 }}
+                            animate={isInView1 ? { scale: 1 } : { scale: .2 }}
+                            transition={{ duration: 3, ease: "easeOut" }}
                             className="w-[20.48vw] h-[20.48vw] object-cover"
                             src="/images-proyecto/Claro-Portabilidad-Plan5GB-1.png"
                             alt="Claro-Portabilidad-Plan5GB-1"
@@ -107,17 +131,17 @@ const isInView3 = useInView(ref3, { once: false, margin: "-100px 0px" });
                         />
                     </div>
                     <div className='w-full flex justify-center items-center'>
-                    <motion.img
-                           ref={ref2}
-                           initial={{ scale: .2 }}
-                           animate={isInView2 ? { scale: 1 } : { scale: .2 }}
-                           transition={{ duration: 3, ease: "easeOut" }}
+                        <motion.img
+                            ref={ref2}
+                            initial={{ scale: .2 }}
+                            animate={isInView2 ? { scale: 1 } : { scale: .2 }}
+                            transition={{ duration: 3, ease: "easeOut" }}
                             className="w-[20.48vw] h-[20.48vw] object-cover z-30"
                             src="/images-proyecto/Claro-Portabilidad-2.png"
                             alt="Claro-Portabilidad-Plan5GB-2"
-                     
+
                         />
-                        
+
                     </div>
                     <div className='relative flex justify-between items-center bottom-[3vw]'>
                         <Image
@@ -134,57 +158,54 @@ const isInView3 = useInView(ref3, { once: false, margin: "-100px 0px" });
                             width={295}
                             height={295}
                         />
-                         <motion.img
-                           ref={ref3}
-                           initial={{ scale: .2 }}
-                           animate={isInView3 ? { scale: 1 } : { scale: .2 }}
-                           transition={{ duration: 3, ease: "easeOut" }}
+                        <motion.img
+                            ref={ref3}
+                            initial={{ scale: .2 }}
+                            animate={isInView3 ? { scale: 1 } : { scale: .2 }}
+                            transition={{ duration: 3, ease: "easeOut" }}
                             className="w-[20.48vw] h-[20.48vw] object-cover"
                             src="/images-proyecto/Claro-Portabilidad-Plan5GB-3.png"
                             alt="Claro-Portabilidad-Plan5GB-2"
-                     
+
                         />
-                        
+
 
                     </div>
 
                 </div>
-                <div className="relative flex justify-center  gap-14 w-full  mt-[-1px] py-32 bg-[linear-gradient(to_bottom,_#131313_0%,_#131313_40%,_#E20001_40%,_#E20001_100%)]">
-                    <div className='relative'>
+                <div className="relative flex justify-center gap-14 w-full mt-[-1px] py-32 bg-[linear-gradient(to_bottom,_#131313_0%,_#131313_40%,_#E20001_40%,_#E20001_100%)]">
+                    {/* Mockup fijo */}
+                    <div className="relative z-10 right-[24vw] top-1.5">
                         <Image
-                            className="w-[20.48vw] h-[41.94vw] object-cover"
+                            className="w-[20.48vw] h-[41.5vw] object-cover"
                             src="/images-proyecto/claro-MIl-Aires-Mockup.png"
                             alt="claro-MIl-Aires-Mockup"
                             width={295}
-                            height={295}
-                        />
-                        <Image
-                            className="absolute left-[1vw] top-[4.3vw] w-[18.8vw] object-cover"
-                            src="/images-proyecto/Claro-1.png"
-                            alt="Claro-Portabilidad-PlanMulticontenidos-RRSSCarrusel-Story-ABR24_1"
-                            width={280}
                             height={500}
                         />
                     </div>
 
-                    <div className='relative'>
-                        <Image
-                            className="relative top-[-6vw] object-cover  w-[18.8vw]"
-                            src="/images-proyecto/Claro-2.png"
-                            alt="Claro-Portabilidad-PlanMulticontenidos02"
-                            width={295}
-                            height={295}
-                        />
-                    </div>
-                    <div>
-                        <Image
-                            className="relative top-[6vw] object-cover  w-[18.8vw]"
-                            src="/images-proyecto/Claro-3.png"
-                            alt="Claro-Portabilidad-PlanMulticontenidos-RRSSCarrusel-Story-ABR24_03"
-                            width={295}
-                            height={295}
-                        />
-                    </div>
+                    {/* Imágenes animadas */}
+                    {order.map((imgIndex, idx) => (
+                        <motion.div
+                            key={imgIndex}
+                            animate={{
+                                x: positions[idx].x,
+                                y: positions[idx].y,
+                                zIndex: positions[idx].zIndex,
+                            }}
+                            transition={{ duration: 1, ease: "easeInOut" }}
+                            className="absolute"
+                        >
+                            <Image
+                                className="object-cover w-[18.8vw]"
+                                src={images[imgIndex]}
+                                alt={`imagen-${idx}`}
+                                width={295}
+                                height={500}
+                            />
+                        </motion.div>
+                    ))}
                 </div>
                 <div className='bg-[#E20001] mt-[-1px]'>
                     <h2 className=' text-center font-antonio font-medium text-white font-web text-bordered uppercase'>web <br />
