@@ -43,8 +43,12 @@ export default function ClaroSessions() {
     <div
       ref={containerRef}
       className="relative w-[22.29vw] h-[574px] mx-auto overflow-hidden"
-      style={{ width: '80vw' }} 
+      style={{ width: '80vw' }}
     >
+      <div className='absolute font-web text-bordered flex flex-col top-1/2 -translate-y-1/2'>
+        <span>SOCIAL</span>
+        <span>MEDIA</span>
+      </div>
       <img
         ref={imgRef}
         src={images[imageIndex]}

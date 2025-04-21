@@ -1,0 +1,9 @@
+.font-web {
+    font-size: clamp(66px, 13.88vw, 300px);
+    line-height: clamp(66px, 12vw, 280px);
+  }
+  .text-bordered {
+    color: transparent;
+    /* Color de la letra */
+    -webkit-text-stroke: 2px white;
+  }

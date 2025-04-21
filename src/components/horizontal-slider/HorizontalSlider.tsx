@@ -8,11 +8,7 @@ const chunkArray = (arr: string[], size: number) => {
   for (let i = 0; i < arr.length; i += size) {
     let chunk = arr.slice(i, i + size);
 
-    // Si el chunk está incompleto, rellenar desde el inicio
-    if (chunk.length < size) {
-      const needed = size - chunk.length;
-      chunk = [...chunk, ...arr.slice(0, needed)];
-    }
+    
 
     result.push(chunk);
   }

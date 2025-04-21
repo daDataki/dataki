@@ -79,10 +79,11 @@ export default function Claro() {
                     <div className='flex justify-center bg-black mt-[-1px] pb-32'>
                         <video
                             className="object-cover"
+                            autoPlay
                             loop
                             muted
                             playsInline
-                            controls
+                           
                         >
                             <source src="/video/claroVideo.mp4" type="video/mp4" />
                         </video>
