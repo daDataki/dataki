@@ -4,16 +4,16 @@ import Image from 'next/image';
 import getImages from '@/utils/images';
 
 const chunkArray = (arr: string[], size: number) => {
-  const result = [];
+  const result: string[][] = [];
+
   for (let i = 0; i < arr.length; i += size) {
-    let chunk = arr.slice(i, i + size);
-
-    
-
+    const chunk = arr.slice(i, i + size); 
     result.push(chunk);
   }
+
   return result;
 };
+
 
 
 export default async function HorizontalSlider() {
