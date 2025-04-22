@@ -38,7 +38,7 @@ export default function Aos() {
               "Video Production",
               "Front-End Development",
               "Business & Digital Strategy",
-              "Graphic & digital design",
+              "Graphic & Digital Design",
             ],
           }}
           aboutInfo={<span>Aon <br />Work Showcase</span>}
