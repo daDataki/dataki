@@ -197,7 +197,6 @@ export default function Claro() {
 
                     {/* Imágenes animadas */}
                     {order.map((imgIndex, idx) => {
-                        const isCenter = idx === 0;
 
                         return (
                             <motion.div
