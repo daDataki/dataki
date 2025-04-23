@@ -126,7 +126,7 @@ export default function Aos() {
             height={896}
           />
           </div>
-          <div className="w-1/2 flex justify-end">
+          <div className="w-1/2 flex justify-end pt-20">
             <h2 className="relative top-[4vw] right-[6vw] font-normal font-antonio font-empowering text-white uppercase ">Empowering businesses <br /> with smarter,  safer <br /> solutions  for tomorrow.</h2>
           </div>
         </div>

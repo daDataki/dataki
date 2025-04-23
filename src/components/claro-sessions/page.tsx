@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import './claroSessions.css';
 
 const images = [
   '/images-proyecto/ClaroSessions-1.png',
@@ -45,7 +46,7 @@ export default function ClaroSessions() {
       className="relative w-[22.29vw] h-[574px] mx-auto overflow-hidden"
       style={{ width: '80vw' }}
     >
-      <div className='absolute font-web text-bordered flex flex-col top-1/2 -translate-y-1/2'>
+      <div className='absolute font-web1 text-bordered flex flex-col top-1/2 -translate-y-1/2'>
         <span className='uppercase font-antonio'>SOCIAL</span>
         <span className='uppercase font-antonio'>MEDIA</span>
       </div>

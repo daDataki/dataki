@@ -8,7 +8,7 @@ import './claro.css'
 import PreviousNext from '../../components/previous-next/PreviousNext'
 import Footer from '../../components/footer/Footer'
 import ClaroSessions from '@/components/claro-sessions/page';
-import { motion, useInView } from "framer-motion";
+import { motion, useInView} from "framer-motion";
 
 
 export default function Claro() {
@@ -20,14 +20,22 @@ export default function Claro() {
     const isInView2 = useInView(ref2, { once: false, margin: "-100px 0px" });
     const isInView3 = useInView(ref3, { once: false, margin: "-100px 0px" });
 
+    const [order, setOrder] = useState([0, 1, 2]);
+    const [previousCenterImage, setPreviousCenterImage] = useState<number | null>(null);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setOrder(([a, b, c]) => [c, a, b]); // Rotación simple
-        }, 3000); // Cada 3 segundos
-
+          const newOrder = [order[2], order[0], order[1]];
+          setPreviousCenterImage(order[0]); 
+          setOrder(newOrder);
+      
+          setTimeout(() => {
+            setPreviousCenterImage(null);
+          }, 950); // tiempo de fade
+        }, 1000);
+      
         return () => clearInterval(interval);
-    }, []);
+      }, [order]);
 
     const images = [
         "/images-proyecto/Claro-1.png",
@@ -36,12 +44,13 @@ export default function Claro() {
     ];
 
     const positions = [
-        { x: "-24vw", y: "4.5vw", zIndex: 10 }, // izquierda
+        { x: "-24vw", y: "4.5vw", zIndex: 50 }, // izquierda
         { x: "1vw", y: "-5vw", zIndex: 10 },   // centro (sobre el mockup)
-        { x: "26vw", y: "4vw", zIndex: 40 },   // derecha
+        { x: "26vw", y: "4vw", zIndex: 10 },   // derecha
     ];
 
-    const [order, setOrder] = useState([0, 1, 2]);
+
+
 
     return (
         <>
@@ -59,9 +68,9 @@ export default function Claro() {
                             name: "CLARO",
                             categories: [
                                 "Video Production",
-                                "Social Media & graphic design",
+                                "Social Media & Graphic Design",
                                 "Web Design & Development",
-                                "Back-end & Front-End Development",
+                                "Back-End & Front-End Development",
                             ],
                         }}
                         aboutInfo={<span>Claro <br />Work Showcase</span>}
@@ -83,7 +92,7 @@ export default function Claro() {
                             loop
                             muted
                             playsInline
-                           
+
                         >
                             <source src="/video/claroVideo.mp4" type="video/mp4" />
                         </video>
@@ -178,7 +187,7 @@ export default function Claro() {
                     {/* Mockup fijo */}
                     <div className="relative z-10 right-[24vw] top-1.5">
                         <Image
-                            className="w-[20.48vw] h-[41.5vw] object-cover"
+                            className="w-[20.48vw] h-[41.8vw] object-cover"
                             src="/images-proyecto/claro-MIl-Aires-Mockup.png"
                             alt="claro-MIl-Aires-Mockup"
                             width={295}
@@ -187,29 +196,58 @@ export default function Claro() {
                     </div>
 
                     {/* Imágenes animadas */}
-                    {order.map((imgIndex, idx) => (
+                    {order.map((imgIndex, idx) => {
+                        const isCenter = idx === 0;
+
+                        return (
+                            <motion.div
+                                key={imgIndex}
+                                animate={{
+                                    x: positions[idx].x,
+                                    y: positions[idx].y,
+                                    zIndex: positions[idx].zIndex,
+                                    opacity: 1,
+                                }}
+                                transition={{ duration: 1 }}
+                                className="absolute"
+                            >
+                                <Image
+                                    className="object-cover w-[18.9vw]"
+                                    src={images[imgIndex]}
+                                    alt={`imagen-${idx}`}
+                                    width={295}
+                                    height={500}
+                                />
+                            </motion.div>
+                        );
+                    })}
+
+                    {/* Imagen anterior del centro (desvaneciéndose) */}
+                    {previousCenterImage !== null && (
                         <motion.div
-                            key={imgIndex}
-                            animate={{
-                                x: positions[idx].x,
-                                y: positions[idx].y,
-                                zIndex: positions[idx].zIndex,
-                            }}
-                            transition={{ duration: 1, ease: "easeInOut" }}
+                            initial={{ opacity: 1 }}
+                            animate={{ opacity: 1}}
+                            transition={{ duration: 1}}
                             className="absolute"
+                            style={{
+                                x: positions[0].x,
+                                y: positions[0].y,
+                                zIndex: positions[2].zIndex,
+                            }}
                         >
                             <Image
-                                className="object-cover w-[18.8vw]"
-                                src={images[imgIndex]}
-                                alt={`imagen-${idx}`}
+                                className="object-cover w-[19vw] "
+                                src={images[previousCenterImage]}
+                                alt="prev-img"
                                 width={295}
                                 height={500}
                             />
                         </motion.div>
-                    ))}
+                    )}
+
                 </div>
                 <div className='bg-[#E20001] mt-[-1px]'>
-                    <h2 className=' text-center font-antonio font-medium text-white font-web text-bordered uppercase'>web <br />
+                    <h2 className='sticky top-0 mb-32 text-center font-antonio font-medium text-white font-web text-bordered uppercase'>web <br />
                         design</h2>
                     <div className="relative w-[70%] z-20 mx-auto top-[-10vw] ">
                         {/* Contenedor con overflow-hidden para simular el marco de la pantalla */}

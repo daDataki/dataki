@@ -12,6 +12,9 @@
     font-size: clamp(80px, 16.66vw, 360px);
     line-height: clamp(80px, 16.66vw, 360px);
   }
+
+  
+
   .text-bordered {
     color: transparent;
     /* Color de la letra */

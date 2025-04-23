@@ -1,6 +1,6 @@
-.font-web {
-  font-size: clamp(80px, 16.66vw, 360px);
-  line-height: clamp(80px, 16.66vw, 360px);
+.font-web1 {
+  font-size: clamp(66px, 13.88vw, 300px);
+  line-height: clamp(66px, 13.88vw, 300px);
 }
   .text-bordered {
     color: transparent;
