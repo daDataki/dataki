@@ -9,7 +9,7 @@ const DEFAULT_BG = 'bg-easternBlue bg-gradient-to-b from-black/80 to-transparent
 export default function Footer({ background = DEFAULT_BG }: FooterProps) {
   return (
     <footer id="footer" className={`relative px-24 py-12 mt-[-1px] sm:py-20 ${background}`}>
-      <img className='absolute w-[63%] top-[-6vw] left-1/2 -translate-x-[36%] ' src="images-proyecto/footer-new.png" alt="Footer-Mapa-Lila" />
+      <img className='absolute w-[63%] top-1/2 left-1/2 -translate-y-1/2 -translate-x-[35%] ' src="images-proyecto/Footer-Mapa-Lila.png" alt="Footer-Mapa-Lila" />
       <nav className=" text-white z-20">
         <div className="max-sm:block max-sm:text-center flex justify-between items-center h-auto">
           <p className="font-normal max-sm:mb-12 text-let font-signature z-30 text-[#BFAEFF]">

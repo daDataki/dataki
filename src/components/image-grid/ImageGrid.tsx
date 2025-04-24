@@ -124,7 +124,7 @@ export default function ImageGrid() {
         {/* Primer fila */}
         <div
           ref={row1Ref}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center mb-responsive mt-responsive max-sm:mb-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center  mb-12 max-sm:mb-8"
         >
           {images.slice(0, 3).map((src, i) => {
             const globalIndex = i;
@@ -156,7 +156,7 @@ export default function ImageGrid() {
         {/* Segunda fila */}
         <div
           ref={row2Ref}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center mb-responsive mt-responsive max-sm:mb-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center  mb-12 max-sm:mb-8"
         >
           {images.slice(3, 6).map((src, i) => {
             const globalIndex = i + 3;
@@ -188,7 +188,7 @@ export default function ImageGrid() {
         {/* Tercera fila */}
         <div
           ref={row3Ref}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center mb-responsive mt-responsive max-sm:mb-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center  mb-12 max-sm:mb-8"
         >
           {images.slice(6, 9).map((src, i) => {
             const globalIndex = i + 6;

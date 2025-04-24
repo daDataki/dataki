@@ -8,7 +8,7 @@ import './claro.css'
 import PreviousNext from '../../components/previous-next/PreviousNext'
 import Footer from '../../components/footer/Footer'
 import ClaroSessions from '@/components/claro-sessions/page';
-import { motion, useInView} from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 
 export default function Claro() {
@@ -22,26 +22,39 @@ export default function Claro() {
 
     const [order, setOrder] = useState([0, 1, 2]);
     const [previousCenterImage, setPreviousCenterImage] = useState<number | null>(null);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-          const newOrder = [order[2], order[0], order[1]];
-          setPreviousCenterImage(order[0]); 
-          setOrder(newOrder);
-      
-          setTimeout(() => {
-            setPreviousCenterImage(null);
-          }, 950); // tiempo de fade
-        }, 1000);
-      
-        return () => clearInterval(interval);
-      }, [order]);
+    const [currentIndex, setCurrentIndex] = useState(2);
 
     const images = [
         "/images-proyecto/Claro-1.png",
         "/images-proyecto/Claro-2.png",
         "/images-proyecto/Claro-3.png"
     ];
+
+    useEffect(() => {
+        let direction = 1; // 1 para incrementar, -1 para decrementar
+
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => {
+                // Cambia la dirección si llegas a los límites
+                if (prevIndex === images.length - 1) {
+                    direction = -1; // Cambia a decrementar
+                } else if (prevIndex === 0) {
+                    direction = 1; // Cambia a incrementar
+                }
+
+                // Retorna el nuevo índice basado en la dirección
+                return prevIndex + direction;
+            });
+        }, 1000);
+
+
+        return () => {
+            clearInterval(interval);
+
+        }
+    }, [images.length]);
+
+
 
     const positions = [
         { x: "-24vw", y: "4.5vw", zIndex: 50 }, // izquierda
@@ -99,8 +112,9 @@ export default function Claro() {
                     </div>
 
                 </div>
-                <div className='bg-[#131313] mt-[-1px] pt-32 pb-12 '>
-                    <div className='sticky top-0 w-full flex'>
+                <div className='bg-[#131313] mt-[-1px]  pb-12'>
+                   
+                    <div className='relative top-[10vw] w-full flex '>
                         <div className='relative w-1/2 flex left-1/3 items-center'><Image
                             className="w-[5.69vw] h-[5.69vw] object-cover"
                             src="/images-proyecto/claro-rectangule.png"
@@ -109,53 +123,35 @@ export default function Claro() {
                             height={82}
                         />
                         </div>
-                        <div className=' w-1/2 font-antonio font-medium font-empowering text-white'>
-                            <h2>
-                                Bold designs <br /> empowering seamless <br /> digital journeys.
-                            </h2>
+
+                    </div>
+                    <div className='relative top-[8vw] pl-12 text-bordered font-web font-antonio font-medium'>
+                        <h2 className='uppercase text-star'>video</h2>
+                    </div>
+
+                    <div className='flex justify-end mt-[-1px] w-full'>
+                        <video
+                            className="relative object-cover  w-[58.95vw] h-auto right-[3vw] z-10"
+                            controls
+                            playsInline
+                        >
+                            <source src="/video/claro-video-2.mp4" type="video/mp4" />
+                        </video>
+                        <div className='relative flex justify-end items-star w-fit'>
+
+                            <Image
+                                className="w-[10.48vw] h-[20.48vw] object-cover"
+                                src="/images-proyecto/claro-Ellipse-r.png"
+                                alt="claro-Ellipse-r"
+                                width={295}
+                                height={295}
+                            />
                         </div>
+
                     </div>
                     <div className='relative flex justify-between items-center'>
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 w-[35.62vw] h-[35.73vw] font-media bg-[#E20001] flex flex-col justify-center items-center text-black text-xl font-semibold uppercase">
-                            <span>media</span>
-                            <span>media</span>
-                            <span>media</span>
-                        </div>
-                        <motion.img
-                            ref={ref1}
-                            initial={{ scale: .2 }}
-                            animate={isInView1 ? { scale: 1 } : { scale: .2 }}
-                            transition={{ duration: 3, ease: "easeOut" }}
-                            className="w-[20.48vw] h-[20.48vw] object-cover"
-                            src="/images-proyecto/Claro-Portabilidad-Plan5GB-1.png"
-                            alt="Claro-Portabilidad-Plan5GB-1"
-                            width={295}
-                            height={295}
-                        />
                         <Image
-                            className="w-[10.48vw] h-[20.48vw] object-cover"
-                            src="/images-proyecto/claro-Ellipse-r.png"
-                            alt="claro-Ellipse-r"
-                            width={295}
-                            height={295}
-                        />
-                    </div>
-                    <div className='w-full flex justify-center items-center'>
-                        <motion.img
-                            ref={ref2}
-                            initial={{ scale: .2 }}
-                            animate={isInView2 ? { scale: 1 } : { scale: .2 }}
-                            transition={{ duration: 3, ease: "easeOut" }}
-                            className="w-[20.48vw] h-[20.48vw] object-cover z-30"
-                            src="/images-proyecto/Claro-Portabilidad-2.png"
-                            alt="Claro-Portabilidad-Plan5GB-2"
-
-                        />
-
-                    </div>
-                    <div className='relative flex justify-between items-center bottom-[3vw]'>
-                        <Image
-                            className="absolute top-1/2 transform -translate-y-1/2 left-[22%] w-[5.69vw] h-[5.69vw] object-cover"
+                            className="absolute top-1/2 transform -translate-y-1/2 left-[16%] w-[5.69vw] h-[5.69vw] object-cover"
                             src="/images-proyecto/claro-rectangule.png"
                             alt="claro-rectangule"
                             width={82}
@@ -168,84 +164,61 @@ export default function Claro() {
                             width={295}
                             height={295}
                         />
-                        <motion.img
-                            ref={ref3}
-                            initial={{ scale: .2 }}
-                            animate={isInView3 ? { scale: 1 } : { scale: .2 }}
-                            transition={{ duration: 3, ease: "easeOut" }}
-                            className="w-[20.48vw] h-[20.48vw] object-cover"
-                            src="/images-proyecto/Claro-Portabilidad-Plan5GB-3.png"
-                            alt="Claro-Portabilidad-Plan5GB-2"
-
-                        />
-
-
                     </div>
-
+                    <div className='relative top-[-24vw] text-bordered font-web font-antonio font-medium text-right pr-12'>
+                        <h2 className='uppercase'>production</h2>
+                    </div>
+                    <div className=' w-full font-antonio font-medium font-empowering text-white mt-[-20vw] pr-12'>
+                        <h2 className="text-end">
+                            Bold designs <br /> empowering seamless <br /> digital journeys.
+                        </h2>
+                    </div>
                 </div>
-                <div className="relative flex justify-center gap-14 w-full mt-[-1px] py-32 bg-[linear-gradient(to_bottom,_#131313_0%,_#131313_40%,_#E20001_40%,_#E20001_100%)]">
-                    {/* Mockup fijo */}
-                    <div className="relative z-10 right-[24vw] top-1.5">
-                        <Image
-                            className="w-[20.48vw] h-[41.8vw] object-cover"
-                            src="/images-proyecto/claro-MIl-Aires-Mockup.png"
-                            alt="claro-MIl-Aires-Mockup"
-                            width={295}
-                            height={500}
-                        />
+                <div className='relative w-full flex flex-col pt-20 pb-32 px-12 bg-[linear-gradient(to_bottom,_#131313_0%,_#131313_40%,_#E20001_40%,_#E20001_100%)]'>
+                    <div className='absolute w-full top-[40%]'>
+                        <h2 className='hidden fontSize-fluid font-antonio font-medium text-bordered uppercase'>
+                            FRONT END
+                        </h2>
                     </div>
-
-                    {/* Imágenes animadas */}
-                    {order.map((imgIndex, idx) => {
-
-                        return (
-                            <motion.div
-                                key={imgIndex}
-                                animate={{
-                                    x: positions[idx].x,
-                                    y: positions[idx].y,
-                                    zIndex: positions[idx].zIndex,
-                                    opacity: 1,
-                                }}
-                                transition={{ duration: 1 }}
-                                className="absolute"
-                            >
-                                <Image
-                                    className="object-cover w-[18.9vw]"
-                                    src={images[imgIndex]}
-                                    alt={`imagen-${idx}`}
-                                    width={295}
-                                    height={500}
-                                />
-                            </motion.div>
-                        );
-                    })}
-
-                    {/* Imagen anterior del centro (desvaneciéndose) */}
-                    {previousCenterImage !== null && (
-                        <motion.div
-                            initial={{ opacity: 1 }}
-                            animate={{ opacity: 1}}
-                            transition={{ duration: 1}}
-                            className="absolute"
-                            style={{
-                                x: positions[0].x,
-                                y: positions[0].y,
-                                zIndex: positions[2].zIndex,
-                            }}
-                        >
+                    <div className='flex w-full overflow-hidden justify-center'>
+                        <div className="flex justify-center items-center relative">
                             <Image
-                                className="object-cover w-[19vw] "
-                                src={images[previousCenterImage]}
-                                alt="prev-img"
-                                width={295}
-                                height={500}
+                                className="relative w-[300px] z-0"
+                                src="/images-proyecto/claro-MIl-Aires-Mockup.png"
+                                alt="Main Image"
+                                layout="intrinsic"
+                                width={800}
+                                height={1111}
                             />
-                        </motion.div>
-                    )}
+                            <div className='w-[93%] absolute left-3'>
+                                <div className='flex gap-8'
+                                    style={{
+                                        transform: `translateX(calc(-${currentIndex * 100}% - ${2 * currentIndex}rem))`,
+                                        transition: '0.2s',
+                                    }}
+                                >
+                                    {images.map((img, index) => (
+                                        <Image key={index}
+                                            className="w-[100%]"
+                                            src={img}
+                                            alt={`Slide ${1}`}
+                                            layout="intrinsic"
+                                            width={800}
+                                            height={1111}
+                                            style={{
+                                                flexShrink: 0
+                                            }}
+                                        />
+                                    ))}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
 
                 </div>
-                <div className='bg-[#E20001] mt-[-1px]'>
+
+                <div className='bg-[#E20001] mt-[-1px] pt-12 pb-16'>
                     <h2 className='sticky top-0 mb-32 text-center font-antonio font-medium text-white font-web text-bordered uppercase'>web <br />
                         design</h2>
                     <div className="relative w-[70%] z-20 mx-auto top-[-10vw] ">
@@ -326,7 +299,7 @@ export default function Claro() {
                         </div>
                     </div>
                 </div>
-                <div className='flex justify-center mt-[-1px] w-full'>
+                <div className='flex justify-center mt-[-1px] w-full h-screen'>
                     <video
                         className=" object-cover w-full"
                         controls
@@ -337,20 +310,6 @@ export default function Claro() {
 
                 </div>
                 <div className='relative py-24 bg-[linear-gradient(to_bottom,_#E20001_0%,_#E20001_1%,_#000000_100%)]'>
-                    <div>
-                        <div className='sticky top-12 text-bordered font-web font-antonio font-medium'>
-                            <h2 className='uppercase text-center'>video</h2>
-                            <h2 className='uppercase'>production</h2>
-                        </div>
-                        <div className='relative top-[-15vw] left-[4vw] px-36'>
-                            <img className='relative w-[22.5vw] h-auto' src="/images-proyecto/Claro-MAX-AQUAMAN.png" alt="Claro-MAX-AQUAMAN" />
-                        </div>
-                        <div className='absolute top-12 right-0 pr-12'>
-                            <img className='relative top-12  w-[22.5vw] h-auto' src="/images-proyecto/Claro-MAX-HouseOfTheDragon.png" alt="Claro-MAX-HouseOfTheDragon" />
-                            <img className='relative w-[22.5vw] right-[10.5vw] bottom-[22vw] h-auto' src="/images-proyecto/Claro-MAX-WONKA.png" alt="Claro-MAX-WONKA" />
-                        </div>
-                    </div>
-
                     <div className='w-full mt-[2px]'>
                         <div className='px-24  mx-auto  '>
                             <PreviousNext className='text-white' previousUrl="/vida-estilo" nextUrl="/vml" />

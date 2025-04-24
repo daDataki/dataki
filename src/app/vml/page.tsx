@@ -163,33 +163,58 @@ export default function Vml() {
                 hellman&apos;s
               </h2>
             </div>
-            <div className='flex flex-col items-center justify-center'>
-              <h2 className='sticky top-0 fontSize-fluid font-antonio font-medium text-bordered uppercase'>
-                FRONT END
-              </h2>
-              <div className='relative'></div>
-              <Image
-                className="relative w-[24vw] h-auto z-10 top-[-4vw]"
-                src="/images-proyecto/Hellmans-Mockup1.png"
-                alt="Hellmans-Mockup"
-                layout="intrinsic"
-                width={800}
-                height={1111}
-              />
-              <div className="absolute top-[30vw] left-[37.5vw] w-[18vw]  h-auto z-20">
-                  <Image
-                    className="relative rotate"
-                    style={{
-                      transform: `rotate(${degrees}deg)`,
-                      transition: "transform 0.1s linear",
-                    }}
-                    src="/images-proyecto/mayometer-pointer.png"
-                    alt="mayometer-pointer"
-                    layout="intrinsic"
-                    width={800}
-                    height={1111}
-                  />
-                </div>
+            <h2 className='sticky top-0 fontSize-fluid font-antonio font-medium text-bordered uppercase text-center'>
+              FRONT END
+            </h2>
+            <div className='flex  items-center justify-center'>
+
+              <div className='relative w-[26.31vw] left-[11vw] top-[5vw] h-auto '>
+                <Image
+                  className="relative w-full h-auto"
+                  src="/images-proyecto/PHONE-110.png"
+                  alt="PHONE-110"
+                  layout="intrinsic"
+                  width={800}
+                  height={1111}
+                />
+              </div>
+              <div className='relative top-[3vw]'>
+                <Image
+                  className="relative w-[24vw] h-auto z-10 top-[-4vw]"
+                  src="/images-proyecto/Hellmans-Mockup1.png"
+                  alt="Hellmans-Mockup"
+                  layout="intrinsic"
+                  width={800}
+                  height={1111}
+                />
+                <div className="absolute top-[10vw] left-[3vw] w-[18vw]  h-auto z-20">
+                <Image
+                  className="relative rotate"
+                  style={{
+                    transform: `rotate(${degrees}deg)`,
+                    transition: "transform 0.1s linear",
+                  }}
+                  src="/images-proyecto/mayometer-pointer.png"
+                  alt="mayometer-pointer"
+                  layout="intrinsic"
+                  width={800}
+                  height={1111}
+                />
+              </div>
+              </div>
+
+              
+              <div className='relative w-[29vw] right-[2vw] top-[5vw] h-auto '>
+                <Image
+                  className="relative w-full h-auto"
+                  src="/images-proyecto/PHONE-18.png"
+                  alt="PHONE-18"
+                  layout="intrinsic"
+                  width={800}
+                  height={1111}
+                />
+              </div>
+
             </div>
           </div>
         </div>
@@ -522,9 +547,9 @@ export default function Vml() {
               className='font-antonio font-bold uppercase text-caption1 text-black'
               initial={{ opacity: 0, y: -50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3,   delay: 0.5, ease: "easeInOut" }}
+              transition={{ duration: 0.3, delay: 0.5, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.2 }}
-            
+
             >
               RAID
             </motion.h2>

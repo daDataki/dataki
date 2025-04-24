@@ -176,27 +176,27 @@ export default function VidaEstilo() {
           <DiagonalSlider
             left="left-[-18rem]"
             top="top-0"
-            images={["/images-proyecto/image1.png", "/images-proyecto/image2.png", "/images-proyecto/image1.png", "/images-proyecto/image2.png", "/images-proyecto/image1.png"]}
+            images={["/images-proyecto/image3.png", "/images-proyecto/image2.png", "/images-proyecto/image1.png", "/images-proyecto/image2.png", "/images-proyecto/image1.png"]}
 
           />
           <DiagonalSlider
             reverse
             left="left-[8rem]"
             top="top-0"
-            images={["/images-proyecto/image3.png", "/images-proyecto/image4.png", "/images-proyecto/image5.png", "/images-proyecto/image4.png", "/images-proyecto/image5.png"]}
+            images={["/images-proyecto/image1.png", "/images-proyecto/image4.png", "/images-proyecto/image6.png", "/images-proyecto/image4.png", "/images-proyecto/image5.png"]}
 
           />
           <DiagonalSlider
             left="left-[34rem]"
             top="top-0"
-            images={["/images-proyecto/image6.png", "/images-proyecto/image7.png", "/images-proyecto/image6.png", "/images-proyecto/image7.png", "/images-proyecto/image6.png"]}
+            images={["/images-proyecto/image5.png", "/images-proyecto/image8.png", "/images-proyecto/image6.png", "/images-proyecto/image7.png", "/images-proyecto/image6.png"]}
 
           />
           <DiagonalSlider
             reverse
             left="left-[60rem]"
             top="top-0"
-            images={["/images-proyecto/image8.png", "/images-proyecto/image9.png", "/images-proyecto/image8.png", "/images-proyecto/image9.png", "/images-proyecto/image8.png"]}
+            images={["/images-proyecto/image8.png", "/images-proyecto/image9.png", "/images-proyecto/image7.png", "/images-proyecto/image9.png", "/images-proyecto/image8.png"]}
 
           />
           <DiagonalSlider
@@ -210,60 +210,8 @@ export default function VidaEstilo() {
             <div className=''><h2 className='uppercase font-antonio font-bold text-bordered-strategy '>Strategy</h2></div>
           </div>
         </div>
-        <div><div className='bg-[#E2DED6] w-full flex justify-center z-10 mt-[-1px]'><Image
-          className="w-full z-10"
-          src="/images-proyecto/Mockup V&E.png"
-          alt="vida-estilo"
-          layout="intrinsic"
-          width={800}
-          height={1111}
-        /></div></div>
-        <div className='relative bg-[#68725E] px-12 sm:px-12 pt-8 sm:pt-32 mt-[-1px] z-10'>
-          <div className='sticky top-0'><h2 className='uppercase text-bordered-data fontSize-fluid font-antonio '>Data <br />Analytics </h2></div>
-          <div className='absolute w-[35%] left-[50%] top-[10%] h-auto z-10'><Image
-            className=" w-full z-10  h-[66vh] "
-            src="/images-proyecto/Profit (1).png"
-            alt="vida-estilo"
-            layout="intrinsic"
-            width={611}
-            height={672}
-          /></div>
-          <div className='max-sm:hidden relative max-sm:m-auto px-4 sm:px-14 py-8 w-full  md:w-[73%] bg-black rounded-2xl top-0 text-white z-10'>
-            <h2 className='text-metric font-inter font-bold'>Metric evolution</h2>
-            <p className='text-caption font-inter font-light'>December</p>
-            <div className='relative text-xl md:text-2xl xl:text-2xl font-inter font-bold my-2 '>
-              <div className='absolute w-[62%] sm:w-[70%] md:w-[76%] bottom-0 left-10 h-auto z-10'><Image
-                className=" w-full z-10 "
-                src="/images-proyecto/Vector-346.png"
-                alt="vida-estilo"
-                layout="intrinsic"
-                width={800}
-                height={1111}
-              /></div>
-              <div className='absolute w-[50%] md:w-[68%] bottom-0 left-12 lg:left-20 xl:left-32 h-auto z-10'><Image
-                className=" w-full z-10 "
-                src="/images-proyecto/Vector-347.png"
-                alt="vida-estilo"
-                layout="intrinsic"
-                width={800}
-                height={1111}
-              /></div>
-              <div className='w-full flex justify-between text-clip font-inter font-bold border-b border-gray-500 pb-4'>
-                <h4>Clics</h4><h4>Impression</h4>
-              </div>
-              <div className='max-sm:hidden w-full flex justify-between text-caption font-inter border-b border-gray-500 font-light py-4 md:py-8'>
-                <h4>180</h4><h4>20 mil</h4>
-              </div>
-              <div className='w-full flex justify-between text-caption font-inter border-b border-gray-500 font-light py-4 md:py-8'>
-                <h4>90</h4><h4>10 mil</h4>
-              </div>
-              <div className='w-full flex justify-between text-caption font-inter border-b border-gray-500 font-light py-4 md:py-8'>
-                <h4>0</h4><h4>0</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className='mt-[-1px] bg-[#68725E]  text-white px-24 z-10'><PreviousNext previousUrl="/aon" nextUrl="/daytona" /></div>
+       
+        <div className='mt-[-1px] bg-[#68725E] py-8 text-white px-24 z-10'><PreviousNext previousUrl="/aon" nextUrl="/daytona" /></div>
         <div>
           <Footer background="bg-[#131313] " />
         </div>

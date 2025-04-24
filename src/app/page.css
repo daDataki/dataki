@@ -16,14 +16,20 @@
 }
 
 
-@supports (-webkit-appearance: none) and (not (accent-color: auto)) {
-    .safari-text-stroke {
-      color: transparent;
-      -webkit-text-stroke-width: 3px;
-      -webkit-text-stroke-color: red!important;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+/* Para pantallas menores a 1280px */
+
+  
+  /* Para pantallas mayores o iguales a 1280px */
+  @media (min-width: 1280px) {
+    @supports (-webkit-appearance: none) and (not (accent-color: auto)) {
+      .safari-text-stroke {
+        color: transparent;
+        -webkit-text-stroke-width: 3px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
     }
   }
+  
   
 

@@ -20,17 +20,7 @@
 }
 
 
-@media (min-width: 640px) {
-    .mb-responsive {
-      margin-bottom: clamp(33px, 6.94vw, 150px);
-    }
-}
 
-@media (min-width: 640px) {
-  .mt-responsive {
-    margin-top: clamp(133px, 13.88vw, 300px);
-  }
-}
 
 @media (min-width: 1440px) {
     .width-major{
