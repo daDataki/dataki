@@ -166,7 +166,6 @@ export default function ImageGrid() {
                 initial={{ scale: 0.1, opacity: 0 }}
                 animate={isRow2InView ? { scale: 1, opacity: 1 } : {}}
                 transition={{
-                  delay: globalIndex * 0.3,
                   duration: 0.6,
                   ease: "easeOut",
                 }}
@@ -198,7 +197,6 @@ export default function ImageGrid() {
                 initial={{ scale: 0.1, opacity: 0 }}
                 animate={isRow3InView ? { scale: 1, opacity: 1 } : {}}
                 transition={{
-                  delay: globalIndex * 0.3,
                   duration: 0.6,
                   ease: "easeOut",
                 }}

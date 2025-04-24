@@ -188,67 +188,6 @@ export default function Vml() {
                   height={1111}
                 />
                 <div className="absolute top-[10vw] left-[3vw] w-[18vw]  h-auto z-20">
-                <Image
-                  className="relative rotate"
-                  style={{
-                    transform: `rotate(${degrees}deg)`,
-                    transition: "transform 0.1s linear",
-                  }}
-                  src="/images-proyecto/mayometer-pointer.png"
-                  alt="mayometer-pointer"
-                  layout="intrinsic"
-                  width={800}
-                  height={1111}
-                />
-              </div>
-              </div>
-
-              
-              <div className='relative w-[29vw] right-[2vw] top-[5vw] h-auto '>
-                <Image
-                  className="relative w-full h-auto"
-                  src="/images-proyecto/PHONE-18.png"
-                  alt="PHONE-18"
-                  layout="intrinsic"
-                  width={800}
-                  height={1111}
-                />
-              </div>
-
-            </div>
-          </div>
-        </div>
-        <div className='relative flex justify-center items-center bg-[#d8e7f2] py-[11vw] px-[11vw]'>
-          <div className='relative w-full flex justify-center'>
-            <Image
-              className="relative w-full"
-              src="/images-proyecto/Ellipse-104.png"
-              alt="Ellipse-104"
-              layout="intrinsic"
-              width={800}
-              height={1111}
-            />
-            <div className='absolute w-full flex justify-center items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-              <div className='relative w-[26.31vw] left-[11vw] top-[5vw] h-auto '>
-                <Image
-                  className="relative w-full h-auto"
-                  src="/images-proyecto/PHONE-110.png"
-                  alt="PHONE-110"
-                  layout="intrinsic"
-                  width={800}
-                  height={1111}
-                />
-              </div>
-              <div className="relative w-[24vw] top-[-1vw] left-[2vw] h-auto z-10">
-                <Image
-                  className="relative w-full h-auto"
-                  src="/images-proyecto/PHONE-111.png"
-                  alt="PHONE-111"
-                  layout="intrinsic"
-                  width={800}
-                  height={1111}
-                />
-                <div className="absolute top-[18.5vw] left-[3vw] w-[18vw]  h-auto">
                   <Image
                     className="relative rotate"
                     style={{
@@ -264,6 +203,7 @@ export default function Vml() {
                 </div>
               </div>
 
+
               <div className='relative w-[29vw] right-[2vw] top-[5vw] h-auto '>
                 <Image
                   className="relative w-full h-auto"
@@ -274,9 +214,9 @@ export default function Vml() {
                   height={1111}
                 />
               </div>
+
             </div>
           </div>
-
         </div>
         <div className='relative pt-40 pb-16 px-12 bg-[#3a0f4e] bg-gradient-to-t from-black/100 to-transparent min-h-[150vh]'>
           <div className='relative'>

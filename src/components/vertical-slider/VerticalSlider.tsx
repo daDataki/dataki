@@ -68,28 +68,22 @@ export default function VerticalSlider() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
+    const handleScroll = () => {
+      if (!containerRef.current) return;
 
-    let lastScrollTime = 0;
+      const top = containerRef.current.offsetTop;
+      const scroll = window.scrollY;
+      const scrollInside = scroll - top;
+      const stepHeight = 120; // cada paso: 50vh
 
-    const handleWheel = (e: WheelEvent) => {
-      const now = Date.now();
-      if (now - lastScrollTime < 600) return;
-      lastScrollTime = now;
-
-      if (e.deltaY > 0) {
-        setCurrentIndex((prev) => Math.min(prev + 1, words.length - 1));
-      } else {
-        setCurrentIndex((prev) => Math.max(prev - 1, 0));
+      if (scrollInside >= 0 && scrollInside < stepHeight * words.length) {
+        const index = Math.floor(scrollInside / stepHeight);
+        setCurrentIndex(index);
       }
     };
 
-    container.addEventListener('wheel', handleWheel, { passive: true });
-
-    return () => {
-      container.removeEventListener('wheel', handleWheel);
-    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const getPositionClass = (offset: number) => {
@@ -113,7 +107,7 @@ export default function VerticalSlider() {
     <div
       ref={containerRef}
       className="relative w-full"
-      style={{ height: '100vh' }}
+      style={{ height: `${(words.length + 1.5) * 25}vh` }} 
     >
       {/* Sticky content */}
       <div className="sticky top-0 h-screen bg-black text-white flex flex-col justify-center items-center overflow-hidden">

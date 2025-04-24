@@ -88,8 +88,6 @@ const imageDataMap: Record<string, {
 
 const CardBack = ({ image}: { image: string;  }) => {
   useEffect(() => {
-    console.log("Image recibida:", image);
-    console.log("Coincide en imageDataMap:", image in imageDataMap);
   }, [image]);
   const router = useRouter();
 
