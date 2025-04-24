@@ -1,6 +1,6 @@
 
 "use client";
-import { useRef, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import Hero from '../../components/hero/Hero';
 import claro from '../../../public/images-proyecto/heroClaro.png';
 import Image from 'next/image';
@@ -8,20 +8,11 @@ import './claro.css'
 import PreviousNext from '../../components/previous-next/PreviousNext'
 import Footer from '../../components/footer/Footer'
 import ClaroSessions from '@/components/claro-sessions/page';
-import { motion, useInView } from "framer-motion";
+
 
 
 export default function Claro() {
-    const ref1 = useRef(null);
-    const ref2 = useRef(null);
-    const ref3 = useRef(null);
 
-    const isInView1 = useInView(ref1, { once: false, margin: "-100px 0px" });
-    const isInView2 = useInView(ref2, { once: false, margin: "-100px 0px" });
-    const isInView3 = useInView(ref3, { once: false, margin: "-100px 0px" });
-
-    const [order, setOrder] = useState([0, 1, 2]);
-    const [previousCenterImage, setPreviousCenterImage] = useState<number | null>(null);
     const [currentIndex, setCurrentIndex] = useState(2);
 
     const images = [
@@ -53,17 +44,6 @@ export default function Claro() {
 
         }
     }, [images.length]);
-
-
-
-    const positions = [
-        { x: "-24vw", y: "4.5vw", zIndex: 50 }, // izquierda
-        { x: "1vw", y: "-5vw", zIndex: 10 },   // centro (sobre el mockup)
-        { x: "26vw", y: "4vw", zIndex: 10 },   // derecha
-    ];
-
-
-
 
     return (
         <>
