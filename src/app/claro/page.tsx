@@ -92,7 +92,7 @@ export default function Claro() {
                     </div>
 
                 </div>
-                <div className='bg-[#131313] mt-[-1px]  pb-12'>
+                <div className='bg-black mt-[-1px]  pb-12'>
                    
                     <div className='relative top-[10vw] w-full flex '>
                         <div className='relative w-1/2 flex left-1/3 items-center'><Image
@@ -115,7 +115,7 @@ export default function Claro() {
                             controls
                             playsInline
                         >
-                            <source src="/video/claro-video-2.mp4" type="video/mp4" />
+                            <source src="/video/Claro-Compra-Packs-con-Cashback.mp4" type="video/mp4" />
                         </video>
                         <div className='relative flex justify-end items-star w-fit'>
 
@@ -149,7 +149,7 @@ export default function Claro() {
                         <h2 className='uppercase'>production</h2>
                     </div>
                     <div className=' w-full font-antonio font-medium font-empowering text-white mt-[-20vw] pr-12'>
-                        <h2 className="text-end">
+                        <h2 className="text-end uppercase">
                             Bold designs <br /> empowering seamless <br /> digital journeys.
                         </h2>
                     </div>
