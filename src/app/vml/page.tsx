@@ -598,9 +598,32 @@ export default function Vml() {
 
           </div>
         </div>
+
         <div className='mt-[-1px] bg-[#bababa]  text-[#131313] px-24 z-10'><PreviousNext previousUrl="/daytona" nextUrl="/aon" /></div>
+        <div className='bg-white mt-[-1px]  pb-12'>
+          <h2 className='relative top-[4vw] font-antonio font-bold uppercase text-caption1 text-black pl-12'>
+            General mills
+          </h2>
+          <div className='relative top-[8vw] pl-12 text-bordered fontSize-fluid font-antonio font-medium'>
+            <h2 className='uppercase'>video</h2>
+          </div>
+
+          <div className='flex justify-center mt-[-1px] w-full'>
+            <video
+              className="relative object-cover  w-[75.5vw] h-auto  z-10"
+              controls
+              playsInline
+            >
+              <source src="/video/Vml-General-Mills.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div className='relative top-[-4vw] text-bordered fontSize-fluid font-antonio font-medium text-right pr-12'>
+            <h2 className='uppercase'>production</h2>
+          </div>
+        </div>
         <div>
-          <Footer background="bg-[#131313] " />
+          <Footer background="bg-white " navTextColor="text-black"
+            letsTalkColor="text-black" />
         </div>
       </div>
     </>

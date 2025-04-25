@@ -47,8 +47,8 @@ export default function ClaroSessions() {
       style={{ width: '80vw' }}
     >
       <div className='absolute font-web1 text-bordered flex flex-col top-1/2 -translate-y-1/2'>
-        <span className='uppercase font-antonio'>SOCIAL</span>
-        <span className='uppercase font-antonio'>MEDIA</span>
+        <span className='uppercase font-antonio'>graphic</span>
+        <span className='uppercase font-antonio'>design</span>
       </div>
       <img
         ref={imgRef}

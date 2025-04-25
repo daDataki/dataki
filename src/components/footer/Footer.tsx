@@ -1,18 +1,26 @@
 import './Footer.css'
 
+const DEFAULT_BG = 'bg-easternBlue bg-gradient-to-b from-black/80 to-transparent';
+const DEFAULT_NAV_TEXT_COLOR = 'text-white';
+const DEFAULT_LETS_TALK_COLOR = 'text-[#BFAEFF]';
+
 interface FooterProps {
   background?: string;
+  navTextColor?: string;    // Color del <nav>
+  letsTalkColor?: string;   // Color del "Let's Talk"
 }
 
-const DEFAULT_BG = 'bg-easternBlue bg-gradient-to-b from-black/80 to-transparent';
-
-export default function Footer({ background = DEFAULT_BG }: FooterProps) {
+export default function Footer({
+  background = DEFAULT_BG,
+  navTextColor = DEFAULT_NAV_TEXT_COLOR,
+  letsTalkColor = DEFAULT_LETS_TALK_COLOR,
+}: FooterProps) {
   return (
     <footer id="footer" className={`relative px-24 py-12 mt-[-1px] sm:py-20 ${background}`}>
       <img className='absolute w-[63%] top-1/2 left-1/2 -translate-y-1/2 -translate-x-[35%] ' src="images-proyecto/Footer-Mapa-Lila.png" alt="Footer-Mapa-Lila" />
-      <nav className=" text-white z-20">
+      <nav className={`z-20 ${navTextColor}`}>
         <div className="max-sm:block max-sm:text-center flex justify-between items-center h-auto">
-          <p className="font-normal max-sm:mb-12 text-let font-signature z-30 text-[#BFAEFF]">
+          <p className={`font-normal max-sm:mb-12 text-let font-signature z-30 ${letsTalkColor}`}>
             Let’s Talk
           </p>
           <p className="hidden font-semibold text-caption font-Poppins">

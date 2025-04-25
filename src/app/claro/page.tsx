@@ -265,8 +265,8 @@ export default function Claro() {
                     </div>
                     <div className='relative flex flex-col justify-center mt-[10vw] px-24 pb-36'>
                         <div className='sticky left-[7vw] top-0 font-web font-antonio font-medium text-white z-20'>
-                            <h2 className='uppercase'>graphic</h2>
-                            <h2 className='relative left-[13vw] uppercase text-bordered'>design</h2>
+                            <h2 className='uppercase'>Social</h2>
+                            <h2 className='relative left-[13vw] uppercase text-bordered'>media</h2>
                         </div>
                         <div className='flex justify-center items-center w-full'>
                             <div className='relative left-[21vw] w-[60%]'>
