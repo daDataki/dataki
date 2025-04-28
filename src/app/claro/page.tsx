@@ -154,12 +154,7 @@ export default function Claro() {
                         </h2>
                     </div>
                 </div>
-                <div className='relative w-full flex flex-col pt-20 pb-32 px-12 bg-[linear-gradient(to_bottom,_#131313_0%,_#131313_40%,_#E20001_40%,_#E20001_100%)]'>
-                    <div className='absolute w-full top-[40%]'>
-                        <h2 className='hidden fontSize-fluid font-antonio font-medium text-bordered uppercase'>
-                            FRONT END
-                        </h2>
-                    </div>
+                <div className='relative w-full flex flex-col pt-20 pb-32  bg-[linear-gradient(to_bottom,_#000000_0%,_#000000_40%,_#E20001_40%,_#E20001_100%)]'>
                     <div className='flex w-full overflow-hidden justify-center'>
                         <div className="flex justify-center items-center relative">
                             <Image
