@@ -598,8 +598,6 @@ export default function Vml() {
 
           </div>
         </div>
-
-        <div className='mt-[-1px] bg-[#bababa]  text-[#131313] px-24 z-10'><PreviousNext previousUrl="/daytona" nextUrl="/aon" /></div>
         <div className='bg-white mt-[-1px]  pb-12'>
           <h2 className='relative top-[4vw] font-antonio font-bold uppercase text-caption1 text-black pl-12'>
             General mills
@@ -621,9 +619,10 @@ export default function Vml() {
             <h2 className='uppercase'>production</h2>
           </div>
         </div>
+        <div className='mt-[-1px] bg-white  text-[#131313] px-24 z-10'><PreviousNext previousUrl="/daytona" nextUrl="/aon" /></div>
         <div>
-          <Footer background="bg-white " navTextColor="text-black"
-            letsTalkColor="text-black" />
+          <Footer background="bg-black"
+            letsTalkColor="white" />
         </div>
       </div>
     </>

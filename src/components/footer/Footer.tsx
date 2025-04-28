@@ -35,16 +35,18 @@ export default function Footer({
           <div> <p className="text-captions font-Poppins">
             <span className="block font-bold">Buenos Aires</span>
             <span className="block sm:mb-10 font-bold">Argentina</span>
-            <span className="block">Av. Libertador 1398</span>
-            <span className="block">+54 11 8765 4345</span>
-            <span className="block">Mail: xxxxxxxx</span>
+            <span className="block">Avenida del Libertador 6299 </span>
+            <span className="block">Dpto 420</span>
+            <span className="block">Ciudad de Buenos Aires</span>
+            <span className="block">C1428ARF</span>
+            <span className="block">jb@dataki.co</span>
           </p></div>
           <div className="text-captions font-Poppins z-30">
-            <span className="block font-bold">New York</span>
+            <span className="block font-bold">Miami</span>
             <span className="block sm:mb-10 font-bold">United States</span>
-            <span className="block">118 3rd St, S, Brooklyn</span>
-            <span className="block">+1 1249 5556</span>
-            <span className="block">dataki@gmail.com</span></div>
+            <span className="block">1600 NE 1st Ave.  Apt. 1408</span>
+            <span className="block">Miami, FL 33132</span>
+            <span className="block">jb@dataki.co</span></div>
         </div>
       </nav>
     </footer>
