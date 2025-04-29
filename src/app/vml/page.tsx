@@ -622,7 +622,7 @@ export default function Vml() {
         <div className='mt-[-1px] bg-white  text-[#131313] px-24 z-10'><PreviousNext previousUrl="/daytona" nextUrl="/aon" /></div>
         <div>
           <Footer background="bg-black"
-            letsTalkColor="white" />
+            />
         </div>
       </div>
     </>
