@@ -6,7 +6,6 @@ import CardBack from "../card-grid/CardBack";
 
 
 export default function ImageGrid() {
-  const [applyClasses, setApplyClasses] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "10px 0px" });
