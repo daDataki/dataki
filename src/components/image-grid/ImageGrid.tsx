@@ -9,7 +9,7 @@ export default function ImageGrid() {
   const [applyClasses, setApplyClasses] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px 0px" });
+  const isInView = useInView(ref, { once: true, margin: "10px 0px" });
   // Refs para cada fila
   const row1Ref = useRef(null);
   const isRow1InView = useInView(row1Ref, { once: true, margin: "-50px 0px" });
@@ -96,25 +96,31 @@ export default function ImageGrid() {
         {isInView && (
           <div className="relative flex justify-center">
             <motion.h2
-              initial={{ fontSize: "300px", opacity: 0, scale: 4 }}
-              animate={{ fontSize: "-100px", opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
-              onAnimationComplete={() => setApplyClasses(true)}
-              className={`relative font-bold safari-text-stroke font-antonio text-black uppercase ${applyClasses ? "text-work" : ""
-                }`}
+              initial={{ opacity: 0, scale: 3, y: -50 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{
+                duration: 1,
+                ease: [0.34, 1.56, 0.64, 1],
+                delay: 0.2,
+              }}
+              className="text-[200px] uppercase font-antonio text-black font-bold safari-text-stroke will-change-transform"
             >
               WORK
             </motion.h2>
+
             <motion.h3
-              initial={{ fontSize: "300px", opacity: 0, scale: 4 }}
-              animate={{ fontSize: "100px", opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-              onAnimationComplete={() => setApplyClasses(true)}
-              className={`absolute top-[44%] left-[45%] z-10 font-light font-signature text-easternBlue ${applyClasses ? "text-Showcase" : ""
-                }`}
+              initial={{ opacity: 0, scale: 2.8, y: -50, rotate: -5, x: 30 }}
+              animate={{ opacity: 1, scale: 1, y: 0, rotate: 0, x: 0 }}
+              transition={{
+                duration: 1,
+                ease: [0.34, 1.56, 0.64, 1],
+                delay: 0.2,
+              }}
+              className="absolute top-[20%] left-[45%] z-10 text-[100px] font-light font-signature text-easternBlue will-change-transform"
             >
               Showcase
             </motion.h3>
+
           </div>
         )}
       </div>
