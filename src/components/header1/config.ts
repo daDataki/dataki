@@ -14,7 +14,8 @@ export const menuOptions = [
             { name: "aon", path: "/aon" },
             { name: "vida y estilo", path: "/vida-estilo" },
             { name: "daytona", path: "/daytona" },
-            { name: "claro", path: "/claro" }
+            { name: "claro", path: "/claro" },
+            { name: "milaires", path: "/milaires" }
         ]
     },
     { name: "Services", path: "/services", menuIcon: "/images-proyecto/menuWhite.png" },

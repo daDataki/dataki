@@ -34,7 +34,7 @@ const imageDataMap: Record<string, {
     text1: "",
     text2: "2024-Ongoing",
     categories: ["Digital Strategy & Campaigns", "Graphic Design & Media", "Data Analytics"],
-    route: "/vida-estilo"
+    route: "/milaires"
   },
   "/images-grid/Mask-group4.png": {
     src: "/images-grid/Mask-group4.png",

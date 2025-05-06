@@ -176,33 +176,33 @@ export default function VidaEstilo() {
           <DiagonalSlider
             left="left-[-18rem]"
             top="top-0"
-            images={["/images-proyecto/image3.png", "/images-proyecto/image2.png", "/images-proyecto/image1.png", "/images-proyecto/image2.png", "/images-proyecto/image1.png"]}
+            images={["/images-proyecto/image1.png", "/images-proyecto/image2.png", "/images-proyecto/image3.png", "/images-proyecto/image4.png", "/images-proyecto/image5.png"]}
 
           />
           <DiagonalSlider
             reverse
             left="left-[8rem]"
             top="top-0"
-            images={["/images-proyecto/image1.png", "/images-proyecto/image4.png", "/images-proyecto/image6.png", "/images-proyecto/image4.png", "/images-proyecto/image5.png"]}
+            images={["/images-proyecto/image6.png", "/images-proyecto/image7.png", "/images-proyecto/image8.png", "/images-proyecto/image9.png", "/images-proyecto/image10.png"]}
 
           />
           <DiagonalSlider
             left="left-[34rem]"
             top="top-0"
-            images={["/images-proyecto/image5.png", "/images-proyecto/image8.png", "/images-proyecto/image6.png", "/images-proyecto/image7.png", "/images-proyecto/image6.png"]}
+            images={["/images-proyecto/image11.png", "/images-proyecto/image5.png", "/images-proyecto/image6.png", "/images-proyecto/image3.png", "/images-proyecto/image2.png"]}
 
           />
           <DiagonalSlider
             reverse
             left="left-[60rem]"
             top="top-0"
-            images={["/images-proyecto/image8.png", "/images-proyecto/image9.png", "/images-proyecto/image7.png", "/images-proyecto/image9.png", "/images-proyecto/image8.png"]}
+            images={["/images-proyecto/image1.png", "/images-proyecto/image11.png", "/images-proyecto/image7.png", "/images-proyecto/image9.png", "/images-proyecto/image8.png"]}
 
           />
           <DiagonalSlider
             left="left-[86rem]"
             top="top-0"
-            images={["/images-proyecto/image9.png", "/images-proyecto/image10.png", "/images-proyecto/image9.png", "/images-proyecto/image10.png", "/images-proyecto/image9.png"]}
+            images={["/images-proyecto/image10.png", "/images-proyecto/image11.png", "/images-proyecto/image1.png", "/images-proyecto/image2.png", "/images-proyecto/image3.png"]}
 
           />
 

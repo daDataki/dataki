@@ -1,6 +1,6 @@
 
 "use client";
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Hero from '../../components/hero/Hero';
 import claro from '../../../public/images-proyecto/heroClaro.png';
 import Image from 'next/image';
@@ -54,7 +54,7 @@ export default function Claro() {
                         backgroundImage={claro.src}
                         backgroundPosition="right"
                         prev='/daytona'
-                        next='/vml'
+                        next='/milaires'
                         clientInfo={{
                             group: "",
                             date: "2020-2025",
@@ -93,7 +93,7 @@ export default function Claro() {
 
                 </div>
                 <div className='bg-black mt-[-1px]  pb-12'>
-                   
+
                     <div className='relative top-[10vw] w-full flex '>
                         <div className='relative w-1/2 flex left-1/3 items-center'><Image
                             className="w-[5.69vw] h-[5.69vw] object-cover"
@@ -255,7 +255,20 @@ export default function Claro() {
                             priority={true}
                         />
                         <div className='relative top-[-5vw]'>
-                            <ClaroSessions />
+                            <ClaroSessions
+                                images={[
+                                    '/images-proyecto/ClaroSessions-1.png',
+                                    '/images-proyecto/ClaroSessions-4.png',
+                                    '/images-proyecto/ClaroSessions-7.png',
+                                    '/images-proyecto/ClaroSessions-2.png',
+                                    '/images-proyecto/ClaroSessions-5.png',
+                                    '/images-proyecto/ClaroSessions-8.png',
+                                    '/images-proyecto/ClaroSessions-3.png',
+                                    '/images-proyecto/ClaroSessions-6.png',
+                                    '/images-proyecto/ClaroSessions-9.png',
+                                ]}
+                                title={['graphic', 'design']}
+                            />
                         </div>
                     </div>
                     <div className='relative flex flex-col justify-center mt-[10vw] px-24 pb-36'>
@@ -287,7 +300,7 @@ export default function Claro() {
                 <div className='relative py-24 bg-[linear-gradient(to_bottom,_#E20001_0%,_#E20001_1%,_#000000_100%)]'>
                     <div className='w-full mt-[2px]'>
                         <div className='px-24  mx-auto  '>
-                            <PreviousNext className='text-white' previousUrl="/vida-estilo" nextUrl="/vml" />
+                            <PreviousNext className='text-white' previousUrl="/daytona" nextUrl="/milaires" />
                         </div>
                     </div>
                 </div>

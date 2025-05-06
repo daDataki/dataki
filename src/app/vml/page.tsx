@@ -122,7 +122,7 @@ export default function Vml() {
           textBlack='text-black'
           title="VML"
           backgroundImage={beacon.src}
-          prev='/daytona'
+          prev='/milaires'
           next='/aon'
           clientInfo={{
             group: "",
@@ -600,7 +600,7 @@ export default function Vml() {
         </div>
         <div className='bg-white mt-[-1px]  pb-12'>
           <h2 className='relative top-[4vw] font-antonio font-bold uppercase text-caption1 text-black pl-12'>
-            General mills
+          nature valley
           </h2>
           <div className='relative top-[8vw] pl-12 text-bordered fontSize-fluid font-antonio font-medium'>
             <h2 className='uppercase'>video</h2>
@@ -619,7 +619,7 @@ export default function Vml() {
             <h2 className='uppercase'>production</h2>
           </div>
         </div>
-        <div className='mt-[-1px] bg-white  text-[#131313] px-24 z-10'><PreviousNext previousUrl="/daytona" nextUrl="/aon" /></div>
+        <div className='mt-[-1px] bg-white  text-[#131313] px-24 z-10'><PreviousNext previousUrl="/milaires" nextUrl="/aon" /></div>
         <div>
           <Footer background="bg-black"       
             />

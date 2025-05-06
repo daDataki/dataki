@@ -88,13 +88,20 @@ export default function Aos() {
             </div>
           </div>
           <motion.img
-            initial={{ y: 0, opacity: .5 }} // Empieza visible en su posición original
-            animate={isInView ? { y: -1000 } : { y: 0 }} // Sube cuando entra en vista
-            transition={{ duration: 12, ease: "easeOut", delay: 1 }} // Suaviza el movimiento
+            initial={{ y: 0, opacity: 0.8 }}
+            animate={isInView ? { y: [0, -1000], opacity: [0.8, 0.8] } : { y: 0 }}
+            transition={{
+              repeat: isInView ? Infinity : 0,
+              repeatType: "loop",
+              duration: 12,
+              ease: "easeInOut",
+            }}
             className="absolute right-[25vw] w-[15vw] h-auto top-[25%]"
             src="/images-proyecto/Aon-Globo.png"
             alt="Aon-globo"
           />
+
+
         </div>
       </div>
 

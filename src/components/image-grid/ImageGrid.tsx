@@ -9,16 +9,16 @@ export default function ImageGrid() {
   const [applyClasses, setApplyClasses] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, margin: "-100px 0px" });
+  const isInView = useInView(ref, { once: true, margin: "-100px 0px" });
   // Refs para cada fila
   const row1Ref = useRef(null);
-  const isRow1InView = useInView(row1Ref, { once: false, margin: "-50px 0px" });
+  const isRow1InView = useInView(row1Ref, { once: true, margin: "-50px 0px" });
 
   const row2Ref = useRef(null);
-  const isRow2InView = useInView(row2Ref, { once: false, margin: "-50px 0px" });
+  const isRow2InView = useInView(row2Ref, { once: true, margin: "-50px 0px" });
 
   const row3Ref = useRef(null);
-  const isRow3InView = useInView(row3Ref, { once: false, margin: "-50px 0px" });
+  const isRow3InView = useInView(row3Ref, { once: true, margin: "-50px 0px" });
 
   const ImageItem = ({
     src,

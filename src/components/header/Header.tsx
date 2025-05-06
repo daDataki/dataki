@@ -103,6 +103,14 @@ export default function Header() {
                 vml
               </Link>
             </li>
+            <li>
+              <Link
+                href="/milares"
+                className="block px-4 py-2 sm:p-0 hover:text-gray-400"
+              >
+                milaires
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

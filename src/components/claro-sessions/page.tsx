@@ -3,19 +3,19 @@
 import { useEffect, useRef, useState } from 'react';
 import './claroSessions.css';
 
-const images = [
-  '/images-proyecto/ClaroSessions-1.png',
-  '/images-proyecto/ClaroSessions-4.png',
-  '/images-proyecto/ClaroSessions-7.png',
-  '/images-proyecto/ClaroSessions-2.png',
-  '/images-proyecto/ClaroSessions-5.png',
-  '/images-proyecto/ClaroSessions-8.png',
-  '/images-proyecto/ClaroSessions-3.png',
-  '/images-proyecto/ClaroSessions-6.png',
-  '/images-proyecto/ClaroSessions-9.png',
-];
+interface ClaroSessionsProps {
+  images: string[];
+  title: string[];
+  width?: string;
+  height?: string;
+}
 
-export default function ClaroSessions() {
+export default function ClaroSessions({
+  images,
+  title,
+  width = '80vw',
+  height = '574px',
+}: ClaroSessionsProps) {
   const [imageIndex, setImageIndex] = useState(0);
   const [left, setLeft] = useState(0);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -28,28 +28,32 @@ export default function ClaroSessions() {
       const nextLeft = left + 20;
 
       if (nextLeft + imageWidth > containerWidth) {
-        setLeft(0); // Reinicia justo al borde izquierdo
+        setLeft(0);
         setImageIndex(0);
         return;
       }
 
       setLeft(nextLeft);
       setImageIndex(prev => (prev + 1) % images.length);
-    }, 200); // ✅ cada 50ms
+    }, 200);
 
     return () => clearInterval(interval);
-  }, [left]);
+  }, [left, images.length]);
 
   return (
     <div
       ref={containerRef}
-      className="relative w-[22.29vw] h-[574px] mx-auto overflow-hidden"
-      style={{ width: '80vw' }}
+      className="relative mx-auto overflow-hidden"
+      style={{ width, height }}
     >
-      <div className='absolute font-web1 text-bordered flex flex-col top-1/2 -translate-y-1/2'>
-        <span className='uppercase font-antonio'>graphic</span>
-        <span className='uppercase font-antonio'>design</span>
+      <div className="absolute font-web1 text-bordered flex flex-col top-1/2 -translate-y-1/2">
+        {title.map((line, idx) => (
+          <span key={idx} className="uppercase font-antonio">
+            {line}
+          </span>
+        ))}
       </div>
+
       <img
         ref={imgRef}
         src={images[imageIndex]}
