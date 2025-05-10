@@ -122,8 +122,8 @@ export default function Vml() {
           textBlack='text-black'
           title="VML"
           backgroundImage={beacon.src}
-          prev='/cis-latam'
-          next='/aon'
+          prev='/vida-estilo'
+          next='/claro'
           clientInfo={{
             group: "",
             date: "2020-Ongoing",
@@ -603,7 +603,7 @@ export default function Vml() {
           nature valley
           </h2>
           <div className='relative top-[8vw] pl-12 text-bordered fontSize-fluid font-antonio font-medium'>
-            <h2 className='uppercase'>video</h2>
+            <h2 className='uppercase'>FRONT END</h2>
           </div>
 
           <div className='flex justify-center mt-[-1px] w-full'>
@@ -616,10 +616,10 @@ export default function Vml() {
             </video>
           </div>
           <div className='relative top-[-4vw] text-bordered fontSize-fluid font-antonio font-medium text-right pr-12'>
-            <h2 className='uppercase'>production</h2>
+            <h2 className='uppercase'>design</h2>
           </div>
         </div>
-        <div className='mt-[-1px] bg-white  text-[#131313] px-24 z-10'><PreviousNext previousUrl="/cis-latam" nextUrl="/aon" /></div>
+        <div className='mt-[-1px] bg-white  text-[#131313] px-24 z-10'><PreviousNext previousUrl="/vida-estilo" nextUrl="/claro" /></div>
         <div>
           <Footer background="bg-black"       
             />

@@ -10,13 +10,13 @@ export const menuOptions = [
         path: "/#work",
         menuIcon: "/images-proyecto/menuBlack.png",
         subMenu: [
-            { name: "vml", path: "/vml" },
             { name: "aon", path: "/aon" },
-            { name: "vida y estilo", path: "/vida-estilo" },
-            { name: "daytona", path: "/daytona" },
-            { name: "claro", path: "/claro" },
+            { name: "cis latam", path: "/cis-latam" },
             { name: "milaires", path: "/milaires" },
-            { name: "cis-latam", path: "/cis-latam" }
+            { name: "daytona", path: "/daytona" },
+            { name: "vida & estilo", path: "/vida-estilo" },
+            { name: "vml", path: "/vml" },
+            { name: "claro", path: "/claro" }, 
         ]
     },
     { name: "Services", path: "/services", menuIcon: "/images-proyecto/menuWhite.png" },

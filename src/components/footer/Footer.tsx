@@ -25,12 +25,12 @@ export default function Footer({
           </p>
           <p className="hidden font-semibold text-caption font-Poppins">
             Virtual team <br /> with global reach.
-            
+
           </p>
         </div>
 
         <div className="max-sm:justify-center max-sm:text-center flex  mb-8">
-          <p className="font-antonio font-bold safari-text-stroke  xtext-lg1  uppercase z-30">Share your<br/> idea  with us</p>
+          <p className="font-antonio font-bold safari-text-stroke  xtext-lg1  uppercase z-30">Share your<br /> idea  with us</p>
         </div>
         <div className="block sm:flex justify-between w-full max-sm:text-center xl:w-[75%] z-30">
           <div className='z-30 w-1/2'> <p className="text-captions font-Poppins">
@@ -38,14 +38,28 @@ export default function Footer({
             <span className="block sm:mb-10 font-bold">Argentina</span>
             <span className="block">Avenida del Libertador 6299 </span>
             <span className="block">Ciudad de Buenos Aires, C1428ARF</span>
-            <span className="block">jb@dataki.co</span>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=jb@dataki.co"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-white underline hover:text-blue-800"
+            >
+              jb@dataki.co
+            </a>
           </p></div>
           <div className="text-captions font-Poppins z-30 w-1/2">
             <span className="block font-bold">Miami</span>
             <span className="block sm:mb-10 font-bold">United States</span>
             <span className="block">1600 NE 1st Ave.  Apt. 1408</span>
             <span className="block">Miami, FL 33132</span>
-            <span className="block">jb@dataki.co</span></div>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=jb@dataki.co"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-white underline hover:text-blue-800"
+            >
+              jb@dataki.co
+            </a></div>
         </div>
       </nav>
     </footer>

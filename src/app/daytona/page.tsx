@@ -27,8 +27,8 @@ export default function Daytona() {
           title="Daytona"
           backgroundImage={daytona.src}
           backgroundPosition="right"
-          prev='/vida-estilo'
-          next='/claro'
+          prev='/milaires'
+          next='/vida-estilo'
           clientInfo={{
             group: "",
             date: "2022-Ongoing",
@@ -192,7 +192,7 @@ export default function Daytona() {
         </div>
         <div className='w-full mt-[2px]'>
           <div className='px-24  my-[5vw] mx-auto bg-[#ca262c] '>
-            <PreviousNext className='text-white' previousUrl="/vida-estilo" nextUrl="/claro" />
+            <PreviousNext className='text-white' previousUrl="/milaires" nextUrl="/vida-estilo" />
           </div>
         </div>
 

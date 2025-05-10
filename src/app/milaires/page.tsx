@@ -95,8 +95,8 @@ export default function Milaires() {
           textBlack='text-black'
           title="MILAIRES"
           backgroundImage={beacon.src}
-          prev='/claro'
-          next='/cis-latam'
+          prev='/cis-latam'
+          next='/daytona'
           clientInfo={{
             group: "",
             date: "2024-Ongoing",
@@ -403,7 +403,7 @@ export default function Milaires() {
             </video>
           </div>
         </div>
-        <div className='mt-[-1px] bg-[#162b45]  text-white px-24 z-10'><PreviousNext previousUrl="/claro" nextUrl="/cis-latam" /></div>
+        <div className='mt-[-1px] bg-[#162b45]  text-white px-24 z-10'><PreviousNext previousUrl="/cis-latam" nextUrl="/daytona" /></div>
         <div>
           <Footer background="[background:linear-gradient(to_bottom,_#162b45_10%,_black_100%)]"
           />

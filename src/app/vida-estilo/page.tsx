@@ -58,8 +58,8 @@ export default function VidaEstilo() {
         <div><Hero
           title="Vida & Estilo"
           backgroundImage={beacon.src}
-          prev='/aon'
-          next='/daytona'
+          prev='/daytona'
+          next='/vml'
           clientInfo={{
             group: "Hospitality Group",
             date: "2023-Ongoing",
@@ -139,7 +139,7 @@ export default function VidaEstilo() {
                     {/* Imagen con animación de desplazamiento */}
                     <Image
                       className="scrollable-image"
-                      src="/images-proyecto/scroll.png"
+                      src="/images-proyecto/vida-est-image.png"
                       alt="vida-estilo"
                       width={800}
                       height={1111}
@@ -211,7 +211,7 @@ export default function VidaEstilo() {
           </div>
         </div>
        
-        <div className='mt-[-1px] bg-[#68725E] py-8 text-white px-24 z-10'><PreviousNext previousUrl="/aon" nextUrl="/daytona" /></div>
+        <div className='mt-[-1px] bg-[#68725E] py-8 text-white px-24 z-10'><PreviousNext previousUrl="/daytona" nextUrl="/vml" /></div>
         <div>
           <Footer background="bg-[#131313] " />
         </div>

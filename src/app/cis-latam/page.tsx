@@ -95,8 +95,8 @@ export default function CisLatam() {
         <div><Hero
           title="CIS latam"
           backgroundImage={cis.src}
-          prev='/milaires'
-          next='/vml'
+          prev='/aon'
+          next='/milaires'
           clientInfo={{
             group: "",
             date: "2022 Ongoing",
@@ -108,10 +108,10 @@ export default function CisLatam() {
               "App & Web UX/UI Design",
             ],
           }}
-          aboutInfo=<>Cis Latam <br /> work showcase </>
+          aboutInfo=<>CIS LATAM <br /> work showcase </>
           services={{
             description:
-              "We helped Cis Latam launch with a comprehensive digital and strategic package, covering everything from branding and video production to app design and go-to-market strategy.",
+              "We helped CIS LATAM launch with a comprehensive digital and strategic package, covering everything from branding and video production to app design and go-to-market strategy.",
             list: [
               "video & graphic design",
               "Branding & Marketing Campaigns",
@@ -324,7 +324,7 @@ export default function CisLatam() {
             </div>
           </div>
           <div className='relative text-white top-[-10vw] w-[80%] mx-auto'>
-            <PreviousNext previousUrl="/milaires" nextUrl="/vml" />
+            <PreviousNext previousUrl="/aon" nextUrl="/milaires" />
           </div>
         </div>
         <div>
