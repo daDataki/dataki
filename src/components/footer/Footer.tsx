@@ -10,6 +10,9 @@ interface FooterProps {
   letsTalkColor?: string;   // Color del "Let's Talk"
 }
 
+const email = "jb@dataki.co"
+const emailLink = "mailto:" + email;
+
 export default function Footer({
   background = DEFAULT_BG,
   navTextColor = DEFAULT_NAV_TEXT_COLOR,
@@ -39,12 +42,12 @@ export default function Footer({
             <span className="block">Avenida del Libertador 6299 </span>
             <span className="block">Ciudad de Buenos Aires, C1428ARF</span>
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=jb@dataki.co"
+               href={emailLink}
               target="_blank"
               rel="noopener noreferrer"
               className="block text-white underline hover:text-blue-800"
             >
-              jb@dataki.co
+              {email}
             </a>
           </p></div>
           <div className="text-captions font-Poppins z-30 w-1/2">
@@ -53,12 +56,12 @@ export default function Footer({
             <span className="block">1600 NE 1st Ave.  Apt. 1408</span>
             <span className="block">Miami, FL 33132</span>
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=jb@dataki.co"
+              href={emailLink}
               target="_blank"
               rel="noopener noreferrer"
               className="block text-white underline hover:text-blue-800"
             >
-              jb@dataki.co
+              {email}
             </a></div>
         </div>
       </nav>
