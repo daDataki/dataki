@@ -179,18 +179,26 @@ img {
 }
 
 .scrollable-image {
-  animation: scrollImage 60s linear infinite alternate;
-  will-change: transform;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: auto;
+  animation: scrollImage 60s linear infinite alternate;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0); /* fuerza aceleración por GPU */
+  -webkit-transform: translate3d(0, 0, 0);
+  image-rendering: optimizeQuality; /* mejora visual */
 }
 
-/* 🔥 FIX para Safari */
+/* Safari fix adicional */
 @supports (-webkit-touch-callout: none) {
   .scrollable-image {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     animation: scrollImage 60s linear infinite alternate !important;
   }
 }

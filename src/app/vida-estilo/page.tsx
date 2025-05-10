@@ -134,7 +134,7 @@ export default function VidaEstilo() {
             <div className=' w-full flex justify-center'>
               <div className="relative w-[70%] z-20">
                 {/* Contenedor con overflow-hidden para simular el marco de la pantalla */}
-                <div className="absolute bg-blue w-[82%] h-[53%] top-[8%] left-[9%] overflow-hidden">
+                <div className="absolute bg-blue w-[82%] h-[53%] top-[8%] left-[9%] overflow-hidden ">
                   <div className="relative w-full h-full">
                     {/* Imagen con animación de desplazamiento */}
                     <img
@@ -153,7 +153,7 @@ export default function VidaEstilo() {
                   width={800}
                   height={1111}
                   layout="intrinsic"
-                  priority={true} 
+                  priority={true}
                 />
               </div>
               <div id="design" className="absolute bottom-24 w-fit text-start left-12">
@@ -205,7 +205,7 @@ export default function VidaEstilo() {
             <div className=''><h2 className='uppercase font-antonio font-bold text-bordered-strategy '>Strategy</h2></div>
           </div>
         </div>
-       
+
         <div className='mt-[-1px] bg-[#68725E] py-8 text-white px-24 z-10'><PreviousNext previousUrl="/daytona" nextUrl="/vml" /></div>
         <div>
           <Footer background="bg-[#131313] " />

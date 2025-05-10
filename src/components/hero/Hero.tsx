@@ -63,7 +63,6 @@ const Hero: React.FC<HeroProps> = ({
                     }}
                 >
                     <div className="absolute inset-0 bg-black opacity-40 "></div>
-
                     <div className="flex flex-col justify-between px-12 pt-12 py-12 z-10 h-[100%]">
                         <div className="w-fit">
                             <div className="w-fit">
