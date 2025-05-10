@@ -55,36 +55,4 @@ body {
     font-weight: bold;
   }
 
-  .scrollable-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    animation: scrollImage 60s linear infinite alternate;
-    will-change: transform;
-    backface-visibility: hidden;
-    transform: translate3d(0, 0, 0); /* fuerza aceleración por GPU */
-    -webkit-transform: translate3d(0, 0, 0);
-    image-rendering: optimizeQuality; /* mejora visual */
-  }
   
-  /* Safari fix adicional */
-  @supports (-webkit-touch-callout: none) {
-    .scrollable-image {
-      transform: translateZ(0);
-      -webkit-transform: translateZ(0);
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-      animation: scrollImage 60s linear infinite alternate !important;
-    }
-  }
-  
-  @keyframes scrollImage {
-    from {
-      transform: translate3d(0, 0, 0);
-    }
-    to {
-      transform: translate3d(0, -93%, 0);
-    }
-  }
