@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './VerticalSlider.css';
 
-const words = ['strategy', 'design', 'technology', 'content', 'data', 'media'];
+const words = ['strategy', 'design','media' , 'content', 'data', 'technology'];
 
 const strategy = [
   "Go-to-market.",
@@ -23,10 +23,12 @@ const design = [
   "Packaging."
 ];
 
-const technology = [
-  "Front-end & back-end development.",
-  "Platform development.",
-  "Website performance optimization."
+const media = [
+  "Campaign Strategy and Planning.",
+  "Platform Selection and Setup.",
+  "Ad Creation and Management.",
+  "Optimization and Scaling.",
+  "Analytics and Reporting.",
 ];
 
 const content = [
@@ -45,22 +47,20 @@ const data = [
   "Insights for strategy optimization.",
   "Custom analytics dashboards.",
 ];
-
-const media = [
-  "Campaign Strategy and Planning.",
-  "Platform Selection and Setup.",
-  "Ad Creation and Management.",
-  "Optimization and Scaling.",
-  "Analytics and Reporting.",
+const technology = [
+  "Front-end & back-end development.",
+  "Platform development.",
+  "Website performance optimization."
 ];
 
 const wordContentMap: { [key: string]: string[] } = {
   strategy,
   design,
-  technology,
+  media,
   content,
   data,
-  media,
+  technology,
+  
 };
 
 export default function VerticalSlider() {
