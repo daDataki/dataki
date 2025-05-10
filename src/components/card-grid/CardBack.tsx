@@ -33,7 +33,7 @@ const imageDataMap: Record<string, {
     title: "Milaires",
     text1: "",
     text2: "2024-Ongoing",
-    categories: ["Digital Strategy & Campaigns", "Graphic Design & Media", "Data Analytics"],
+    categories: ["Digital Strategy & Campaigns", "Graphic Design", "Media", "Data Analytics"],
     route: "/milaires"
   },
   "/images-grid/Mask-group4.png": {
@@ -58,7 +58,7 @@ const imageDataMap: Record<string, {
     text1: "",
     text2: "2022",
     categories: ["Front-End Development", "Back-End Development", "Web Design & Development"],
-    route: "/vida-estilo"
+    route: ""
   },
   "/images-grid/Macbook-Claro7.png": {
     src: "/images-grid/Macbook-Claro7.png",
@@ -74,7 +74,7 @@ const imageDataMap: Record<string, {
     text1: "",
     text2: "2022-2024",
     categories: ["Video Production & Graphic Design", "UX/UI & Web Development", "Business & Digital Strategy", "Graphic Design"],
-    route: "/vida-estilo"
+    route: ""
   },
   "/images-grid/Mask-group-9.png": {
     src: "/images-grid/Mask-group-9.png",
@@ -98,7 +98,7 @@ const CardBack = ({ image}: { image: string;  }) => {
     route: ""
   };
   const handleNavigate = () => {
-
+    if (!route) return;
     router.push(route); // Redirige a la página correspondiente
   };
    
