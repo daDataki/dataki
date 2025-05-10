@@ -25,11 +25,12 @@ export default function Footer({
           </p>
           <p className="hidden font-semibold text-caption font-Poppins">
             Virtual team <br /> with global reach.
+            
           </p>
         </div>
 
         <div className="max-sm:justify-center max-sm:text-center flex  mb-8">
-          <p className="font-antonio font-bold safari-text-stroke  xtext-lg1  uppercase z-30">Tell us about <br /> your idea.</p>
+          <p className="font-antonio font-bold safari-text-stroke  xtext-lg1  uppercase z-30">Share your<br/> idea  with us</p>
         </div>
         <div className="block sm:flex justify-between w-full max-sm:text-center xl:w-[75%] z-30">
           <div className='z-30 w-1/2'> <p className="text-captions font-Poppins">

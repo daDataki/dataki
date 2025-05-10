@@ -279,7 +279,7 @@ export default function Milaires() {
               <Image src="/images-proyecto/milaires-5.png" alt="milaires-5" className="relative left-[6vw] top-[4vw]  w-[23vw] z-20" width={326} height={326} />
             </motion.div>
           </div>
-          <div className='relative pl-10 top-[-20vw] z-0'>
+          <div className='relative pl-10 top-[-10vw] z-0'>
             <h2 className='uppercase font-antonio font-medium text-white font-digital-miliares'>
               design
             </h2>
@@ -293,7 +293,7 @@ export default function Milaires() {
           </div>
           <div className='relative'>
             <h2 className='uppercase font-antonio font-medium text-white font-digital-miliares text-media'>
-              & campaigns
+              campaigns
             </h2>
           </div>
           <div className='relative top-[-15vw] flex w-full overflow-hidden justify-center '>
