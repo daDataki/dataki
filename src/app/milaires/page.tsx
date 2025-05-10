@@ -96,14 +96,15 @@ export default function Milaires() {
           title="MILAIRES"
           backgroundImage={beacon.src}
           prev='/claro'
-          next='/vml'
+          next='/cis-latam'
           clientInfo={{
             group: "",
             date: "2024-Ongoing",
             name: "MILAIRES",
             categories: [
               "Digital Strategy & Campaigns",
-              "Graphic Design & Media",
+              "Graphic Design",
+              "Media",
               "Data Analytics",
             ],
           }}
@@ -113,7 +114,8 @@ export default function Milaires() {
               "MilAires came to us for a comprehensive digital strategy. We manage their social media, tailor campaigns, run data analytics, and design attractive visuals to enhance their presence.",
             list: [
               "Digital Strategy & Campaigns",
-              "Graphic Design & Media",
+              "Graphic Design",
+              "Media",
               "Data Analytics",
             ],
           }}
@@ -401,7 +403,7 @@ export default function Milaires() {
             </video>
           </div>
         </div>
-        <div className='mt-[-1px] bg-[#162b45]  text-white px-24 z-10'><PreviousNext previousUrl="/claro" nextUrl="/vml" /></div>
+        <div className='mt-[-1px] bg-[#162b45]  text-white px-24 z-10'><PreviousNext previousUrl="/claro" nextUrl="/cis-latam" /></div>
         <div>
           <Footer background="[background:linear-gradient(to_bottom,_#162b45_10%,_black_100%)]"
           />

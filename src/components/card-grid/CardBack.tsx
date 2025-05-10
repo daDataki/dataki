@@ -26,7 +26,7 @@ const imageDataMap: Record<string, {
     text1: "",
     text2: "2022-Ongoing",
     categories: ["Video & Graphic Design", "Branding & Marketing Campaigns", "Digital & Go-To-Market Strategies", "App & Web UX/UI Design"],
-    route: "/vida-estilo"
+    route: "/cis-latam"
   },
   "/images-grid/Mask-group33.png": {
     src: "/images-grid/Mask-group33.png",

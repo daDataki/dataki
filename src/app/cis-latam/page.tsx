@@ -4,30 +4,90 @@ import Hero from '@/components/hero/Hero';
 import cis from '../../../public/images-proyecto/cis-slider-1.png';
 import './cis-latam.css'
 import Image from 'next/image';
-import { useState } from "react";
 import PreviousNext from '../../components/previous-next/PreviousNext'
 import Footer from '../../components/footer/Footer'
+import { motion, useInView } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+
+
 
 
 const images = [
-  "/images-proyecto/Cis-PautaDigital-S01.png",
-  "/images-proyecto/CONTENT.png",
-  "/images-proyecto/Cis-PautaDigital-S02.png",
+  "/images-proyecto/cis-image-1.png",
+  "/images-proyecto/cis-image-2.png",
+  "/images-proyecto/cis-image-3.png",
+  "/images-proyecto/cis-image-4.png",
+  "/images-proyecto/cis-image-5.png",
+  "/images-proyecto/cis-image-6.png",
+  "/images-proyecto/cis-image-7.png",
+  "/images-proyecto/cis-image-8.png",
+  "/images-proyecto/cis-image-9.png",
+  "/images-proyecto/cis-image-10.png",
+  "/images-proyecto/cis-image-11.png",
+  "/images-proyecto/cis-image-12.png",
+  "/images-proyecto/cis-image-13.png",
+  "/images-proyecto/cis-image-14.png",
+
 
 ];
 
 
 export default function CisLatam() {
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(2);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, margin: "-120px" });
+
+  const [bgColor, setBgColor] = useState("#FFE300");
+  const videoRef = useRef(null);
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!videoRef.current || !canvasRef.current) return;
+  
+      const video = videoRef.current;
+      const canvas = canvasRef.current as HTMLCanvasElement;
+      const ctx = canvas.getContext("2d");
+  
+      if (ctx && video) {
+        try {
+          ctx.drawImage(video, 0, 0, 4, 2);
+          const frame = ctx.getImageData(0, 0, 1, 1).data;
+          const color = `rgb(${frame[0]}, ${frame[1]}, ${frame[2]})`;
+          setBgColor(color);
+        } catch (err) {
+          console.warn("No se pudo obtener el color del video:", err);
+        }
+      }
+    }, 500);
+  
+    return () => clearInterval(interval);
+  }, []);
+  
 
 
-  const prevSlide = () => {
-    setActiveIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
-  };
+  useEffect(() => {
+    let direction = 1; // 1 para incrementar, -1 para decrementar
 
-  const nextSlide = () => {
-    setActiveIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
-  };
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => {
+        // Cambia la dirección si llegas a los límites
+        if (prevIndex === images.length - 1) {
+          direction = -1; // Cambia a decrementar
+        } else if (prevIndex === 0) {
+          direction = 1; // Cambia a incrementar
+        }
+
+        // Retorna el nuevo índice basado en la dirección
+        return prevIndex + direction;
+      });
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+
+    }
+  }, [images.length]);
 
   return (
     <>
@@ -35,8 +95,8 @@ export default function CisLatam() {
         <div><Hero
           title="CIS latam"
           backgroundImage={cis.src}
-          prev='/vml'
-          next='/vida-estilo'
+          prev='/milaires'
+          next='/vml'
           clientInfo={{
             group: "",
             date: "2022 Ongoing",
@@ -48,7 +108,7 @@ export default function CisLatam() {
               "App & Web UX/UI Design",
             ],
           }}
-          aboutInfo="Cis Latam work showcase"
+          aboutInfo=<>Cis Latam <br /> work showcase </>
           services={{
             description:
               "We helped Cis Latam launch with a comprehensive digital and strategic package, covering everything from branding and video production to app design and go-to-market strategy.",
@@ -60,157 +120,211 @@ export default function CisLatam() {
             ],
           }}
         /></div>
-        <div className=" hidden relative w-full h-[60vh] md:h-[120vh]  justify-end items-center  bg-black mt-[-1px]">
-          <div className="w-full absolute flex justify-center top-1/2 left-1/2 -translate-x-[47%] -translate-y-[70%]">
-            <Image
-              className="w-[70%] lg:w-[40%] slide-fwd-center"
-              src="/images-proyecto/Ellipse31.png"
-              alt="vida-estilo"
-              width={879}
-              height={879}
-            />
-            <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-antonio font-semibold text-[50px]  md:text-[70px] lg:text-[100px] uppercase text-black text-center">
-              digital <br /> strategy
-            </h2>
-          </div>
-          <div className='justify-center w-full absolute top-1/2 left-1/2 -translate-x-[70%]  lg:-translate-x-[60%] -translate-y-1/2 '><Image
-            className="w-[70%] lg:w-[45%]"
-            src="/images-proyecto/CisUp-Mockup-Phone.png"
-            alt="vida-estilo"
-            width={879}
-            height={879}
-          /></div>
-        </div>
-        <div className='flex flex-col w-full mt-[-1px]'>
-          <video
-            className="w-full h-screen object-cover"
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
-            <source src="/video/institucional-cisup2.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div className='bg-black py-28 mt-[-1px]'>
-          <div className='relative flex justify-end font-antonio font-semibold fontSize-fluid-branding text-bordered top-[109%] lg:top-[123%] xl:top-[118%] 2xl:top-[110%]'>
-            <h2 className='relative uppercase text-bordered-branding '>branding</h2>
-            <div className="absolute w-1/4 h-auto top-[88%] pr-0">
+        <div className='bg-black pb-28 xl:pb-64 mt-[-1px] pt-12'>
+          <div className='relative flex justify-center items-center'>
+            <motion.div
+              ref={ref}
+              initial={{ scale: 0 }}
+              animate={isInView ? { scale: 1 } : { scale: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="flex justify-center items-center w-[53.52vw] h-[53.52vw] rounded-full"
+              style={{ backgroundColor: bgColor }}
+            >
+              <div className="flex flex-col font-antonio font-medium uppercase fontSize-fluid-digital">
+                <span>digital</span>
+                <span>strategy</span>
+              </div>
+            </motion.div>
+
+            <div className='absolute w-[45.76vw] top-[8vw] left-4'>
+              <video ref={videoRef} className="phone-video-cis z-20" autoPlay loop muted playsInline>
+                <source src="/video/cis-registro.mp4" type="video/mp4" />
+              </video>
+              <canvas ref={canvasRef} width={1} height={1} className="hidden" />
               <Image
                 className="w-full"
-                src="/images-proyecto/Group-42.png"
+                src="/images-proyecto/CisUp-Mockup-Phone.png"
                 alt="vida-estilo"
-
-                width={380} // 
-                height={1088}
+                width={879}
+                height={879}
               />
             </div>
           </div>
-          <div className="flex items-center justify-center py-8 md:py-32 mt-6 md:mt-24">
-            <button onClick={prevSlide} className="hidden text-3xl font-bold text-white">❮</button>
-            <div className="w-full flex justify-around">
-              {images.map((src, index) => {
-                // Definir si la imagen es la activa (central)
-                const isActive = index === activeIndex;
-                // Definir si la imagen es adyacente a la activa
-                const isAdjacent = index === activeIndex - 1 || index === activeIndex + 1;
+        </div>
+        <div className='flex justify-center mt-[-1px] w-full h-screen'>
+          <video
+            className=" object-cover w-full"
+            controls
+            playsInline
+          >
+            <source src="/video/cis-up-v3-1.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className='bg-black py-28 mt-[-1px]'>
+          <div className='relative w-full flex justify-start font-antonio font-semibold fontSize-fluid-digital top-[109%] lg:top-[123%] xl:top-[118%] 2xl:top-[110%]'>
+            <h2 className='relative pl-12 top-[4.5vw] uppercase text-bordered-branding '>branding</h2>
+          </div>
+          <div className='relative top-0 flex w-full overflow-hidden justify-center '>
+            <div className="flex justify-center items-center relative">
+              {/* Mockup del teléfono transparente */}
+              <Image
+                className="relative w-[375px] z-20"
+                src="/images-proyecto/CONTENT.png"
+                alt="Main Image"
+                layout="intrinsic"
+                width={800}
+                height={1111}
+              />
 
-                return (
-                  <div
-                    key={index}
-                    className={`relative transition-all duration-500
-                    ${isActive ? "scale-100 py-2 md:py-12 bg-white shadow-lg" : ""}
-                    ${isAdjacent ? "scale-x-95  scale-y-75" : ""}
-                    ${!isActive && !isAdjacent ? "scale-75  scale-y-90" : ""}`}
-                    style={{
-                      width: isActive ? "25%" : isAdjacent ? "22%" : "15%", // Tamaños dinámicos
-                      borderRadius: "12px",
-                    }}
-                  >
-                    <img
-                      src={src}
-                      alt={`Cis-Slide ${index}`}
-                      className="w-full h-full object-cover rounded-lg"
+              {/* Carrusel desenfocado (fondo) */}
+              <div className="w-[95%] absolute z-10">
+                <div
+                  className="flex gap-8 blur-sm"
+                  style={{
+                    transform: `translateX(calc(-${currentIndex * 100}% - ${2 * currentIndex}rem))`,
+                    transition: '0.2s',
+                  }}
+                >
+                  {images.map((img, index) => (
+                    <Image
+                      key={index}
+                      className="w-full"
+                      src={img}
+                      alt={`Slide ${index}`}
+                      layout="intrinsic"
+                      width={800}
+                      height={1111}
+                      style={{
+                        flexShrink: 0
+                      }}
                     />
-                  </div>
+                  ))}
+                </div>
+              </div>
 
-                );
-              })}
+              {/* "Ventana nítida" donde se ve la imagen sin blur dentro del teléfono */}
+              <div
+                className="w-[74%] absolute z-30 left-1/2 sm:-translate-x-[187px] xl:-translate-x-[188px] overflow-hidden"
+                style={{
+                  width: '375px',    // Ajustá esto al ancho de la pantalla del mockup
+                  height: '390px',   // Ajustá esto a la altura de la pantalla
+                  top: '55px',      // Posicioná desde arriba
+
+                }}
+              >
+                <div
+                  className="flex gap-8"
+                  style={{
+                    transform: `translateX(calc(-${currentIndex * 100}% - ${2 * currentIndex}rem))`,
+                    transition: '0.2s',
+                  }}
+                >
+                  {images.map((img, index) => (
+                    <Image
+                      key={index}
+                      className="w-full"
+                      src={img}
+                      alt={`Slide ${index}`}
+                      layout="intrinsic"
+                      width={800}
+                      height={1111}
+                      style={{
+                        flexShrink: 0
+                      }}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
-            <button onClick={nextSlide} className="hidden text-3xl font-bold text-white">❯</button>
           </div>
-          <div className='w-9/12 flex justify-center'><h2 className='text-white font-antonio font-light text-2xl lg:text-6xl uppercase'>Blending creativity <br /> and strategy for <br /> impactful growth.</h2></div>
+
         </div>
-        <div className="relative w-full bg-black mt-[-1px]">
-          <Image
-            className="w-full"
-            src="/images-proyecto/cis-slider-1.png"
-            alt="cis-slider"
-            layout="intrinsic"
-            width={1447} // 
-            height={962}
-          />
-          <Image
-            className="absolute w-[90%] top-[44%] left-1/2 transform -translate-x-1/2 z-10"
-            src="/images-proyecto/CisUp-Landing-Mockup.png"
-            alt="cis-slider"
-            layout="intrinsic"
-            width={1835} // 
-            height={912}
-          />
-          <Image
-            className="hidden absolute w-9/12 top-[127%] left-1/2 transform -translate-x-1/2 "
-            src="/images-proyecto/CisUp-Landing-Screen.png"
-            alt="CisUp-Landing-Screen"
-            layout="intrinsic"
-            width={1051} // 
-            height={477}
-          />
-          <Image
-            className="hidden absolute w-9/12 top-[178%] left-1/2 transform -translate-x-1/2 "
-            src="/images-proyecto/CisUp-Landing-Screen-3.png"
-            alt="CisUp-Landing-Screen"
-            layout="intrinsic"
-            width={1051} // 
-            height={477}
-          />
-        </div>
-        <div className='bg-black h-70'></div>
-        <div className='relative flex flex-col rectangulo62 h-[120vh] sm:h-[150vh]  lg:h-[180vh] xl:h-[230vh] 2xl:h-[270vh] mt-[-1px]' >
-          <div className='relative flex flex-col top-[16%]  font-antonio font-semibold fontSize-fluid-marketing ]'>
-            <h2 className='uppercase text-bordered-marketing '>marketing</h2>
-            <h2 className='uppercase text-bordered-marketing self-end mr-14 '>campaign</h2>
-          </div>
-          <div className='relative flex flex-row justify-between top-[2%]'>
+        <div className='bg-gradient-to-t from-[#131313] to-[#000000] bg-no-repeat bg-cover w-full pb-24 pl-24 flex justify-start mt-[-1px]'><h2 className='text-white font-antonio font-light text-2xl lg:text-6xl uppercase'>Blending creativity <br /> and strategy for <br /> impactful growth.</h2></div>
+        <div className='relative bg-gradient-to-t from-[#3b2c57] to-[#131313] bg-no-repeat bg-cover mt-[-1px] pt-12'>
+          <h2 className='sticky flex justify-center gap-16 top-0 mb-32 text-center font-antonio font-medium text-bordered text-white fontSize-fluid-digital  uppercase'><span>web</span><span>design</span></h2>
+          <div className="relative w-[70%] z-20 mx-auto top-[-10vw] ">
+            {/* Contenedor con overflow-hidden para simular el marco de la pantalla */}
+            <div className="absolute bg-blue w-[73.2%] h-[75%] top-[6%] left-[13.8%] overflow-hidden">
+              <div className="relative w-full h-full">
+                {/* Imagen con animación de desplazamiento */}
+                <Image
+                  className="absolute w-full scrollable-image"
+                  src="/images-proyecto/cis-scroll.png"
+                  alt="vida-estilo"
+                  width={800}
+                  height={1111}
+                  layout="intrinsic"
+                  priority={true}
+                />
+              </div>
+            </div>
+
+            {/* Imagen estática de la pantalla */}
             <Image
-              className="w-[19%]  "
+              className="z-10 w-full"
+              src="/images-proyecto/Claro-Mockup.png"
+              alt="vida-estilo"
+              width={800}
+              height={1111}
+              layout="intrinsic"
+              priority={true}
+            />
+          </div>
+          <img
+            className="absolute top-[40vw] z-10 w-full h-screen"
+            src="/images-proyecto/cis-frame.png"
+            alt="vida-estilo"
+          />
+        </div>
+        <div className=' bg-[#3b2c57]  bg-no-repeat bg-cover relative flex flex-col mt-[-1px]' >
+          <div className='relative flex flex-col top-[16%]  font-antonio font-semibold'>
+            <h2 className='uppercase pl-12 text-bordered font-medium fontSize-fluid-digital'>marketing</h2>
+            <h2 className='uppercase pl-12 text-bordered  font-medium  fontSize-fluid-digital'>campaign</h2>
+          </div>
+          <div className='w-full relative flex flex-row justify-between top-[-20vw]'>
+            <Image
+              className="w-[17%]  "
               src="/images-proyecto/Group-43.png"
               alt="CisUp-Landing-Screen"
               layout="intrinsic"
               width={379} // 
               height={1087}
             />
-            <Image
-              className="relative w-[65%] top-24 "
-              src="/images-proyecto/Cis-PautaDigital-S04-Mailings.png"
-              alt="CisUp-Landing-Screen"
-              layout="intrinsic"
-              width={815} // 
-              height={1103}
-            />
+            <div className='flex'>
+              <div className='relative flex justify-center left-[9vw] top-[10vw]'>
+                <img
+                  className="absolute w-[60%] top-[14.7%] h-[70%]"
+                  src="/images-proyecto/cis-scroll.png"
+                  alt="CisUp-Landing-Screen"
+
+                />
+                <Image
+                  className="relative w-[77%]"
+                  src="/images-proyecto/milaires-phone-transparent-fixed.png"
+                  alt="CisUp-Landing-Screen"
+                  layout="intrinsic"
+                  width={815} // 
+                  height={1103}
+                /></div>
+              <div className='relative flex justify-center top-[-10vw] right-[13vw]'>
+                <img
+                  className="absolute w-[60%] top-[14.7%] h-[72%]"
+                  src="/images-proyecto/cis-scroll-2.png"
+                  alt="CisUp-Landing-Screen"
+
+                />
+                <Image
+                  className="relative w-[77%] "
+                  src="/images-proyecto/milaires-phone-transparent-fixed.png"
+                  alt="CisUp-Landing-Screen"
+                  layout="intrinsic"
+                  width={815} // 
+                  height={1103}
+                /></div>
+            </div>
           </div>
-          <div className='absolute w-full bottom-0'>
-            <Image
-              className="w-full"
-              src="/images-proyecto/Frame.png"
-              alt="CisUp-Landing-Screen"
-              style={{ objectFit: 'contain' }}
-              width={379} // 
-              height={1087}
-            />
-          </div>
-          <div className='relative top-[25%] lg:top-[18%] 2xl:top-[15%] w-[80%] mx-auto'>
-            <PreviousNext />
+          <div className='relative text-white top-[-10vw] w-[80%] mx-auto'>
+            <PreviousNext previousUrl="/milaires" nextUrl="/vml" />
           </div>
         </div>
         <div>

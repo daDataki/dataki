@@ -122,7 +122,7 @@ export default function Vml() {
           textBlack='text-black'
           title="VML"
           backgroundImage={beacon.src}
-          prev='/milaires'
+          prev='/cis-latam'
           next='/aon'
           clientInfo={{
             group: "",
@@ -619,7 +619,7 @@ export default function Vml() {
             <h2 className='uppercase'>production</h2>
           </div>
         </div>
-        <div className='mt-[-1px] bg-white  text-[#131313] px-24 z-10'><PreviousNext previousUrl="/milaires" nextUrl="/aon" /></div>
+        <div className='mt-[-1px] bg-white  text-[#131313] px-24 z-10'><PreviousNext previousUrl="/cis-latam" nextUrl="/aon" /></div>
         <div>
           <Footer background="bg-black"       
             />

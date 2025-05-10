@@ -1,27 +1,15 @@
 .text-bordered {
-    color: black;
+    color: transparent;
     /* Color de la letra */
-    text-shadow:
-        -1px -1px 0 white,
-        /* Sombra arriba-izquierda */
-        1px -1px 0 white,
-        /* Sombra arriba-derecha */
-        -1px 1px 0 white,
-        /* Sombra abajo-izquierda */
-        1px 1px 0 white;
-    /* Sombra abajo-derecha */
-}
+    -webkit-text-stroke: 2px white;
+  }
 
-.fontSize-fluid {
-    font-size: clamp(20vw, 27vw, 50vw);
-    line-height: clamp(20vw, 27vw, 50vw);
+.fontSize-fluid-digital {
+    font-size: clamp(66px, 13.88vw, 300px);
+    line-height: clamp(66px, 13.88vw, 300px);
 
 }
-.fontSize-fluid-branding {
-    font-size: clamp(15vw, 21vw, 27vw);
-    line-height: clamp(15vw, 21vw, 27vw);
 
-}
 
 .fontSize-fluid-social {
     font-size: clamp(7vw, 15vw, 21vw);
@@ -131,5 +119,38 @@
   
   .animate-slide-fwd {
     animation: slide-fwd-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  
+  .phone-video-cis{
+    position: absolute;
+    object-fit:cover; 
+    top: 13.8%;
+    left: 50.4%;
+    transform: translateX(-50%);
+    width: 44.9%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .scrollable-image {
+    animation: scrollImage 15s linear infinite alternate;
+    will-change: transform;
+   
+  }
+  
+  /* 🔥 FIX para Safari */
+  @supports (-webkit-touch-callout: none) {
+    .scrollable-image {
+      animation: scrollImage 15s linear infinite alternate !important;
+    }
+  }
+  
+  @keyframes scrollImage {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-60%);
+    }
   }
   
