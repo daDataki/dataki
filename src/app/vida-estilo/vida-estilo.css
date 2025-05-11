@@ -184,7 +184,7 @@ img {
   left: 0;
   width: 100%;
   height: auto;
-  animation: scrollImage 60s linear infinite alternate;
+  animation: scrollImage 15s linear infinite alternate;
   will-change: transform;
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0); /* fuerza aceleración por GPU */
@@ -199,7 +199,7 @@ img {
     -webkit-transform: translateZ(0);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    animation: scrollImage 60s linear infinite alternate !important;
+    animation: scrollImage 15s linear infinite alternate !important;
   }
 }
 
@@ -208,7 +208,7 @@ img {
     transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translate3d(0, -93%, 0);
+    transform: translate3d(0, -70%, 0);
   }
 }
 
