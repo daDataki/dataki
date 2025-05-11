@@ -139,7 +139,7 @@ export default function VidaEstilo() {
                     {/* Imagen con animación de desplazamiento */}
                     <img
                       className="scrollable-image"
-                      src="/images-proyecto/vida-est-image-1.jpg"
+                      src="/images-proyecto/vida-est-image-1.png"
                       alt="vida-estilo"
                     />
                   </div>
