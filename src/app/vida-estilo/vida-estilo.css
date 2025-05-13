@@ -181,7 +181,8 @@ img {
 .scrollable-image {
   position: absolute;
   width: 100%;
-  height: 330%;
+  height: auto;
+  aspect-ratio: 9 / 16; 
   object-fit: cover;
   animation: scrollImage 15s linear infinite alternate;
   will-change: transform;
