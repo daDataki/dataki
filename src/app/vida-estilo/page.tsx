@@ -138,34 +138,30 @@ export default function VidaEstilo() {
               <h2 className="uppercase text-bordered-branding sm:left-3">graphic</h2>
             </div>
             <div className=' w-full flex justify-center'>
-            <div className="relative w-[70%] z-20 mx-auto top-[-10vw] ">
-                        {/* Contenedor con overflow-hidden para simular el marco de la pantalla */}
-                        <div className="absolute bg-blue w-[73.2%] h-[75%] top-[6%] left-[13.8%] overflow-hidden">
-                            <div className="relative w-full h-full">
-                                {/* Imagen con animación de desplazamiento */}
-                                <Image
-                                    className="absolute w-full scrollable-image"
-                                    src="/images-proyecto/vida-est-image-1.png"
-                                    alt="vida-estilo"
-                                    width={800}
-                                    height={1111}
-                                    layout="intrinsic"
-                                    priority={true}
-                                />
-                            </div>
-                        </div>
+              <div className="relative w-[70%] z-20 mx-auto top-[-10vw] ">
+                {/* Contenedor con overflow-hidden para simular el marco de la pantalla */}
+                <div className="absolute bg-blue w-[76.2%] h-[57%] top-[8.2%] left-[12.1%] overflow-hidden">
+                  <div className="relative w-full h-full">
+                    {/* Imagen con animación de desplazamiento */}
+                    <Image
+                      className="absolute w-full scrollable-image"
+                      src="/images-proyecto/vida-est-image-1.png"
+                      alt="vida-estilo"
+                      width={800}
+                      height={1111}
+                      layout="intrinsic"
+                      priority={true}
+                    />
+                  </div>
+                </div>
 
-                        {/* Imagen estática de la pantalla */}
-                        <Image
-                            className="z-10 w-full"
-                            src="/images-proyecto/Claro-Mockup.png"
-                            alt="vida-estilo"
-                            width={800}
-                            height={1111}
-                            layout="intrinsic"
-                            priority={true}
-                        />
-                    </div>
+                {/* Imagen estática de la pantalla */}
+                <img
+                  className="z-10 w-full"
+                  src="/images-proyecto/vida-estilo-pantalla.png"
+                  alt="vida-estilo"
+                />
+              </div>
 
               <div id="design" className="absolute bottom-24 w-fit text-start left-12">
                 <h2 className="uppercase text-bordered-branding sm:left-3">design</h2>
