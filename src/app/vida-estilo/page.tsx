@@ -139,7 +139,7 @@ export default function VidaEstilo() {
                     {/* Imagen con animación de desplazamiento */}
                     <img
                       className="scrollable-image"
-                      src="/images-proyecto/vida-est-image-1.png"
+                      src="/images-proyecto/vida-est-image-1-2.png"
                       alt="vida-estilo"
                     />
                   </div>
@@ -147,13 +147,11 @@ export default function VidaEstilo() {
 
                 {/* Imagen estática de la pantalla */}
                 <Image
-                  className="z-10"
                   src="/images-proyecto/imac.png"
-                  alt="vida-estilo"
+                  alt="iMac"
                   width={800}
                   height={1111}
-                  layout="intrinsic"
-                  priority={true}
+                  priority
                 />
               </div>
               <div id="design" className="absolute bottom-24 w-fit text-start left-12">
