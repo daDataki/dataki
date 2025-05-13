@@ -179,16 +179,12 @@ img {
 }
 
 .scrollable-image {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 9 / 16; 
-  object-fit: cover;
   animation: scrollImage 15s linear infinite alternate;
   will-change: transform;
+ 
 }
 
-/* Safari fix adicional */
+/* 🔥 FIX para Safari */
 @supports (-webkit-touch-callout: none) {
   .scrollable-image {
     animation: scrollImage 15s linear infinite alternate !important;
@@ -197,12 +193,13 @@ img {
 
 @keyframes scrollImage {
   from {
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
   }
   to {
-    transform: translate3d(0, -70%, 0);
+    transform: translateY(-65%);
   }
 }
+
 
 
 
