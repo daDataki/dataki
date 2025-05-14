@@ -16,7 +16,7 @@ const imageDataMap: Record<string, {
     src: "/images-grid/busy-1.png",  // Aquí es necesario asignar correctamente la propiedad src
     title: "AON",
     text1: "",
-    text2: "2024-Ongoing",
+    text2: "2023-Ongoing",
     categories: ["Video Production", "Front-End Development", "Business & Digital Strategy", "Graphic & Digital Design"],
     route: "/aon"
   },
@@ -32,7 +32,7 @@ const imageDataMap: Record<string, {
     src: "/images-grid/Mask-group33.png",
     title: "Milaires",
     text1: "",
-    text2: "2024-Ongoing",
+    text2: "2023-Ongoing",
     categories: ["Digital Strategy & Campaigns", "Graphic Design", "Media", "Data Analytics"],
     route: "/milaires"
   },
@@ -49,7 +49,7 @@ const imageDataMap: Record<string, {
     title: "Vida & Estilo",
     text1: "Hospitality Group",
     text2: "2023-Ongoing",
-    categories: ["SEO & Data Analytics", "Branding & Digital Strategy", "Graphic & Web Designs", "Online & Social Media Management"],
+    categories: ["SEO & Data Analytics", "Branding & Digital Strategy", "Graphic & Web Design", "Online & Social Media Management"],
     route: "/vida-estilo"
   },
   "/images-grid/miroshnichenko66.png": {
@@ -74,7 +74,7 @@ const imageDataMap: Record<string, {
     text1: "",
     text2: "2022-2024",
     categories: ["Video Production & Graphic Design", "UX/UI & Web Development", "Business & Digital Strategy", "Graphic Design"],
-    route: ""
+    route: "/tango"
   },
   "/images-grid/Mask-group-9.png": {
     src: "/images-grid/Mask-group-9.png",

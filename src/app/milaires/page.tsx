@@ -99,7 +99,7 @@ export default function Milaires() {
           next='/daytona'
           clientInfo={{
             group: "",
-            date: "2024-Ongoing",
+            date: "2023-Ongoing",
             name: "MILAIRES",
             categories: [
               "Digital Strategy & Campaigns",

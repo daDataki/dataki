@@ -68,12 +68,12 @@ export default function VidaEstilo() {
           next='/vml'
           clientInfo={{
             group: "Hospitality Group",
-            date: "2023-Ongoing",
+            date: "2022-Ongoing",
             name: "Vida & Estilo<br />Hospitality<br />Group",
             categories: [
               "SEO & Data Analytics",
               "Branding & Digital Strategy",
-              "Graphic & Web Designs",
+              "Graphic & Web Design",
               "Online & Social Media Management",
             ],
           }}

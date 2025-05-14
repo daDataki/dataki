@@ -54,7 +54,7 @@ export default function Claro() {
                         backgroundImage={claro.src}
                         backgroundPosition="right"
                         prev='/vml'
-                        next='/aon'
+                        next='/tango'
                         clientInfo={{
                             group: "",
                             date: "2020-2025",
@@ -300,7 +300,7 @@ export default function Claro() {
                 <div className='relative py-24 bg-[linear-gradient(to_bottom,_#E20001_0%,_#E20001_1%,_#000000_100%)]'>
                     <div className='w-full mt-[2px]'>
                         <div className='px-24  mx-auto  '>
-                            <PreviousNext className='text-white' previousUrl="/vml" nextUrl="/aon" />
+                            <PreviousNext className='text-white' previousUrl="/vml" nextUrl="/tango" />
                         </div>
                     </div>
                 </div>

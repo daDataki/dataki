@@ -17,6 +17,7 @@ export const menuOptions = [
             { name: "vida & estilo", path: "/vida-estilo" },
             { name: "vml", path: "/vml" },
             { name: "claro", path: "/claro" }, 
+            { name: "tango", path: "/tango" }, 
         ]
     },
     { name: "Services", path: "/services", menuIcon: "/images-proyecto/menuWhite.png" },

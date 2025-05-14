@@ -76,7 +76,7 @@ export default function ImageGrid() {
     "/images-grid/Mask-group33.png",
     "/images-grid/Mask-group4.png",
     "/images-grid/beacon-beach5.png",
-     "/images-grid/Mask-group-9.png",
+    "/images-grid/Mask-group-9.png",
     "/images-grid/Macbook-Claro7.png",
     "/images-grid/TC2K_ENTRADA8.png",
     "/images-grid/miroshnichenko66.png",
