@@ -237,27 +237,30 @@ export default function Tango() {
           </div>
           <div className='z-10'>
             <div className='w-full flex justify-between'>
-              <Image
-                className="relative w-[33%] top-[-15vw] z-10"
+              <div className='relative w-[31%] top-[-15vw] z-10'><Image
+                className="w-full"
                 src="/images-proyecto/tango-media-1.png"
                 alt="vida-estilo"
                 layout="intrinsic"
                 width={375}
                 height={859}
-              />
-              <Image
-                className="relative w-[43%] top-[-10vw] z-20"
-                src="/images-proyecto/tango-media-2.png"
-                alt="vida-estilo"
-                layout="intrinsic"
-                width={375}
-                height={859}
-              />
+              /></div>
+              <div className='relative w-[43%] top-[-10vw] z-20'>
+                <Image
+                  className="w-full"
+                  src="/images-proyecto/tango-media-2-1.png"
+                  alt="vida-estilo"
+                  layout="intrinsic"
+                  width={375}
+                  height={859}
+                />
+              </div>
+
             </div>
             <div className='w-full flex justify-between z-10'>
               <Image
-                className="relative w-[38%] top-[-33.5vw] left-1/2 transform -translate-x-[62.4%]"
-                src="/images-proyecto/tango-media-3.png"
+                className="relative w-[38%] top-[-33.5vw] left-1/2 transform -translate-x-[82%]"
+                src="/images-proyecto/tango-media-3-1.png"
                 alt="vida-estilo"
                 layout="intrinsic"
                 width={375}
