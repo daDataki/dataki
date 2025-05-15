@@ -48,7 +48,7 @@ const imageDataMap: Record<string, {
     src: "/images-grid/beacon-beach5.png",
     title: "Vida & Estilo",
     text1: "Hospitality Group",
-    text2: "2023-Ongoing",
+    text2: "2022-Ongoing",
     categories: ["SEO & Data Analytics", "Branding & Digital Strategy", "Graphic & Web Design", "Online & Social Media Management"],
     route: "/vida-estilo"
   },
@@ -73,7 +73,7 @@ const imageDataMap: Record<string, {
     title: "TANGO Motorsports",
     text1: "",
     text2: "2022-2024",
-    categories: ["Video Production & Graphic Design", "UX/UI & Web Development", "Business & Digital Strategy", "Graphic Design"],
+    categories: ["Video Production & Graphic Design", "UX/UI & Web Development", "Business & Digital Strategy", "Graphic Design", "Media Strategy"],
     route: "/tango"
   },
   "/images-grid/Mask-group-9.png": {

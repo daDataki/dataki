@@ -53,7 +53,7 @@ export default function Tango() {
           prev='/claro'
           next='/aon'
           clientInfo={{
-            group: "Hospitality Group",
+            group: "",
             date: "2022 - 2024",
             name: "TANGO<br>motorsports",
             categories: [
@@ -61,18 +61,19 @@ export default function Tango() {
               "UX/UI & Web Development",
               "Business & Digital Strategy",
               "Graphic Design",
+              "Media Strategy"
             ],
           }}
           aboutInfo={
             <>
               Tango Motorsports
               <br />
-              work showcase
+              Work Showcase
             </>
           }
           services={{
             description:
-              "We supported Tango C200 with dynamic videos, sleek web design, and full-stack development, all backed by a strategic vision.",
+              "We supported Tango Motorsports (TC2000 | Top Race | Super Bike | CarX | Formula Nacional | Tango Rally Team) with dynamic videos, sleek web design, and full-stack development, all backed by a strategic vision.",
             list: [
               "Video Production",
               "UX/UI & Web Development",
@@ -84,9 +85,7 @@ export default function Tango() {
         <div className='flex flex-col w-full'>
           <video
             className="w-full h-video object-cover"
-            autoPlay
-            loop
-            muted
+            controls
             playsInline
           >
             <source src="/video/Teaser_ Axion.mp4" type="video/mp4" />
@@ -227,7 +226,7 @@ export default function Tango() {
               Performance-driven <br /> creativity for the <br /> motorsports world.
             </h2>
           </div>
-          <div className='w-full flex flex-col justify-end items-end sticky top-0 mb-[16vw]'>
+          <div className='w-full flex flex-col justify-end items-end sticky top-0'>
             <h2 className='relative right-[8vw] font-web font-antonio text-white uppercase'>
               media
             </h2>
@@ -236,18 +235,28 @@ export default function Tango() {
             </h2>
           </div>
           <div className='z-10'>
-            <div className='w-full flex justify-between'>
-              <div className='relative w-[31%] top-[-15vw] z-10'><Image
-                className="w-full"
+            <div className='relative w-full flex justify-center'>
+              <div className='absolute w-full z-10 top-[-12vw]'><Image
+                className="w-[36%]"
                 src="/images-proyecto/tango-media-1.png"
                 alt="vida-estilo"
                 layout="intrinsic"
                 width={375}
                 height={859}
               /></div>
-              <div className='relative w-[43%] top-[-10vw] z-20'>
+              <div className='relative w-1/2 flex justify-end left-[7vw] top-[16vw]  z-20'>
                 <Image
-                  className="w-full"
+                  className="w-[76%]"
+                  src="/images-proyecto/tango-media-3-1.png"
+                  alt="vida-estilo"
+                  layout="intrinsic"
+                  width={375}
+                  height={859}
+                />
+              </div>
+              <div className='relative w-1/2 flex justify-end  z-10 '>
+                <Image
+                  className="relative w-[85%]"
                   src="/images-proyecto/tango-media-2-1.png"
                   alt="vida-estilo"
                   layout="intrinsic"
@@ -257,24 +266,15 @@ export default function Tango() {
               </div>
 
             </div>
-            <div className='w-full flex justify-between z-10'>
-              <Image
-                className="relative w-[38%] top-[-33.5vw] left-1/2 transform -translate-x-[82%]"
-                src="/images-proyecto/tango-media-3-1.png"
-                alt="vida-estilo"
-                layout="intrinsic"
-                width={375}
-                height={859}
-              />
-            </div>
+
           </div>
-          <div className='z-0'>
-            <h2 className='relative  font-web font-antonio  uppercase text-[#DB0940] z-0'>
+          <div className='relative top-[12vw] z-0'>
+            <h2 className='relative font-web font-antonio  uppercase text-[#DB0940] z-0'>
               &ONLINE
             </h2>
           </div>
         </div>
-        <div className='p-24 mx-auto bg-[linear-gradient(to_bottom,_#1a1a1a_0%,_#1a1a1a_2%,_rgba(202,38,44,0.92)_100%)]'>
+        <div className='px-24 pt-40 pb-24 mx-auto bg-[linear-gradient(to_bottom,_#1a1a1a_0%,_#1a1a1a_2%,_rgba(202,38,44,0.92)_100%)]'>
           <PreviousNext className='text-white' previousUrl="/claro" nextUrl="/aon" />
         </div>
         <div>

@@ -55,4 +55,12 @@ body {
     font-weight: bold;
   }
 
+  .wa-float {
+    position: fixed;
+    right: 64px;
+    bottom: 64px;
+    width: 76px;
+    height: 76px;
+    z-index: 1000;
+  }
   
