@@ -45,7 +45,7 @@ export default function RootLayout({
           className="wa-float"
         >
           <Image
-            src="/images-proyecto/whatsapp.svg"
+            src="/images-proyecto/ws.png"
             alt="WhatsApps"
             width={76}
             height={76}
