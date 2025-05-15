@@ -46,7 +46,7 @@ export default function RootLayout({
         >
           <Image
             src="/images-proyecto/whatsapp.svg"
-            alt="WhatsApp"
+            alt="WhatsApps"
             width={76}
             height={76}
             priority
