@@ -79,6 +79,7 @@ export default function Tango() {
               "UX/UI & Web Development",
               "Business & Digital Strategy",
               "Graphic Design",
+              "Media Strategy"
             ],
           }}
         /></div>
@@ -230,8 +231,8 @@ export default function Tango() {
             <h2 className='relative right-[8vw] font-web font-antonio text-white uppercase'>
               media
             </h2>
-            <h2 className='font-web font-antonio text-white  uppercase'>
-              offline
+            <h2 className='font-web font-antonio text-[#DB0940]  uppercase'>
+              & ONLINE
             </h2>
           </div>
           <div className='z-10'>
@@ -269,8 +270,8 @@ export default function Tango() {
 
           </div>
           <div className='relative top-[12vw] z-0'>
-            <h2 className='relative font-web font-antonio  uppercase text-[#DB0940] z-0'>
-              &ONLINE
+            <h2 className='relative font-web font-antonio  uppercase text-white z-0'>
+              offline
             </h2>
           </div>
         </div>
