@@ -1,86 +1,40 @@
 "use client";
 import { motion, useInView } from "framer-motion";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import "./ImageGrid.css";
 import CardBack from "../card-grid/CardBack";
-
+import { imageDataMap as images } from "../card-grid/CardBack";
 
 export default function ImageGrid() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "10px 0px" });
-  // Refs para cada fila
-  const row1Ref = useRef(null);
-  const isRow1InView = useInView(row1Ref, { once: true, margin: "-50px 0px" });
+  const gridRef = useRef<HTMLDivElement>(null);
 
-  const row2Ref = useRef(null);
-  const isRow2InView = useInView(row2Ref, { once: true, margin: "-50px 0px" });
+  const handleMouseEnter = (i: number) => () => {
+    if (!gridRef.current) return;
+    const cards = gridRef.current.children;
 
-  const row3Ref = useRef(null);
-  const isRow3InView = useInView(row3Ref, { once: true, margin: "-50px 0px" });
-
-  const ImageItem = ({
-    src,
-    alt,
-    clase,
-    index,
-    hoveredIndex,
-    setHoveredIndex,
-  }: {
-    src: string;
-    alt: string;
-    clase: string;
-    index: number;
-    hoveredIndex: number | null;
-    setHoveredIndex: (index: number | null) => void;
-  }) => {
-    const isBlurred = hoveredIndex !== null && hoveredIndex !== index;
-
-    return (
-      <div
-        className="relative w-[27.77svw] h-[300px] perspective cursor-pointer"
-        onMouseEnter={() => setHoveredIndex(index)}
-        onMouseLeave={() => setHoveredIndex(null)}
-      >
-        <motion.div
-          className="w-full h-full relative"
-          animate={{ rotateY: hoveredIndex === index ? 180 : 0 }}
-          transition={{ duration: 0.6 }}
-          style={{ transformStyle: "preserve-3d" }}
-        >
-          {/* Lado frontal */}
-          <div className="absolute w-full h-full backface-hidden">
-            <img
-              src={src}
-              alt={alt}
-              className={`${clase} w-full h-full object-cover rounded-md transition-all duration-300 ${isBlurred ? "blur-sm brightness-75" : ""
-                }`}
-            />
-          </div>
-
-          {/* Lado trasero */}
-          <div
-            className="absolute w-full h-full backface-hidden"
-            style={{ transform: "rotateY(180deg)" }}
-          >
-            <CardBack image={src} />
-          </div>
-        </motion.div>
-      </div>
-    );
+    [...cards].forEach((card, j) => {
+      const flip = card.querySelector(".flip-container");
+      if (i === j) {
+        flip?.classList.add("rotateY-180");
+        card.classList.remove("faded");
+      } else {
+        card.classList.add("faded");
+      }
+    });
   };
 
-  const images = [
-    "/images-grid/busy-1.png",
-    "/images-grid/Maskgroup2.png",
-    "/images-grid/Mask-group33.png",
-    "/images-grid/Mask-group4.png",
-    "/images-grid/beacon-beach5.png",
-    "/images-grid/Mask-group-9.png",
-    "/images-grid/Macbook-Claro7.png",
-    "/images-grid/TC2K_ENTRADA8.png",
-    "/images-grid/miroshnichenko66.png",
-  ];
+  const handleMouseLeave = () => {
+    if (!gridRef.current) return;
+    const cards = gridRef.current.children;
+
+    [...cards].forEach((card) => {
+      const flip = card.querySelector(".flip-container");
+      flip?.classList.remove("rotateY-180");
+      card.classList.remove("faded");
+    });
+  };
 
   return (
     <div ref={ref} className="relative mx-auto w-full sm:mb-16 min-h-screen max-sm:pt-10">
@@ -119,106 +73,36 @@ export default function ImageGrid() {
             >
               Showcase
             </motion.h3>
-
           </div>
         )}
       </div>
 
-      {/* Grid de imágenes */}
-      <div className="relative overflow-hidden px-24">
-        {/* Primer fila */}
-        <div
-          ref={row1Ref}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center  mb-12 max-sm:mb-8"
-        >
-          {images.slice(0, 3).map((src, i) => {
-            const globalIndex = i;
-            return (
-              <motion.div
-                key={globalIndex}
-                initial={{ scale: 0.1, opacity: 0 }}
-                animate={isRow1InView ? { scale: 1, opacity: 1 } : {}}
-                transition={{
-                  delay: globalIndex * 0.3,
-                  duration: 0.6,
-                  ease: "easeOut",
-                }}
-              >
-                <ImageItem
-                  key={globalIndex}
-                  index={globalIndex}
-                  hoveredIndex={hoveredIndex}
-                  setHoveredIndex={setHoveredIndex}
-                  clase=""
+      {/* Grid de imágenes con giro */}
+      <div className="grid grid-cols-3 gap-8 px-24" ref={gridRef}>
+        {images.map(({ src, ...rest }, i) => (
+          <div
+            key={i}
+            className="work-grid-card w-full relative perspective h-[300px] cursor-pointer"
+            onMouseEnter={handleMouseEnter(i)}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="flip-container">
+              {/* Frente */}
+              <div className="flip-side">
+                <img
+                  className="w-full h-full object-cover inner-image"
                   src={src}
-                  alt={`image-${globalIndex}`}
+                  alt="front"
                 />
-              </motion.div>
-            );
-          })}
-        </div>
+              </div>
 
-        {/* Segunda fila */}
-        <div
-          ref={row2Ref}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center  mb-12 max-sm:mb-8"
-        >
-          {images.slice(3, 6).map((src, i) => {
-            const globalIndex = i + 3;
-            return (
-              <motion.div
-                key={globalIndex}
-                initial={{ scale: 0.1, opacity: 0 }}
-                animate={isRow2InView ? { scale: 1, opacity: 1 } : {}}
-                transition={{
-                  duration: 0.6,
-                  ease: "easeOut",
-                }}
-              >
-                <ImageItem
-                  key={globalIndex}
-                  index={globalIndex}
-                  hoveredIndex={hoveredIndex}
-                  setHoveredIndex={setHoveredIndex}
-                  clase=""
-                  src={src}
-                  alt={`image-${globalIndex}`}
-                />
-              </motion.div>
-            );
-          })}
-        </div>
-
-        {/* Tercera fila */}
-        <div
-          ref={row3Ref}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center  mb-12 max-sm:mb-8"
-        >
-          {images.slice(6, 9).map((src, i) => {
-            const globalIndex = i + 6;
-            return (
-              <motion.div
-                key={globalIndex}
-                initial={{ scale: 0.1, opacity: 0 }}
-                animate={isRow3InView ? { scale: 1, opacity: 1 } : {}}
-                transition={{
-                  duration: 0.6,
-                  ease: "easeOut",
-                }}
-              >
-                <ImageItem
-                  key={globalIndex}
-                  index={globalIndex}
-                  hoveredIndex={hoveredIndex}
-                  setHoveredIndex={setHoveredIndex}
-                  clase=""
-                  src={src}
-                  alt={`image-${globalIndex}`}
-                />
-              </motion.div>
-            );
-          })}
-        </div>
+              {/* Reverso */}
+              <div className="flip-side flip-back">
+                <CardBack {...rest} />
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

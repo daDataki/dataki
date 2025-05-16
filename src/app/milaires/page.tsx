@@ -85,7 +85,7 @@ export default function Milaires() {
       clearInterval(interval);
       
     }
-  }, [images.length]);
+  }, []);
 
   return (
     <>
