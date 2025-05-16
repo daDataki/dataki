@@ -4,6 +4,7 @@ import SafariClassHandler from "@/components/only-safari/SafariClassHandler";
 import Image from "next/image";
 import "./globals.css";
 import "aos/dist/aos.css";
+import { WhatsappIcon } from "@/components/icons";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,13 +45,7 @@ export default function RootLayout({
           aria-label="Chatear por WhatsApp"
           className="wa-float"
         >
-          <Image
-            src="/images-proyecto/ws.png"
-            alt="WhatsApps"
-            width={76}
-            height={76}
-            priority
-          />
+          <WhatsappIcon />
         </a>
       </body>
     </html>

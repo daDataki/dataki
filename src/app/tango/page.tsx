@@ -227,12 +227,12 @@ export default function Tango() {
               Performance-driven <br /> creativity for the <br /> motorsports world.
             </h2>
           </div>
-          <div className='w-full flex flex-col justify-end items-end sticky top-0'>
-            <h2 className='relative right-[8vw] font-web font-antonio text-white uppercase'>
+          <div className='w-full flex flex-col justify-end items-end sticky top-0 mb-[6vw]'>
+            <h2 className='relative right-[4vw] font-web font-antonio text-white uppercase'>
               media
             </h2>
             <h2 className='font-web font-antonio text-[#DB0940]  uppercase'>
-              & ONLINE
+              ONLINE
             </h2>
           </div>
           <div className='z-10'>
@@ -271,7 +271,7 @@ export default function Tango() {
           </div>
           <div className='relative top-[12vw] z-0'>
             <h2 className='relative font-web font-antonio  uppercase text-white z-0'>
-              offline
+             & offline
             </h2>
           </div>
         </div>

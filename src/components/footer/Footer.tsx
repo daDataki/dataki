@@ -19,7 +19,7 @@ export default function Footer({
   letsTalkColor = DEFAULT_LETS_TALK_COLOR,
 }: FooterProps) {
   return (
-    <footer id="footer" className={`relative px-24 py-12 mt-[-1px] sm:py-20 ${background}`}>
+    <footer id="footer" className={`relative px-24 py-12 mt-[-1px] sm:py-20 overflow-hidden ${background}`}>
       <img className='absolute w-[73%] top-1/2 left-1/2 -translate-y-[65%] -translate-x-[30%] ' src="images-proyecto/Footer-Mapa-Lila.png" alt="Footer-Mapa-Lila" />
       <nav className={`z-20 ${navTextColor}`}>
         <div className="max-sm:block max-sm:text-center flex justify-between items-center h-auto">
