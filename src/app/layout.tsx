@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import SafariClassHandler from "@/components/only-safari/SafariClassHandler";
-import Image from "next/image";
 import "./globals.css";
 import "aos/dist/aos.css";
 import { WhatsappIcon } from "@/components/icons";
