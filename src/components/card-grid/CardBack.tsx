@@ -84,8 +84,10 @@ export const imageDataMap: BackImage[] = [
     title: "ENVEEDO",
     text1: "",
     text2: "2022",
-    categories: ["Front-End Development", "Back-End Development", "Web Design & Development"],
-    route: ""
+    categories: [ "Front-End Development",
+      "Back-End Development",
+      "Web Design & Development",],
+    route: "enveedo"
   }
 ];
 

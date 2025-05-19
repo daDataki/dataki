@@ -51,7 +51,7 @@ export default function Tango() {
           title={<h1 className="text-tango-title">TANGO Motorsports</h1>}
           backgroundImage={tango.src}
           prev='/claro'
-          next='/aon'
+          next='/enveedo'
           clientInfo={{
             group: "",
             date: "2022 - 2024",
@@ -276,7 +276,7 @@ export default function Tango() {
           </div>
         </div>
         <div className='px-24 pt-40 pb-24 mx-auto bg-[linear-gradient(to_bottom,_#1a1a1a_0%,_#1a1a1a_2%,_rgba(202,38,44,0.92)_100%)]'>
-          <PreviousNext className='text-white' previousUrl="/claro" nextUrl="/aon" />
+          <PreviousNext className='text-white' previousUrl="/claro" nextUrl="/enveedo" />
         </div>
         <div>
           <Footer background="bg-black " />

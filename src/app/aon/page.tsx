@@ -28,7 +28,7 @@ export default function Aos() {
         <Hero
           title="Aon"
           backgroundImage={aon.src}
-          prev='/tango'
+          prev='/enveedo'
           next='/cis-latam'
           clientInfo={{
             group: "",
@@ -191,7 +191,7 @@ export default function Aos() {
         </video>
       </div>
       <div className='px-24  my-[5vw] mx-auto bg-black'>
-        <PreviousNext className='text-white' previousUrl="/tango" nextUrl="/cis-latam" />
+        <PreviousNext className='text-white' previousUrl="/eveedo" nextUrl="/cis-latam" />
       </div>
       <div>
         <Footer background="bg-black " />

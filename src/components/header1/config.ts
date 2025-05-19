@@ -18,6 +18,7 @@ export const menuOptions = [
             { name: "vml", path: "/vml" },
             { name: "claro", path: "/claro" }, 
             { name: "tango Motorsports", path: "/tango" }, 
+            { name: "enveedo", path: "/enveedo" }, 
         ]
     },
     { name: "Services", path: "/services", menuIcon: "/images-proyecto/menuWhite.png" },
