@@ -211,7 +211,7 @@ export default function Tango() {
               >
                 <Image
                   className="max-sm:hidden relative w-image-iphone"
-                  src="/images-proyecto/iPhone-3-Pro.png"
+                  src="/images-proyecto/iPhone-4-Pro.png"
                   alt="vida-estilo"
                   layout="intrinsic"
                   width={375}
