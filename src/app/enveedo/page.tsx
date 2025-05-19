@@ -4,7 +4,6 @@ import enveedo from '../../../public/images-proyecto/enveedo-hero.png';
 import Image from 'next/image';
 import './enveedo.css'
 import { motion } from 'framer-motion';
-import { useState, useEffect, useRef } from "react";
 import Footer from '../../components/footer/Footer'
 import PreviousNext from '../../components/previous-next/PreviousNext'
 import dynamic from 'next/dynamic';
@@ -20,19 +19,6 @@ export default function Enveedo() {
     hidden: { opacity: 0, y: 100 },
     visible: { opacity: 1, y: 0 }
   };
-
-  
-
-  const checkVisibility = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const rect = element.getBoundingClientRect();
-      return rect.top <= window.innerHeight && rect.bottom >= 0;
-    }
-    return false;
-  };
-
-  
 
   return (
     <>

@@ -66,7 +66,7 @@ export default function Home() {
           </video>
         </div>
         <div><VerticalSlider /></div>
-        <div id="work" className='bg-white relative max-sm:mb-10'>
+        <div id="work" className='bg-white relative max-sm:mb-10 mb-16'>
           <ImageGrid />
         </div>
 

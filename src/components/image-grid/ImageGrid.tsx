@@ -37,7 +37,7 @@ export default function ImageGrid() {
   };
 
   return (
-    <div ref={ref} className="relative mx-auto w-full sm:mb-16 min-h-screen max-sm:pt-10">
+    <div ref={ref} className="relative mx-auto w-full min-h-screen max-sm:pt-10">
       {isInView && (
         <motion.div className="text-center font-Poppins text-cases text-black font-light py-16 uppercase">
           our CASES
@@ -78,7 +78,7 @@ export default function ImageGrid() {
       </div>
 
       {/* Grid de imágenes con giro */}
-      <div className="grid grid-cols-3 gap-8 px-24" ref={gridRef}>
+      <div className="grid grid-cols-3 gap-8 px-24 " ref={gridRef}>
         {images.map(({ src, ...rest }, i) => (
           <div
             key={i}
