@@ -11,12 +11,14 @@ export default function PlyrVideo({src}: PlyrVideoProps) {
   const videoRef = useRef(null);
 
   useEffect(() => {
-    const Plyr = require('plyr'); // ⬅️ Carga condicional
-    if (videoRef.current) {
-      new Plyr(videoRef.current, {
-        controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
-      });
-    }
+    import('plyr').then((PlyrModule) => {
+      const Plyr = PlyrModule.default;
+      if (videoRef.current) {
+        new Plyr(videoRef.current, {
+          controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+        });
+      }
+    });
   }, []);
 
   return (
