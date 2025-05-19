@@ -21,11 +21,7 @@ export default function Enveedo() {
     visible: { opacity: 1, y: 0 }
   };
 
-  const [visibility, setVisibility] = useState({
-    image1: false,
-    image2: false,
-    image3: false,
-  });
+  
 
   const checkVisibility = (id: string) => {
     const element = document.getElementById(id);
@@ -36,23 +32,7 @@ export default function Enveedo() {
     return false;
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setVisibility(() => ({
-        image1: checkVisibility("flip-image-1"),
-        image2: checkVisibility("flip-image-2"),
-        image3: checkVisibility("flip-image-3"),
-
-      }));
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Verifica si ya está visible al cargar
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  
 
   return (
     <>
