@@ -17,10 +17,9 @@ export default function Home() {
           menuCloseIcon="/images-proyecto/closeMenu.svg"
           logoSrcOpen="/images-proyecto/logo.png"
         />
-        {/* Sección del video */}
-        <div className="relative">
+        <div className="relative w-full h-[100dvh] overflow-hidden">
           <video
-            className="w-full h-screen object-cover"
+            className="absolute top-0 left-0 w-full h-full object-cover"
             autoPlay
             loop
             muted
@@ -30,7 +29,6 @@ export default function Home() {
           >
             <source src="/video/Video1_06-01.mp4" type="video/mp4" />
           </video>
-         
         </div>
         <div className="flex flex-col bg-white text-black w-full  object-cover pt-12 pb-24">
           <div className="pt-12 pb-12">
@@ -39,7 +37,7 @@ export default function Home() {
             </h4>
           </div>
           <div className="flex flex-col justify-center items-center font-antonio font-semibold xtext-lg  uppercase ">
-            <h2 className='text-center safari-text-stroke'     
+            <h2 className='text-center lg:safari-text-stroke'
             ><span >we help companies</span>
               <div>
                 <span className="text-easternBlue stroke-easternBlue" >bring to life</span>
@@ -66,11 +64,9 @@ export default function Home() {
           </video>
         </div>
         <div><VerticalSlider /></div>
-        <div id="work" className='bg-white relative max-sm:mb-10 mb-16'>
+        <div id="work" className='bg-white relative max-sm:pb-10 pb-16'>
           <ImageGrid />
         </div>
-
-        {/* Galería de imágenes */}
         <div><HorizontalSlider /></div>
       </main >
       <Footer />

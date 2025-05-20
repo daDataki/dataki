@@ -39,13 +39,13 @@ export default function ImageGrid() {
   return (
     <div ref={ref} className="relative mx-auto w-full min-h-screen max-sm:pt-10">
       {isInView && (
-        <motion.div className="text-center font-Poppins text-cases text-black font-light py-16 uppercase">
+        <motion.div className="text-center font-Poppins text-cases text-black font-light py-4 sm:py-16 uppercase">
           our CASES
         </motion.div>
       )}
 
       {/* Título grande */}
-      <div className="max-sm:hidden sticky top-10">
+      <div className=" sm:sticky top-10">
         {isInView && (
           <div className="relative flex justify-center">
             <motion.h2
@@ -56,7 +56,7 @@ export default function ImageGrid() {
                 ease: [0.34, 1.56, 0.64, 1],
                 delay: 0.2,
               }}
-              className="text-[200px] uppercase font-antonio text-black font-bold safari-text-stroke will-change-transform"
+              className="text-work  uppercase font-antonio text-black font-bold safari-text-stroke will-change-transform"
             >
               WORK
             </motion.h2>
@@ -69,7 +69,7 @@ export default function ImageGrid() {
                 ease: [0.34, 1.56, 0.64, 1],
                 delay: 0.2,
               }}
-              className="absolute top-[20%] left-[45%] z-10 text-[100px] font-light font-signature text-easternBlue will-change-transform"
+              className="absolute top-[20%] left-[20%] sm:left-[45%] z-10 text-Showcase font-light font-signature text-easternBlue will-change-transform"
             >
               Showcase
             </motion.h3>
@@ -78,7 +78,7 @@ export default function ImageGrid() {
       </div>
 
       {/* Grid de imágenes con giro */}
-      <div className="grid grid-cols-3 gap-8 px-24 " ref={gridRef}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 sm:px-12 md:px-24" ref={gridRef}>
         {images.map(({ src, ...rest }, i) => (
           <div
             key={i}

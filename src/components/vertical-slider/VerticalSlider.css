@@ -4,8 +4,8 @@
   }
   
   .text-we-focus {
-    font-size: clamp(7px, 1.52vw, 28px);
-    line-height: clamp(10px, 2.08vw, 35px);
+    font-size: clamp(14px, 1.52vw, 28px);
+    line-height: clamp(18px, 2.08vw, 35px);
   }
 
   .text-fluid {

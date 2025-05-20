@@ -66,6 +66,7 @@ const wordContentMap: { [key: string]: string[] } = {
 export default function VerticalSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [containerHeight, setContainerHeight] = useState("100vh");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,6 +86,13 @@ export default function VerticalSlider() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    const isMobile = window.innerWidth <= 768;
+    const factor = isMobile ? 18 : 25; // más alto en móvil
+    const height = `${(words.length + 1.5) * factor}vh`;
+    setContainerHeight(height);
+  }, [words]);
 
   const getPositionClass = (offset: number) => {
     switch (offset) {
@@ -107,21 +115,15 @@ export default function VerticalSlider() {
     <div
       ref={containerRef}
       className="relative w-full"
-      style={{ height: `${(words.length + 1.5) * 25}vh` }} 
+      style={{ height: containerHeight }}
     >
       {/* Sticky content */}
-      <div className="sticky top-0 h-screen bg-black text-white flex flex-col justify-center items-center overflow-hidden">
+      <div className="sticky top-0 h-[70vh] sm:h-screen bg-black text-white flex flex-col justify-center items-center overflow-hidden">
 
         {/* Título */}
         <div className='absolute top-0 py-12 flex flex-col justify-center items-center text-we-focus uppercase'>
           <p>services</p>
         </div>
-
-        {/* Texto lateral */}
-        <div className='max-sm:hidden absolute top-52 xl:top-1/2 left-12 md:left-0'>
-          <p className='hidden font-Poppins md:ml-16 text-we-focus uppercase'>we focus on</p>
-        </div>
-
         {/* Palabras principales */}
         <ul className="relative h-full w-full flex flex-col justify-center items-center">
           {words.map((word, index) => {
@@ -149,7 +151,7 @@ export default function VerticalSlider() {
         </ul>
 
         {/* Lista de contenido */}
-        <div className='absolute max-sm:hidden top-[60%] md:top-[68%] left-[55%]'>
+        <div className='absolute top-[60%] md:top-[68%] left-20%] sm:left-[55%]'>
           <ul className='w-full list-disc pl-5 z-10 text-we-focus font-Poppins font-semibold'>
             {wordContentMap[words[currentIndex]]?.map((item, i) => (
               <li key={i} className="text-we-focus">{item}</li>

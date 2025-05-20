@@ -1,17 +1,17 @@
 .text-cases {
-    font-size: clamp(9px, 1.94vw, 42px)!important;
+    font-size: clamp(20px, 1.94vw, 42px)!important;
     line-height: clamp(10px, 2.08vw, 45px)!important;
 }
 .text-work {
-  font-size: clamp(66px, 13.88vw, 300px)!important;
-  line-height: clamp(66px, 13.88vw, 300px)!important;
+  font-size: clamp(86px, 13.88vw, 300px)!important;
+  line-height: clamp(150px, 13.88vw, 300px)!important;
 }
 .img-responsive {
     @apply sm:w-[250px] lg:w-[400px] sm:h-[150px] lg:h-[278px];
 }
 .text-Showcase{
-  font-size: clamp(33px, 6.94vw, 150px)!important;
-  line-height: clamp(133px, 13.88vw, 300px)!important;
+  font-size: clamp(60px, 6.94vw, 150px)!important;
+  line-height: clamp(60px, 6.94vw, 150px)!important;
 }
 
 .blur-effect {

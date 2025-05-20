@@ -20,22 +20,18 @@ export default function Footer({
 }: FooterProps) {
   return (
     <footer id="footer" className={`relative px-24 py-12 mt-[-1px] sm:py-20 overflow-hidden ${background}`}>
-      <img className='absolute w-[73%] top-1/2 left-1/2 -translate-y-[65%] -translate-x-[30%] ' src="images-proyecto/Footer-Mapa-Lila.png" alt="Footer-Mapa-Lila" />
+      <img className='absolute w-[73%] top-1/2 -translate-y-[65%] left-1/2 -translate-x-1/2 sm:-translate-x-[30%] ' src="images-proyecto/Footer-Mapa-Lila.png" alt="Footer-Mapa-Lila" />
       <nav className={`z-20 ${navTextColor}`}>
         <div className="max-sm:block max-sm:text-center flex justify-between items-center h-auto">
           <p className={`font-normal max-sm:mb-12 text-let font-signature z-30 ${letsTalkColor}`}>
             Let’s Talk
-          </p>
-          <p className="hidden font-semibold text-caption font-Poppins">
-            Virtual team <br /> with global reach.
-
-          </p>
+          </p>       
         </div>
 
         <div className="max-sm:justify-center max-sm:text-center flex  mb-8">
-          <p className="font-antonio font-bold safari-text-stroke  xtext-lg1  uppercase z-30">Share your<br /> idea  with us</p>
+          <p className="font-antonio font-bold lg:safari-text-stroke  xtext-lg1  uppercase z-30">Share your<br /> idea  with us</p>
         </div>
-        <div className="block sm:flex justify-between w-full max-sm:text-center xl:w-[75%] z-30">
+        <div className="flex justify-between w-full max-sm:text-center xl:w-[75%] z-30">
           <div className='z-30 w-1/2'> <p className="text-captions font-Poppins">
             <span className="block font-bold">Buenos Aires</span>
             <span className="block sm:mb-10 font-bold">Argentina</span>
