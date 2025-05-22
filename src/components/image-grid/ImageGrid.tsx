@@ -78,7 +78,7 @@ export default function ImageGrid() {
       </div>
 
       {/* Grid de imágenes con giro */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 sm:px-12 md:px-24" ref={gridRef}>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-8 px-4 sm:px-12 md:px-24" ref={gridRef}>
         {images.map(({ src, ...rest }, i) => (
           <div
             key={i}

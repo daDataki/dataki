@@ -5,7 +5,7 @@
 }
 
 .text-let {
-    font-size: clamp(33px, 6.94vw, 150px);
+    font-size: clamp(43px, 6.94vw, 150px);
     line-height: clamp(50px, 14vw, 300px);
 }
 .text-captions{

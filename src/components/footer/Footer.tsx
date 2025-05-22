@@ -35,8 +35,8 @@ export default function Footer({
           <div className='z-30 w-1/2'> <p className="text-captions font-Poppins">
             <span className="block font-bold">Buenos Aires</span>
             <span className="block sm:mb-10 font-bold">Argentina</span>
-            <span className="block">Avenida del Libertador 6299 </span>
-            <span className="block">Ciudad de Buenos Aires, C1428ARF</span>
+            <span className="block">Av. del Libertador 6299 </span>
+            <span className="block">CABA, Buenos Aires, C1428ARF</span>
             <a
                href={emailLink}
               target="_blank"

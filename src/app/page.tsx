@@ -17,7 +17,7 @@ export default function Home() {
           menuCloseIcon="/images-proyecto/closeMenu.svg"
           logoSrcOpen="/images-proyecto/logo.png"
         />
-        <div className="relative w-full h-[100dvh] overflow-hidden">
+        <div className="relative w-full h-[75vh] sm:h-[100dvh] overflow-hidden">
           <video
             className="absolute top-0 left-0 w-full h-full object-cover"
             autoPlay

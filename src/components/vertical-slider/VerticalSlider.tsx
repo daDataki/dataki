@@ -89,7 +89,7 @@ export default function VerticalSlider() {
 
   useEffect(() => {
     const isMobile = window.innerWidth <= 768;
-    const factor = isMobile ? 18 : 25; // más alto en móvil
+    const factor = isMobile ? 30 : 18; // más alto en móvil
     const height = `${(words.length + 1.5) * factor}vh`;
     setContainerHeight(height);
   }, [words]);
