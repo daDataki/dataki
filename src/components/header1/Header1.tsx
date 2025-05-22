@@ -26,6 +26,7 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon 
   }, [pathname]);
 
   const menuIcon = menuOptions.find(option => option.path === pathname)?.menuIcon || "/images-proyecto/menuWhite.svg";
+  const isMobile = () => typeof window !== "undefined" && window.innerWidth <= 768;
 
   // Bloquea el scroll cuando el menú está abierto
   useEffect(() => {
@@ -108,7 +109,20 @@ export default function Header({ className, logoSrc, logoSrcOpen, menuCloseIcon 
               >
                 <Link
                   href={link.path}
-                  onClick={(e) => handleLinkClick(e, link.path, link.onClick)}
+                  onClick={(e) => {
+                    if (isMobile() && link.subMenu) {
+                      e.preventDefault();
+                      if (selectedItem === index) {
+                        
+                        setIsOpen(false);
+                        window.location.href = link.path;
+                      } else {
+                        setSelectedItem(index); 
+                      }
+                    } else {
+                      handleLinkClick(e, link.path, link.onClick); 
+                    }
+                  }}
                   className={`block py-2 uppercase text-white transition-all duration-300 hover:text-easternBlue hover:py-8 ${selectedItem !== null && selectedItem !== index ? 'blur-sm' : ''}`}
                 >
                   <span className="max-sm:hidden">0{index + 1}</span> {link.name}
