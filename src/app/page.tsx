@@ -54,7 +54,7 @@ export default function Home() {
         </div>
         <div className='flex flex-col w-full'>
           <video
-            className="w-full object-cover"
+            className="w-full max-sm:h-[60vh] object-cover"
             autoPlay
             loop
             muted
