@@ -28,7 +28,7 @@ const media = [
   "Platform Selection and Setup.",
   "Ad Creation and Management.",
   "Optimization and Scaling.",
-  "Analytics and Reporting.",
+  "Analytics and Reporting."
 ];
 
 const content = [
@@ -45,7 +45,7 @@ const data = [
   "Campaign performance analysis.",
   "Data collection and reporting.",
   "Insights for strategy optimization.",
-  "Custom analytics dashboards.",
+  "Custom analytics dashboards."
 ];
 const technology = [
   "Front-end & back-end development.",
@@ -60,7 +60,6 @@ const wordContentMap: { [key: string]: string[] } = {
   content,
   data,
   technology,
-  
 };
 
 export default function VerticalSlider() {
@@ -75,7 +74,9 @@ export default function VerticalSlider() {
       const top = containerRef.current.offsetTop;
       const scroll = window.scrollY;
       const scrollInside = scroll - top;
-      const stepHeight = 120; // cada paso: 50vh
+
+      const isMobile = window.innerWidth <= 768;
+      const stepHeight = isMobile ? window.innerHeight*0.35 : 120;
 
       if (scrollInside >= 0 && scrollInside < stepHeight * words.length) {
         const index = Math.floor(scrollInside / stepHeight);
@@ -89,8 +90,9 @@ export default function VerticalSlider() {
 
   useEffect(() => {
     const isMobile = window.innerWidth <= 768;
-    const factor = isMobile ? 30 : 18; // más alto en móvil
-    const height = `${(words.length + 1.5) * factor}vh`;
+    const factor = isMobile ? 50 : 30;
+    const height = `${(words.length) * factor}vh`;
+    console.log("containerHeight calculado:", height); 
     setContainerHeight(height);
   }, [words]);
 
@@ -118,7 +120,7 @@ export default function VerticalSlider() {
       style={{ height: containerHeight }}
     >
       {/* Sticky content */}
-      <div className="sticky top-0 h-[70vh] sm:h-screen bg-black text-white flex flex-col justify-center items-center overflow-hidden">
+      <div className="sticky top-0 h-screen bg-black text-white flex flex-col justify-center items-center overflow-hidden">
 
         {/* Título */}
         <div className='absolute top-0 py-12 flex flex-col justify-center items-center text-we-focus uppercase'>

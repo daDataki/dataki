@@ -1,11 +1,11 @@
 
 .xtext-lg1 {
-    font-size: clamp(27px, 7.63vw, 165px);
-    line-height: clamp(30px, 8.33vw, 180px);
+    font-size: clamp(37px, 7.63vw, 165px);
+    line-height: clamp(40px, 8.33vw, 180px);
 }
 
 .text-let {
-    font-size: clamp(43px, 6.94vw, 150px);
+    font-size: clamp(46px, 6.94vw, 150px);
     line-height: clamp(50px, 14vw, 300px);
 }
 .text-captions{

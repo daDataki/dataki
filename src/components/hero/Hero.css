@@ -10,16 +10,16 @@
 }
 
 .text-fluid-span{
-    font-size: clamp(7px, 1.38vw, 30px);
-    line-height:  clamp(7px, 1.38vw, 30px);
+    font-size: clamp(10px, 1.38vw, 30px);
+    line-height:  clamp(10px, 1.38vw, 30px);
 }
 .text-pre-next{
     font-size: clamp(5.5px,1.1vw,24px);
     line-height: clamp(5px,1.1vw,24px);
 }
 .text-servicie {
-    font-size: clamp(7px, 1.52vw, 33px);
-    line-height:  clamp(11.3px, 2.36vw, 51px);
+    font-size: clamp(12px, 1.52vw, 33px);
+    line-height:  clamp(16px, 2.36vw, 51px);
 }
 
 .text-ul-servicie{

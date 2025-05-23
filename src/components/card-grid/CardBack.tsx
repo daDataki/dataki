@@ -103,14 +103,14 @@ const CardBack = ({ title, text1, text2, route, categories  }: Omit<BackImage, '
 
   const titleSize = title.length > 13 ? "text-[3rem]" : "text-[4rem]";
   return (
-    <div onClick={handleNavigate} className="absolute top-0 pointer-events-auto w-full h-[300px] bg-[#BFAEFF] px-2 py-2" >
+    <div onClick={handleNavigate} className="absolute top-0 pointer-events-auto w-full h-[200px] sm:h-[300px] bg-[#BFAEFF] px-2 py-2" >
       <div className="w-full flex flex-col h-full">
         {/* Título */}
         <div className="relative flex flex-col justify-start">
-          <h1 className={`font-antonio font-bold uppercase text-black leading-none ${titleSize}`}>{title}</h1>
+          <h1 className={`font-antonio font-bold text-card-grid uppercase text-black leading-none ${titleSize}`}>{title}</h1>
         </div>
         <div className=" w-full flex  justify-between mt-2">
-          <div className="relative w-[30px] h-[30px]">
+          <div className="relative w-[15px] h-[15px] sm:w-[30px] sm:h-[30px]">
             <Image
               src="/images-proyecto/arrow-modal.png"
               alt={title}
@@ -130,8 +130,8 @@ const CardBack = ({ title, text1, text2, route, categories  }: Omit<BackImage, '
             {/* Categorías */}
             {categories.length > 0 && (
               <div className="">
-                <h3 className="font-bold font-Poppins text-sm text-black">CATEGORIES:</h3>
-                <ul className="list-disc list-inside font-Poppins text-sm">
+                <h3 className="font-bold font-Poppins text-[9px] sm:text-sm text-black">CATEGORIES:</h3>
+                <ul className="list-disc list-inside font-Poppins text-[9px] sm:text-sm">
                   {categories.map((category, index) => (
                     <li key={index} className="text-black list-none font-Poppins">{category}</li>
                   ))}
@@ -140,7 +140,7 @@ const CardBack = ({ title, text1, text2, route, categories  }: Omit<BackImage, '
             )}
           </div>
           <div className="mt-auto ml-auto">
-            <h6 className=" text-xs text-black">
+            <h6 className="text-[9px] sm:text-sm text-black">
               <span className="font-bold">DATE:</span> {text2}
             </h6>
           </div>

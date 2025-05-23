@@ -82,7 +82,7 @@ export default function ImageGrid() {
         {images.map(({ src, ...rest }, i) => (
           <div
             key={i}
-            className="work-grid-card w-full relative perspective h-[300px] cursor-pointer"
+            className="work-grid-card w-full relative perspective h-[200px] sm:h-[300px] cursor-pointer"
             onMouseEnter={handleMouseEnter(i)}
             onMouseLeave={handleMouseLeave}
           >

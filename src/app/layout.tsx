@@ -35,8 +35,6 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <SafariClassHandler />
         {children}
-
-        {/* WhatsApp Floating Button */}
         <a
           href="https://wa.me/5491138260308"
           target="_blank"

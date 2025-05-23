@@ -168,7 +168,7 @@ export default function CisLatam() {
             <div className="flex justify-center items-center relative">
               {/* Mockup del teléfono transparente */}
               <Image
-                className="relative w-[375px] z-20"
+                className="relative w-[200px] sm:w-[375px] z-20"
                 src="/images-proyecto/CONTENT.png"
                 alt="Main Image"
                 layout="intrinsic"
@@ -204,13 +204,8 @@ export default function CisLatam() {
 
               {/* "Ventana nítida" donde se ve la imagen sin blur dentro del teléfono */}
               <div
-                className="w-[74%] absolute z-30 left-1/2 sm:-translate-x-[187px] xl:-translate-x-[188px] overflow-hidden"
-                style={{
-                  width: '375px',    // Ajustá esto al ancho de la pantalla del mockup
-                  height: '390px',   // Ajustá esto a la altura de la pantalla
-                  top: '55px',      // Posicioná desde arriba
-
-                }}
+                className="w-[200px] sm:w-[375px] absolute z-30 left-1/2 max-sm:-translate-x-[100px] sm:-translate-x-[187px] xl:-translate-x-[188px] overflow-hidden"
+                
               >
                 <div
                   className="flex gap-8"
@@ -239,10 +234,10 @@ export default function CisLatam() {
           </div>
 
         </div>
-        <div className='bg-gradient-to-t from-[#131313] to-[#000000] bg-no-repeat bg-cover w-full pb-24 pl-24 flex justify-start mt-[-1px]'><h2 className='text-white font-antonio font-light text-2xl lg:text-6xl uppercase'>Blending creativity <br /> and strategy for <br /> impactful growth.</h2></div>
+        <div className='bg-gradient-to-t from-[#131313] to-[#000000] bg-no-repeat bg-cover w-full pb-8 sm:pb-24 pl-8 sm:pl-24 flex justify-start mt-[-1px]'><h2 className='text-white font-antonio font-light text-2xl lg:text-6xl uppercase'>Blending creativity <br /> and strategy for <br /> impactful growth.</h2></div>
         <div className='relative bg-gradient-to-t from-[#3b2c57] to-[#131313] bg-no-repeat bg-cover mt-[-1px] pt-12'>
           <h2 className='sticky flex justify-center gap-16 top-0 mb-32 text-center font-antonio font-medium text-bordered text-white fontSize-fluid-digital  uppercase'><span>web</span><span>design</span></h2>
-          <div className="relative w-[70%] z-20 mx-auto top-[-10vw] ">
+          <div className="relative w-full sm:w-[70%] z-20 mx-auto top-[-10vw] ">
             {/* Contenedor con overflow-hidden para simular el marco de la pantalla */}
             <div className="absolute bg-blue w-[73.2%] h-[75%] top-[6%] left-[13.8%] overflow-hidden">
               <div className="relative w-full h-full">

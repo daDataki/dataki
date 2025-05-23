@@ -134,14 +134,13 @@ export default function Aos() {
           />
           </div>
           <div className="w-1/2 flex justify-end pt-20">
-            <h2 className="relative top-[4vw] right-[6vw] font-normal font-antonio font-empowering text-white uppercase ">Empowering businesses <br /> with smarter,  safer <br /> solutions  for tomorrow.</h2>
+            <h2 className="relative top-[-2vw] sm:top-[4vw] right-[6vw] font-normal font-antonio font-empowering text-white uppercase ">Empowering businesses <br /> with smarter,  safer <br /> solutions  for tomorrow.</h2>
           </div>
         </div>
       </div>
       <div className="relative flex flex-col items-center justify-center bg-black bg-gradient-to to-transparent ">
         <div ref={ref2} className="relative w-full px-24">
           <div
-
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center w-full z-10"
           >
             <motion.img
@@ -170,9 +169,8 @@ export default function Aos() {
               <h2 className="fontSize-gra-desig font-antonio font-medium text-bordered uppercase">DESIGN</h2>
             </div>
           </div>
-
         </div>
-        <div className="w-full ml-[21.5vw] font-empowering pt-64">
+        <div className="w-full ml-[21.5vw] font-empowering pt-32 sm:pt-64">
           <h2 className="uppercase font-antonio font-normal text-white">
             Strategies and <br /> visuals aligned <br /> for a changing <br /> world.
           </h2>
@@ -190,7 +188,7 @@ export default function Aos() {
           <source src="/video/Aon.mp4" type="video/mp4" />
         </video>
       </div>
-      <div className='px-24  my-[5vw] mx-auto bg-black'>
+      <div className='px-6 sm:px-24  sm:my-[5vw] mx-auto bg-black'>
         <PreviousNext className='text-white' previousUrl="/eveedo" nextUrl="/cis-latam" />
       </div>
       <div>

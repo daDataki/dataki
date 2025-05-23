@@ -53,7 +53,7 @@ const Hero: React.FC<HeroProps> = ({
             />
             <div className="relative w-full z-10">
                 <div
-                    className="relative flex flex-col justify-between w-full h-[50vh] sm:h-[65vh] md:h-[80vh] lg:h-screen 2xl:h-[120vh]"
+                    className="relative flex flex-col justify-between w-full h-[60vh] sm:h-[65vh] md:h-[80vh] lg:h-screen 2xl:h-[120vh]"
                     style={{
                         backgroundImage: `url(${bgImage})`,
                         backgroundSize: 'cover',
@@ -70,8 +70,8 @@ const Hero: React.FC<HeroProps> = ({
                                     {title}
                                 </h1>
                             </div>
-                            <div className="hidden sm:flex justify-between items-start w-full py-4">
-                                <div className="w-20 ">
+                            <div className="flex justify-between items-start w-full py-4">
+                                <div className="w-8 sm:w-20 ">
                                     <Image
                                         className="relative object-contain w-full h-full"
                                         src="/images-proyecto/arrow.png"
@@ -87,7 +87,7 @@ const Hero: React.FC<HeroProps> = ({
                                 </div>
                             </div>
                         </div>
-                        <div className="max-sm:hidden w-[60%] flex justify-between text-white">
+                        <div className="w-full sm:w-[60%] flex justify-between text-white">
                             <div className="z-10">
                                 <h4 className="font-Poppins font-bold text-fluid-span uppercase z-10 mb-2">Date</h4>
                                 <span className="text-fluid-span font-Poppins z-10">
@@ -135,11 +135,11 @@ const Hero: React.FC<HeroProps> = ({
                             </p>
                         </div>
                     </div>
-                    <div className="w-1/2">
+                    <div className="w-full sm:w-1/2">
                         <div className='max-sm:mt-8'>
                             <ul className={`uppercase ${textBlack || "text-white"} text-ul-servicie font-antonio font-bold`}>
                                 {services.list.map((service, index) => (
-                                    <li key={index} className='text-ul-servicie first:leading-none first:mb-4 first:mt-2'>
+                                    <li key={index} className='text-ul-servicie sm:first:leading-none sm:first:mb-4 sm:first:mt-2'>
                                         <p>{service}</p>
                                     </li>
                                 ))}

@@ -63,4 +63,12 @@ body {
     height: 60px;
     z-index: 1000;
   }
-  
+  @media (max-width: 768px) {
+    .wa-float {
+      right: .7rem;
+      bottom: .7rem;
+      width: 48px;  /* más pequeño para pantallas reducidas */
+      height: 48px;
+    
+    }
+  }
